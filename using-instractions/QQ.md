@@ -1,5 +1,7 @@
 # QQ使用
-## Note：  
+## Note： 
+
+![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/qq.png)
 
 ### QQ登陆：  
 - 打开应用输入用户名、密码登陆QQ。
