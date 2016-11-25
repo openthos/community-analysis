@@ -1,6 +1,7 @@
 # WPS使用说明书
 ## Note：  
 
+![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps.png)
 
 ### wps首页功能：  
 - 使用wps打开文档
