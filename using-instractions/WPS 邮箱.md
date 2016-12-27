@@ -3,5 +3,5 @@
  ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps-email.png)
 
 ### wps邮箱登陆：  
-- 打开应用输入用户名、密码登陆wps邮箱。
-
+- 打开应用输入用户名、密码登陆wps邮箱。登录后如下图。
+ ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps-email.png)
