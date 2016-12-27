@@ -7,3 +7,23 @@
  ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/tmp_4543-Screenshot_2016-12-27-15-54-231526350674.png)
 
 ### 功能点
+1. 登录后收取邮件正常。
+2. 可以通过此客户端发送邮件
+3. 可以发送带附件的邮件
+4. 可以发送带链接的附件
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
