@@ -75,3 +75,10 @@
   1. 选择wps打开文件
   2. 编辑后保存为txt文件格式  (应用本身需要一个文件格式）  
   3. 回到文件管理器，右键重命名为原无后缀等的文件类型。
+
+### 参考案例：  
+- 文本文档(doc)  
+  - [](https://github.com/openthos/multiwin-analysis/tree/master/doc/docs.zip) 
+- 电子表格文档(xls)
+  - ctl + p 选择本地打印服务， 点击打印。
+- 幻灯片文档（ppt）
