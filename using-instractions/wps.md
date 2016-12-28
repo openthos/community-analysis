@@ -80,5 +80,10 @@
 - 文本文档(doc)  
   - [下载zip压缩包](https://github.com/openthos/multiwin-analysis/tree/master/doc/docs.zip) 
 - 电子表格文档(xls)
-  - ctl + p 选择本地打印服务， 点击打印。
+  - [下载zip压缩包](https://github.com/openthos/multiwin-analysis/tree/master/doc/xls.zip) 
 - 幻灯片文档（ppt）
+  - [下载zip压缩包1 (包含前3个ppt)](https://github.com/openthos/multiwin-analysis/tree/master/doc/ppt.zip) 
+  - [下载zip压缩包2 (包含接着的3个ppt)](https://github.com/openthos/multiwin-analysis/tree/master/doc/ppt2.zip) 
+  - [下载最后一个ppt](https://github.com/openthos/multiwin-analysis/tree/master/doc/tmp_19691-一铭翻译云V2.0介绍-950946290.pptx) 
+- PDF文档
+  - [下载1个PDF文档](https://github.com/openthos/multiwin-analysis/tree/master/doc/cy-1.pdf) 
