@@ -35,9 +35,11 @@
 21. 收取的附件可以下载到本地，也可以存到WPS云端
 
 #### 联系人
+![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps_contact.png)
 22. 自动保存有过邮件往来的邮箱为联系人
 23. 点击联系人可查看详情，列出往来邮件，进行发件、归类、编辑联系人操作
 
 #### 云服务
+![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps_cloud.png)
 24. 收藏邮件，查看所有收藏到云端的右键
 25. 云文档，查看云端所有文档
