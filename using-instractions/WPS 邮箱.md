@@ -15,6 +15,7 @@
 6. 可以通过邮先森反馈意见，了解产品信息
 
 #### 发送各类邮件
+![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps_send.png)
 7. 可以发送带附件的邮件
 8. 可发送包含多个附件的邮件
 9. 可以发送带链接的邮件
