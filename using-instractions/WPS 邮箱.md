@@ -27,6 +27,7 @@
 - 抄送收件人时可以选择密送
 
 #### 收取各类邮件
+![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps_get.png)
 - 可收取带附件的邮件，且附件可以打开。
 - 可收取包含多个附件的邮件，且多个附件均下载成功，可打开。
 - 可收取发送带链接的邮件,可点链接直接打开链接
