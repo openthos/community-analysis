@@ -78,7 +78,7 @@
 
 ### 参考案例：  
 - 文本文档(doc)  
-  - [](https://github.com/openthos/multiwin-analysis/tree/master/doc/docs.zip) 
+  - [下载zip压缩包](https://github.com/openthos/multiwin-analysis/tree/master/doc/docs.zip) 
 - 电子表格文档(xls)
   - ctl + p 选择本地打印服务， 点击打印。
 - 幻灯片文档（ppt）
