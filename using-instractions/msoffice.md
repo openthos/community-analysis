@@ -2,5 +2,5 @@
 
 ## [Word使用说明](https://github.com/openthos/community-analysis/blob/master/using-instractions/office_word.md)
 
-## [PPT使用说明](https://github.com/openthos/community-analysis/blob/master/using-instractions/office_powerpoint)
+## [PPT使用说明](https://github.com/openthos/community-analysis/blob/master/using-instractions/office_powerpoint.md)
 
