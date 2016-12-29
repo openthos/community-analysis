@@ -1,8 +1,10 @@
 
 工作界面
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E5%B7%A5%E4%BD%9C%E7%95%8C%E9%9D%A2.png)
+
 1.输入：使用键盘上的左、右、上、下方向键可以将光标移至各单元格上，这就选定了当前单元格，从而让您在各单元格中输入文字信息。
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E8%BE%93%E5%85%A5.png)
+
 2.单元格设置：我们可以在输入文字之后，点击右键对当前单元格文字进行设置如剪切/复制/黏贴/清除/填充/编辑等操作。
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E5%8D%95%E5%85%83%E6%A0%BC%E8%AE%BE%E7%BD%AE1.png)
 
@@ -24,9 +26,10 @@
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E6%8F%92%E5%85%A5%E5%87%BD%E6%95%B0.png)
 
 5.计算公式：公式的应用法则，无论在单元格中，还是在“编辑栏”中都能建立并使用公式的。如果正确的创建了计算公式，那么在默认状态下，其计算值就会显示在单元格中，公式则显示在“编辑栏”中。如下图所示例子：
-![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E6%8F%92%E5%85%A5%E5%87%BD%E6%95%B0.png)
+![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E5%85%AC%E5%BC%8F.png)
 
 运算方法支持常见的加减乘除百分比等。常见的数字符号如下图所示。
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7.png)
+
 引用下表的运算符可以将单元格区域合并起来进行计算。 
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B72.png)
