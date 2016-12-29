@@ -5,14 +5,14 @@
    在左侧点击打开图标 （第一次打开文档）点击新建空白表格，即完成第一次新建
    在左侧点击最近图标 （打开最近打开过的文档）右侧点击要打开的文档 （若要返回，点击窗口左上角的返回按钮）
 2、工作界面
-![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E5%B7%A5%E4%BD%9C%E7%95%8C%E9%9D%A2.png)
+![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E5%B7%A5%E4%BD%9C%E7%95%8C%E9%9D%A21212.png)
   
 3、输入：使用键盘上的左、右、上、下方向键可以将光标移至各单元格上，这就选定了当前单元格，从而让您在各单元格中输入文字信息。选中单元格-键盘上删除键（快捷键Backspace）-直到表格底下的输入框里的文字删除-点击回车-完成删除文本； 
 
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E8%BE%93%E5%85%A5.png)
 
 
-4、支持快捷键保存wps文档  
+4、支持快捷键保存文档  
     ctrl + s 选择路径和文件名，保存文件。
 
 5、支持打印相应文档    - ctrl + p 选择本地打印服务， 点击打印。
@@ -76,7 +76,7 @@
 
 26、支持格式刷功能；
 
-27、支持清楚格式、超链接、批注等功能；
+27、支持清除格式、超链接、批注等功能；
 
 28、支持插入图形功能；择单元格-视图-插入-形状-完成；
 
