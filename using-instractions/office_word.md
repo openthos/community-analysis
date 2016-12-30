@@ -6,12 +6,9 @@ word
 
 2.支持页面边距设置。单击“布局”选项卡上中的“页边距”按钮。
 
-
-
+![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80.png)
 
 3.支持插入“页眉和页脚”。
-
-![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80.png)
 
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B5%E7%9C%89%E5%92%8C%E9%A1%B5%E8%84%9A.png)
 
@@ -28,7 +25,7 @@ word
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B9%E7%9B%AE%E7%AC%A6%E5%8F%B7.png)
 
 
-7、能便捷地对图文进行排版编辑（如：设置字体、大小、颜色、加粗、居中）；  - 选中编辑区域-单击左键上方菜单栏-编辑-字体-进行设置；
+7、能便捷地对图文进行排版编辑（如：设置字体、大小、颜色、加粗、居中）；  选中编辑区域-单击左键上方菜单栏-编辑-字体-进行设置；
 
 8、支持复制、粘贴文本  - 找到选中文本地点-长按鼠标左键滑动滚轮或滑动鼠标往下拖-快捷键（复制ctrl+c）-（粘贴ctrl+v）或片选完成后点击上方的提示框-鼠标点击复制、粘贴；
 
