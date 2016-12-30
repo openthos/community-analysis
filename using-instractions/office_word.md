@@ -7,29 +7,34 @@ word
 2.支持页面边距设置。单击“布局”选项卡上中的“页边距”按钮。
 
 
-![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E6%8F%92%E5%85%A5.png)
+
 
 3.支持插入“页眉和页脚”。
 
+![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80.png)
 
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B5%E7%9C%89%E5%92%8C%E9%A1%B5%E8%84%9A.png)
 
 4.支持插入表格/图片/线框图/文本框/链接/批注/页码等。单击“插入”选项卡上中的“相关”按钮。
 
-
+![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E6%8F%92%E5%85%A5.png)
 
 5.支持快捷键保存word文档。  ctrl + s 选择路径和文件名，保存文件。
 6.标题的自动编号/项目符号。选中文本-点击开始-选中项目符号或者编号-即可。
 
-页面布局
 
-![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80.png)
+![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E8%87%AA%E5%8A%A8%E7%BC%96%E5%8F%B7.png)
+
+![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B9%E7%9B%AE%E7%AC%A6%E5%8F%B7.png)
+
 
 7、能便捷地对图文进行排版编辑（如：设置字体、大小、颜色、加粗、居中）；  - 选中编辑区域-单击左键上方菜单栏-编辑-字体-进行设置；
 
 8、支持复制、粘贴文本  - 找到选中文本地点-长按鼠标左键滑动滚轮或滑动鼠标往下拖-快捷键（复制ctrl+c）-（粘贴ctrl+v）或片选完成后点击上方的提示框-鼠标点击复制、粘贴；
 
 9、支持段落设置（如首行缩进/居中/向右对齐/向左对齐等）  - 选中编辑区域-单击左键上方菜单栏-开始-点击相应按键-进行编辑；
+
+![](https://github.com/openthos/community-analysis/blob/master/pic/office/9%E6%AE%B5%E8%90%BD%E8%AE%BE%E7%BD%AE.png)
 
 10、支持文档分享功能 。点击文件-共享-以链接/附件形式；
 
@@ -69,9 +74,4 @@ word
 
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E7%BB%98%E5%9B%BE.png)
 
-自动编号
-![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E8%87%AA%E5%8A%A8%E7%BC%96%E5%8F%B7.png)
-项目符号
-![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B9%E7%9B%AE%E7%AC%A6%E5%8F%B7.png)
-段落设置
-![](https://github.com/openthos/community-analysis/blob/master/pic/office/9%E6%AE%B5%E8%90%BD%E8%AE%BE%E7%BD%AE.png)
+
