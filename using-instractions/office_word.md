@@ -1,18 +1,17 @@
 # office_word的使用
 
-以下是图片：
 word
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/word.jpg)
 1.纸张大小或者方向设置。单击“布局”选项卡上中的“纸张大小或纸张方向”按钮。
 
 2.支持页面边距设置。单击“布局”选项卡上中的“页边距”按钮。
 
-插入
+
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E6%8F%92%E5%85%A5.png)
 
 3.支持插入“页眉和页脚”。
 
-页眉页脚
+
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B5%E7%9C%89%E5%92%8C%E9%A1%B5%E8%84%9A.png)
 
 4.支持插入表格/图片/线框图/文本框/链接/批注/页码等。单击“插入”选项卡上中的“相关”按钮。
