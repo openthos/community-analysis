@@ -34,7 +34,7 @@ qq打开链接（总是在内部打开，不是外链）
 
 3、	无法找到文件保存的位置，需要另存为指定。
 
-4、	共享文件操作，以附件形式分享会出现崩溃退出。附log：[20170103excel]（https://github.com/openthos/community-analysis/blob/master/daily-testresult/20170103excel）
+4、	共享文件操作，以附件形式分享会出现崩溃退出。附log：[20170103excel](https://github.com/openthos/community-analysis/blob/master/daily-testresult/20170103excel)
 
 5、	文档另存为，添加位置，选择任意一个后，无法返回。
 
