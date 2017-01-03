@@ -27,22 +27,22 @@ qq提示消息太长
 qq打开链接（总是在内部打开，不是外链）
 
 ## MS office 目前存在的问题：
-1、	打印时左上角显示保存为pdf。
+1、	excel打印时左上角显示保存为pdf。
 
 2、	给表格文字添加边框时，选择完表格，点击边框很难选中，光标经常会跳到fx的输入框中。
 
-3、	无法找到文件保存的位置，需要另存为指定。
+3、	excel无法找到文件保存的位置，需要另存为指定。
 
-4、	共享文件操作，以附件形式分享会出现崩溃退出。附log：[20170103excel](https://github.com/openthos/community-analysis/blob/master/daily-testresult/20170103excel)
+4、	excel共享文件操作，以附件形式分享会出现崩溃退出。附log：[20170103excel](https://github.com/openthos/community-analysis/blob/master/daily-testresult/20170103excel)
 
-5、	文档另存为，添加位置，选择任意一个后，无法返回。
+5、	excel文档另存为，添加位置，选择任意一个后，无法返回。
 
 6、  设置单元格大小时，光标也会经常跳到fx的输入框中，然后设置的大小就无效了。该问题十分影响使用，工具栏大多数均存在此问题。
 
 7、  绘图功能会导致excel无响应退出。
 
-8、  无法进行替换功能
+8、  excel无法进行替换功能
 
-9、  无格式刷功能
+9、  excel无格式刷功能
 
 10、  绘图功能导致word无响应退出。
