@@ -4,6 +4,7 @@
 
    在左侧点击打开图标 （第一次打开文档）点击新建空白表格，即完成第一次新建
    在左侧点击最近图标 （打开最近打开过的文档）右侧点击要打开的文档 （若要返回，点击窗口左上角的返回按钮）
+
 2、工作界面
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E5%B7%A5%E4%BD%9C%E7%95%8C%E9%9D%A21212.png)
   
