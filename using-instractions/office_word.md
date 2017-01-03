@@ -17,6 +17,7 @@ word
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E6%8F%92%E5%85%A5.png)
 
 5.支持快捷键保存word文档。  ctrl + s 选择路径和文件名，保存文件。
+
 6.标题的自动编号/项目符号。选中文本-点击开始-选中项目符号或者编号-即可。
 
 
