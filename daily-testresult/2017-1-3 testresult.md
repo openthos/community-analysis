@@ -29,8 +29,7 @@ qq打开链接（总是在内部打开，不是外链）
 ## MS office 目前存在的问题：
 1、	excel打印时左上角显示保存为pdf。
 
-2、	给表格文字添加边框时，选择完表格，点击边框很难选中，光标经常会跳到fx的输入框中。
-
+2、	给表格文字添加边框时，选择完表格，点击边框很难选中，光标经常会跳到fx的输入框中。(点击视图，去掉第一个编辑栏可以使操作正常很多）
 3、	excel无法找到文件保存的位置，需要另存为指定。
 
 4、	excel共享文件操作，以附件形式分享会出现崩溃退出。附log：[20170103excel](https://github.com/openthos/community-analysis/blob/master/daily-testresult/20170103excel)
