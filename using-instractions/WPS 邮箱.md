@@ -46,7 +46,7 @@
 - 23. 点击联系人可查看详情，列出往来邮件
 - 24. 联系人详情页可直接发送邮件
 - 25. 联系人详情页可对联系人归类
-- 26. 联系人详情页可对联系人信息编
+- 26. 联系人详情页可对联系人信息编辑
 - 27. 支持新增联系人，联系人界面右上角加号按钮,如图填写新增邮箱
 ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps_new.png)
 - 28. 支持新增组，联系人界面右上角加号按钮
