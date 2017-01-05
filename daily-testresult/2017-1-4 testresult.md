@@ -43,13 +43,13 @@ qq用二维码传送文件，点开二维码后退出qq崩溃
 
 [bug] 7、  绘图功能会导致excel无响应退出。
 
-[bug] 10、  绘图功能导致word无响应退出。
+[bug] 8、  绘图功能导致word无响应退出。
 
-[bug] 11、 powerpoint 添加图片等操作导致串口内显示不全（部分边界文字跑到屏幕外）
+[bug] 9、 powerpoint 添加图片等操作导致串口内显示不全（部分边界文字跑到屏幕外）
 
-[feature] 8、  excel无法进行替换功能
+[feature] 1、  excel无法进行替换功能
 
-[feature] 9、  excel无格式刷功能
+[feature] 2、  excel无格式刷功能
 
 
 ## 文件管理器（补充）：
