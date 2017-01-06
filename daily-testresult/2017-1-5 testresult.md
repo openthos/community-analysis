@@ -63,6 +63,8 @@
 
 [bug] 9、 powerpoint 添加图片等操作导致串口内显示不全（部分边界文字跑到屏幕外）
 
+[bug] 10、excel 总会自动推出；
+
 [feature] 1、  excel无法进行替换功能
 
 [feature] 2、  excel无格式刷功能
