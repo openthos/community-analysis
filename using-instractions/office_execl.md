@@ -8,7 +8,7 @@
 2、工作界面
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E5%B7%A5%E4%BD%9C%E7%95%8C%E9%9D%A21212.png)
   
-3、输入：使用键盘上的左、右、上、下方向键可以将光标移至各单元格上，这就选定了当前单元格，从而让您在各单元格中输入文字信息。选中单元格-键盘上删除键（快捷键Backspace）-直到表格底下的输入框里的文字删除-点击回车-完成删除文本； 
+3、输入：使用键盘上的左、右、上、下方向键可以将光标移至各单元格上，这就选定了当前单元格，从而让您在各单元格中输入文字信息。选中单元格-键盘上删除键（快捷键Backspace）-直到表格底上面的输入框里的文字删除-点击回车-完成删除文本； 
 
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E8%BE%93%E5%85%A5.png)
 
