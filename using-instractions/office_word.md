@@ -62,7 +62,7 @@ word
 
 23、支持打印相应文档； 
 
-24、支持拼音简写功能。点击文件-审阅-拼音简写-即可完成；
+24、支持拼音检查功能。点击文件-审阅-拼音简写-即可完成；
 
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E6%8B%BC%E9%9F%B3%E7%AE%80%E5%86%99.png)
 
