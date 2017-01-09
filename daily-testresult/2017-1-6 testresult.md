@@ -177,6 +177,9 @@ WPS邮箱初次登录对于有的邮箱是登录不上的，需要去Web网页�
 
 [feature]word文档中不能插入excel快捷方式，PC版的有此功能，我们没有；
 
+[feature]ctrl+p打印，word支持，excel和ppt不支持
+
+
 # 图库
 ### 一般
 [bug]左右切换可以鼠标滑动，但键盘的左右键不管用；
