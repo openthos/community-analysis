@@ -73,7 +73,7 @@
 
 [feature]excel 横的列表栏右键可以插入单元格，竖的列表栏右键没有插入列表功能；
 
-[feature]打印快捷键ctrl+p 不支持；
+[feature]打印快捷键ctrl+p 不支持；(word不支持，excel和ppt支持)
 
 [feature]打印缺少“正在打印...“这种提示；
 
