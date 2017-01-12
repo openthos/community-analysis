@@ -1,7 +1,6 @@
 # WPS使用说明书
-## Note：  
 
-![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps.png)
+
 
 ### wps首页功能：  
 - 1、使用wps打开文档
@@ -9,6 +8,8 @@
   - 方法一：在左侧点击“打开”图标（第一次打开文档）—— 查找打开文件的位置(如一个任意目录下的文件在“平板”内查找点击路径查找）；
   
   - 方法二：在左侧点击“最近”图标（打开最近打开过的文档）—— 点击要打开的文档（若要返回，点击窗口左上角的返回按钮）；
+  
+  ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/wps.png)
   
 - 2、支持新建文档
 
@@ -39,12 +40,16 @@
   - 上方菜单栏-文件-分享-文本发送／文档发送／截屏发送；
 - 8、支持文档加密
   - 文件-加密-输入密码-确认密码-确定；
-![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-15-52-56.png)
+
 - 9、可另存为PDF格式；
   - 上方菜单栏-单击文件-另存为-出现弹框，单击右下角的倒三角选择PDF-保存；
-![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-16-03-55.png)
+  
+  ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-15-52-56.png)
+
 - 10、支持插入图片；
   - 鼠标放置要插入的位置-上方菜单栏-单击插入-单击图片-出现弹框-选择用户图库-插入；
+  ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-16-03-55.png)
+  
 - 11、支持插入表格；
   - 鼠标放置要插入的位置-上方菜单栏-单击插入-表格-选择样式-确定；
 - 12、支持插入形状；
