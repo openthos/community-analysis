@@ -2,7 +2,7 @@
 
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/ppt%E7%95%8C%E9%9D%A2.jpg)
 
-1、支持打开ppt。点击右键-打开-ppt-完成。
+1、支持打开ppt。点击文件-打开-ppt-完成。
 
 2、支持新建文档。点击文件-新建-空白文档或模板-完成。
 
