@@ -105,9 +105,12 @@
 - 10、编辑文本／删除文本；    
   - 鼠标选中单元格-输入文本-文本会出现在表格底下的输入框里-点回车-文本会输入到选中的单元格中；
   - 鼠标选中单元格-键盘上删除键（快捷键Backspace）-直到表格底下的输入框里的文字删除-点击回车-完成删除文本；
-![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-17-09-25.png)
+
 - 11、支持自动换行功能；
   - 鼠标选中编辑的内容-上方菜单栏-单元格-单击自动换行-完成；
+  
+  ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-17-09-25.png)
+  
 - 12、支持合并单元格功能
   - 鼠标选中编辑的内容-上方菜单栏-单元格-单击合并拆分-完成；
 - 13、支持插入单元格功能；
