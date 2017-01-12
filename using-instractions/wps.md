@@ -60,10 +60,13 @@
 - 14、支持阅读器功能；
 - 15、支持对文档的字数统计功能；
 - 16、支持对文档阅读的设置背景色功能；
-![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-16-14-57.png)
-![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-16-15-07.png)
+
 - 17、支持查找、替换文字功能；
   - 鼠标放置要插入的位置-上方菜单栏-查看-查找／替换-进行编辑-确定；
+  
+  ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-16-14-57.png)
+![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-16-15-07.png)
+  
 - 18、支持文档符号和多级符号的插入；
 - 19、支持对文本样式的编辑；
 - 20、支持页面背景色的设置；
