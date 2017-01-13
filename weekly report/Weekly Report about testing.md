@@ -44,14 +44,17 @@
        2、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）及结果汇总
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
        3、周三，五与各组核对工作进展。周五 与各组商议制定下周计划
-       4、周四，五两天 组织测试组将用户手册全部过一遍。
+
+
 ## 周生强
 本周工作内容：
 
        1、测试和复现目前bug
        2、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
-       3、周四，五两天 将用户手册分配的章节
+
+
+
 ## 张琳苹
 本周工作内容：
 
@@ -63,10 +66,14 @@
 
        1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
-       2、周四，五两天 将用户手册分配的章节
-       
+
 ## 张捷
+
 
        1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
-       2、周四，五两天 将用户手册分配的章节      
+       2、每日社区更新；
+       3、准备春节期间微信内容；
+       4、本周3篇的微信发布；
+       5、用新发的手机号注册百度帐号进行每日百度贴吧、百度文库的文档上传；
+       
