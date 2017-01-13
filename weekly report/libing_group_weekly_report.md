@@ -39,11 +39,14 @@
 ###  本周总结  
 
       工作简述:
-             1.ota升级：md5校验出现问题，重构md5校验代码。
-             2.ota升级：ota升级弹出dialog超出应用窗口,优化dialog代码。
-             3.otalauncher:
-      bug:
+             本周完成工作：
+             1.ota：md5校验出现问题，重构md5校验代码。
+             2.ota BUG(833,567):弹出dialog超出应用窗口，优化代码。
+             3.otalauncher BUG :桌面文件及文件夹重命名时，delete,shift+delete操作失误。
+     
    
 ### 下周任务计划:
-     
+     1.处理 bug：桌面在快捷键下，ctrl+a，ctrl+c，ctrl+x， ctrl+v，f2, f5错误操作。
+      2.磁盘存储：右键菜单。
+      3.解决与自己模块相关的bug。
       . 
