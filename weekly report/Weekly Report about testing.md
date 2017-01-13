@@ -20,15 +20,16 @@
 
 ## 叶雷
 
-       1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库）及结果汇总。 
-       2、用户手册的pdf版本制作
-       3、每周1，3，5微信内容准备
-       4、每天论坛内容维护
-       5、每天客户电脑问题交流
+       1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库）及结果汇总。  
        
 ## 张捷   
 
-       1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库）及结果汇总。  
+       1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库）及结果汇总；
+       2、每日社区论坛、博客更新；
+       3、百度贴吧、百度文库文档上传；
+       4、每日的微信发布；
+       5、用户礼品的邮寄；
+       6、用户手册PDF的转格式；
 ---------------------------------------------------------------------------------------------------------
 
 # 2017-01-09~~2017-01-13 本周工作总结
@@ -64,12 +65,7 @@
 
        1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
-       
-       2、3篇微信内容发放
-       3、用户手册内容的更新与修改
-       4、每日客户见面交流指导
-       5、论坛内容正常更新维护
-       
+
 ## 张捷
 
 
