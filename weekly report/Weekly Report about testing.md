@@ -63,8 +63,9 @@
 
        1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
-       2、周四，五两天 将用户手册分配的章节2## 张捷
-
+       2、周四，五两天 将用户手册分配的章节
+       
+## 张捷
 
        1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
