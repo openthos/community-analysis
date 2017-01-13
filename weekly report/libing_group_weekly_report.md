@@ -39,6 +39,9 @@
 ###  本周总结  
 
       工作简述:
+             1.ota升级：md5校验出现问题，重构md5校验代码。
+             2.ota升级：ota升级弹出dialog超出应用窗口,优化dialog代码。
+             3.otalauncher:
       bug:
    
 ### 下周任务计划:
