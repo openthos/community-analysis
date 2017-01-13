@@ -20,7 +20,11 @@
 
 ## 叶雷
 
-## 张捷       
+       1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库）及结果汇总。  
+       
+## 张捷   
+
+       1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库）及结果汇总。  
 ---------------------------------------------------------------------------------------------------------
 
 # 2017-01-09~~2017-01-13 本周工作总结
@@ -40,7 +44,7 @@
 本周工作内容：
 
        1、测试和复现目前bug
-       2、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）及结果汇总
+       2、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
 
 
@@ -54,4 +58,11 @@
 
 ## 叶雷
 
+       1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
+       https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
+
 ## 张捷
+
+
+       1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
+       https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
