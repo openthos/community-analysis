@@ -69,7 +69,7 @@
 
 ## 张捷
 
-
+```
        1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
        2、每日社区更新；
@@ -77,3 +77,4 @@
        4、本周3篇的微信发布；
        5、用新发的手机号注册百度帐号进行每日百度贴吧、百度文库的文档上传；
        
+```
