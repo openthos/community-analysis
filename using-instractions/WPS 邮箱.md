@@ -7,7 +7,7 @@
  ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/tmp_4543-Screenshot_2016-12-27-15-54-231526350674.png) 
  
 - 遇到无法登录时：
-  - WPS邮箱初次登录对于有的邮箱是登录不上的，需要去Web网页版邮箱进行开通设置，步骤如下：网页版邮 —— > 设置 —— > 左侧列表中点击“POP3／SMTP／IMAP“—— > 在中间面板中√的地方都打上√ —— > 保存 —— > 再在左侧列表中点击 “客户端授权密码“ —— > 在中间面板设置“开启“  —— > 自行设置授权密码 —— > 完成后重新登录即可。如图：
+  - WPS邮箱初次登录对于有的邮箱是登录不上的，需要去Web网页版邮箱进行开通设置，步骤如下：网页版邮箱 —— > 设置 —— > 左侧列表中点击“POP3／SMTP／IMAP“—— > 在中间面板中√的地方都打上√ —— > 保存 —— > 再在左侧列表中点击 “客户端授权密码“ —— > 在中间面板设置“开启“  —— > 自行设置授权密码 —— > 完成后重新登录即可。如图：
   
  ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/tmp_4426-Screenshot_2017-01-05-11-17-56-464580284.png)
 
