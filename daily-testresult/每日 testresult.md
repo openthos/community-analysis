@@ -55,8 +55,6 @@
 
 [bug]excel\Word 快捷键ctrl + s 保存文件，没提示选择路径，无法知道保存到哪；
 
-[bug]绘图功能会导致excel无响应退出。
-
 [bug]绘图功能导致word无响应退出。
 
 [bug]excel 总是无缘无故自动退出；
