@@ -53,9 +53,7 @@
 
 [bug]excel\Word 快捷键ctrl + s 保存文件，没提示选择路径，无法知道保存到哪；
 
-[bug]绘图功能导致word无响应退出。
-
-[bug]excel 总是无缘无故自动退出；
+[bug]绘图功能在wrod中可以画，鼠标松开线条也消失，在word中是无法使用的，但在excel中是可以的用的。
 
 [feature]无法自动换行
 
