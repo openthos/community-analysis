@@ -56,8 +56,6 @@
 
 [bug]excel\Word 快捷键ctrl + s 保存文件，没提示选择路径，无法知道保存到哪；
 
-[bug]excel共享文件操作，以附件形式分享会出现崩溃退出。附log：[20170103excel](https://github.com/openthos/community-analysis/blob/master/daily-testresult/20170103excel)
-
 [bug]绘图功能会导致excel无响应退出。
 
 [bug]绘图功能导致word无响应退出。
