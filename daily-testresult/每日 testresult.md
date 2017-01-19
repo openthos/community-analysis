@@ -68,6 +68,8 @@
 
 [bug]powerpoint 添加图片等操作导致串口内显示不全（部分边界文字跑到屏幕外）
 
+[bug]Excel偶尔会出现闪退、打不开现象
+
 [bug]ctrl+鼠标滚轮，放大缩小不太灵敏；
 
 [feature]excel无法进行替换功能
