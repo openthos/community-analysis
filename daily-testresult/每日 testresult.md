@@ -64,6 +64,8 @@
 
 [bug]excel 总是无缘无故自动退出；
 
+[feature]无法自动换行
+
 ### 一般
 [bug]excel打印时左上角显示保存为pdf。
 
