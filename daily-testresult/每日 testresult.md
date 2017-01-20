@@ -73,8 +73,6 @@
 
 [bug]Excel偶尔会出现闪退、打不开现象
 
-[bug]ctrl+鼠标滚轮，放大缩小不太灵敏；
-
 [feature]excel无法进行替换功能
 
 [feature]excel无格式刷功能
