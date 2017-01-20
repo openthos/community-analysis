@@ -35,7 +35,8 @@
 
        1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库[每日着重两个应用]）
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E6%AF%8F%E6%97%A5%20testresult.md
-
+       2、六个系统对比测试（负责remix系统）
+       
 ## 张捷
 
 ```
