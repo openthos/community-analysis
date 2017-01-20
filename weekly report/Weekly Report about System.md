@@ -13,7 +13,7 @@
 ## 陈威  
 ### 本周总结  
 1. 撰写windows环境下，手动安装OPENTHOS的指南  
-2. 研究windows的U盘多分区管理及mount（目前通过移植sgdisk能进行分区，但仍然不能格式化及mount第二分区）  
+2. 研究windows的U盘多分区管理及mount（目前通过移植sgdisk能进行分区，但仍然不能格式化及mount第二分区）   
 ### 后续计划
 1. 先提供一个单FAT32分区的安装工具  
 2. 研究一下chromeos下android（包括APK及studio）的情况  
