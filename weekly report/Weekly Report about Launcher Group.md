@@ -93,7 +93,7 @@
 
 |id|发现时间|说明|
 |---|---|---|  
-|bug 935|16-12-27|桌面在快捷键下，ctrl+a，ctrl+c，ctrl+x， ctrl+v，f2, f5错误操作||
+|bug 935|16-12-27|桌面在快捷键下，ctrl+a，ctrl+c，ctrl+x， ctrl+v，f2, f5,delete,shift+delete错误操作||
 
 # 2017-01-22 ~ 2017-01-26工作计划
 ## 王之旭
