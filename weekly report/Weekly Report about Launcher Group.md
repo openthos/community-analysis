@@ -1,7 +1,7 @@
 [2017-01-22 ~ 2017-01-26工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-22--2017-01-26%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-01-16 ~ 2017-01-20工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-01-16 ~ 2017-01-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)
+[2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
 
@@ -10,6 +10,7 @@
   - bug: 云服务-新建文件夹提示“文件名含不合法字符“
   - 当光标在地址栏或者搜索栏时，ctrl+鼠标选择文件，光标仍在地址栏，且复制、删除等快捷键均无效
   - 桌面的应用窗口会遮挡压缩、删除、属性的弹出框。
+  - 重构代码，将桌面图标对象优化，目的简洁，便于扩展与修改
 
 # 2017-01-16 ~ 2017-01-20个人周报
 ## 王之旭
