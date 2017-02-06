@@ -6,7 +6,9 @@
                          3）还存在未关闭的问题
        2、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库）及结果汇总
        3、周三，五与各组核对工作进展。周五 与各组商议制定下周计划
-
+       4、flash for openthos 验证
+       5、monkey工具调研使用到openthos测试中
+       
 ## 周生强   
 
        1、测试和复现目前bug
