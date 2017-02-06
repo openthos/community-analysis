@@ -14,7 +14,7 @@
   
 ## 陈鹏
   - fileManager 多个U盘的支持
-  - framework 窗口拖拽改变大小
+  - framework 窗口拖拽改变大小
   
 ## 卢宁
   - 桌面重命名
