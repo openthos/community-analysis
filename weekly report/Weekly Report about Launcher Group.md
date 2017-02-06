@@ -18,7 +18,7 @@
   
 ## 陈鹏
   - fileManager 多个U盘的支持
-  - framework 窗口拖拽改变大小文件
+  - framework 窗口拖拽改变大小文件
   
 ## 卢宁
   - 多窗口状态，支持中文重命名
