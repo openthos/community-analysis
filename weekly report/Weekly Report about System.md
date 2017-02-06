@@ -12,6 +12,7 @@ dev.openthos.org的https证书被修改了？之前一直使用letsencrypt提供
 ```
 ## 陈威
 * 完成windwos版安装工具的开发  
+
 # 2017年01月16日-01月20日
 ## 王建兴
 ### 本周总结
