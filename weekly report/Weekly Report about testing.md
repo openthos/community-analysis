@@ -13,15 +13,15 @@
 
        1、测试和复现目前bug
        2、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库）及结果汇总。  
+       3、验证名下所有BUG
  
 ## 张琳苹    
 
        1、修改完善lkp中微信的测试用例
        2、完善summary结果展示
-       3、测试和复现目前bug
+     
 
 ## 叶雷
-
        1、每日测试（FM,Firefox,office,wps,input,QQ,Wechat,图库）及结果汇总。  
        
 ## 张捷   
