@@ -19,7 +19,7 @@
 ## 张琳苹    
 
        1、修改集成在lkp中的wechat测试用例
-       2、将QQ集成到lkp中并形成文档
+       2、将QQ、word、calc、toutiao集成到lkp中
        3、修改其余测试用例
      
 
