@@ -1,21 +1,43 @@
+[2017-02-13 ~ 2017-02-17工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-02-13--2017-02-17%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
+[2017-01-22 ~ 2017-02-10个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-22--2017-02-10%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-01-22 ~ 2017-02-10工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-22--2017-02-10%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-01-16 ~ 2017-01-20工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-01-16 ~ 2017-01-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
+# 2017-02-13 ~ 2017-02-17工作计划
+## 王之旭
+  
+## 陈鹏
+  
+## 卢宁
+  
+## 罗俊欢
+  
+## 曾菲菲
+  
+## 周怡洁
+
 # 2017-01-22 ~ 2017-02-10个人周报
 ## 王之旭
 本周已完成任务<br />
 
 |id|发现时间|说明|
-|---|---|---|  
+|---|---|---|
+|||bug: 云服务-新建文件夹提示“文件名含不合法字符“|
+|bug 695|17-01-17|桌面的应用窗口会遮挡压缩、删除、属性的弹出框。|
+|task 746|17-01-22|重构代码，将桌面图标对象优化，目的简洁，便于扩展与修改
+|bug 1007|17-01-19|桌面重命名失败
+|task 748|17-02-09|重构桌面多选点击事件
 
 本周未完成任务<br />
 
 |id|发现时间|说明|未完成原因|
 |---|---|---|---|
-
+|bug 986|17-01-09|当光标在地址栏或者搜索栏时，ctrl+鼠标选择文件，<br />光标仍在地址栏，且复制、删除等快捷键均无效|优先级较低，还没处理|
+|task 749|17-02-06|bug：桌面重命名状态下，点击其他图标的名字部位，切换无效|由于之前多选逻辑代码有问题，故先重构多选|
+|task 750|17-02-06|bug:桌面重命名状态下，不可以多次点击文字部分切换光标位置|由于之前多选逻辑代码有问题，故先重构多选|
 
 ## 陈鹏
 本周已完成任务<br />
@@ -73,6 +95,7 @@
 
 |id|发现时间|说明|未完成原因|
 |---|---|---|---|
+
 # 2017-01-22 ~ 2017-02-10工作计划
 ## 王之旭
   - bug: 云服务-新建文件夹提示“文件名含不合法字符“
@@ -85,18 +108,20 @@
     - 特殊字符失败
   - bug：重命名状态下，点击其他图标的名字部位，切换无效
   - bug:重命名状态下，不可以多次点击文字部分切换光标位置
+  - 重构桌面多选点击事件
   
 ## 陈鹏
-  - fileManager 多个U盘的支持
+  - FileManager 多个U盘的支持
   - framework 窗口拖拽改变大小文件
   
 ## 卢宁
   - 多窗口状态，支持中文重命名
   - 文件管理器视图优化
-  - 重命名时新文件名合法性判断
+  - 文件管理器重命名时新文件名合法性判断
   
 ## 罗俊欢
   - U盘格式化
+  - U盘真卸载
   
 ## 曾菲菲
   - 盘符右键菜单
