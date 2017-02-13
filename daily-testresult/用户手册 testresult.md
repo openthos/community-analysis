@@ -58,8 +58,6 @@
 
 [bug]excel鼠标在菜单栏，总是出现fx让编辑的提示，导致功能变灰无法快速使用；
 
-[feature]无法自动换行
-
 [feature]PPT右上角无“- 口 X“功能，导致无法对此功能进行操作；
 
 
@@ -67,7 +65,7 @@
 
 [bug]Excel偶尔会出现闪退、打不开现象
 
-[feature]excel无法进行替换功能
+[feature]excel无法进行查找、替换功能
 
 [feature]excel无格式刷功能
 
