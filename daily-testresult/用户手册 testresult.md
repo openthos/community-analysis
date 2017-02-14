@@ -195,7 +195,7 @@
 
 [feature]ctrl+p打印，word支持，excel和ppt不支持
 
-[feature]下载的zip压缩包
+[feature]下载的zip压缩包解压后docs的文档统一用WPS打开，有支持WPS打开可正常查看、可编辑，有默认Word打开的可正常查看、不可编辑；
 
 # 图库
 ### 重要
