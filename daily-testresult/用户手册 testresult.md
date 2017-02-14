@@ -195,7 +195,8 @@
 
 [feature]ctrl+p打印，word支持，excel和ppt不支持
 
-[feature]下载的docs
+[feature]下载的zip压缩包
+
 # 图库
 ### 重要
 快图浏览设为默认，去除默认图库
