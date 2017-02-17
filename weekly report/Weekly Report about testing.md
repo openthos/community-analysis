@@ -4,16 +4,19 @@
        2、补充测试任务（wps,office,fennec,音视频），并负责测试fennec模块（50个）网站测试。汇总测试结果并发送邮件
        3、整理本周两轮全面测试结果
        4、整理本周解决的问题列表并发达邮件
-       5、
+       5、筛选简历，面试。本周共招到一名合适人员，下周一入职
+       6、给客户升级系统，去现场帮忙解决问题，记录问题汇总并发出。
+       7、整理2017-03-05 需要修复的BUG列表
+       https://github.com/openthos/community-analysis/blob/master/stage/2017-03-05%E5%89%8D%E9%9C%80%E8%A7%A3%E5%86%B3%E7%9A%84BUG%E5%88%97%E8%A1%A8.md
        
 ## 周生强   
        1、测试和复现目前bug
-       2、测试huangzhiwei提供的更新kernel、hodini。mesa的img版本，编写测试结果  
-       3、平板安装openthos；帮助新员工安装系统
- 
+       2、帮忙董鹏一起定位flash问题（两天）
+       3、教实习生使用nitrate（用例系统）-实习生帮忙将用例增加到nitrate中
+        
 ## 张琳苹    
 
-       1、修改集成在lkp中的wechat测试用例
+       1、参与两轮全面测试
        2、将QQ、word、calc、toutiao集成到lkp中
        3、修改其余测试用例
 
