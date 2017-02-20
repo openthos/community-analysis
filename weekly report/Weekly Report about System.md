@@ -1,7 +1,11 @@
+### 系统组状态描述  
+<https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
+### 系统组的任务分配  
+<https://github.com/openthos/system-analysis/blob/master/system/Task.md>
 # 2017年02月２０日-02月２４日
 ## 本周任务
 U盘版系统的安装，bug修复，文档撰写  
-VDI client管理  
+VDI client管理  https://github.com/openthos/community-analysis/graphs
 # 2017年02月１３日-02月１７日
 ## 王建兴
 ```
