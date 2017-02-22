@@ -65,6 +65,8 @@
 
 ### 一般
 
+[feature]excel插入-表格-样式选择，“样式选择“功能不管用；
+
 [feature]excel无法进行查找、替换功能
 
 [feature]excel无格式刷功能
