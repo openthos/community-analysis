@@ -1,7 +1,7 @@
 # 2017-02-20~~2017-02-24 工作总结
 ## 刘明明
        1、20170220,20170223全面测试任务分配.
-       2、整理本周两轮全面测试结果
+       2、参与两轮（20170220,20170223）全面测试（任务栏，通知栏等模块）;整理本周两轮全面测试结果
        https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%20testresult.md
        3、整理本周解决的问题列表并发达邮件
        https://github.com/openthos/app-testing-results/blob/master/%E6%AF%8F%E6%97%A5%E9%87%8D%E7%82%B9%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86.md
