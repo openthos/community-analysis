@@ -5,6 +5,7 @@
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
 # 2017年02月２０日-02月２４日
 ## 本周工作总结
+周二做出来了第一版，测试出来了一些问题;其中读写速度慢的问题最为严重，我们正在改进该问题,下周一应该可以正常使用.
 ## 陈威  
 1.在windows上生成U盘系统工具制作;  
 2.针对U盘系统做了大量测试;  
