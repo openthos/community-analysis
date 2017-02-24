@@ -10,7 +10,7 @@
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
-# 2017-02-20 ~ 2017-02-24工作计划
+# 2017-02-27 ~ 2017-03-03工作计划
 ## 王之旭
   - 解压缩中文路径乱码报错问题 	
   - 桌面增加方向键选择
@@ -44,7 +44,6 @@
 
 |id|发现时间|说明|
 |---|---|---|
-|||思考云服务使用场景
 |||Launcher 卡顿
 |||去掉桌面和文件管理器不合理的重命名规则
 |||当光标在地址栏或者搜索栏时，ctrl+鼠标选择文件，光标仍在地址栏，且复制、删除等快捷键均无效
