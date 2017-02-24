@@ -4,6 +4,19 @@
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
 # 2017年02月２０日-02月２４日
+## 本周工作总结
+## 陈威  
+1.在windows上生成U盘系统工具制作;  
+2.针对U盘系统做了大量测试;  
+3.在windows上完成了legacy和uefi引导合一的工作  
+## 肖络元  
+1.调查U盘系统制作的方法，提供了很好的思路  
+2.尝试了移植parted工具到windows  
+3.live方式下保存数据的工作，进度90%  
+## 王建兴  
+1.不同版本的U盘系统测试，调查FAT32+image文件读写速度慢的问题  
+2.seafile暴露出的一些问题调查  
+3.VDI工具试用  
 ## 本周任务
 U盘版系统的安装，bug修复，文档撰写  
 VDI client管理  https://github.com/openthos/community-analysis/graphs
