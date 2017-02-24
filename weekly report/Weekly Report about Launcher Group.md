@@ -1,3 +1,4 @@
+[2017-02-27 ~ 2017-03-03工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-02-27--2017-03-03%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-02-20 ~ 2017-02-24个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-02-20--2017-02-24%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-02-20 ~ 2017-02-24工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-02-20--2017-02-24%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-02-13 ~ 2017-02-17个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-02-13--2017-02-17%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
@@ -9,18 +10,39 @@
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
+# 2017-02-20 ~ 2017-02-24工作计划
+## 王之旭
+## 陈鹏
+## 卢宁
+## 罗俊欢
+## 曾菲菲 & 周怡洁
+## 曹海洋 & 王超越
+
 # 2017-02-20 ~ 2017-02-24个人周报
 ## 王之旭
 本周已完成任务<br />
 
 |id|发现时间|说明|
 |---|---|---|
-
+|||思考云服务使用场景
+|||Launcher 卡顿
+|||去掉桌面和文件管理器不合理的重命名规则
+|||当光标在地址栏或者搜索栏时，ctrl+鼠标选择文件，光标仍在地址栏，且复制、删除等快捷键均无效
+|||989 云服务-新建文件夹提示“文件名含不合法字符“
+|||优化桌面和文件管理器重命名规则
+|||创建云服务库，可能导致奔溃
+|||设置方面 云服务支持
+|||[bug]地址栏一删就全部删除了，无法一个个字符删除。导致无法微改路径
+|||bug：文件管理器空白处右键弹出打开菜单
+|||[bug]1019 桌面-右键-新建文件-（doc,txt,xls,ppt）客户看不懂。需改为word,excel,powerpoint,文本文件字样
+|||文件管理器有时候框选失败
 
 本周未完成任务<br />
 
 |id|发现时间|说明|未完成原因|
 |---|---|---|---|
+|||解压缩中文路径乱码报错问题
+|||桌面增加方向键选择
 
 ## 陈鹏
 本周已完成任务<br />
