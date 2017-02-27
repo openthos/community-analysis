@@ -3,6 +3,12 @@
 <https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
+# 2017年02月２7日-03月03日
+## 本周计划
+1.U盘启动的系统运行流畅，接近硬盘运行的效果  
+2.OpenThos中FAQ清理  
+检查FAQ中的问题，能够集成进入openthos中的集成到openthos中
+3.openthos库整理，openthos库的manifest目前过于混乱，重新整理以利于升级  
 # 2017年02月２０日-02月２４日
 ## 本周工作总结
 周二做出来了第一版，测试出来了一些问题;其中读写速度慢的问题最为严重，我们正在改进该问题,下周一应该可以正常使用.
