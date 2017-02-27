@@ -7,7 +7,7 @@
 ## 本周计划
 1.U盘启动的系统运行流畅，接近硬盘运行的效果  
 2.OpenThos中FAQ清理  
-检查FAQ中的问题，能够集成进入openthos中的集成到openthos中
+检查FAQ中的问题，能够集成进入openthos中的集成到openthos中  
 3.openthos库整理，openthos库的manifest目前过于混乱，重新整理以利于升级  
 # 2017年02月２０日-02月２４日
 ## 本周工作总结
