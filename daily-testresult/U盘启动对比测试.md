@@ -15,15 +15,10 @@ openthos| | | | |
 remix-文件管理器| | | | |
 remix-浏览器| | | | |
 remix-office| | | | |
-remix-QQ| | | | |
-remix-Wechat| | | | |
 phoenix-文件管理器| | | | |
 phoenix-浏览器| | | | |
-phoenix-office| | | | |
-phoenix-QQ| | | | |
 phoenix-Wechat| | | | |
 openthos-文件管理器| | | | |
 openthos-浏览器| | | | |
 openthos-office| | | | |
-openthos-QQ| | | | |
-openthos-Wechat| | | | |
+
