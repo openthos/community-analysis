@@ -10,32 +10,20 @@ remix| | | | |
 phoenix| | | | |
 openthos| | | | |
 
-文件管理器| 64G | SanDisk-32G | Netac-32G | 16G | 
+应用使用情况| 64G | SanDisk-32G | Netac-32G | 16G | 
 -----|-----|-----|-----|-----|
-remix| | | | |
-phoenix| | | | |
-openthos| | | | |
-
-浏览器| 64G | SanDisk-32G | Netac-32G | 16G | 
------|-----|-----|-----|-----|
-remix| | | | |
-phoenix| | | | |
-openthos| | | | |
-
-office| 64G | SanDisk-32G | Netac-32G | 16G | 
------|-----|-----|-----|-----|
-remix| | | | |
-phoenix| | | | |
-openthos| | | | |
-
-QQ| 64G | SanDisk-32G | Netac-32G | 16G | 
------|-----|-----|-----|-----|
-remix| | | | |
-phoenix| | | | |
-openthos| | | | |
-
-微信| 64G | SanDisk-32G | Netac-32G | 16G | 
------|-----|-----|-----|-----|
-remix| | | | |
-phoenix| | | | |
-openthos| | | | |
+remix-文件管理器| | | | |
+remix-浏览器| | | | |
+remix-office| | | | |
+remix-QQ| | | | |
+remix-Wechat| | | | |
+phoenix-文件管理器| | | | |
+phoenix-浏览器| | | | |
+phoenix-office| | | | |
+phoenix-QQ| | | | |
+phoenix-Wechat| | | | |
+openthos-文件管理器| | | | |
+openthos-浏览器| | | | |
+openthos-office| | | | |
+openthos-QQ| | | | |
+openthos-Wechat| | | | |
