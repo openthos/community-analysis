@@ -1,7 +1,7 @@
 制作镜像的时间| 64G | SanDisk-32G | Netac-32G | 16G | 
 -----|-----|-----|-----|-----|
 remix|30s |1m22s |1m26s |3m2s |
-phoenix|1)3m30s<br>2)remix工具+P-iso:26s |5m36s |6m21s |11m45s |
+phoenix|1)3m30s<br>2)remix工具+P-iso: 26s |1)5m36s<br>2)remix工具+P-iso:38s |1)6m21s <br>2)remix工具+P-iso: 1m17s|1)11m45s<br>2)remix工具+P-iso:1m51s |
 openthos|1m25s |6m45s |5m22s |11m38s |
 
 启动时间| 64G | SanDisk-32G | Netac-32G | 16G | 
