@@ -18,7 +18,7 @@ remix-office|不卡顿<br> ppt全屏播放<br> excel无穿透效果，可正常�
 phoenix(live)-文件管理器| |不卡顿<br> 菜单操作正常<br> 快捷键操作正常<br> 支持FM多开<br>支持拖拽 |不卡顿<br> 菜单操作正常<br> 快捷键操作正常<br> 支持FM多开<br>支持拖拽 | |
 phoenix(live)-浏览器| |不卡顿<br> 电脑版不支持视频播放，平板模式和手机模式支持<br> 没有滚动条<br> Fennec root以全屏模式打开，页面加载一会儿然后闪退<br>|不卡顿<br> 电脑版不支持视频播放，平板模式和手机模式支持<br> 没有滚动条<br> Fennec root以全屏模式打开，页面加载一会儿然后闪退<br> | |
 phoenix(live)-office| |不卡顿<br> ppt全屏播放<br> excel无穿透效果，可正常使用<br> |不卡顿<br> ppt全屏播放<br> excel无穿透效果，可正常使用<br> | |
-openthos-文件管理器|不卡顿<br> 菜单操作正常<br> 快捷键操作正常<br> 不支持FM多开<br>不支持拖拽<br> | | | |
-openthos-浏览器|不卡顿<br> 视频播放时会卡死，Fennec root崩溃退出<br> 有滚动条<br> | | | |
-openthos-office|不卡顿<br> ppt全屏播放<br> excel无穿透效果，可正常使用<br> | | | |
+openthos-文件管理器|不卡顿<br> 菜单操作正常<br> 快捷键操作正常<br> 不支持FM多开<br>不支持拖拽<br> |不卡顿<br> 菜单操作正常<br> 快捷键操作正常<br> 不支持FM多开<br>不支持拖拽<br> | | |
+openthos-浏览器|不卡顿<br> 视频播放时会卡死，Fennec root崩溃退出<br> 有滚动条<br> | 不卡顿<br> 视频播放时会卡死，Fennec root崩溃退出<br> 有滚动条<br>| | |
+openthos-office|不卡顿<br> ppt全屏播放<br> excel穿透FX，可正常使用<br> |不卡顿<br> ppt全屏播放<br> excel穿透FX，可正常使用<br> | | |
 
