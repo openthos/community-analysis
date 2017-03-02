@@ -3,7 +3,27 @@
 <https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
+# 2017年02月总结
+## 王建兴
+1.服务器正常运行的问题    
+dev.openthos.org的证书问题,seafile问题  
+185的同步问题，  
+180服务器坏了，重建docker环境等问题  
+2.黄志伟代码提交的同步,实验室内部ｓerver的升级    
+内外部同步的问题,内部升级的问题，重新打tag问题，董鹏的flash问题等    
+3.U盘系统问题   
+两个方案的尝试，测试,优化；目前仍然没有好的办法克服在一般的U盘上的运行卡顿问题   
+4.其他杂项问题  
+drm_gralloc支持VGA接口的clone模式  
+openthos下可以识别系统其他的硬盘分区，进度50%  
+wps的word字体问题,进度70%  
 # 2017年02月２7日-03月03日
+## 本周总结
+### 王建兴
+1.U盘系统运行的测试,尝试优化的调研；但目前来看瓶颈是卡在了U盘的物理读写速度上  
+2.drm_gralloc支持VGA接口的clone模式  
+3.openthos下可以识别系统其他的硬盘分区，进度50%  
+4.wps的word字体问题,进度70%  
 ## 本周计划
 1.U盘启动的系统运行流畅，接近硬盘运行的效果  
 2.OpenThos中FAQ清理  
