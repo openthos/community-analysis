@@ -6,7 +6,7 @@ openthos| | | | |
 
 启动时间| 64G | SanDisk-32G | Netac-32G | 16G | 
 -----|-----|-----|-----|-----|
-remix|3m16s |3m9s |13m | |
+remix|3m16s |3m9s |13m | 40m没有成功启动|
 phoenix| | | | |
 openthos| | | | |
 
