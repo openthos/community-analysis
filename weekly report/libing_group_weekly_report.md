@@ -1,3 +1,38 @@
+# 2017年02月27日-03月03日
+## 李兵
+### 本周总结:
+
+          工作简述:  
+              添加云服务导入导出功能提示并优化代码结构； 
+              调研解决当鼠标右击时dilog不能维持显示的问题；  
+              整理问档，完善交接任务；  
+               https://github.com/openthos/multiwin-analysis/blob/master/doc/lb/handover.md
+               https://github.com/openthos/setting-analysis/blob/master/lb/handover.md  
+               https://github.com/openthos/firtboot-config-analysis/blob/master/doc/summary/handover.md  
+               
+
+###下周任务计划  
+      
+
+
+## 周怡洁
+### 本周总结: 
+       工作简述:  bug：点击桌面空白处或其他文件，重命名失败,由于代码版本迭代，原来实现的部分功能失效.  
+         
+                                   
+ ### 下周任务计划  
+    
+            
+            
+## 曾非非
+### 本周总结: 
+               
+               
+       
+### 下周任务计划
+      
+        
+        
 # 2017年02月20日-02月24日
 ## 李兵
 ### 本周总结:
