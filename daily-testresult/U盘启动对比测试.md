@@ -8,7 +8,7 @@ openthos|1m25s |6m45s |5m22s |11m38s |
 -----|-----|-----|-----|-----|
 remix|3m16s |3m9s |13m | 40m没有成功启动|
 phoenix(live)| |1m17s |52s | |
-openthos|30s | | 31s| |
+openthos|30s |31s | | |
 
 应用使用情况| 64G | SanDisk-32G | Netac-32G | 16G | 
 -----|-----|-----|-----|-----|
