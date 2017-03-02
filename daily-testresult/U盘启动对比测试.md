@@ -1,14 +1,14 @@
 制作镜像的时间| 64G | SanDisk-32G | Netac-32G | 16G | 
 -----|-----|-----|-----|-----|
 remix|30s |1m22s |1m26s |3m2s |
-phoenix| | | | |
-openthos| | | | |
+phoenix|3m30s |5m36s | | |
+openthos|1m25s |6m45s |5m22s |11m38s |
 
 启动时间| 64G | SanDisk-32G | Netac-32G | 16G | 
 -----|-----|-----|-----|-----|
 remix|3m16s |3m9s |13m | 40m没有成功启动|
 phoenix(live)| |1m17s |52s | |
-openthos|30s | | | |
+openthos|30s | | 31s| |
 
 应用使用情况| 64G | SanDisk-32G | Netac-32G | 16G | 
 -----|-----|-----|-----|-----|
