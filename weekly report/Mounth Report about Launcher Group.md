@@ -49,3 +49,11 @@
   - 完成bug 1个
   - 重点
     - 无
+
+## 曹海洋
+  - 解决Bug：AppStore 标题栏不居中
+  - 解决Bug：FileManager右键菜单操作选项不合理
+  - 阅读FileManager代码
+  - 学习了如何使用AIDL实现进程间通信
+  - 学习View的事件分发及绘制机制
+  - 学习了Bitmap的高效加载和缓存机制
