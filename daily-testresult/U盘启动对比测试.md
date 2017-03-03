@@ -1,3 +1,4 @@
+## remix,phoenix,openthos在四类U盘上的测试对比
 制作镜像的时间| 64G | SanDisk-32G | Netac-32G | 16G | 
 -----|-----|-----|-----|-----|
 remix|30s |1m22s |1m26s |3m2s |
