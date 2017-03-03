@@ -17,6 +17,15 @@ dev.openthos.org的证书问题,seafile问题
 drm_gralloc支持VGA接口的clone模式  
 openthos下可以识别系统其他的硬盘分区，进度50%  
 wps的word字体问题,进度70%  
+## 陈威  
+## 主要工作  
+### U盘体验版开发
+1. 为openthos在livecd模式的基础新增了evaluation引导模式
+2. 针对evaluation模式开发了生成工具
+3. 代码做了大容量U盘的适配，fat32不支持超过32GB的分区，而作为uefi启动，fat32是必须使用的文件系统。
+4. 为统一uefi及legacy展开了研究，现U盘体验版已经同时支持在两种环境下启动。
+## 下一步工作  
+Xposed在Android X86-64体系下的移植
 # 2017年02月２7日-03月03日
 ## 本周总结
 ### 王建兴
