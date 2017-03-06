@@ -118,13 +118,6 @@
 [bug] 从桌面进行入回收站，进入后，左侧边栏中选中项不是‘回收站’ 
 
 ### 一般
-
-[bug 1042] 改变文件的后缀，图标不会立刻更新，必须刷新后才会改变 	
-
-[bug 1041] 在新建文件夹中粘贴剪切的文件异常 
-
-[bug 1040] 新建文件夹打开后右键异常 	
-
 [bug 1039] 压缩文件时的弹窗信息是Compressed:229275719 		
 
 [bug 1038] 弹窗显示的是上一次操作的信息 	
@@ -166,8 +159,6 @@
 [feature] 不支持邮箱图片放大，下载功能；   －－－－－－建议提高优先级
  
 [feature] 网页图片无法复制、无法保存，右键单击图片无任何反映（2016-1-5）
-
-[feature] FLASH支持
 
 # WPS邮箱
 
@@ -348,8 +339,6 @@
 
 # 设置
 
-[bug 1112] 以太网设置中切换模式可能会出现“设置无响应“ 或者是 “系统界面已停止运行“ 的错误
-
 [bug 820] 代理模式模块存在，输入数据不能保存且功能未实现。
 
 [bug 1045] 账户-添加账户-点击QQ不弹出相应的界面
@@ -389,6 +378,7 @@
 [feature] "设置"->"系统重置"　会导致系统问题,需重做
 
 # 其他问题汇总
-* [[物业客户使用反馈|https://github.com/openthos/community-analysis/blob/master/%E5%AE%A2%E6%88%B7%E5%8F%8D%E9%A6%88%E9%97%AE%E9%A2%98%E5%88%97%E8%A1%A8.md]]
+* [物业客户使用反馈|(https://github.com/openthos/community-analysis/blob/master/%E5%AE%A2%E6%88%B7%E5%8F%8D%E9%A6%88%E9%97%AE%E9%A2%98%E5%88%97%E8%A1%A8.md)]
+
 * [[刘总使用反馈及需求]|https://github.com/openthos/community-analysis/blob/master/meetings/2017-03-06%20meeting.md]
 
