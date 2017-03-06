@@ -385,3 +385,6 @@
 [feature] 以太网静态Ip设置无法保存，每次进入都需要重新输入，并且设置静态ip的功能未实现。
 
 [feature] "设置"->"系统重置"　会导致系统问题,需重做
+
+
+[物业客户使用反馈|（https://github.com/openthos/community-analysis/blob/master/%E5%AE%A2%E6%88%B7%E5%8F%8D%E9%A6%88%E9%97%AE%E9%A2%98%E5%88%97%E8%A1%A8.md） ]
