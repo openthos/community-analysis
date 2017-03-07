@@ -10,7 +10,6 @@
     点击文件-> 新建-> 空白文档或模板-> 完成   
 
   - 003 支持模板应用   
-    如果你很喜欢某个PPT的版式，那么很简单，你只需将那份PPT中其中一张幻灯片拷贝到你正在编辑的PPT中，然后通过选择版式，就可以很方便修改你所编辑的幻灯片版式。   
     选择开始-> 版式-> 选择相应的版式-> 确定   
   ![](https://github.com/openthos/community-analysis/blob/master/pic/office/ppt%E7%89%88%E5%BC%8F%E5%BA%94%E7%94%A8.png)   
 
