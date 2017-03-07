@@ -39,8 +39,9 @@
 - 008 支持文档加密
   - 文件->加密->输入密码->确认密码->确定；
 - 009 可另存为PDF格式；  
-![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-15-52-56.png)  
-  - 上方菜单栏->单击文件->另存为->出现弹框，单击右下角的倒三角选择PDF->保存；
+![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-15-52-56.png)   
+
+    - 上方菜单栏->单击文件->另存为->出现弹框，单击右下角的倒三角选择PDF->保存；
    
 - 010 支持插入图片；
   - 鼠标放置要插入的位置->上方菜单栏->单击插入->单击图片->出现弹框->选择用户图库->插入；
@@ -60,7 +61,8 @@
 - 017 支持查找、替换文字功能；  
 ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-16-14-57.png)  
 ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-16-15-07.png)  
-  - 鼠标放置要插入的位置->上方菜单栏->查看->查找／替换->进行编辑->确定；
+
+    - 鼠标放置要插入的位置->上方菜单栏->查看->查找／替换->进行编辑->确定；
   
 - 018 支持文档符号和多级符号的插入；
 - 019 支持对文本样式的编辑；
@@ -103,8 +105,10 @@
 
 - 011 支持自动换行功能；
   
-  ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-17-09-25.png)
-  - 鼠标选中编辑的内容->上方菜单栏->单元格->单击自动换行->完成；  
+  ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-17-09-25.png)  
+  
+    - 鼠标选中编辑的内容->上方菜单栏->单元格->单击自动换行->完成；  
+   
 - 012 支持合并单元格功能
   - 鼠标选中编辑的内容->上方菜单栏->单元格->单击合并拆分->完成；
 - 013 支持插入单元格功能；
