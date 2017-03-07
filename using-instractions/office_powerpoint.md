@@ -1,6 +1,6 @@
 # office_powerpoint的使用
 
-## powerpoint   
+## PowerPoint   
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/ppt%E7%95%8C%E9%9D%A2.jpg)
 
   - 001 支持打开ppt   
