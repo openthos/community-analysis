@@ -1,4 +1,6 @@
 # office_excel的使用
+## Excel   
+![](https://github.com/openthos/community-analysis/blob/master/pic/tmp_4997-Screenshot_2017-03-07-18-40-16401459281.png)   
 
   - 001 使用office打开文档
    在左侧点击打开图标 （第一次打开文档）点击新建空白表格，即完成第一次新建
