@@ -132,12 +132,8 @@
 - 028 支持插入超链接功能；
 - 029 持选择多颜色、多样式的笔功能；
 - 030 插入图表
-  - 有插入图表的功能，但除了条形图，其他图表插入不上；
-  
-- 不具备的功能如下：       
-  - 下拉自动填充功能   
-  - 无法片选（非常影响使用）  
-  
+
+
 ### PPT
 ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-29-09-22-44.png)
 
