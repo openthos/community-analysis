@@ -15,10 +15,11 @@
 - 003 支持PDF文档浏览  
 
   - 选中PDF文档->选择打开方式-> WPS->浏览完成；
-  
+
+
 ## wps文档中的操作：  
 
-  
+***
 ### 文本
   
 - 001 支持保存wps文档      
@@ -75,7 +76,7 @@
 - 028 支持进行设置一、二、三级标题，可以生成目录；
 - 029 支持微信、QQ传来的文件能用WPS打开；
 
-
+***
 ### 表格
 
 ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-28-16-44-27.png)
@@ -133,7 +134,7 @@
 - 029 持选择多颜色、多样式的笔功能；
 - 030 插入图表
 
-
+***
 ### PPT
 ![](https://github.com/openthos/community-analysis/blob/master/pic/WPSpic/Screenshot_2016-12-29-09-22-44.png)
 
