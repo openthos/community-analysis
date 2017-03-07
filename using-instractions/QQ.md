@@ -1,5 +1,5 @@
 # QQ使用
-## Note
+## QQ
 ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/qq.png)   
 
 ### QQ登陆
