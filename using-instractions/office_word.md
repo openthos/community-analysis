@@ -63,10 +63,12 @@
 
   - 023 支持打印相应文档   
 
-  - 024 支持拼音检查功能。点击文件-审阅-拼音简写-即可完成   
+  - 024 支持拼音检查功能   
+    点击文件-> 审阅-> 拼音简写-> 即可完成   
   ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E6%8B%BC%E9%9F%B3%E7%AE%80%E5%86%99.png)   
 
-  - 025 支持绘图功能。点击绘图-选择画笔/颜色等-即可完成   
+  - 025 支持绘图功能   
+    点击绘图-> 选择画笔/颜色等-> 即可完成   
   ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E7%BB%98%E5%9B%BE.png)   
 
 
