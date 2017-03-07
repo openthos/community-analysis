@@ -1,6 +1,6 @@
 # office_word的使用
 
-## word   
+## Word   
 ![](https://github.com/openthos/community-analysis/blob/master/pic/office/word.jpg)
   - 001 纸张大小或者方向设置。单击“布局”选项卡上中的“纸张大小或纸张方向”按钮   
 
