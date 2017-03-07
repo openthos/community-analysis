@@ -1,9 +1,9 @@
 # QQ使用
 ## Note
-![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/qq.png)
+![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/qq.png)   
 
 ### QQ登陆
-- 打开应用输入用户名、密码登陆QQ
+- 打开应用输入用户名、密码登陆QQ   
 
 ### 使用回车发送消息
 - 点击左上方 "用户头像"-> "设置" -> "辅助功能" -> "回车键发送消息“
@@ -12,7 +12,7 @@
 - 发送消息（中文，英文，语音，特殊字符，表情）
 
 ### 切换帐号
-- 点击左上方 "用户头像"
+- 点击左上方 "用户头像"   
 ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/qq_contact.jpg) 
 
 ### 添加联系人，删除联系人，移动联系人
@@ -43,7 +43,7 @@
 - 点击左上方 -> "个性装扮"
 
 ### 发送文件
-- 点击好友 -> "文件"
+- 点击好友 -> "文件"   
 ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/qq_slidemenu.jpg)
 
 ### 帐号安全
@@ -68,20 +68,20 @@
 - 点击左上方 -> "个性签名"
 
 ### 绑定手机
-- 点击左上方 -> "设置"-> "手机号码"
+- 点击左上方 -> "设置"-> "手机号码"   
 ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/qq_public.jpg) 
 
 ### 公众号
 - 点击"联系人" -> "公众号"
 
 ### 附近的人
-- 点击"联系人" -> "附近的人"
+- 点击"联系人" -> “添加“ -> "查看附近的人"
 
 ### 找人，找群，找公众号，面对面添加，添加手机联系人，查看附近的人
 - 点击"联系人" -> "添加"
 
 ### 我的收藏
-- 点击左上方"用户头像"-> "我的收藏"
+- 点击左上方"用户头像"-> "我的收藏"   
 ![](https://github.com/openthos/community-analysis/blob/master/pic/using-instractions-pic/qq_status.jpg) 
 
 ### 我的文件（传文件/照片到我的电脑，面对面快传，备份相册到微云）
