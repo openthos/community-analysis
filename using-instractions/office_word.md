@@ -10,7 +10,8 @@
   - 003 支持插入“页眉和页脚”   
   ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E9%A1%B5%E7%9C%89%E5%92%8C%E9%A1%B5%E8%84%9A.png)   
 
-  - 004 支持插入表格/图片/线框图/文本框/链接/批注/页码等。单击“插入”选项卡上中的“相关”按钮   
+  - 004 支持插入表格/图片/线框图/文本框/链接/批注/页码等   
+    单击“插入”选项卡上中的“相关”按钮   
   ![](https://github.com/openthos/community-analysis/blob/master/pic/office/%E6%8F%92%E5%85%A5.png)   
 
   - 005 支持快捷键保存word文档   
