@@ -1,5 +1,5 @@
 ## openthos在两种SanDisk-32G的U盘上的测试对比
-对比项|白色SanDisk-32G|黑色SanDisk-32G|
+对比项|白色SanDisk-32G|黑色(小)SanDisk-32G|
 -----|-----|-----|
 启动时间|||
 系统流畅度|||
