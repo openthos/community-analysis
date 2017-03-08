@@ -1,3 +1,12 @@
+## openthos在两种SanDisk-32G的U盘上的测试对比
+对比项|白色SanDisk-32G|黑色SanDisk-32G|
+-----|-----|-----|
+启动时间|||
+系统流畅度|||
+文件管理器|||
+Fennec浏览器|||
+ms-office|||
+
 ## remix,phoenix,openthos在四类U盘上的测试对比
 制作镜像的时间| 64G | SanDisk-32G | Netac-32G | 16G | 
 -----|-----|-----|-----|-----|
