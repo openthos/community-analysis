@@ -2,16 +2,20 @@
 ## 刘晓旭
 ### 本周总结:
 
-          工作简述:  
-              添加云服务导入导出功能提示并优化代码结构； 
-              调研解决当鼠标右击时dilog不能维持显示的问题；  
-              整理问档，完善交接任务；  
-               https://github.com/openthos/multiwin-analysis/blob/master/doc/lb/handover.md
-               https://github.com/openthos/setting-analysis/blob/master/lb/handover.md  
-               https://github.com/openthos/firtboot-config-analysis/blob/master/doc/summary/handover.md  
+  - 本周总结
+    - 工作简述：
+      - 1.[bug]1144 ：excel崩溃必现。新建一个excel表，不进行任何操作，鼠标滑过fx编辑框，或者点击一个单元格，鼠标在fx编辑框滑动，excel崩溃。完成 100%
+      - 2.[bug]1072 ：excel鼠标在菜单栏，总是出现fx让编辑的提示，导致功能变灰无法快速使用；(加边框时光标经常到FX处） 完成 100%
+      - 3.[bug] ：wps点击标题栏的关闭按钮时未提示保存。 完成 100%
+      - 4.[bug928] ：任务栏自动隐藏，当用alt+f4关闭应用后，其他应用在仅鼠标点击操作时，任务栏不在隐藏。 完成 100%
+      - 5.[bug]1143 ：密码不要回显，现在会短暂回显当前输入字母，在桌面系统中不安全。 完成 100%
+      - 6.[bug] ：任务栏的通知按钮连续点击两次后，会造成桌面鼠标不可点击。 完成 100%
+      
+    - 本周未完成工作：
+      - [bug]1066 ：msoffice word使用绘图功能时，使用橡皮擦功能会崩溃。  经调研属于进程卡死造成应用僵死，未找到解决办法。
                
-
-###下周任务计划  
+###下周任务计划 
+  - 待定
       
 
 
