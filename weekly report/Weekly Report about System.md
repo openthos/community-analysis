@@ -3,6 +3,17 @@
 <https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
+# 2017年03月6日-03月10日
+## 本周总结
+### 王建兴
+1.office字体的预装，app部分由wangzhixu帮忙集成到filemanager中  
+2.发布镜像的裁剪工作,并拉出了专门的分支开展本次工作  
+3.发布镜像中应用运行问题的调查和解决  
+4.帮助yiming公司搭建开发环境  
+5.帮助caoyongren搭建firefox开发环境  
+6.帮助测试解决大量的实测问题  
+7.openthos注册服务配置修改  
+8.同方电脑休眠问题的准备工作，复现和准备工具  
 # 2017年02月总结
 ## 王建兴
 1.服务器正常运行的问题    
