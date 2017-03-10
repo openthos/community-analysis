@@ -1,3 +1,5 @@
+[2017-03-13 ~ 2017-03-17工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-13--2017-03-17%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
+[2017-03-06 ~ 2017-03-10个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-06--2017-03-10%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-03-06 ~ 2017-03-10工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-06--2017-03-10%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-02-27 ~ 2017-03-03个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-02-27--2017-03-03%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-02-27 ~ 2017-03-03工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-02-27--2017-03-03%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
@@ -11,6 +13,54 @@
 [2017-01-16 ~ 2017-01-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2017-03-13 ~ 2017-03-17工作计划
+
+# 2017-03-06 ~ 2017-03-10个人周报
+## 王之旭
+本周已完成任务<br />
+
+|id|发现时间|说明|
+|---|---|---|
+
+本周未完成任务<br />
+
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+## 陈鹏
+
+本周已完成任务<br />
+
+|id|发现时间|说明|
+|---|---|---|
+
+本周未完成任务<br />
+
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+## 卢宁
+本周已完成任务<br />
+
+|id|发现时间|说明|
+|---|---|---|
+
+本周未完成任务<br />
+
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+## 罗俊欢
+本周已完成任务<br />
+
+|id|发现时间|说明|
+|---|---|---|
+
+本周未完成任务<br />
+
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
 
 # 2017-03-06 ~ 2017-03-10工作计划
 ## 王之旭
@@ -70,7 +120,7 @@
 |---|---|---|
 |task 807|17-02-27|列表模式的框选
 ||17-02-27|修复bug 切换视图右键创建文件/文件夹 报错
-||17-02-27|云服务首页屏蔽部分快捷键，因可能导致文件管理器崩溃https://github.com/openthos/community-analysis/pulls
+||17-02-27|云服务首页屏蔽部分快捷键，因可能导致文件管理器崩溃
 ||17-02-27|减少云服务并发操作
 ||17-02-27|首页云盘跳转修正，应跳转到云服务界面
 ||17-02-27|增加文件管理器和桌面文件后缀库
