@@ -10,7 +10,9 @@
 ## 张琳苹    
        1、参与五轮20170306,20170307,20170308，20170309,20170310全面测试，
        2、周六加班一天
-       
+       3、对比测试白色和黑色小U盘的使用情况，结果文档https://github.com/openthos/community-analysis/blob/master/daily-testresult/U%E7%9B%98%E5%90%AF%E5%8A%A8%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95.md
+       4、汇总系统使用时需要提前进行的配置，并形成文档加入gitbook，https://github.com/openthos/userguide-analysis/blob/master/%E5%8D%81%E4%B8%83%E3%80%81%E7%9B%B8%E5%85%B3%E5%BA%94%E7%94%A8%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%B1%87%E6%80%BB.md
+       5、汇总20170311u盘启动测试结果，形成文档https://github.com/openthos/community-analysis/blob/master/daily-testresult/20170311user%E7%89%88u%E7%9B%98%E5%90%AF%E5%8A%A8%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C.md
 ## 李玲芝
        1、参与三轮20170306,20170309,20170310全面测试，
        2、作图
