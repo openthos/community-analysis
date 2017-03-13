@@ -208,6 +208,10 @@
  
 [feature] 网页图片无法复制、无法保存，右键单击图片无任何反映（2016-1-5）
 
+[feature] internet 浏览器预配置如下： a.安装扩展ublock origin和phony b. ublock默认启用 easylist china并更新列表 c.phony默认启用desktop  firefox模式，并在用户手册中提示如果用户需要切换的话如何操作 d.默认首页http://www.openthos.org
+
+[feature] phony后续会被我们自己的扩展（提供浏览器工具栏上的切换按钮）替代
+
 # WPS邮箱
 
 ### 一般
