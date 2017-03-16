@@ -3,6 +3,17 @@
 <https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
+# 2017年03月16日-03月22日
+## 陈威,王建兴
+- project需求分析和设计文档修订  
+  安装部分修改  
+系统休眠问题复现
+## 肖络元
+```
+userguide网站维护.  
+U盘LIVE的bug修复.
+vold部分能够进行第一次测试.
+```
 # 2017年03月6日-03月10日
 ## 本周总结
 ### 王建兴
