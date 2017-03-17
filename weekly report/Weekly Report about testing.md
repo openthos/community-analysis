@@ -8,7 +8,9 @@
                
 ## 张琳苹    
        1、参与20170313,20170314全面测试
-      
+       2、整理汇总测试结果https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%20testresult.md
+       3、修改用户手册
+       4、配置自动化测试编译环境，寻找android命令不可用的解决方法
        
 ## 李玲芝
        1、
