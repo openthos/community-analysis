@@ -1,3 +1,5 @@
+[2017-03-20 ~ 2017-03-24工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-20--2017-03-24%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
+[2017-03-13 ~ 2017-03-17个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-13--2017-03-17%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-03-13 ~ 2017-03-17工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-13--2017-03-17%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-03-06 ~ 2017-03-10个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-06--2017-03-10%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-03-06 ~ 2017-03-10工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-06--2017-03-10%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
@@ -14,7 +16,24 @@
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
+# 2017-03-13 ~ 2017-03-17个人周报
+## 王之旭 陈鹏 卢宁 罗俊欢
+本周已完成任务<br />
+
+|id|发现时间|说明|
+|---|---|---|
+|||测试系统
+|||编写用户手册文档（桌面，文件管理器，应用商店）
+|||根据用户交互手册编写需求文档（桌面，文件管理器，应用商店）
+|||讨论近期开发目标
+
+
 # 2017-03-13 ~ 2017-03-17工作计划
+## 王之旭 陈鹏 卢宁 罗俊欢
+- 测试系统
+- 编写用户手册文档（桌面，文件管理器，应用商店）
+- 根据用户交互手册编写需求文档（桌面，文件管理器，应用商店）
+- 讨论近期开发目标
 
 # 2017-03-06 ~ 2017-03-10个人周报
 ## 王之旭
