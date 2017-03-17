@@ -13,6 +13,7 @@
  - 修订firtboot_config analysis需求分析和设计文档
  - 修订setting analysis需求分析和设计文档
  - 讨论firtboot_config analysis、setting analysis等project后期开发目标
+ - [bug1191] office缺少关闭文档时的提示保存与否, 点击右上角关闭时，没提示是否保存，默认的是不保存。
  
 ## 周怡洁  
 ### 本周总结:  
