@@ -11,10 +11,8 @@
    - bug：wifi检测，无法自动连接已保存的WiFi，完成代码，正在测试    完成80%
    
 ### 下周计划
- - 修订firtboot_config analysis需求分析和设计文档
- - 修订setting analysis需求分析和设计文档
- - 讨论firtboot_config analysis、setting analysis等project后期开发目标
- - [bug1191] office缺少关闭文档时的提示保存与否, 点击右上角关闭时，没提示是否保存，默认的是不保存。
+ - 完成解决bug：wifi检测，无法自动连接已保存的WiFi，完成代码
+ - [feature] 设置-运行模式模块功能添加
  
 ## 周怡洁  
 ### 本周总结
