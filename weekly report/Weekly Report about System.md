@@ -3,6 +3,19 @@
 <https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
+# 2017年03月20日-03月24日
+## 本周总结
+### 王建兴
+1.Openthos存储localtime到BIOS,基本完成  
+2.xposed的尝试,因为优先级比较低暂停  
+3.成功使用ramoops来抓取crash信息,但是有效范围还有待验证.  
+### 肖络元
+1.完成U盘多分区的识别挂载工作  
+2.着手AUTOMOUNT的工作  
+### 陈威
+1.silent boot的工作  
+2.U盘工具的重新优化  
+3.用户手册中安装部分添加修改
 # 2017年03月16日-03月22日
 ## 陈威,王建兴
 - project需求分析和设计文档修订  
