@@ -1,21 +1,32 @@
-[2017年03月20日-03月24日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md)<br />
 [2017年03月13日-03月17日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md)<br />
 
 
-# 2017年03月20日-03月24日周报及下周计划
+# 2017年03月20日-03月24日周报及03/37-03/31周计划
 ## 刘晓旭
 ### 本周总结
  - 工作简述：
-   - 修订firtboot_config analysis需求分析和设计文档 完成100%  
-   - 修订seting analysis 需求分析和设计文档         完成100% 
-   - 隐藏设置中防火墙、云服务的条目                  完成100%
-   - bug：wifi检测，无法自动连接WiFi    完成修复，正在测试， 完成80%
+   - 修订firtboot_config analysis需求分析和设计文档
+   - 编写首次配置和系统配置用户手册
+   - 测试OPENTHOS-1.0-RC1版本的系统，并反馈给测试组
    
 ### 下周计划
- - 彻底解决bug：wifi检测，无法自动连接WiFi
- - [feature] 完成设置运行模式模块的功能
+ - 修订firtboot_config analysis需求分析和设计文档
+ - 修订setting analysis需求分析和设计文档
+ - 讨论firtboot_config analysis、setting analysis等project后期开发目标
+ - [bug1191] office缺少关闭文档时的提示保存与否, 点击右上角关闭时，没提示是否保存，默认的是不保存。
  
-
+## 周怡洁  
+### 本周总结
+ - 工作简述:  
+   - 修改bug:文件管理器重命名不能回车确认  
+   - feature: 文件管理器上下左右键选择图标的支持  
+   - 调研上下左右键控制图标,选中时不能往下一个图标跳动  
+   
+### 下周计划  
+ - 完成禅道中优先级较高的bug  
+ - 其他待定
+ 
+ 
 # 2017年03月13日-03月17日周报及下周计划
 ## 刘晓旭
 ### 本周总结
