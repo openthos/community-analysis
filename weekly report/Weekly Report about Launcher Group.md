@@ -58,7 +58,6 @@
 |task|17-03-16|AppStore代码结构文档|
 |task|17-03-16|AppStore功能实现文档|
 |task|17-03-16|AppStore用户手册文档|
-|task|17-03-16|应用商店全套UI更换|  
   
 本周未完成任务<br />
 
