@@ -1,5 +1,5 @@
 [2017年03月20日-03月24日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md)<br />
-[2017年03月13日-03月17日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md)<br />
+[2017年03月13日-03月17日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年03月13日-03月17日周报及下周计划)<br />
 
 
 # 2017年03月20日-03月24日周报及下周计划
