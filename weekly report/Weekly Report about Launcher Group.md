@@ -19,7 +19,7 @@
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
 # 2017-03-27 ~ 2017-04-01工作计划
-## 罗俊欢 && 曹海洋 && 王超越 
+## 罗俊欢 && 王超越 
   - 应用商店全套UI更换
   
 ## 曾菲菲
