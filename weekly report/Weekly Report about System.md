@@ -7,9 +7,11 @@
 ## 本周总结
 ### 王建兴
 1.Openthos使用localtime的功能完成,并且可以重新切换使用UTC  
-离最终的用户配置使用还需要一个图形化接口  
+Openthos和windows双系统可以使用localtime  
+Openthos+Linux系统,需要配置属性来使用UTC时间  
 2.支援EmindOS legacy boot时字符串的遮蔽   
-3.Silent boot功能完成进度80%,还有一些kernel的配置和硬盘启动时的更新时的工作需要做.
+3.Silent boot功能完成进度80%,还有一些kernel的配置和硬盘启动时的更新时的工作需要做.  
+4.follow黄志伟的硬解码工作  
 ### 肖络元
 ### 陈威
 1.silent boot的工作  
