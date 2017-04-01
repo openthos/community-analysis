@@ -7,10 +7,13 @@
 ## 刘晓旭
 ### 本周总结
  - 工作简述：
-   - 修订firtboot_config analysis需求分析和设计文档    完成100%  
-   - 修订setting analysis 需求分析和设计文档   完成100%   
-   - 隐藏setting中防火墙、云服务条目      完成100%
-   - bug：wifi检测，无法自动连接已保存的WiFi，完成代码，正在测试    完成80%
+   - 编译android-5.1.1的源码，并且成功运行在模拟器上  
+   - 完成Android多窗口需求文档的拟定   
+   - 熟悉Android-5.1.1的源码，学习Android多窗口相关资料
+   - 通过Android-5.1.1单窗口与openthos多窗口的代码对比，总结如下文档
+     - [单窗口、多窗口焦点设置](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/2017-03-30%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93.md)
+     - [多窗口应用activity关闭的方法实现](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/2017-03-31%E5%B7%A5%E4%BD%9C%E6%8A%A5%E5%91%8A.md)
+   
    
 ### 下周计划
  - 完成在android-5.1.1的源码上使应用窗口化
