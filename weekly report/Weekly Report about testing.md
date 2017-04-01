@@ -4,8 +4,9 @@
        2、openthos0327升级安装测试；openthos0329 U盘测试
        
 ## 张琳苹      
-       1、
-       2、
+       1、openthos0327升级安装测试；openthos0329测试及结果整理
+       2、emulator学习，使用
+       3、微信跟踪，问题记录
        
 ## 江沁
        1、
