@@ -2,6 +2,19 @@
 [2017年03月13日-03月17日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年03月13日-03月17日周报及下周计划)<br />
 
 
+# 2017年03月27日-04月01日周报及下周计划
+## 刘晓旭
+### 本周总结
+ - 工作简述：
+   - 修订firtboot_config analysis需求分析和设计文档    完成100%  
+   - 修订setting analysis 需求分析和设计文档   完成100%   
+   - 隐藏setting中防火墙、云服务条目      完成100%
+   - bug：wifi检测，无法自动连接已保存的WiFi，完成代码，正在测试    完成80%
+   
+### 下周计划
+ - 完成解决bug：wifi检测，无法自动连接已保存的WiFi，完成代码
+ - [feature] 设置-运行模式模块功能添加
+
 # 2017年03月20日-03月24日周报及下周计划
 ## 刘晓旭
 ### 本周总结
