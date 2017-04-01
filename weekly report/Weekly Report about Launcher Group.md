@@ -20,6 +20,15 @@
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
 # 2017-03-27 ~ 2017-04-01个人周报
+## 王之旭
+- 编译ASOP
+- 学习了罗浩，包均圳的论文
+- 学习了AMS，WMS等Android框架层知识
+- 研究了4.4的多窗口的实现
+- 开始编写第一个小目标：单窗口的运行
+## 陈鹏
+## 卢宁
+
 ## 罗俊欢
 本周已完成任务<br />
 
