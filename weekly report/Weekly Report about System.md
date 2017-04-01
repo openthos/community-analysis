@@ -3,6 +3,17 @@
 <https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
+# 2017年03月27日-04月1日
+## 本周总结
+### 王建兴
+1.Openthos使用localtime的功能完成,并且可以重新切换使用UTC  
+离最终的用户配置使用还需要一个图形化接口  
+2.支援EmindOS legacy boot时字符串的遮蔽   
+3.Silent boot功能完成进度80%,还有一些kernel的配置和硬盘启动时的更新时的工作需要做.
+### 肖络元
+### 陈威
+1.silent boot的工作  
+2.U盘启动时的overlay fs工作  
 # 2017年03月20日-03月24日
 ## 本周总结
 ### 王建兴
