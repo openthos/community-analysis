@@ -1,4 +1,3 @@
-# 优先完成陈老师分配的任务
 ### 系统组工作概述    
 <https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
 ### 系统组任务  
