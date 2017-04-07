@@ -2,22 +2,18 @@
 [2017年03月20日-03月24日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年03月20日-03月24日周报及下周计划)<br />
 [2017年03月13日-03月17日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年03月13日-03月17日周报及下周计划)<br />
 
-# 2017年04月03日-04月07日周报及下周计划
+# 2017年04月05日-04月07日周报及下周计划
 ## 刘晓旭
 ### 本周总结
  - 工作简述：
    - 编译android-5.1.1的源码，并且成功运行在模拟器上  
    - 完成Android多窗口需求文档的拟定   
-   - 熟悉Android-5.1.1的源码，学习Android多窗口相关资料
-   - 通过Android-5.1.1单窗口与openthos多窗口的代码对比，总结如下文档
-     - [单窗口、多窗口焦点设置](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/2017-03-30%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93.md)
-     - [多窗口应用activity关闭的方法实现](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/2017-03-31%E5%B7%A5%E4%BD%9C%E6%8A%A5%E5%91%8A.md)
-   
+   - 熟悉Android-5.1.1的源码，学习Android多窗口相关资料   
    
 ### 下周计划
- - 完成在android-5.1.1的源码上使应用窗口化
-
-
+ - 通过下周一与陈工沟通交流后，代码实现Android5.1应用窗口非全屏
+ - 在实现Android5.1应用窗口非全屏的前提下，实现多个应用窗口并存
+ 
 # 2017年03月27日-04月01日周报及下周计划
 ## 刘晓旭
 ### 本周总结
