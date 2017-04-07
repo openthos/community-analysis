@@ -1,3 +1,5 @@
+[2017-04-05 ~ 2017-04-07个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-04-05--2017-04-07%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-04-05 ~ 2017-04-07工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-04-05--2017-04-07%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-03-27 ~ 2017-04-01个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-27--2017-04-01%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-03-27 ~ 2017-04-01工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-27--2017-04-01%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-03-20 ~ 2017-03-24个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-03-20--2017-03-24%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -18,6 +20,57 @@
 [2017-01-16 ~ 2017-01-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2017-04-05 ~ 2017-04-07个人周报
+## 王之旭
+
+## 陈鹏
+
+## 卢宁  
+
+## 罗俊欢
+本周已完成任务<br />
+
+|id|发现时间|说明|
+|---|---|---|
+|task 854|17-03-16|应用商店全套UI更换|
+
+## 曾菲菲
+本周未完成任务<br />
+
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+| | |桌面上下左右选择图标的支持|已完成50％
+| | |固定文件管理器导航栏的高度
+
+## 周怡洁
+本周已完成任务<br />
+
+|id|发现时间|说明|
+|---|---|---|
+|bug 997|17-02-10|系统账户管理，绑定openthosid， 在以前存在openthosid时，未解绑的情况下，再次绑定后，无显示信息（同绑定成功）但是在云服务中无法读取或为原openthosid内容（目前判断应未绑定成功）|  
+
+本周未完成任务<br />
+
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+|bug 1010|17-02-06|第一次启动设置-选择语言进入下一页时屏幕很黑一下。中英文均存在次问题|调研|
+| | |文件管理器上下左右选择图标的支持|
+| | |文件管理器重命名不能回车确认|
+
+# 2017-04-05 ~ 2017-04-07工作计划
+## 罗俊欢
+  - 应用商店全套UI更换
+  
+## 曾菲菲
+  - 桌面上下左右选择图标的支持
+  - 固定文件管理器导航栏的高度
+ 
+## 周怡洁
+  - 文件管理器上下左右选择图标的支持
+  - 文件管理器重命名不能回车确认
+  - 第一次启动设置-选择语言进入下一页时屏幕很黑一下。中英文均存在次问题
+  - 系统账户管理，绑定openthosid， 在以前存在openthosid时，未解绑的情况下，再次绑定后，无显示信息
 
 # 2017-03-27 ~ 2017-04-01个人周报
 ## 王之旭
