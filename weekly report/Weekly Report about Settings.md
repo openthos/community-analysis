@@ -6,9 +6,12 @@
 ## 刘晓旭
 ### 本周总结
  - 工作简述：
-   - 编译android-5.1.1的源码，并且成功运行在模拟器上  
-   - 完成Android多窗口需求文档的拟定   
-   - 熟悉Android-5.1.1的源码，学习Android多窗口相关资料   
+   - 分析excel数据丢失及闪退的原因，反编译excel的源码发现，AccessibilituySubNodeInfoElement是其中的一个类，暂未找到解决办法，log日志如下：
+   
+         FastAccCustomViewHelper:DispatchHoverEvent:: AccessibilituySubNodeInfoElement is null at times for virtualId 1273
+         
+     
+   - 完成了Android5.1应用单窗口加边框   
    
 ### 下周计划
  - 通过下周一与陈工沟通交流后，代码实现Android5.1应用窗口非全屏
