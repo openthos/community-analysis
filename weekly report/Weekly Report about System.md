@@ -27,6 +27,9 @@ Openthos+Linux系统,需要配置属性来使用UTC时间
 3.Silent boot功能完成进度80%,还有一些kernel的配置和硬盘启动时的更新时的工作需要做.  
 4.follow黄志伟的硬解码工作  
 ### 肖络元
+1.协助董鹏进行一铭版ISO的定制，包括开机启动图片定制等
+2.Android多窗口的调研，并部署好代码原生5.1代码服务器提供给开发人员测试原生multiwindow
+3.follow黄志伟的硬解码工作  
 ### 陈威
 1.silent boot的工作  
 2.U盘启动时的overlay fs工作  
@@ -37,8 +40,10 @@ Openthos+Linux系统,需要配置属性来使用UTC时间
 2.xposed的尝试,因为优先级比较低暂停  
 3.成功使用ramoops来抓取crash信息,但是有效范围还有待验证.  
 ### 肖络元
-1.完成U盘多分区的识别挂载工作  
-2.着手AUTOMOUNT的工作  
+1.完成了U盘多分区的识别挂载工作  
+2.着手文件管理器的硬盘AUTOMOUNT的工作  
+3.对于向老师测试再次报告OTO的自动更新停止的bug，详细检测github自动更新的部分，
+包括之前子仓库的创建，oto仓库的本地与github的冲突等，进行初步梳理更新相关的操作；
 ### 陈威
 1.silent boot的工作  
 2.U盘工具的重新优化  
@@ -49,11 +54,10 @@ Openthos+Linux系统,需要配置属性来使用UTC时间
   安装部分修改  
 系统休眠问题复现
 ## 肖络元
-```
-userguide网站维护.  
-U盘LIVE的bug修复.
-vold部分能够进行第一次测试.
-```
+用户手册网站UserGuide网站的搭建及相应文档的修改.  
+U盘LiveCD的用户数据保存方案的bug修复.
+U盘多分区支持，vold部分进行测试.
+对一铭的ISO，对于linux启动logo修改并编写自动化脚本
 # 2017年03月13日-03月17日
 ## 本周总结
 ### 王建兴
@@ -91,6 +95,10 @@ dev.openthos.org的证书问题,seafile问题
 drm_gralloc支持VGA接口的clone模式  
 openthos下可以识别系统其他的硬盘分区，进度50%  
 wps的word字体问题,进度70%  
+## 肖络元  
+1.调研U盘系统制作，提供了很好的思路，如整合.iso, efi支持legacy和uefi双中模式启动，类似ubuntu ISO
+2.尝试移植parted工具到windows，后因编译依赖库众多等问题，更换为编译成Linux静态版本的parted试验通过
+3.live方式下保存数据的工作，等待细节测试 
 ## 陈威  
 ## 主要工作  
 ### U盘体验版开发
@@ -119,10 +127,6 @@ Xposed在Android X86-64体系下的移植
 1.在windows上生成U盘系统工具制作;  
 2.针对U盘系统做了大量测试;  
 3.在windows上完成了legacy和uefi引导合一的工作  
-## 肖络元  
-1.调查U盘系统制作的方法，提供了很好的思路  
-2.尝试了移植parted工具到windows  
-3.live方式下保存数据的工作，进度90%  
 ## 王建兴  
 1.不同版本的U盘系统测试，调查FAT32+image文件读写速度慢的问题  
 2.seafile暴露出的一些问题调查  
