@@ -2,6 +2,11 @@
 <https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
+# 2017年04月10日-04月14日
+## 本周总结
+### 王建兴
+### 肖络元
+### 陈威
 # 2017年03月27日-04月1日
 ## 本周总结
 ### 王建兴
