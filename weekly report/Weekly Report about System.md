@@ -12,6 +12,11 @@
 3.Follow黄志伟关于硬解码的工作  
 目前的状态和黄志伟那里保持一致,志伟仍然在修改硬解码的错误  
 ### 肖络元
+1. 对于黄志伟要求的github代码与实验室代码保持一致的要求，
+重点 梳理了旧子仓库升级的造成的update github错误，以及部分开发提交过的子仓库未上传到github，自动化更新脚本的功能增强，包括检测github外部更新等；
+2. 协助chengang对android-x86的原生代码的获取以解决bug
+3. Follow CWHuang的硬解码部分的ffmpeg测试；
+4. 对于文件管理器的硬盘automount功能，进行分析修改filemanager的java部分
 ### 陈威
 基于小DATA.img的U盘OVERLAY FS系统，基本完成。将在U盘启动时，自动启动一下android程序这个程序检测是否有OVERLAY DATA的分区，
 1. 如有则按Overlay的方式挂载该分区。
