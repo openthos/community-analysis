@@ -23,7 +23,7 @@
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
-# 2017-04-05 ~ 2017-04-07工作计划
+# 2017-04-10 ~ 2017-04-14工作计划
 ## 罗俊欢
   - 返回图标逻辑优化（主页不应该有返回图标） 
   - 页面之间跳转位置没有置顶 
@@ -39,7 +39,7 @@
   - 文件管理器重命名不能回车确认
   - 第一次启动设置-选择语言进入下一页时屏幕很黑一下。中英文均存在次问题
 
-# 2017-04-05 ~ 2017-04-07个人周报
+# 2017-04-10 ~ 2017-04-14个人周报
 ## 王之旭
 - 研究单窗口的实现
 - 参加陈工的多窗口原理会议
