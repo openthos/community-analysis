@@ -11,7 +11,7 @@
 - [feature]
 1. 增强(E):浏览器增强（多实例，弹窗JS，右键，UI修改，PHONY+ublock origin预装配置）---陈刚
 1. fennec应集成在system中，不可卸载------刘锋 (罗俊欢)
-2. 请把这个addon作为默认项编译进fennec------刘锋（曹永韧）
+2. 请把这个addon(https://addons.mozilla.org/en-US/android/addon/ublock-origin/?src=search)作为默认项编译进fennec------刘锋（曹永韧）
 3. 默认集成UA切换功能，或者phony扩展；默认集成ublock origin并订阅easylist china------刘锋 （曹永韧）
 4. internet 浏览器预配置如下： a.安装扩展ublock origin和phony b. ublock默认启用 easylist china并更新列表 c.phony默认启用desktop firefox模式，并在用户手册中提示如果用户需要切换的话如何操作------刘锋 （曹永韧）
 5. 设置-易用性-文本大小 默认改为“大”------刘锋 （曹永韧）
