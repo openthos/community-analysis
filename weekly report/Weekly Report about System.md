@@ -13,6 +13,9 @@
 3.修理180服务器   
 目前来看服务器重启问题不再出现  
 ### 肖络元
+1. 针对磁盘AutoMount的FileManager部分增加fragment view，并请教处理过类似问题的罗俊欢；并且与王之旭讨论进度，他提供filemanager应用层代码，调用我提供的MountService与vold的装卸接口，先AutoMount还有一个小bug待解决；
+2. 对于vmware运行openthos的patch出现的错误，协助陈鹏；给陈工的repo仓库创建给予帮助；
+2. 对于androidia的硬解码编译以及其解码的错误log分析，这部分未明显进展；
 ### 陈威
 1. 给同方政府客户准备信息系统搬通州办公区的迁移方案
 2. OVERLAY FS将基于shell的命令整合到app时，遇到字符串处理问题，写了java的字符串处理程序
