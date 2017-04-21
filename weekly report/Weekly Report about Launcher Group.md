@@ -25,9 +25,6 @@
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
-- AutoMount （王之旭 4-21）
-- 云服务模块掐断 （王之旭 4-21）
-
 # 2017-04-10 ~ 2017-04-14个人周报
 ## 王之旭
 本周已完成任务<br />
@@ -40,7 +37,7 @@
 
 |id|发现时间|说明|未完成原因|
 |---|---|---|---|
-| |17-04-10|AutoMount|完成90% 剩下10%周末加班完成|
+| |17-04-10|AutoMount|完成90% 剩下10%（界面逻辑）周末加班完成|
 
 ## 陈鹏
 本周已完成任务<br />
