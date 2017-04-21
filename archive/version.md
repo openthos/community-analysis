@@ -2,7 +2,6 @@
 
 ## 修复问题
 
-  - 修复了[bug]1004 桌面-其它应用打开时无法重命名文件，且所有快捷键失效：F2、F5、ctrl + a、ctrl + c、ctrl+v、ctrl + x、ctrl+ 左键、Enter、delete、shift +delete (非100%复现) （刘晓旭）
   - Internet浏览器中添加phony快捷图标
 
 ## 仍存在的部分问题
