@@ -4,6 +4,19 @@
 [2017年03月20日-03月24日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年03月20日-03月24日周报及下周计划)<br />
 [2017年03月13日-03月17日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年03月13日-03月17日周报及下周计划)<br />
 
+# 2017年04月17日-04月21日周报及下周计划
+## 刘晓旭
+### 本周总结
+ - 工作简述：
+   - 分析WMS计算activity窗口大小的流程
+   - 实现Android5.1应用窗口非全屏  
+   
+### 下周计划
+ - [bug] 电源管理（wifi检测）
+ - [bug 1217] 20170330版本，打开多个应用，互相切换，提示“谷歌输入法”停止运行
+ - [feature]应用默认打开方式目前通过白名单启动，新安装其他应用默认均为手机模式.
+
+
 # 2017年04月10日-04月14日周报及下周计划
 ## 刘晓旭
 ### 本周总结
