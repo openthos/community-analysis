@@ -5,6 +5,11 @@
 # 2017年04月17日-04月21日
 ## 本周总结
 ### 黄志伟
+1. 與王建兴合作研究 VMVare上鼠标问题。嘗試換到 Mesa 13.0 branch，VMVare上鼠标可顯現，但系統不穩定。
+2. 提交 Mesa 13.0 相關修改至 github。寫說明文件。
+3. 繼續修改 stagefright-plugins，能同時搭配 libav & ffmpeg 編譯，以便對比。
+4. 研究在 libva enable vaapi 的方法，預計下週能完成。
+5. 下週將嘗試把 stagefright-plugins 加到 OPENTHOS.
 ### 王建兴
 1.调查OPENTHOS的VMVare上鼠标问题  
 虽然最后mesa13可以解决这个问题,但是会导致一些应用crash.  
