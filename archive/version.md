@@ -1,3 +1,8 @@
+# 镜像位置
+
+- 下载镜像地址:http://pan.baidu.com/s/1kVauJ5t
+- 提取码:y48g
+
 # 存在的部分问题
   
   - 详情见https://github.com/openthos/community-analysis/blob/master/stage/bug%E5%92%8Cfeature%E7%BC%BA%E5%A4%B1%E6%83%85%E5%86%B5.md
