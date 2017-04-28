@@ -2,6 +2,28 @@
 <https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
+
+# 2017-04-24 ~ 2017-04-28 工作总结
+## 黃志偉
+       1、 
+       2、 
+       3、 
+       
+## 王建兴      
+       1、 
+       2、 
+       3、 
+
+## 肖络元
+       1、        
+       2、
+       3、
+
+## 陈威
+       1、 
+       2、 
+       3、 
+
 # 2017年04月17日-04月21日
 ## 本周总结
 ### 黄志伟
