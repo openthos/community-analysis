@@ -5,9 +5,13 @@
 
 # 2017-04-24 ~ 2017-04-28 工作总结
 ## 黃志偉
-       1、 
-       2、 
-       3、 
+       1、 按照 Intel 要求更新 libva 和 vaapi 並送新的 pull request。
+       2、 完成 ffmpeg stagefright plugins 整合到 OPENTHOS。
+       3、 提供 LKP 在 Android-x86 on QEMU 的測試建議。
+       4、 協助檢查 jni build error 的 log 並提供意見。
+       5、 下週工作：
+              a. 繼續 debug stagefright-plugins unstable issue
+              b. 研究 LKP 並提供測試 script。
        
 ## 王建兴      
        1、 
