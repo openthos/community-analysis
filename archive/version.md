@@ -5,8 +5,9 @@
 
 # 存在的部分问题
   
-  - 详情见https://github.com/openthos/community-analysis/blob/master/weekly%20report/work-progress/20170422%7E20170428%20work.md
-
+  - 本周进度见https://github.com/openthos/community-analysis/blob/master/weekly%20report/work-progress/20170422%7E20170428%20work.md
+  - 全面测试结果：https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%20testresult%2020170428.md
+ 
 # 用户反馈
   
   - 汇总列表见https://github.com/openthos/community-analysis/tree/master/userquestion
@@ -19,6 +20,7 @@
 ## 修复问题
 
   - 优化睡眠功能，去除首次权限弹框
+  - 解决睡眠唤醒回到桌面后快捷键不能用的问题
 
 --------------
 
