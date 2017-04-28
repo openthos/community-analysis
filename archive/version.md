@@ -5,7 +5,7 @@
 
 # 存在的部分问题
   
-  - 详情见https://github.com/openthos/community-analysis/blob/master/stage/bug%E5%92%8Cfeature%E7%BC%BA%E5%A4%B1%E6%83%85%E5%86%B5.md
+  - 详情见https://github.com/openthos/community-analysis/blob/master/weekly%20report/work-progress/20170422%7E20170428%20work.md
 
 # 用户反馈
   
