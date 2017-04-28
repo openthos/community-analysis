@@ -1,3 +1,5 @@
+[2017-04-24 ~ 2017-04-28个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-04-24--2017-04-28%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-04-24 ~ 2017-04-28工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-04-24--2017-04-28%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-04-17 ~ 2017-04-21个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-04-17--2017-04-21%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-04-17 ~ 2017-04-21工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-04-17--2017-04-21%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-04-10 ~ 2017-04-14个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-04-10--2017-04-14%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -24,6 +26,63 @@
 [2017-01-16 ~ 2017-01-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+
+# 2017-04-24 ~ 2017-04-28个人周报
+## 王之旭
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+| | |工厂测试工具|完成调研，需求分析，功能方面完成整体架构和LCD,wifi,bluetooth等检测项的实现|
+
+## 陈鹏
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+## 卢宁
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+## 罗俊欢
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+## 周怡洁
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+# 2017-04-24 ~ 2017-04-28工作计划
+## 王之旭
+- 工厂测试工具
+
+## 陈鹏
+
+## 卢宁
+
+## 罗俊欢
+
+## 周怡洁
+
 
 # 2017-04-17 ~ 2017-04-21个人周报
 ## 王之旭
