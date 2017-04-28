@@ -1,3 +1,4 @@
+[2017年04月24日-04月28日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年04月24日-04月28日周报及下周计划)<br />
 [2017年04月17日-04月21日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年04月17日-04月21日周报及下周计划)<br />
 [2017年04月10日-04月14日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年04月10日-04月14日周报及下周计划)<br />
 [2017年04月05日-04月07日周报及下周计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Settings.md#2017年04月05日-04月07日周报及下周计划)<br />
