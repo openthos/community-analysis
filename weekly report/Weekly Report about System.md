@@ -3,6 +3,10 @@
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
 
+# 2017-05-02 ~ 2017-05-05 工作总结
+## 黃志偉
+       1、 Intel has merged libva 和 vaapi。
+
 # 2017-04-24 ~ 2017-04-28 工作总结
 ## 黃志偉
        1、 按照 Intel 要求更新 libva 和 vaapi 並送新的 pull request。
