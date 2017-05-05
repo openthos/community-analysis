@@ -5,7 +5,23 @@
 
 # 2017-05-02 ~ 2017-05-05 工作总结
 ## 黃志偉
-       1、 Intel has merged libva 和 vaapi。
+       1、 Intel 已合伴=併 libva 和 vaapi pull request。漏掉一小個 patch，再 push 並送 pull request。
+       
+       2、 更新 ffmpeg 至 master branch。有較佳的 hwaccel 支持和穩定性。
+       
+       3、 繼續 debug stagefright plugins。將 thread_count 改為 1 有助於解決 crashing。
+       
+       4、 在 github 記錄 debug ffmpeg & libva 的方法。
+       
+       5、 測試以 mainline kernel 搭配 nougat-x86 編譯成功。說明測試方法。
+       
+       6、 下週工作：
+       
+              a. Study Intel's libstagefrighthw implementation
+              
+              b. Try to enable Intel QSV in ffmpeg
+              
+              c. Study LKP & test script
 
 # 2017-04-24 ~ 2017-04-28 工作总结
 ## 黃志偉
