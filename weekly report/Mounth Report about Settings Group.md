@@ -3,14 +3,15 @@
 ## 刘晓旭
 
 - 完成feature 1个
-  - 完成bug 4个
+  - 完成bug 5个
   - 重点任务
     - [bug] 电源管理（wifi检测）
     - [feature]应用默认打开方式目前通过白名单启动，新安装其他应用默认均为手机模式.
     - [bug1004] 桌面-其它应用打开时无法重命名文件，且所有快捷键失效：F2、F5、ctrl + a、ctrl + c、ctrl+v、ctrl + x、ctrl+ 左键、Enter、delete、shift +delete
     - [bug1221] fennec(20170405版)下载wandoujia apk，双击弹出安装对话框，关闭此对话框，整个fennec被关闭。
     - [bug1259] 解除锁定或睡眠操作后桌面上的快捷键无效
-    
+    - [bug] 设置-节能模式选择更改修复
+    
 
 # 2017-02 月报
 
