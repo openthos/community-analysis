@@ -10,7 +10,7 @@
 # 肖络元
 
 ### 本周计划
-  -详见：https://github.com/openthos/system-analysis/issues/93
+  - 详见：https://github.com/openthos/system-analysis/issues/93
 
 # 2017年5月1日 - - 2017年5月5日
 
