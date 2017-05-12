@@ -5,6 +5,12 @@
 
 # 2017-05-08 ~ 2017-05-12 工作总结
 ## 黃志偉
+* 繼續清理 ffmpeg & stagefright-plugins makefiles & warnings
+* 合併 hwaccel code 至 nougat-x86, 公告請其他 developers 試試。
+* 測試 VMware with Mesa 17.0, 但鼠標依舊不穩定。
+* 重新提交給 Intel libva patches，已合併 (https://github.com/01org/libva/pull/47)
+* Rebase Mesa 17.1 with nougat-x86. 在不同 GPUs 測試，大致正常。
+* Check and solve multiwindow-hwaccel compiling issues
 
 ## 王建兴
 1.调查超锐x700重启原因  
