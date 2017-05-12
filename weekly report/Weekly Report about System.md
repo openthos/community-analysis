@@ -11,6 +11,10 @@
 * 重新提交給 Intel libva patches，已合併 (https://github.com/01org/libva/pull/47)
 * Rebase Mesa 17.1 with nougat-x86. 在不同 GPUs 測試，大致正常。
 * Check and solve multiwindow-hwaccel compiling issues
+* 下週工作：
+  * Prepare nougat-x86 release
+  * Study multiwindow framework
+  * Ctinue study LKP
 
 ## 王建兴
 1.调查超锐x700重启原因  
