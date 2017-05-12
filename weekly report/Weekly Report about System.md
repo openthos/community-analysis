@@ -14,7 +14,7 @@
 * 下週工作：
   * Prepare nougat-x86 release
   * Study multiwindow framework
-  * Ctinue study LKP
+  * Continue study LKP
 
 ## 王建兴
 1.调查超锐x700重启原因  
