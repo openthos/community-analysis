@@ -13,6 +13,7 @@
 3.OTA升级失败问题解决  
 4.尝试rebase到最新的kernel-4.9,解决了一些冲突问题和编译问题  
 这个更加直接的办法可以是直接fetch android-x86的branch，然后rebase到最新的upstream  
+5.学习mesa  
 ## 肖络元
 
 # 2017-05-02 ~ 2017-05-05 工作总结
