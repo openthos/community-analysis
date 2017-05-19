@@ -1,3 +1,7 @@
+[2017-05-15 ~ 2017-05-19个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-05-15--2017-05-19%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-05-15 ~ 2017-05-19工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-05-15--2017-05-19%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
+[2017-05-08 ~ 2017-05-12个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-05-08--2017-05-12%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-05-08 ~ 2017-05-12工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-05-08--2017-05-12%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-05-02 ~ 2017-05-05个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-05-02--2017-05-05%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-05-02 ~ 2017-05-05工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-05-02--2017-05-05%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-04-24 ~ 2017-04-28个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-04-24--2017-04-28%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -28,6 +32,62 @@
 [2017-01-16 ~ 2017-01-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+
+# 2017-05-15 ~ 2017-05-19个人周报
+# 王之旭
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |完成WIM界面需求，完善部分代码，提供接口
+| | |更深层次优化代码，提高桌面框选，上下左右时的卡顿问题
+| | |bug： 在桌面上选中文件夹重命名时，仍然可以通过方向键去选择其它文件
+| | |移除桌面拖拽功能
+| | |修复文件管理器某些时候奔溃的bug
+| | |文件管理器增加地址直接键入地址页面的前进后退支持
+| | |修改文件管理器磁盘大小等显示问题
+| | |研究U盘卸载和U盘格式化
+
+# 陈鹏
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |部分应用弹窗出屏的问题|
+| | |完善文件管理器方向键向下的功能|
+
+# 卢宁
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+|1310|17-05-10|桌面和FM左键长按弹menu（松手的一瞬间才会弹菜单，不松手一下不弹菜单）|
+|||桌面重命名初次输入左右键会删除全部内容，改为光标移动到开头或末尾|
+|||压缩解压缩代码提交和bug修改|
+
+# 罗俊欢
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+|||文件管理器中键向上功能|
+|||完善新版应用商店设计文档|
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+|||桌面文件监听|已经实现了从其它地方（文件管理器，终端等）新建，删除，重命名文件等的操作在桌面实时显示，但是重命名的时候会改变原来的位置|
+
+# 2017-05-15 ~ 2017-05-19工作计划
+## 王之旭
+
+
+## 陈鹏
+
+
+
+## 卢宁
+
+
+## 罗俊欢
+
 
 # 2017-05-08 ~ 2017-05-12个人周报
 # 王之旭
