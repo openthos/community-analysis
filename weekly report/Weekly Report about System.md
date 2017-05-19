@@ -3,6 +3,20 @@
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
 
+# 2017-05-15 ~ 2017-05-19 工作总结
+## 黃志偉
+* 調查 VMware 問題在原生 lollipop-x86 和 OPENTHOS 之間的差異。結論是與 resolution 有關。
+* 修正 Mesa 17.0/17.1 在 OPENTHOS 的編譯問題。因 5.1 的 llvm 過舊，必須 disable radeonsi。
+* 提供 lollipop-x86 和 OPENTHOS 的 VMware 測試用 iso。確認無誤後 push 代碼至 github。
+* 協助合併 hwaccel branch，更新 manifest。
+* 提供 Fennec 集成的建議，實作相關 patch。
+* 下週工作：
+  * 準備 7.1-rc1 的發佈
+
+## 王建兴
+
+## 肖络元
+
 # 2017-05-08 ~ 2017-05-12 工作总结
 ## 黃志偉
 * 繼續清理 ffmpeg & stagefright-plugins makefiles & warnings
