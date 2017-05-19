@@ -39,6 +39,12 @@
 这个更加直接的办法可以是直接fetch android-x86的branch，然后rebase到最新的upstream  
 5.学习mesa  
 ## 肖络元
+1. 根据刘总对windows分区恢复工具新需求修改代码，并提交给测试，集成windows系统恢复工具为系统应用；
+2. 编译试验Qemu对openthos virgl 3d加速支持；
+3. 完成对原生浏览器的disable；
+4. 协助CMHuang集成fennec浏览器作为系统应用；
+5. github代码同步，并向老师沟通需求，以及自动化测试相关的支持；
+6. 修复bug 1383，windows分区恢复工具的首次启动黑色。
 
 # 2017-05-02 ~ 2017-05-05 工作总结
 ## 黃志偉
