@@ -82,8 +82,6 @@
 
 [bug 1253] MS office在小窗口模式下，拖动窗口抖动严重，其他应用无此现象
 
-[bug 1349] 首次使用msoffice，通过powerpointd登录帐号时，无法输入密码，点击输入框返回登录界面
-
 [bug 1433] ms excel 点击创建表格，崩溃退出，log见附件
 
 [bug 1434] ms onenote 界面出现混乱
