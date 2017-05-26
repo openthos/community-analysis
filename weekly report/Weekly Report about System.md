@@ -3,6 +3,18 @@
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
 
+# 2017-05-22 ~ 2017-05-26 工作总结
+## 黃志偉
+* 加入 OPENTHOS 對 QEMU virgl 的支持。但仍不穩定。
+* 測試 THTF NS4AU11，用 kernel 4.4 無法開機，改用 kernel 4.9.27 解決。提供一版 image 供測試。
+* 研究 NS4AU11 touchpad 問題，用最新 kernel 4.12-rc1 仍無解。
+* 修改 VMware resolution 為 1280x720 。
+* 繼續修整 kernel-4.9 branch，為 7.1-rc1 做準備。
+* 調查 StartupMenu & Fennec 崩潰問題。StartupMenu 可在 Mesa revert d9164fd 解決。但 Fennec 不確定和 Mesa 有關?
+* 下週工作：
+  * 繼續研究 Mesa 與 Fennec 的問題。
+  * 繼續準備 7.1-rc1 的發佈。
+
 # 2017-05-15 ~ 2017-05-19 工作总结
 ## 黃志偉
 * 調查 VMware 問題在原生 lollipop-x86 和 OPENTHOS 之間的差異。結論是與 resolution 有關。
