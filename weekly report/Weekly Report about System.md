@@ -15,6 +15,14 @@
   * 繼續研究 Mesa 與 Fennec 的問題。
   * 繼續準備 7.1-rc1 的發佈。
 
+## 肖络元
+1. 分析log并测试openthos运行在qemu virgl不稳定的原因；
+2. 编写openthos for vmware and qemu 测试文档；
+3. 由原android-x86进行重现硬解码的移植过程；
+4. 处理由mesa升级出现的应用卡顿崩溃、浏览器打开特定网页崩溃等bug；
+5. 对于黄sir对mesa升级代码的跟踪复现；
+6. 建立Android-x86-7.1 的开发仓库multiwindow-nougat
+
 # 2017-05-15 ~ 2017-05-19 工作总结
 ## 黃志偉
 * 調查 VMware 問題在原生 lollipop-x86 和 OPENTHOS 之間的差異。結論是與 resolution 有關。
