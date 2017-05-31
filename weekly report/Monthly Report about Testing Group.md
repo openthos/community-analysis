@@ -22,6 +22,7 @@
 ## 江沁
 #### 本月工作总结  
   - 每日patch验证
+  - 每周全面测试
   - 自动化测试工具uiautomator,monkeyrunner的调研
   - 微信群问题交流汇总，负责周一至周三上午时间段，整理文档至github
   - 每周五整理用户手册testresult
