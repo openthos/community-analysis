@@ -33,6 +33,23 @@
      - [feature] 增加桌面上下左右方向键支持。
 <hr>
 
+## 总结
+  - StartupMenu优化后，代码逻辑已经很简洁易懂，非常有利于后期功能扩展，卡顿问题也有改善.
+  - SystemUI解决一部分bug，但是仍有一些顽固bug，需要后期解决.
+  - StartupMenu的优化中，出现一些和系统组有关的问题，无法辨别，后期增加对系统层的了解.
+  - SystemUI很多问题和multiWindow有关，但之前学习multiwindow的知识出现生疏，后期加强frameworks的学习。
+  
+## 下月计划
+  - 曹永韧
+    - 移植StartupMenu。
+    - 解决SystemUI紧急的bug.
+    
+  - 罗俊欢
+    - StartupMenu偶然出现的‘停止运行’，继续跟进，调研。
+    - 协助移植StartupMenu.
+    - 解决StartupMenu的紧急bug.
+
+<hr>
 # 2017年4月 -- SystemUI组  总结
 ### 本月总结
   - 工作简述:
