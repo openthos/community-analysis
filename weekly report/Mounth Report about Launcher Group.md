@@ -7,10 +7,13 @@
     - 
 
 ## 陈鹏
-  - 完成feature 
-  - 完成bug 
+  - 完成feature 2个
+  - 完成bug 13个
   - 重点任务
-    - 
+    - 增加文件管理器上下左右方向键支持
+    - 增加文件管理器tab快捷键功能，以适应无鼠标的操作环境
+    - 文件管理器缩小窗口后，文件图标显示不正常
+    - 完善popupwindow相关的算法，解决相关应用弹窗出屏，位置不对，点击穿透,显示不全等问题，如qq,wpsemail,input method, startupmenu等
     
 ## 卢宁
   - 完成feature 
