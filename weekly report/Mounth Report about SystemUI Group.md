@@ -14,13 +14,16 @@
     - [bug]1264 任务栏上的两个右键菜单可以同时出现。
     - [bug]1399 工厂测试第一次使用完成后，在startmenu常用列表中留下application图标，点击即弹出电源停止运行。
     - [bug] StartupMenu停止运行(调研问题引发原因和引发问题的patch)。
+<hr>
 
+## 罗俊欢
+   - 工作简述：
+     - [bug] StartupMenu的代码优化。
+     - [bug] 修改StartupMenu的名字为开始菜单
+     - 还有工作内容在Launcher组
 <hr>
 
 # 2017年4月 -- SystemUI组  总结
-
-<hr>
-
 ### 本月总结
   - 工作简述:
     - 分析完成控制单窗口位置和大小.
