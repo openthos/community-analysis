@@ -1,3 +1,14 @@
+2017-05-31 ~ 2017-06-02 工作总结
+1. 调研了XPOSED现状  
+   ROVO89已经有近1年没有维护github上XPOSED的相关代码，且据其个人声明，Nougat上的Xposed，有在研究，但无明确日程。  
+2. 分析了XPOSED在Android 7.0+上的支持情况  
+   现状无正式支持
+3. 计划展开XPOSED的Android 7.0+自主开发工作，据此向下调研了XPOSED在Android 6.0下的情况
+   目前，XPOSED官方代码在Android 6.0 ARM版本运作良好，另外多方大神释出过专有设备上的X86(32位)发行包。
+4. Down回了Android X86 6.0版本源码，并开始在此基础的XPOSED移植学习
+
+5. 另。对Windows版本的OPENTHOS安装工具进行了内存稳定性等方面的基础测试，测试通过，已经提交测试组进一步测试。源码开放在https://github.com/chanuei/OpenThosInstallerUnderWindows.git
+
 # 2017-05-22 ~ 2017-05-26 工作总结  
 1. 完成4种机型的同方机器的备份恢复测试。  
    * 备份工具的选型及初始启动U盘的制作（陈威）  完成  
