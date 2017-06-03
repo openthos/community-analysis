@@ -3,6 +3,18 @@
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
 
+# 2017-05-31 ~ 2017-06-03 工作总结
+## 黃志偉
+* 準備 Android-x86 7.1-rc1 release
+  - Update kernel to 4.9.30
+  - Update Mesa to 17.1.1
+  - Fix kernel OOPS on Surface 3 by optimizing performance instead of size
+  - Update ffmpeg, vaapi, libdrm, ntfs-3g, bluez to latest upstream master branch
+  - Update GMS to 7.1.2
+  - Workaround Youtube playback green screen on Chrome
+  - Disable Bluetooth by default and fix crashing on VMware
+* 測試 OPENTHOS 在新 NS4AU11 with ELAN touchpad 並安裝。需手動修改 BIOS 才能啟動。
+
 # 2017-05-22 ~ 2017-05-26 工作总结
 ## 黃志偉
 * 加入 OPENTHOS 對 QEMU virgl 的支持。但仍不穩定。
