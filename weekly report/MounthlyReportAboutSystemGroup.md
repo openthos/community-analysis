@@ -40,6 +40,14 @@
 8. 支持overlay功能实现,整理overlay FS的patch
 
 ## 肖络元
+1. windows分区恢复工具，根据刘总需求修改代码，最后集成为系统应用，后根据测试组提的bug解决之；
+2. 编译试验Qemu对openthos virgl 3d加速支持，分析log并测试openthos运行在qemu virgl不稳定的情况；
+3. 完成对原生浏览器的disable；协助CMHuang集成fennec浏览器作为系统应用；
+4. github代码同步，并向老师沟通需求，以及自动化测试相关的支持，但现有一个编译环境bug未解决；
+5. 硬件编解码代码，更新并merge到主开发分支，后在原android-x86重现硬解码的移植过程；
+6. openthos for VM，更新并merge到主开发分支，处理由此更新导致的应用崩溃等bug，编写该wiki文档；
+7. 建立Android-x86-7.1 的开发仓库multiwindow-nougat，并分别为各位开发建立好docker开发环境，编写该文档到wiki ；
+8. 准备git bisect使用文档，并发送至bigandroid mailing list，由git bisect调试图库白边bug：在播放某些视频，边上存在空白的边，已经测试月份3.13的版本，依然存在，确定是multiwindow引入的bug;
 
 # 2017-04月报
 **目前还有两个问题：**  
