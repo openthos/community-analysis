@@ -14,7 +14,9 @@
   - Workaround Youtube playback green screen on Chrome
   - Disable Bluetooth by default and fix crashing on VMware
 * 測試 OPENTHOS 在新 NS4AU11 with ELAN touchpad 並安裝。需手動修改 BIOS 才能啟動。
-
+## 王建兴
+  本周主要进行sec组任务，暂无System组任务  
+  https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20sec.md
 # 2017-05-22 ~ 2017-05-26 工作总结
 ## 黃志偉
 * 加入 OPENTHOS 對 QEMU virgl 的支持。但仍不穩定。
