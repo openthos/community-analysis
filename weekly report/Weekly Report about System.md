@@ -17,6 +17,12 @@
 ## 王建兴
   本周主要进行sec组任务，暂无System组任务  
   https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20sec.md
+## 肖络元
+1. 建立Android-x86-7.1的源码repo和docker代码编译开发环境，并分别为各位开发建立好docker；
+2. 编写Android-x86-7.1文档到wiki，同时补上openthos for vmware and qemu 测试配置wiki
+3. 准备git bisect使用文档，并发送至bigandroid mailing list
+4. 调试图库白边bug：在播放某些视频，边上存在空白的边，已经测试三月份3.13的版本，依然存在，确定是multiwindow引入的bug
+
 # 2017-05-22 ~ 2017-05-26 工作总结
 ## 黃志偉
 * 加入 OPENTHOS 對 QEMU virgl 的支持。但仍不穩定。
