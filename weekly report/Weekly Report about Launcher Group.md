@@ -45,6 +45,7 @@
 |id|发现时间|说明|
 |---|---|---|
 | | |移植launcher,filemanager,compress到7.1，并且可以初步跑起来
+| | |测试luauncher filemanager compress, ota, factorytest, appstore 在7.1上运行情况，规划之后任务安排
 
 # 陈鹏
 ### 本周已完成任务<br />
