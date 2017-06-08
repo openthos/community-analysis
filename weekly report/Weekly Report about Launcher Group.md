@@ -44,6 +44,7 @@
 ### 本周已完成任务<br />
 |id|发现时间|说明|
 |---|---|---|
+| | |移植launcher,filemanager,compress到7.1，并且可以初步跑起来
 
 # 陈鹏
 ### 本周已完成任务<br />
@@ -62,7 +63,7 @@
 
 # 2017-06-05 ~ 2017-06-08工作计划
 ## 王之旭
-- 移植
+- 移植launcher,filemanager,compress到7.1，并且可以初步跑起来
 
 ## 陈鹏
 - 移植OtoFileManager到android7.1系统中，并测试运行情况
