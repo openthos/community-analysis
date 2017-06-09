@@ -3,6 +3,20 @@
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
 
+# 2017-06-05 ~ 2017-06-09 工作总结
+## 黃志偉
+* 本周繼續清理 Android-x86 7.1-rc1 最後 issues/tasks
+  - Update AOSP to android-7.1.2_r17
+  - Update kernel to 4.9.31
+  - Update Mesa to 17.1.2
+  - Update linux-firmware dir
+  - Apply suspend/resume patches from youling257
+  - Workaround suspend issue on T100
+  - Update Chrome apk to avoid crashing on i965
+  - 週四發佈正式 7.1-rc1，上傳 iso，撰寫 release note。
+* 在 OPENTHOS 加入視頻畫質改善的修正。
+* 更新 NS4AU11 testing image，加入 GMS。
+
 # 2017-05-31 ~ 2017-06-03 工作总结
 ## 黃志偉
 * 準備 Android-x86 7.1-rc1 release
