@@ -17,6 +17,13 @@
 * 在 OPENTHOS 加入視頻畫質改善的修正。
 * 更新 NS4AU11 testing image，加入 GMS。
 
+## 肖络元
+* chyyuu/linux中建立v4.x-oto分支，patch代码maurossi/linux
+* 帮助软件所-初 建立openthos源码环境等
+* 针对7.1的键盘wif等失效问题，debug跟踪查找发现为模块加载问题，提供方法解决之；
+* 对于7.1的Apps的开发，与wzx协商，建立OtoApps开发分支用于app移植；
+* windows恢复工具7.1版本初步移植；
+
 # 2017-05-31 ~ 2017-06-03 工作总结
 ## 黃志偉
 * 準備 Android-x86 7.1-rc1 release
