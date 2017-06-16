@@ -3,6 +3,18 @@
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
 
+# 2017-06-12 ~ 2017-06-16 工作总结
+## 黃志偉
+* 請 BIOS owner 協助處理 NS4AU11 touchpad 的問題。
+  - 修改後的 THTF BIOS touchpad 可用，但無法清楚區分多指，有時少一指。
+  - Wifi 無法使用。
+  - Suspend/resume 後 keyboard & touchpad 有時失效，以 power.x86 workaround 有改善但非 100%.
+  - 換回 Thirdwave BIOS，較 wifi 正常，但 suspend/resume 後有很高機率重啟。
+* 測試 Android-IA graphics stack，搭配 nougat-x86 codebase。
+  - Kernel 需換用 Android-IA 的，否則無法起來。
+  - 在 Baytrail 下 Launcher3 起不來。Skylate 正常，但容易 ANR。
+* 搜尋 Nougat SystemUI tunder / freeform window 資料。
+
 # 2017-06-05 ~ 2017-06-09 工作总结
 ## 黃志偉
 * 本周繼續清理 Android-x86 7.1-rc1 最後 issues/tasks
