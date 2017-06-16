@@ -14,7 +14,20 @@
   - Kernel 需換用 Android-IA 的，否則無法起來。
   - 在 Baytrail 下 Launcher3 起不來。Skylate 正常，但容易 ANR。
 * 搜尋 Nougat SystemUI tunder / freeform window 資料。
-
+## 王建兴
+ * 系统背光被关掉无法重新打开问题的调查
+   - 目前台湾的BIOS团队正在fix这个问题
+ * 集成预装应用
+   - 第一次启动时，因为预装应用比较多，系统处理繁忙，这会对系统的使用体验有影响
+     如果使用pm来安装应用，合适的时间点比较难找(系统服务启动完成->第一次开机配置中间)
+ * G4L工具改进
+   - G4L本身支持UEFI启动；我从Android-x86上取的efi.img文件，".disk/info"文件比较特殊；
+ * art内部机制学习
+ * 其他工作:
+    /system/build.prop问题调研
+    因为Hibernate，ntfs挂载失败问题
+    启动中小错误的修复
+    自动安装时应用安装问题修复(还没有提交代码)
 # 2017-06-05 ~ 2017-06-09 工作总结
 ## 黃志偉
 * 本周繼續清理 Android-x86 7.1-rc1 最後 issues/tasks
