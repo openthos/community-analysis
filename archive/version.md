@@ -13,6 +13,13 @@
   - 如您还有其他问题反馈，可登录禅道https://dev.openthos.org/zentao/zentao/bug-browse-1.html
     - 用户名aihaozhe，密码123456
 -----------------------------------------
+# 20170622版本(包含21的patch）
+
+## 修复问题
+
+  - 优化startmenu菜单
+
+--------------
 
 # 20170621版本(包含0616otocompress的patch以及0620 20：00的patch）
 
