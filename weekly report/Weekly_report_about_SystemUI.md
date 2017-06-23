@@ -20,7 +20,8 @@
   - 工作简述：
     - 重写startupMenu设计文档
     - 测试startupMenu有没有新出现的bug
-    
+    - 移植Printer 到Android 7.1, 运行打印测试页可以!
+    
 ### 下周计划:
   - 工作计划:
     - 待定
