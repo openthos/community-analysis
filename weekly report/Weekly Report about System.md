@@ -3,6 +3,15 @@
 ### 系统组任务  
 <https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
 
+# 2017-06-19 ~ 2017-06-23 工作总结
+## 黃志偉
+* 研究 7.1 無法讓 app 進入 freeform mode 的問題。未找到 root cause，但有 workaround。(據說 7.1.2 才有問題)
+* 與 Taskbar 作者合作，修正 Taskbar build with AOSP。已將 Taskbar 放入 7.1 codebase。
+* 研究 Android-IA graphics stack，嘗試於 nougat-x86 使用。需 patch bionic, system/core, frameworks/base。
+* 研究 gralloc.gdm on virgl，但 SurfaceFlinger 起不來。請教 Rob Herring，需更新 libsync。
+* 研究 QQ、wechat crashing 與 mesa 13 的關係。似乎無關，而是受 kernel 4.9 的影響。
+* 嘗試用 ramoops 研究 NS4AU11 resume 重啟的問題。但奇怪的是開了 ramoops 之後問題沒再複現?
+
 # 2017-06-12 ~ 2017-06-16 工作总结
 ## 黃志偉
 * 請 BIOS owner 協助處理 NS4AU11 touchpad 的問題。
