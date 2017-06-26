@@ -12,6 +12,13 @@
 * 研究 QQ、wechat crashing 與 mesa 13 的關係。似乎無關，而是受 kernel 4.9 的影響。
 * 嘗試用 ramoops 研究 NS4AU11 resume 重啟的問題。但奇怪的是開了 ramoops 之後問題沒再複現?
 
+## 肖络元
+* 7.1多窗口进行集成taskbar和多窗口相关patch， 如tuner；
+* 协助ln解决OtoCompress应用的jni部分的问题；
+* 解决Autotest测试系统的bug，调试并通过重建docker的方式解决；
+* 协助CWHuang，保持本地与github的版本的协调同步；
+* RTLlinux进行LKP自动化测试相关的工作；
+
 # 2017-06-12 ~ 2017-06-16 工作总结
 ## 黃志偉
 * 請 BIOS owner 協助處理 NS4AU11 touchpad 的問題。
