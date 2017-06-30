@@ -5,8 +5,8 @@
 
 # 2017-06-26 ~ 2017-06-30 工作总结
 ## 黃志偉
-* 繼續研究 QQ、Wechat 崩潰問題。Kernel 4.4 搭配 mesa 13.0 無雪潰。結論應與 mesa 13.0 無關，而是 kernel 4.9 與 libhoudini 相容問題。
-* 研究 USB power management。確認 kernel 並未 enable autosuspend by default。手動 enabled 可用。
+* 繼續研究 QQ、Wechat 崩潰問題。Kernel 4.4 搭配 mesa 13.0 無崩潰。結論應與 mesa 13.0 無關，而是 kernel 4.9 與 libhoudini 相容問題。
+* 研究 USB power management。確認 kernel 並未 enable autosuspend by default。手動 enabled 可用。提供測試方法。
 * 測試 Chad Versace (Chromium developer) RGBA_8888 patches，搭配修改 drm_gralloc，可解決 Screenshot Touch app 的問題。但 Teamviewer 仍有問題。
 * 以 ramoops 研究 NS4AU11 唤醒後系统重启的現象。找到 kernel panic 位置，和 "Silence NETLINK when in S3" patch 有關。Revert 後就未再發生唤醒後重启的現象。上傳 openthos-k49-oto-6.img 以供測試。
 
