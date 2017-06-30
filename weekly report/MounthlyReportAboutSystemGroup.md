@@ -8,9 +8,9 @@
 4. 與 Taskbar 作者合作導入 Taskbar 到 Android-x86 7.1。研究 7.1 無法自動進 freeform window 問題，在 frameworks 加一 patch 可解決。
 5. 研究 USB power management，確認 kernel 未 enable autosuspend by default，但可手動 enable 有效。
 6. 研究改善 graphics stack 的可能性：
-  * 測試 HWC2 的可行性。使用 minigbm + ia hwcomposer 成功，但僅能用在 Intel GPU Gen8+ 以上。
-  * 測試 gralloc.gdm on virgl，使用 AOSP master 可成功但 7.1 不行。可能須更新 libsync。
-  * 以 Chad Versace's patches 測試 pixel format 改為 RGBA_8888，搭配 gralloc.drm 的修改可解決 Screenshot apps 的問題。但 Teamviewer 仍不行。
+    * 測試 HWC2 的可行性。使用 minigbm + ia hwcomposer 成功，但僅能用在 Intel GPU Gen8+ 以上。
+    * 測試 gralloc.gdm on virgl，使用 AOSP master 可成功但 7.1 不行。可能須更新 libsync。
+    * 以 Chad Versace's patches 測試 pixel format 改為 RGBA_8888，搭配 gralloc.drm 的修改可解決 Screenshot apps 的問題。但 Teamviewer 仍不行。
 
 # 2017-05月报
 
