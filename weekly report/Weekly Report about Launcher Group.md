@@ -1,3 +1,5 @@
+[2017-06-26 ~ 2017-06-30个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-06-26--2017-06-30%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-06-26 ~ 2017-06-30工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-06-26--2017-06-30%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-06-19 ~ 2017-06-23个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-06-19--2017-06-23%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-06-19 ~ 2017-06-23工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-06-19--2017-06-23%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-06-12 ~ 2017-06-16个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-06-12--2017-06-16%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -43,6 +45,52 @@
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
+# 2017-06-26 ~ 2017-06-30个人周报
+# 王之旭
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |文件管理器状态栏功能
+| | |bug： 磁盘大小进度条显示不正确
+| | |bug： 文件管理器某些特殊目录显示总项目大小不正确
+| | |bug： U盘界面卸载或拔出后，再次进入崩溃的bug
+| | |移除图库直接观看视频的功能
+| | |优化桌面复制粘贴删除逻辑，避免桌面卡顿黑屏
+| | |桌面5.1 7.1代码共用修改
+| | |修改文件管理器某些错误的字符串
+| | |修改其他语言，文件管理器崩溃
+
+# 陈鹏
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+# 卢宁
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+
+# 2017-06-19 ~ 2017-06-23工作计划
+## 王之旭
+- 文件管理器状态栏功能
+- bug： 磁盘大小进度条显示不正确
+- bug： 文件管理器某些特殊目录显示总项目大小不正确
+- bug： U盘界面卸载或拔出后，再次进入崩溃的bug
+- 移除图库直接观看视频的功能
+- 优化桌面复制粘贴删除逻辑，避免桌面卡顿黑屏
+- 桌面5.1 7.1代码共用修改
+- 修改文件管理器某些错误的字符串
+- 修改其他语言，文件管理器崩溃
+
 # 2017-06-19 ~ 2017-06-23个人周报
 # 王之旭
 ### 本周已完成任务<br />
@@ -64,9 +112,6 @@
 | | |优化清理桌面Launcher3相关代码|原生Launcher3代码比较多，关联很紧密，工作量较大，比较费时间|
 
 # 卢宁
-### 本周已完成任务<br />
-|id|发现时间|说明|
-|---|---|---|
 
 ### 本周未完成任务<br />
 |id|发现时间|说明|未完成原因|
