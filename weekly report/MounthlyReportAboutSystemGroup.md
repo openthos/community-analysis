@@ -43,6 +43,17 @@ art以前没有接触过，现在正在搜索文档看code学习其实现过程;
 
 7.解决安装问题，从配置好的实际电脑分区上重新生成system.img和data.img替换到原本安装镜像里面的文件
 
+## 肖络元 
+1. chyyuu/linux中建立v4.x-oto分支，patch代码maurossi/linux;
+2. 针对7.1的键盘wif等失效问题，debug跟踪查找发现为模块加载问题，提供方法解决之;
+3. 对于7.1的Apps的开发，建立OtoApps开发分支用于app移植；本地与github的版本的协调同步；
+4. windows恢复工具android 7.1版本初步移植；
+5. 针对7.1多窗口以及systemUI的代码分析修改, 对比Bliss-x86, taskbar 默认开启7.1的SystemUI Tuner和多窗口freeform支持;
+6. 协助ln解决OtoCompress应用的jni部分的问题；
+7. 解决Autotest测试系统的bug，调试并通过重建docker的方式解决；
+8. RTLlinux进行LKP自动化测试相关的工作；
+9. windows恢复工具add new feature.
+
 # 2017-05月报
 
 ## 月小结：
