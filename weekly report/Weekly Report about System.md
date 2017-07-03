@@ -1,15 +1,13 @@
-### 系统组工作概述    
-<https://github.com/openthos/system-analysis/blob/master/system/summary.md>  
-### 系统组任务  
-<https://github.com/openthos/system-analysis/blob/master/system/Task.md>  
-
 # 2017-06-26 ~ 2017-06-30 工作总结
 ## 黃志偉
 * 繼續研究 QQ、Wechat 崩潰問題。Kernel 4.4 搭配 mesa 13.0 無崩潰。結論應與 mesa 13.0 無關，而是 kernel 4.9 與 libhoudini 相容問題。
 * 研究 USB power management。確認 kernel 並未 enable autosuspend by default。手動 enabled 可用。提供測試方法。
 * 測試 Chad Versace (Chromium developer) RGBA_8888 patches，搭配修改 drm_gralloc，可解決 Screenshot Touch app 的問題。但 Teamviewer 仍有問題。
 * 以 ramoops 研究 NS4AU11 唤醒後系统重启的現象。找到 kernel panic 位置，和 "Silence NETLINK when in S3" patch 有關。Revert 後就未再發生唤醒後重启的現象。上傳 openthos-k49-oto-6.img 以供測試。
-
+## 王建兴
+1.重构OPENTHOS安装部分的代码  
+2.系统初次安装完毕启动时，显示壁纸不完整问题调查  
+3.解决安装问题，从配置好的实际电脑分区上重新生成system.img和data.img替换到原本安装镜像里面的文件   
 # 2017-06-19 ~ 2017-06-23 工作总结
 ## 黃志偉
 * 研究 7.1 無法讓 app 進入 freeform mode 的問題。未找到 root cause，但有 workaround。(據說 7.1.2 才有問題)
