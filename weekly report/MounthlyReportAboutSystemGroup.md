@@ -19,6 +19,30 @@
     * 測試 gralloc.gdm on virgl，使用 AOSP master 可成功但 7.1 不行。可能須更新 libsync。
     * 以 Chad Versace's patches 測試 pixel format 改為 RGBA_8888，搭配 gralloc.drm 的修改可解決 Screenshot apps 的問題。但 Teamviewer 仍不行。
 
+### 王建兴
+
+1.xposed框架成功在marshmallow-x86上运行，
+
+并学习xposed从app层->framework->art层的实现；
+
+art以前没有接触过，现在正在搜索文档看code学习其实现过程;
+
+后续会写分析过程的文档
+
+2.和陈威组长一起看T43睡眠时出现的黑屏，不能正常恢复的问题
+
+目前是同方BIOS在更改这个问题
+
+3.集成预装应用
+
+4.G4L工具改进
+
+5.重构OPENTHOS安装部分的代码
+
+6.系统初次安装完毕启动时，显示壁纸不完整问题调查
+
+7.解决安装问题，从配置好的实际电脑分区上重新生成system.img和data.img替换到原本安装镜像里面的文件
+
 # 2017-05月报
 
 ## 月小结：
