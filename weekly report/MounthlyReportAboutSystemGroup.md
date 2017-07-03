@@ -1,7 +1,7 @@
 # 2017-06月报
 月小结：
 
-黄志伟重点解决skylake/kabylake硬件适配问题，Android-x86 7.1的稳定性和兼容性问题 ，取得了很好的成果。 王建兴同时参与sec组和系统组，主要解决 bootloader/os/system的boot优化/美化，硬盘复制，suspend/resume等，系统安装问题。对于suspend/resume的问题，可能涉及bios和其他团队，有所延后，总体基本完成任务。有关肖络元的事务比较繁杂，参与了多节点/多版本的openthos repos版本维护与管理，windows 恢复app,usb mount/unmount，autotest等工作。总体完成了任务。有关基于lkp的autotest方面，由于系统比较复杂，进度较慢。
+黄志伟重点解决skylake/kabylake硬件适配问题，Android-x86 7.1的稳定性和兼容性问题 ，取得了很好的成果。 王建兴同时参与sec组和系统组，主要解决 bootloader/os/system的boot优化/美化，硬盘复制，suspend/resume等，系统安装问题。对于suspend/resume的问题，可能涉及bios和其他团队，有所延后，总体基本完成任务。有关肖络元的事务比较繁杂，参与了多节点/多版本的openthos repos版本维护与管理，windows 恢复app,usb mount/unmount，autotest等工作。总体完成了任务。有关基于lkp的autotest方面，由于系统比较复杂，进度较慢。另外，王建兴和肖络元在日常的工作日志，周报告，月报告的撰写方面，还需加强对自身的管理。对于每周的工作，与小组长等交流还不够充分。
 
 ## 下月计划：
 上月除黄志伟外，工程师大部分工作还是基于openthos 5.1的改进与完善。本月除了要进一步优先解决openthos 5.1存在的问题外，接下来主要是基于Openthos7.1的系统开发与维护工作。
