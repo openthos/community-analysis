@@ -7,12 +7,27 @@
   
   - 本周进度见https://github.com/openthos/community-analysis/tree/master/weekly%20report/work-progress
   - 全面测试结果：https://github.com/openthos/community-analysis/blob/master/daily-testresult/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%20testresult%2020170519.md
+
 # 用户反馈
   
   - 汇总列表见https://github.com/openthos/community-analysis/tree/master/userquestion
   - 如您还有其他问题反馈，可登录禅道https://dev.openthos.org/zentao/zentao/bug-browse-1.html
     - 用户名aihaozhe，密码123456
 -----------------------------------------
+
+# 20170706版本(包含0705和0706上午patch）
+
+## 修复问题
+
+  - 解决了通知中心单击隔离模式后图标没有改变的问题
+  - 解决了字体设置为超大后，任务栏日期显示不全的问题
+  - 修改了英文模式下任务栏右键菜单的文字
+  - 解决了设置壁纸会拉伸导致模糊的问题
+  - 解决了任务栏右键菜单弹出异常的问题
+  - 解决了字体设置为超大后，桌面右键菜单显示不正确的问题
+  - 解决了桌面长按鼠标右键会弹出两个菜单的问题
+
+--------------
 
 # 20170704版本(包含0704上午patch）
 
