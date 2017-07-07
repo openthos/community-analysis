@@ -1,3 +1,11 @@
+# 2017-07-03 ~ 2017-07-07 工作总结
+## 黃志偉
+* 以 git bisect 研究 libhoudini 崩潰問題。找到問題 commit 並 revert，測試正常。上傳 openthos-k49-oto-7.img 以供測試。
+* 繼續研究新 graphic stacks。成功在 virgl 使用 Rob Herring 的 gralloc.gbm 以及 hwcomposer.drm。較穩定但仍有不少 bugs。在 i965 測試則失敗。
+* 測試 NS4AU11 wifi 問題。在 Windows 也訊號不良。疑是硬件問題。
+* 下週工作：
+   - 調查 GFXBench GL 在 Apollo Lake 平台的問題。
+
 # 2017-06-26 ~ 2017-06-30 工作总结
 ## 黃志偉
 * 繼續研究 QQ、Wechat 崩潰問題。Kernel 4.4 搭配 mesa 13.0 無崩潰。結論應與 mesa 13.0 無關，而是 kernel 4.9 與 libhoudini 相容問題。
