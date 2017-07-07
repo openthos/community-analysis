@@ -66,7 +66,7 @@
 | | |AppStore资源文件字符串修正|
 | | |AppStore删除为安装本地apk后无法重新下载此应用|
 | | |FileManager个人空间图标自适应窗口尺寸|
-| | |system目录下的压缩包，FileManager和Launcher的已交由各自应用处理，代码已完成为提交|
+| | |system目录下的压缩包，FileManager和Launcher的已交由各自应用处理，代码已完成未提交|
 
 ### 本周未完成任务<br />
 |id|发现时间|说明|未完成原因|
