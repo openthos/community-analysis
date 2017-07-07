@@ -66,12 +66,12 @@
 | | |AppStore资源文件字符串修正|
 | | |AppStore删除为安装本地apk后无法重新下载此应用|
 | | |FileManager个人空间图标自适应窗口尺寸|
-| | |system目录下的压缩包，FileManager和Launcher的已交由各自应用处理，代码已完成未提交|
+| | |system目录下的压缩包，FileManager、Launcher和Printer的已交由各自应用处理，代码已完成未提交|
 
 ### 本周未完成任务<br />
 |id|发现时间|说明|未完成原因|
 |---|---|---|---|
-| | |system目录下的压缩包,Printer和Fennec的正在调研如何交由各自处理|
+| | |system目录下Fennec的压缩包正在调研如何处理|
 
 # 2017-07-03 ~ 2017-07-07工作计划
 # 王之旭
