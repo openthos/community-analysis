@@ -13,6 +13,19 @@
   - 2.feature 在第一次启动中增加预设应用初始化的界面
   - 3.根据装机测试的结果，修改相关紧急的bug
 
+# 罗浩
+
+### 本周总结
+  - 1.完成了对TaskBar启动应用方法的分析，并成功在Launcher3中复现
+  - 2.找到了Header对应的代码，对全屏化机制以及窗口缩放机制包括拖拽缩放和单机最大化进行了分析，形成了文档
+  - 3.通过保留最大化按钮的方式尝试了让Task在两个ActivityStack间移动，效果已经拍摄视频发给陈老师
+  - 4.尝试修改了ActivityStarter部分代码似的TaskBar能够将FULLSCREEN_WORKSPACE的应用窗口化得启动，但会出现重叠尚未解决。
+    
+### 下周任务
+  - 1.分析Android-x86将TaskBar捆绑并设置为Launcher的代码
+  - 2.分析FarmerBB的FreeFormLibrary部分代码
+  - 3.尝试完成在TaskBar启动一个FULLSCREEN_WORKSPACE中的Task并且将其放置到FREEFORM_WORKSPACE中去时能够判断叠加覆盖问题，从而更好地理解LauchingTaskPositioner的功能
+
 # 2017年7月03日 - - 2017年7月07日
 
 # 刘晓旭
@@ -32,6 +45,20 @@
   - 2.bug1636 窗口有重叠错误，可以调整一下大小确保正确覆盖
   - 3.根据装机测试的结果，修改相关紧急的bug
   - 4.调研Android7.1 关于多窗口实现的代码，分析其实现的原理，以及相关的API调用
+  
+# 罗浩
+
+### 本周总结
+  - 1.分析了Multiwindow7.1中和FREEFORM_WORKSPACE_STACK_ID相关的关联判断，并形成了文档
+  - 2.分析了TaskBar启动应用的方式，已经确定TaskBar是通过InvisibleActivityFreeForm来创建FREEFORM的ActivityContainer。并考察了7.1中Activity启动流程，确定了当LaunchBounds被设定的情况下会强制进入FREEFORM_WORKSPACE
+  - 3.解决了测试机无法启动进入Ubuntu系统导致自动测试无法启动的问题
+  - 4.尝试解决了一处由于Openthos版本更替导致的自动测试问题
+    
+### 下周任务
+  - 1.进一步分析TaskBar窗口化启动应用的方式，争取在Launcher3上复现
+  - 2.考察窗口Header对应的代码，了解窗口缩放机制和Task在不同ActivityStack之间交换的方式
+  - 3.尝试通过一定的修改使得Task能够从FULLSCREEN_WORKSPACE回到FREEFORM_WORKSPACE
+  - 4.尝试通过一定的修改使得TaskBar启动已经启动在FULLSCREEN_WORKSPACE的应用时能够窗口化将其加载到FREEFORM_WORKSPACE
 
 # 2017年6月26日 - - 2017年6月30日
 
