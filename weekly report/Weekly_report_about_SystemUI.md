@@ -2,7 +2,8 @@
 ## 曹永韧
 ### 本周总结：
   - 工作简述：
-    
+    - bug[1634]: 请修改邮件客户端的代码，将默认签名改成下面的内容 Sent from OPENTHOS, an Android based open source desktop OS. 完成: 50%  完成时间: 2017-07-4  完成人: 曹永韧
+  
 ### 新增任务:
   
      
