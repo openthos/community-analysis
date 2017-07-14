@@ -1,3 +1,15 @@
+# 2017-07-10 ~ 2017-07-14 工作总结
+## 黃志偉
+* 測試 GLFBench，在 OPENTHOS 可重現雪花問題。但在 android-x86 5.1, 6.0, 7.1 以及 Remix OS 2.0, 3.0 測試均正常。
+* 研究 VLC 和 bilibili 無法使用 hw codecs 的問題。
+   - 加入 codec profile levels 可解決 VLC 使用 hw h264 codec 問題。
+   - 修改 codec 名稱並在 frameworks/av 做 workaround 可解決 bilibili 的問題。
+   - 上傳 openthos-k49-oto-8.img 以供測試。
+* 繼續研究改良 graphic stacks 的方法。加入 RGBA_8888 patches 後，在 i965 & virgl 可正常顯示。但在 Nvidia 會有紅藍顏色交換的問題。在 AMD 則畫面整個亂掉。
+* 下週工作：
+   - 繼續調查 GFXBench GL 在 Apollo Lake 平台的問題。
+   - 整合 gbm_gralloc。
+
 # 2017-07-03 ~ 2017-07-07 工作总结
 ## 黃志偉
 * 以 git bisect 研究 libhoudini 崩潰問題。找到問題 commit 並 revert，測試正常。上傳 openthos-k49-oto-7.img 以供測試。
