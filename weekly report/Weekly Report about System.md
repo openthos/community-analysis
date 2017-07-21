@@ -11,6 +11,14 @@
 * 下週工作：
    - 繼續 7.1 工作
   
+## 肖络元
+* kernel4.9内核升级，导致一台同方台式机显示bug，通过参考7.1代码mirror该VGA输出解决，同时增加了VGA的双屏输出功能； 
+* kernel4.9内核升级，导致的打印app添加打印机crash，通过环境变量设置修复CUPS打印系统的proot的崩溃； 
+* 升级mesa13  kernel4.9的编译使用测试； 
+* 协助一铭lmm，进行android repo的源码git server和docker编译环境的搭建；
+* 学习陈刚的ubuntu+openthos双系统切换的报告； 
+
+
 # 2017-07-10 ~ 2017-07-14 工作总结
 ## 黃志偉
 * 測試 GLFBench，在 OPENTHOS 可重現雪花問題。但在 android-x86 5.1, 6.0, 7.1 以及 Remix OS 2.0, 3.0 測試均正常。
