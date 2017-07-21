@@ -4,6 +4,7 @@
    - 與肖络元討論某台式機不能跑 kernel 4.9 的問題。發現顯示多了 eDP-1。建議移植 7.1 gralloc.drm 的多屏顯示代碼過來。肖络元測試成功。
    - 測試內置 apps 並回報給測試組，並應測試組要求測試更多 apps，大多數正常，少數應用有黑屏問題。移植 mesa 17.1 的修正過來解決。
    - 測試央視影音(cn.cntvhd)，查看 log 確定沒有使用硬解。在 Nexus 7 也一樣，應是 app 本身設計問題。
+   - Back-port frameworks/base 7.1 對於新 kernel 的修正，以解決無法設置時鐘的問題。
 * 更新 nougat-x86 至 android-7.1.2_r27 (security update 2017-07-05)
 * 提交 libdrm 兩個 patches 以及 mesa 一個 patch 給 upstream，解決 Android build break。
 * 測試 SwiftShader，在 QEMU 效能確實不錯，比 mesa swrast llvmpipe 好些。可考慮取代 swrast llvmpipe。
