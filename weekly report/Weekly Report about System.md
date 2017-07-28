@@ -1,3 +1,22 @@
+# 2017-07-24 ~ 2017-07-28 工作总结
+## 黃志偉
+* 繼續支援測試 kernel 4.9 + mesa 13 的工作：
+   - 確認 Nvidia 以及 AMD 顯卡的支持情況：
+      - https://github.com/openthos/system-analysis/blob/master/display/GPUSupport.md
+   - 修正 inotify 失效的問題。
+* 研究 PCMark 測試中途崩潰的問題。在 gralloc 需增加 GRALLOC_USAGE_HW_VIDEO_ENCODER 的支持，並且放寬 SoftVideoEncoderOMXComponent 對 color format 的限制。提交相關 patches。
+* 解釋目前 HDMI audio 的支持情況。
+* 修正 VMware 不能支持 kernel cmdline video= 來調整 resolution 的問題。
+* 調查 VLC 在 media.sf.hwaccel=0 時崩潰的問題。暫時無解。
+* Review ChenGang libaudio patches。
+* Android-x86 7.1 graphic stack RGBA_8888 改善：
+   - virgl 搭配 gbm_gralloc + drm_hwcomposer 已能穩定運作，RGBA_8888 可用。
+   - i965/i915/vmwgfx 搭配 RGBA_8888 patch 可運作
+   - r600g 搭配 RGBA_8888 畫面花掉
+   - nouveau 尚未測試
+* 下週工作：
+   - 繼續 7.1 工作 graphic stack 的改善測試。
+  
 # 2017-07-17 ~ 2017-07-21 工作总结
 ## 黃志偉
 * 本週工作比較雜，主要支援升級 kernel 4.9 + mesa 13 的工作
