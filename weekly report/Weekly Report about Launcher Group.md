@@ -1,3 +1,5 @@
+[2017-07-24 ~ 2017-07-28个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-24--2017-07-28%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-07-24 ~ 2017-07-28工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-24--2017-07-28%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-07-17 ~ 2017-07-21个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-17--2017-07-21%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-07-17 ~ 2017-07-21工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-17--2017-07-21%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-07-10 ~ 2017-07-14个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-10--2017-07-14%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -50,6 +52,68 @@
 [2017-01-16 ~ 2017-01-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+
+# 2017-07-24 ~ 2017-07-28个人周报
+# 王之旭
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |修复默认壁纸裁剪问题
+| | |修复还原默认壁纸裁剪问题
+| | |调整工厂测试启动逻辑
+| | |增加工厂测试清理wifi缓存和sdcard数据
+| | |调整工厂测试布局
+| | |增加预设默认壁纸
+| | |修改bug： 直接格式化u盘崩溃
+| | |设置壁纸bug：选择非图片文件溃败
+| | |设置壁纸bug：选择复制来的图片文件溃败
+| | |完成ota界面的修改
+| | |完成文件管理器地址栏显示问题
+
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+# 陈鹏
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+# 卢宁
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+
+# 2017-07-24 ~ 2017-07-28工作计划
+## 王之旭
+- 修复默认壁纸裁剪问题
+- 修复还原默认壁纸裁剪问题
+- 调整工厂测试启动逻辑
+- 增加工厂测试清理wifi缓存和sdcard数据
+- 调整工厂测试布局
+- 增加预设默认壁纸
+- 修改bug： 直接格式化u盘崩溃
+- 设置壁纸bug：选择非图片文件溃败
+- 设置壁纸bug：选择复制来的图片文件溃败
+- 完成ota界面的修改
+- 完成文件管理器地址栏显示问题
+
+## 陈鹏
+
+## 卢宁
+
 
 # 2017-07-17 ~ 2017-07-21个人周报
 # 王之旭
