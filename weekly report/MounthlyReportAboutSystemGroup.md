@@ -1,3 +1,20 @@
+# 2017-07月报
+
+## 个人月总结
+
+## 黃志偉
+
+## 萧络元
+1. RTLinux相关的测试框架的建立；
+2. 刷BIOS解决同方笔记本休眠唤醒问题
+3. kernel4.9内核升级，出现一台同方台式机显示bug，通过参考7.1代码mirror该VGA输出解决，同时增加了VGA的双屏输出功能；
+4. kernel4.9内核升级，导致的打印app添加打印机crash，通过环境变量设置修复CUPS打印系统的proot的崩溃；
+5. 协助测试组进行升级kernel4.9 + mesa13的编译使用测试；
+6. 协助一铭lmm，进行android repo的源码git server和docker编译环境的搭建；
+7. 调试调查桌面新建文件显示刷新问题的bug，发现kernel4.9的FileObserver的onEvent()在修改了文件后偶发性无法正确回调，而kernel4.4可，确定是应用层之下的问题。最后黄SIR提供内核patch修复了该bug；
+8. 实验室的repo与github的同步出现bug，主要由于framworks/base存在大文件无法上传成功，现已修复；
+9. windows系统恢复APP根据刘总的需求修改代码，包括分区信息的自动识别与展示，相关流程等的修改；
+
 # 2017-06月报
 月小结：
 
