@@ -18,16 +18,13 @@
 
 ## 罗俊欢
    - 工作简述：
-     - 实现StartupMenu的在作为普通app时在7.1上的移植。 
-     - 书写StartupMenu的移植文档以及设计文档
-     - 完成StartupMenu的重写工作，解决卡顿问题
-     - 移植Printer 到Android 7.1
-     - [bug] StartupMenu中应用右键后，阴影消失。
-     - [bug] StartupMenu自适应右键弹出的dialog（字体调整）
-     - [bug] 通知栏选项中“投影”和“隔离模式”点击切换图标
+     - 
 <hr>
 
 总结:
+  - 1. 7月工作特点: 针对刘总邮件内容进行的bug修复, 工作前半月和后半月存在明显差别, 前半月相对没有被列出问题, 后半月则列出很多.
+  - 2. 在设置调整字体后, SystemUI 布局出现异常.
+  
 <hr>
 
 # 2017年6月 -- SystemUI组 总结
