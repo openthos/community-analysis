@@ -3,6 +3,22 @@
 ## 个人月总结
 
 ## 黃志偉
+本月工作，主要協助處理 OPENTHOS 1.0 release 問題，特別是轉移到 kernel 4.9 + mesa 13 上。
+1. 解決 kernel 4.9 與 libhoudini 相衝突問題
+2. 解決 VLC 無法使用 H.264 硬解的問題
+3. 解決 bilibili 無法使用硬解的問題
+4. 與肖络元解決某 PC 外接顯卡無畫面的問題
+5. 解決 kernel 4.9 inotify 失效的問題
+6. 協助測試各應用在 kernel 4.9 + mesa 13 上的情況
+7. 解決某些應用在 mesa 13 會黑屏的問題
+8. 解決 PCMark 測試中途會 crashing 的問題
+9. 解決 VMware 無法使用 video= 來設定 resolution 的問題
+10. 解決 VLC 播放某些 size 影片會 crashing 的問題
+
+另外在 Android-x86 上則持續著重在 graphic stacks 的改善。
+1. 測試 SwiftShader，效果不錯。可替代 mesa srwast llvmpipe。
+2. 整合 gbm_gralloc 至 nougat-x86 codebase，virgl 可穩定運作。
+3. 測試並整合 Rob Herring 的 RGBA_8888 patch。針對某些 GPU 不支持 RGBA_8888，在 RenderEngine 做 workaround。
 
 ## 萧络元
 1. RTLinux相关的测试框架的建立；
