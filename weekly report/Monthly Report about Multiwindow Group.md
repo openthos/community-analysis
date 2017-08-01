@@ -9,6 +9,10 @@
   - 1.修复装机版剩余的几个紧急bug，并为装机目标做准备。
   - 2.分析Android7.1实现多窗口的API以及相关模块
 
+### 罗浩
+ - 1.继续修复openthos5.1中同多窗口相关的bug
+ - 2.分析7.1并初步进行一些功能的移植和实现
+
 ## 个人月总结
 
 ### 刘晓旭
@@ -34,6 +38,19 @@
    - 17.bug269 系统升级配置,左侧太靠边.建议留点空隙
    - 18.bug1776 图片管理器默认横屏启动（不要全屏
 
+### 罗浩
+ - 分析7.1多窗口并形成多个文档
+ - 完成bug6个
+ - 完成feature2个
+ - 主要任务
+   - 修复图库缩放有问题的bug
+   - 修复systemui弹窗导致系统rect改变的bug
+   - 修复从新建的activityStack弹出的systemui无法点击的bug
+   - 协助修复wifi导致systemui崩溃的bug
+   - 修复BILIBILI程序粉线bug
+   - 修复重复打开打开方式未确定的文件导致Android系统边框出现的bug
+   - 添加让systemui能够不依附于app弹出的feature
+   - 添加不让QQ成为打开文件方式的feature
 
 # 2017年6月 -- Multiwindow组 总结
 
