@@ -1,5 +1,19 @@
 # 2017-07-24 ~ 2017-07-28 工作总结
 ## 黃志偉
+* 協助解決 OPENTHOS bugs:
+   - 修正 VLC 在播放 2820x1200 video 會 crashing 的問題
+   - 解決 3DMark 測試會卡住的問題
+   - 解決掛載多 USB disks 時可能無法缷載的問題
+   - 修正 vold 可能 crashing 的 bug
+   - 研究 PCMark full screen 測試卡住的問題，似和 view size 有關，但未解決
+   - 分析 GFXBench T-Rex 測試的雪花問題，仍未有線索
+* Android-x86 7.1-rc2 方面：
+   - 加入 "DisplayManagerService: disable display blanking on suspend" patch 以改善 suspend/resume
+   - 測試 ShiftShader master branch with RGB_888 patch，顏色正常。
+* 測試和建議一些遊戲，放到應用商店。   
+
+# 2017-07-24 ~ 2017-07-28 工作总结
+## 黃志偉
 * 繼續支援測試 kernel 4.9 + mesa 13 的工作：
    - 確認 Nvidia 以及 AMD 顯卡的支持情況：
       - https://github.com/openthos/system-analysis/blob/master/display/GPUSupport.md
