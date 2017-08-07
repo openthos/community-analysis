@@ -1,3 +1,5 @@
+[2017-07-31 ~ 2017-08-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-31--2017-08-04%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-07-31 ~ 2017-08-04工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-31--2017-08-04%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-07-24 ~ 2017-07-28个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-24--2017-07-28%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-07-24 ~ 2017-07-28工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-24--2017-07-28%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-07-17 ~ 2017-07-21个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-17--2017-07-21%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -52,6 +54,62 @@
 [2017-01-16 ~ 2017-01-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+
+# 2017-07-24 ~ 2017-07-28个人周报
+# 王之旭
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |解决多次在桌面按F5刷新导致卡顿假死
+| | |解决文件管理去多开崩溃
+| | |解决文件管理器多开后指向同一个目录可能不刷新界面的问题
+| | |解决文件管理器多开新建文件等操作某些情况下可能崩溃的bug
+
+# 陈鹏
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |OtoFileManager优化方向键操作的代码逻辑，修复bug:1801
+| | |OtoFileManager支持方向键操作的触发，当用户点击空白区域以后
+| | |OtoFileManager:完善框选计算逻辑以适应不用的dpi（之前完成）
+| | |OtoAppStore支持按esc回退
+| | |OtoAppStore:修复bug : 点击条目时，分数文字会改变颜色
+| | |OtoAppStore修复在英文语言且字体超大的情形下，文字会显示不全的问题
+| | |OtoAppStore修复管理界面下，各子界面按方向键会互相影响的问题
+| | |OtoAppStore修复下载状态下，条目不能滑动的问题
+| | |OtoAppStore修复下载状态下，无法连续点击不同条目进行下载的问题
+| | |OtoAppStore使用图片按钮替换文字按钮
+| | |OtoAppStore给下载状态添加动画
+
+# 卢宁
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+
+
+# 2017-07-24 ~ 2017-07-28工作计划
+## 王之旭
+- 解决多次在桌面按F5刷新导致卡顿假死
+- 解决文件管理去多开崩溃
+- 解决文件管理器多开后指向同一个目录可能不刷新界面的问题
+- 解决文件管理器多开新建文件等操作某些情况下可能崩溃的bug
+
+## 陈鹏
+- OtoFileManager优化方向键操作的代码逻辑，修复bug:1801
+- OtoFileManager支持方向键操作的触发，当用户点击空白区域以后
+- OtoFileManager:完善框选计算逻辑以适应不用的dpi（之前完成）
+- OtoAppStore支持按esc回退
+- OtoAppStore:修复bug : 点击条目时，分数文字会改变颜色
+- OtoAppStore修复在英文语言且字体超大的情形下，文字会显示不全的问题
+- OtoAppStore修复管理界面下，各子界面按方向键会互相影响的问题
+- OtoAppStore修复下载状态下，条目不能滑动的问题
+- OtoAppStore修复下载状态下，无法连续点击不同条目进行下载的问题
+- OtoAppStore使用图片按钮替换文字按钮
+- OtoAppStore给下载状态添加动画效果
+
+## 卢宁
+
 
 
 # 2017-07-24 ~ 2017-07-28个人周报
