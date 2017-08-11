@@ -1,3 +1,13 @@
+# 2017-08-07 ~ 2017-08-11 工作总结
+## 黃志偉
+* 分析並解決 ShadowSocks 在 kernel 4.9 的問題
+* 測試新 OPENTHOS image，VLC 硬解應正常
+* Sync cm-x86-14.1 branch and fix some issues
+* 更新 nougat-x86 至 android-7.1.2_r33
+* 測試 kernel 4.9.41
+* 下週工作：
+   - 準備 7.1-rc2 release
+
 # 2017-07-31 ~ 2017-08-04 工作总结
 ## 黃志偉
 * 協助解決 OPENTHOS bugs:
