@@ -1,3 +1,4 @@
+[2017-08-07 ~ 2017-08-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-08-07--2017-08-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-07-31 ~ 2017-08-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-31--2017-08-04%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-07-31 ~ 2017-08-04工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-31--2017-08-04%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-07-24 ~ 2017-07-28个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-07-24--2017-07-28%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -78,10 +79,13 @@
 ### 本周已完成任务<br />
 |id|发现时间|说明|
 |---|---|---|
+| | |1366笔记本压缩tar格式文件时，选项显示不全|
+| | |压缩软件增加user版用户权限限制|
 
 ### 本周未完成任务<br />
 |id|发现时间|说明|未完成原因|
 |---|---|---|---|
+| | |压缩解压缩缺少rar验证|已完成60％，预计周三前完成|
 
 # 2017-06-05 ~ 2017-06-08工作计划
 ## 王之旭
@@ -89,6 +93,10 @@
 ## 陈鹏
 
 ## 卢宁
+- 1366笔记本压缩tar格式文件时，选项显示不全
+- 压缩软件增加user版用户权限限制
+- 压缩解压缩缺少rar验证
+
 # 2017-07-31 ~ 2017-08-04个人周报
 # 王之旭
 ### 本周已完成任务<br />
