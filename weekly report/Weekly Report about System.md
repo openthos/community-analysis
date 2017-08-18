@@ -1,3 +1,14 @@
+# 2017-08-14 ~ 2017-08-18 工作总结
+## 黃志偉
+* 分析並解決帶 SAR (Sample Aspect Ratio)的視頻被不正確延展的問題。
+* 分析並解決 Weibo apk crashing 的問題。
+* 測試 Nvidia GTX 1060 顯卡。目前 kernel 4.9 不支援，需更新 kernel & drm_gralloc。
+* 研究如何解決 apps in forced orientation 輸入不正常的問題。尚未獲得最後結果。
+* 解釋如何整合 Houdini，以及 Android-IA 的現況。
+* 下週工作：
+   - 繼續研究如何支持 Nvidia GTX 1060 顯卡
+   - 繼續 prepare 7.1-rc2 release, include kernel 4.9.44
+   
 # 2017-08-07 ~ 2017-08-11 工作总结
 ## 黃志偉
 * 分析並解決 ShadowSocks 在 kernel 4.9 的問題
