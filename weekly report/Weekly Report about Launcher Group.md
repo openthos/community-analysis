@@ -1,3 +1,5 @@
+[2017-08-21 ~ 2017-08-25个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-08-21--2017-25-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-08-21 ~ 2017-08-25工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-08-21--2017-08-25%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-08-14 ~ 2017-08-18个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-08-14--2017-08-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-08-14 ~ 2017-08-18工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-08-14--2017-08-18%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-08-07 ~ 2017-08-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-08-07--2017-08-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -58,6 +60,57 @@
 [2017-01-16 ~ 2017-01-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-16--2017-01-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2017-08-21 ~ 2017-08-25个人周报
+# 王之旭
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |修改F5等功能键造成的卡顿或者崩溃问题
+| | |Ota增加手动升级选项
+| | |跳过工厂测试可能导致工厂测试崩溃
+
+# 陈鹏
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+|1896| |OtoAppStore搜索会出现重复的条目|
+|1900| |OtoAppStore回退会出现空白页面|
+|1911| |游戏页面只能搜索到一个"angry birds"|
+|1665| |优化下载界面显示逻辑，修复OtoAppStore安装完软件后，删除apk文件，再次打开管理的下载界面时，显示有误的问题|
+| | |OtoAppStore优化代码，减少实例的创建，提升效率和容错率|
+| | |OtoAppStore支持主页面的全局搜索|
+
+# 卢宁
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+|1687| |压缩解压缩缺少rar(重构重复性验证代码)|
+|1868| |设置字号为超大时，压缩文件的类型显示不全，如图中tar.gz|
+| | |优化加密文件解压缩逻辑代码|
+| | |对原生android lollipop的arm版开发进行初始化配置|
+
+# 2017-08-21 ~ 2017-08-25工作计划
+## 王之旭
+- 修改F5等功能键造成的卡顿或者崩溃问题
+- Ota增加手动升级选项
+- 跳过工厂测试可能导致工厂测试崩溃
+
+# 陈鹏
+- bug1896：OtoAppStore搜索会出现重复的条目
+- bug1900：OtoAppStore回退会出现空白页面
+- bug1911：游戏页面只能搜索到一个"angry birds"
+- bug1665：优化下载界面显示逻辑，修复OtoAppStore安装完软件后，删除apk文件，再次打开管理的下载界面时，显示有误的问题
+- OtoAppStore优化代码，减少实例的创建，提升效率和容错率
+- OtoAppStore支持主页面的全局搜索
+
+# 卢宁
+- 压缩解压缩缺少rar(重构重复性验证代码)
+- 设置字号为超大时，压缩文件的类型显示不全，如图中tar.gz
+- 优化加密文件解压缩逻辑代码
+- 对原生android lollipop的arm版开发进行初始化配置
+
+
 
 # 2017-08-14 ~ 2017-08-18个人周报
 # 王之旭
