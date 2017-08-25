@@ -1,3 +1,15 @@
+# 2017-08-21 ~ 2017-08-25 工作总结
+## 黃志偉
+* 在 nougat-x86 解決 forced orientation portrait apps 的輸入問題。
+* 在 drm_gralloc 加入 Nvidia GTX 1060 的支持。但需用 kernel 4.12 以上才能成功進 SurfaceFlinger。
+* 開始 Android 8.0 oreo-x86 移植
+   - 重整 manifest.xml，改用 include 方式加入 x86 projects。
+   - 改用 mksquashfsimage.sh 來產生 system.sfs。
+   - 解決 mesa 17.2-rc4 在 oreo-x86 的編譯問題。
+   - 移植 system/core 的 patches，解決衝突。
+* 下週工作：
+   - 繼續 oreo-x86 移植。
+
 # 2017-08-14 ~ 2017-08-18 工作总结
 ## 黃志偉
 * 分析並解決帶 SAR (Sample Aspect Ratio)的視頻被不正確延展的問題。
