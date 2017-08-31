@@ -1,7 +1,31 @@
-# 2017-07月报
-
+# 2017-08月报
 ## 个人月总结
+## 黃志偉
+OPENTHOS 相關：
+* 從 Google Play 挑選合適 OPENTHOS 的遊戲，建議放到應用商店
+* 解決 3DMark 測試會卡住的問題
+* 解決 vold umount 反向 unmount 多個 USB 可能卡住的問題
+* 修正 vold return-local-addr bug
+* 修正 ShadowSocks 在 kernel 4.9 無法使用的問題 (netd)
+* 解決某些視頻因不正確的 SAR 而被錯誤拉伸的問題
+* 解決 Weibo 崩潰的問題
+* 分析 VLC 播放 1920x1080 H.264 視頻產生干擾條的問題，但未解決
 
+Android-x86 7.1 相關：
+* 更新至 android-7.1.2_r33
+* 合併 kernel 4.9.41
+* Backport nouveau patches for GTX 1060
+* 解決 forced orientation mode 部分區域無法輸入的問題
+
+開始 Android-x86 8.0 移植：
+* 修改 manifest.xml，加入 include android-x86.xml
+* 暫時 disable busybox, alsa-*, stagefright-plugins, mesa r600g and radeonsi, Eleven
+* 解決 mesa + llvm 編譯問題
+* 使用 mksquashfsimage.sh 產生 system.sfs，修改對應的 init script
+* 移植 Android init patches，目前 module loading patches 尚未完成
+
+# 2017-07月报
+## 个人月总结
 ## 黃志偉
 本月工作，主要協助處理 OPENTHOS 1.0 release 問題，特別是轉移到 kernel 4.9 + mesa 13 上。
 1. 解決 kernel 4.9 與 libhoudini 相衝突問題
