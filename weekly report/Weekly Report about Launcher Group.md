@@ -1,3 +1,5 @@
+[2017-09-04 ~ 2017-09-08个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-09-04--2017-09-08%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-09-04 ~ 2017-09-08工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-09-04--2017-09-08%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-08-28 ~ 2017-09-01个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-08-28--2017-09-01%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-08-28 ~ 2017-09-01工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-08-28--2017-09-01%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-08-21 ~ 2017-08-25个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-08-21--2017-08-25%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -63,6 +65,43 @@
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
+# 2017-09-04 ~ 2017-09-08个人周报
+# 王之旭
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+| | |大部分游戏鼠标点击无效的问题|正在调研 |
+
+# 陈鹏
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |文件管理器对文件进行操作以后，索引未更新的bug|
+ 
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+| | |键盘映射|正在调研|
+
+# 卢宁
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |文件管理器搜索界面重做|
+
+
+# 2017-09-04 ~ 2017-09-08工作计划
+## 王之旭
+- 大部分游戏鼠标不能使用的bug
+
+## 陈鹏
+- 文件管理器对文件进行操作以后，索引未更新的bug
+- 键盘映射
+
+## 卢宁
+- 文件管理器搜索界面重做
+
 # 2017-08-28 ~ 2017-09-01个人周报
 # 王之旭
 ### 本周已完成任务<br />
@@ -83,8 +122,6 @@
 |---|---|---|
 |1934| |文件管理器不能及时刷新剩余空间大小|
  
-
-
 ### 本周未完成任务<br />
 |id|发现时间|说明|未完成原因|
 |---|---|---|---|
