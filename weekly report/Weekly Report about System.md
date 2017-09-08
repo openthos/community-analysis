@@ -1,3 +1,13 @@
+# 2017-08-28 ~ 2017-09-08 工作总结
+## 黃志偉
+* 繼續 oreo-x86 移植：
+   - 重新實作 auto module loading
+   - 修正一大堆編譯錯誤
+   - 使用 SwiftShader 可開進桌面
+
+* 下週工作：
+   - 完善 oreo-x86 移植。
+   
 # 2017-08-21 ~ 2017-08-25 工作总结
 ## 黃志偉
 * 在 nougat-x86 解決 forced orientation portrait apps 的輸入問題。
