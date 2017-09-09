@@ -15,9 +15,11 @@
 ## 罗俊欢
 ### 本周总结：
   - 工作简述：
-    - 调研通知栏实现逻辑 https://github.com/openthos/systemui-analysis/blob/master/LJH/%E9%80%9A%E7%9F%A5%E6%A0%8F%E5%BC%B9%E5%87%BA%E9%80%BB%E8%BE%91%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A.md
-  
+    - 1、调研taskBar在android 7.1上与startupMenu的优缺点并形成文档
+   -https://github.com/openthos/systemui-analysis/blob/master/LJH/对比TaskBar和StartupMenu.md
+   - 2、放置应用至appStore服务器
 ### 下周计划:
+ 
   - 工作计划:
     - 待定
 ***
