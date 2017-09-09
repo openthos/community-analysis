@@ -1,3 +1,27 @@
+# 2017年09月04日 - 2017年09月08日
+## 曹永韧
+### 本周总结：
+  - 工作简述：
+    -  SystemUI实现逻辑和对比8.0 补充和理解
+    -https://github.com/openthos/systemui-analysis/blob/master/CYR/SystemUI%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91%E5%8F%8A%E5%AF%B9%E6%AF%948.0.md
+ 
+### 新增任务:
+     
+     
+### 下周计划：
+  - 工作计划:
+    - 待定
+
+## 罗俊欢
+### 本周总结：
+  - 工作简述：
+    - 调研通知栏实现逻辑 https://github.com/openthos/systemui-analysis/blob/master/LJH/%E9%80%9A%E7%9F%A5%E6%A0%8F%E5%BC%B9%E5%87%BA%E9%80%BB%E8%BE%91%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A.md
+  
+### 下周计划:
+  - 工作计划:
+    - 待定
+***
+
 # 2017年08月28日 - 2017年09月01日
 ## 曹永韧
 ### 本周总结：
