@@ -17,7 +17,7 @@
   - 工作简述：
     - 1、调研taskBar在android 7.1上与startupMenu的优缺点并形成文档
    -https://github.com/openthos/systemui-analysis/blob/master/LJH/对比TaskBar和StartupMenu.md
-   - 2、放置应用至appStore服务器
+    - 2、放置应用至appStore服务器
 ### 下周计划:
  
   - 工作计划:
