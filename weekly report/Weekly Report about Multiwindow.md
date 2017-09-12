@@ -5,7 +5,7 @@
 ### 刘晓旭
   - 1.DecorCaptionView上增加按钮：回退、横竖屏切换、最小化，并实现：回退、横竖屏切换、最大化、最小化（需systemui组配合）功
   - 2.DecorCaptionView通过鼠标Hover事件控制，自动隐藏和显示
-  - 3.DecorCaptionView双击窗口最大化
+  - 3.DecorCaptionView双击窗口最大化或窗口化
   - 4.屏蔽功能：点击边框，窗口最大化
 
 ### 罗浩
