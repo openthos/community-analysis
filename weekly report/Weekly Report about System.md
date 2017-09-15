@@ -1,3 +1,18 @@
+# 2017-09-11 ~ 2017-09-15 工作总结
+## 黃志偉
+* 本週主要繼續 oreo-x86 的移植：
+   - 整理來 oreo-x86 codebase 並 push 出來
+   - 修正 auto module loading 未 sync coldboot 的問題
+   - 研究 init.sh 不能執行的原因，與 SELinux 有關，先跳過 SELinux 的檢查來解決
+   - 移植 vold 完成。目前 USB 可掛載了。
+   - 研究 Mesa 的問題，QEMU virgl (gbm_gralloc) 可用了。但 drm_gralloc 仍不行。
+* 將 SwiftShader 加到 nougat-x86 取代 swrast llvmpipe。
+* 移植 Mesa 17.2 到 nougat-x86。
+* 移植 gptfdisk (sgdisk) 到 OPENTHOS
+* 下週工作：
+   - 準備 7.1-rc2 release
+   - 繼續解決 oreo-x86 問題。
+
 # 2017-08-28 ~ 2017-09-08 工作总结
 ## 黃志偉
 * 繼續 oreo-x86 移植：
