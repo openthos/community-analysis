@@ -93,7 +93,8 @@
 ### 本周已完成任务<br />
 |id|发现时间|说明|
 |---|---|---|
-| | |安装系统，熟悉openthos|
+| | |安装系统，熟悉Ubuntu和openthos|
+| | |熟悉命令行和daoker|
 | | |熟悉OtoCompress代码|
 
 ### 本周未完成任务<br />
@@ -111,6 +112,12 @@
 
 ## 卢宁
   - 键盘映射
+  
+## 王明
+  - 安装系统，熟悉ubuntu和openthos系统
+  - 熟悉命令行和daoker
+  - 熟悉OtoCompress代码
+  - OtoCompress代码优化
 
 # 2017-09-04 ~ 2017-09-08个人周报
 # 王之旭
