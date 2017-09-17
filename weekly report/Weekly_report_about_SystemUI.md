@@ -1,9 +1,11 @@
-# 2017年09月04日 - 2017年09月08日
+
+# 2017年09月11日 - 2017年09月15日
 ## 曹永韧
 ### 本周总结：
   - 工作简述：
-    -  SystemUI实现逻辑和对比8.0 补充和理解
-    -https://github.com/openthos/systemui-analysis/blob/master/CYR/SystemUI%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91%E5%8F%8A%E5%AF%B9%E6%AF%948.0.md
+    - 调研分析在7.1上使用Taskbar.
+    - 针对TaskBar和Launcher冲突的问题分析解决．完成: ２0%  完成时间: 2017-09-15  完成人: 曹永韧
+    - 对7.1的SysemUI部分的修改．完成: 30%  完成时间: 2017-09-12  完成人: 曹永韧
  
 ### 新增任务:
      
