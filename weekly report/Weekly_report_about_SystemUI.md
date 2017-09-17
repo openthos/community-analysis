@@ -4,7 +4,7 @@
 ### 本周总结：
   - 工作简述：
     - 调研分析在7.1上使用Taskbar.
-    - 针对TaskBar和Launcher冲突的问题分析解决．完成: ２0%  完成时间: 2017-09-15  完成人: 曹永韧
+    - 针对TaskBar和Launcher冲突的问题分析解决．完成: 20%  完成时间: 2017-09-15  完成人: 曹永韧
     - 对7.1的SysemUI部分的修改．完成: 30%  完成时间: 2017-09-12  完成人: 曹永韧
  
 ### 新增任务:
@@ -17,9 +17,8 @@
 ## 罗俊欢
 ### 本周总结：
   - 工作简述：
-    - 1、调研taskBar在android 7.1上与startupMenu的优缺点并形成文档
-   -https://github.com/openthos/systemui-analysis/blob/master/LJH/对比TaskBar和StartupMenu.md
-    - 2、放置应用至appStore服务器
+   - 1、分析TaskBar打开应用的多窗口界面不能和Launcher同时存在的问题 完成: 20%  完成时间: 2017-09-15  完成人: 罗俊欢
+   - 2、将StartupMenu的布局文件应用到TaskBar上 完成: 50%  完成时间: 2017-09-15  完成人: 罗俊欢
 ### 下周计划:
  
   - 工作计划:
