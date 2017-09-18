@@ -1,3 +1,9 @@
+# 2017-09-11 ~ 2017-09-15
+对fallback不当代码的patch进行了验证，并提交
+研究aosp中关于update的内容
+并部分整理了相关说明, 见https://github.com/openthos/system-analysis/blob/master/make-build/AOSP%E4%B8%AD%E7%9A%84OTA%E5%8D%87%E7%BA%A7.md
+
+
 # 2017-09-04 ~ 2017-09-08
 修复安装程序种关于fallback的不当代码  
 修复新出现的fallback启动项乱了的问题  
