@@ -1,3 +1,12 @@
+# 2017-09-18 ~ 2017-09-22 工作总结
+## 黃志偉
+* 本週嘗試編譯 emulator image for Android 8.0，但遭遇許多困難。與 Google engineer 工作幾日後，已能開進 Home。但問題仍多。見 https://issuetracker.google.com/issues/66066209
+* 測試 Mesa 17.2 在各種 GPUs 使用情況。其中 vmwgfx 有問題，已 workaround。
+* 嘗試 sdcardfs 以取代 fuse，但只能搭配 ext4 使用。在 tmpfs/9p 的情況下仍只能使用 fuse。
+* 下週工作：
+   - 準備 device/generic/openthos 做為移植 8.0 使用。
+   - 準備 7.1-rc2 release
+
 # 2017-09-11 ~ 2017-09-15 工作总结
 ## 黃志偉
 * 本週主要繼續 oreo-x86 的移植：
