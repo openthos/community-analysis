@@ -25,10 +25,14 @@
     - 待定
     
 ##### 总结
-  - TaskBar启动应用只是发送: FREEFORM_WORKSPACE_STACK_ID = 2. 在ＡcitivityManager中有定义，
+  - 分析OTO7.1上使用Taskbar缺失Launcher问题：
+    - TaskBar启动应用只是发送: FREEFORM_WORKSPACE_STACK_ID = 2. 在ＡcitivityManager中有定义，
   启动应用的应用进入free form栈(多窗口栈)，　由于Launcher在Ｈome栈，不在同一个栈，故将Ｌauncher覆盖．
   至于TaskBar则只是设置：WindowManager.LayoutParams.TYPE_PHONE（该窗口通常置于所有应用之上, 但在状态栏下）
- 对Launcher问题没有影响．  在arm版recent窗口下呈现的则和这个情况一样．　 
+  对Launcher问题没有影响．  在arm版recent窗口下呈现的则和这个情况一样.
+    - 对于将Launcher放入Taskbar上这个方案不可取，
+      - 1. 在Ｔaskbar中只是做了对壁纸的更改，并没有写关于Launcher的任何接口，
+      - 2. 咱么自己的Launcher更是属于filemanager的一部分，若放到TaskBar中出现的问题会更多．
 
 ***
 
