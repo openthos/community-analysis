@@ -69,7 +69,7 @@
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
-# 2017-06-05 ~ 2017-06-08个人周报
+# 2017-09-18 ~ 2017-09-22个人周报
 
 # 陈鹏
 ### 本周已完成任务<br />
@@ -105,7 +105,7 @@
 | | |文件管理器无法对NTFS分区的rar压缩文件解压，说是对目录没有操作权限，但是其他APP却可以|未开始|
 | | |学习js|未开始|
 
-# 2017-06-05 ~ 2017-06-08工作计划
+# 2017-09-18 ~ 2017-09-22工作计划
 ## 陈鹏
   - 键盘映射
   
