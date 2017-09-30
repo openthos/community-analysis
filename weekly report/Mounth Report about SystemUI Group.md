@@ -1,3 +1,23 @@
+# 2017年09月 -- SystemUI组　总结
+## 曹永韧
+  - 工作简述:
+    - 调研分析在7.1上使用Taskbar.
+    - 针对TaskBar和Launcher冲突的问题分析解决.
+    - 对7.1的SysemUI部分的修改.
+    - 自动化测试无法测试Status Bar, 存在任务栏获取不到焦点的问题.
+    - 获取不到焦点的原因应该是没有识别Status Bar这部分View.
+    - OTO7.1去除navigationBar.
+    - OTO7.1通知栏事件响应区域控制.
+    - OTO7.1将status bar位置控制在右下角.
+    - OTO7.1分析OTO7.1上Launcher问题.
+    - OTO7.1新任务栏的布局实现.
+    - OTO7.1在新任务栏启动通知栏.
+    - OTO7.1通知栏布局的修改.
+    
+## 罗俊欢
+
+***
+
 # 2017年08月 -- SystemUI组 总结
 ## 曹永韧
   - 工作简述:
