@@ -1,3 +1,16 @@
+# 2017年9月 -- Multiwindow组 总结
+
+## 月小结
+  - 本月主要功能：基于Android7.1进行openthos多窗口开发工作。截止到月底，月初制定的多窗口开发目标，已全部完成。月末最后一周协助SystemUI组进行基于Android7.1 Openthos任务栏以及Startupmenu的开发，计划两周内初步完成openthos SystemUI组的开发工作。
+  
+## 下月计划
+
+### 刘晓旭
+
+## 个人月总结
+
+### 刘晓旭
+
 # 2017年8月 -- Multiwindow组 总结
 
 ## 月小结
