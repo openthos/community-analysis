@@ -15,7 +15,13 @@
     - OTO7.1通知栏布局的修改.
     
 ## 罗俊欢
-
+  - 工作简述:
+    - 调研TaskBar的任务实现原理并分析应用到OTO7.1的优点和缺点
+    - 分析TaskBar打开应用的多窗口界面不能和Launcher同时存在的问题
+    - 将StartupMenu的布局文件应用到TaskBar上
+    - OTO7.1 StartupMenu实现多窗口/增添缺失的feature
+    - OTO7.1 StartupMenu移入SystemUI.
+    - OTO7.1 StartupMenu和任务栏交互(数据库部分) 
 ***
 
 # 2017年08月 -- SystemUI组 总结
