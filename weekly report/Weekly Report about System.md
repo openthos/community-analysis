@@ -1,3 +1,17 @@
+# 2017-09-25 ~ 2017-09-30 工作总结
+## 黃志偉
+* 建立 device/generic/openthos 相關 configs 為移植方案
+* 繼續解決並改善 emulator image for Android 8.0：
+   - 建立 openthos_emu_{x86,x86_64,arm,arm64,mips,mips64} 的 build target，上傳至代碼服務器。
+   - 修正網路無法使用的問題。
+   - 修正 Webview Tester 崩潰的問題。
+   - 修正 Settings 崩潰的問題
+   - 加入 nativebridge 支援
+* 找出 vmwgfx 在 mesa 17.2 的 regression 問題並 workaround。
+* 在 i915/nouveau/vmwgfx 測試 gbm_gralloc + drm_hwcomposer 並收集 logs 給 upstream developers 分析。
+* 下週工作：
+   - 準備 7.1-rc2 release
+
 # 2017-09-18 ~ 2017-09-22 工作总结
 ## 黃志偉
 * 本週嘗試編譯 emulator image for Android 8.0，但遭遇許多困難。與 Google engineer 工作幾日後，已能開進 Home。但問題仍多。見 https://issuetracker.google.com/issues/66066209
