@@ -1,3 +1,13 @@
+# 2017-09月报
+## 个人月总结
+## 黃志偉
+本月主要工作都在 Android 8.0 的移植。
+* 準備好 oreo-x86 branch 並 push 到 osdn.net。由於 8.0 的設計變更，諸多 HAL 尚無法使用。
+* 研究並解決自編的 Android 8.0 emulator 不能使用的問題。
+* 設計 device/generic/openthos 做為 8.0 的移植方案。
+* 為 OPENTHOS emulator 加上 houdini 的支援。
+* 更新 mesa 17.2 與 kernel 4.9.49，為 7.1-rc2 做準備。
+
 # 2017-08月报
 ## 个人月总结
 ## 黃志偉
