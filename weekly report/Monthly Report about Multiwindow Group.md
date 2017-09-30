@@ -12,6 +12,15 @@
 ## 个人月总结
 
 ### 刘晓旭
+  - 1.feature: 系统预装软件增加920编辑器
+  - 2.完成基于Android 7.1multiwindow开发初步设计文档
+  - 3.DecorCaptionView上增加按钮：回退、横竖屏切换、最小化、应用图标及应用名称
+  - 4.实现了回退、双击窗口最大化或窗口化功能
+  - 5.屏蔽功能：点击边框，窗口最大化
+  - 6.实现窗口横竖切换功能
+  - 7.实现DecorCaptionView通过鼠标Hover事件控制，自动隐藏和显示功能
+  - 8.实现自定义的任务栏OpenthosStatusbar界面
+  - 9.实现点击自定义的任务栏OpenthosStatusbar上通知按钮，弹出通知栏
 
 # 2017年8月 -- Multiwindow组 总结
 
