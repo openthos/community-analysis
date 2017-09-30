@@ -6,6 +6,8 @@
 ## 下月计划
 
 ### 刘晓旭
+  - 1.首先协助SystemUI组完成Android7.1 Openthos任务栏以及Startupmenu的开发工作
+  - 2.整合各开发小组基于Android7.1的开发工作，并解决相关多窗口出现的冲突问题
 
 ## 个人月总结
 
