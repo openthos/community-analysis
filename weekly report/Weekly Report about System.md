@@ -1,3 +1,15 @@
+# 2017-10-02 ~ 2017-10-13 工作总结
+## 黃志偉
+* 釋出 Android-x86 7.1-rc2
+  - 修正 gbm_gralloc 8-byte alignment 問題
+  - 更新 kernel 至 4.9.54
+  - 更新 mesa 至 17.1.10
+  - 修正 libnb 對 houdini 7.1 的支持
+* 更新 multiwindow-oreo android-8.0.0_r17
+* 更新 oreo-x86 至 android-8.0.0_r17
+* 下週工作：
+   - 繼續 oreo-x86 porting
+
 # 2017-09-25 ~ 2017-09-30 工作总结
 ## 黃志偉
 * 建立 device/generic/openthos 相關 configs 為移植方案
