@@ -4,7 +4,8 @@
 * 合併 HardwareCollectorService 至 AnalyticsService 以修正在 Oreo 無法執行的問題。
 * 在 power events 加入 build info 以辨識是哪個版本。
 * 測試 7.1-rc2 在 android-x86 list 回報的問題，基本上未能重現。
-* 測試數個 apps 在 houdini 7.1 的問題。確認「王者荣耀」和「穿越火线」在 houdini 7.1 無法執行，但舊的 houdini 6 反倒可以。
+* 測試數個 apps 在 houdini 7.1 的問題。確認「王者荣耀」和「穿越火线」在 houdini 7.1 無法執行，但舊的 houdini 6 反倒可以。在 houdini 8 也可執行。
+* 在 8.0 Settings 加入 manufacturer info。
 * 下週工作：
   - 解決 houdini 8 在 oreo-x86 的使用問題。
   - 移植 Settings & frameworks/base。
