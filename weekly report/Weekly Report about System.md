@@ -1,3 +1,14 @@
+# 2017-10-16 ~ 2017-10-20 工作总结
+## 黃志偉
+* 修正 AnalyticsService 在 Nougat/Oreo 不能發送 boot_completed event 的問題。
+* 合併 HardwareCollectorService 至 AnalyticsService 以修正在 Oreo 無法執行的問題。
+* 在 power events 加入 build info 以辨識是哪個版本。
+* 測試 7.1-rc2 在 android-x86 list 回報的問題，基本上未能重現。
+* 測試數個 apps 在 houdini 7.1 的問題。確認「王者荣耀」和「穿越火线」在 houdini 7.1 無法執行，但舊的 houdini 6 反倒可以。
+* 下週工作：
+  - 解決 houdini 8 在 oreo-x86 的使用問題。
+  - 移植 Settings & frameworks/base。
+
 # 2017-10-02 ~ 2017-10-13 工作总结
 ## 黃志偉
 * 釋出 Android-x86 7.1-rc2
