@@ -10,6 +10,12 @@
   - 解決 houdini 8 在 oreo-x86 的使用問題。
   - 移植 Settings & frameworks/base。
 
+## 肖络元
+* android-x86-8.0 repo代码及emulator根据开发需求更新;
+* 同方电视的按键板调试并修正按键功能；
+* 请教同方工程师，对同方电视进行openthos多窗口移植，进行到七成左右，剩余有systemUI,Launcher,Wallpaper;
+* 系统组面试简历进行技术匹配筛选；
+
 # 2017-10-02 ~ 2017-10-13 工作总结
 ## 黃志偉
 * 釋出 Android-x86 7.1-rc2
