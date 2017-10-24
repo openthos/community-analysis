@@ -472,10 +472,6 @@
 
 [bug] 中文显示乱码  
 
-[feature] ＂打开／关闭软键盘＂不好使  
-
-[feature] 发送邮件到　功能不好使  
-
 [feature] 开启唤醒锁  
 
 [feature] 开启wifi锁  
