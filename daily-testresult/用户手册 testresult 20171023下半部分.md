@@ -422,8 +422,6 @@
 
 # HCI
 
-[feature] qq,wechat，firefox 缺少右键
-
 [feature] 复文本的复制粘贴
 
 # 多窗口问题
