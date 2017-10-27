@@ -1,3 +1,17 @@
+# 2017年10月23日 - - 2017年10月27日
+
+# 刘晓旭
+
+### 本周总结
+  - 1.增加feature： 在全屏、窗口Dock状态下，隐藏DecorCaption横竖屏切换功能按钮
+  - 2.形成多窗口DecorCaption的功能需求和实现文档，已上传。     
+    [Android 8.0多窗口之DecorCaption功能需求与实现文档.md](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/Android%208.0%E5%A4%9A%E7%AA%97%E5%8F%A3%E4%B9%8BDecorCaption%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82%E4%B8%8E%E5%AE%9E%E7%8E%B0%E6%96%87%E6%A1%A3.md#内容)
+  - 3.调研Android 8.0上app多开实现
+  
+### 下周任务
+  - 1.Android 8.0多窗口DecorCaption开发技术总结
+  - 2.继续调研Android 8.0上app多开实现
+
 # 2017年10月16日 - - 2017年10月20日
 
 # 刘晓旭
