@@ -1,3 +1,14 @@
+# 2017-10-23 ~ 2017-10-27 工作总结
+## 黃志偉
+* 繼續 oreo-x86 移植：
+  - 在 Settings 加入 manufacturer info 和 OpenGL version。
+  - 移植 frameworks/base 相關 patches。
+  - 在 libnb 加入 houdini 8 的支援。
+* 更新 cm-x86-14.1 branch。
+* 下週工作：
+  - 測試並準備 cm-x86-14.1 release
+  - 繼續 oreo-x86 移植
+  
 # 2017-10-16 ~ 2017-10-20 工作总结
 ## 黃志偉
 * 修正 AnalyticsService 在 Nougat/Oreo 不能發送 boot_completed event 的問題。
@@ -5,7 +16,6 @@
 * 在 power events 加入 build info 以辨識是哪個版本。
 * 測試 7.1-rc2 在 android-x86 list 回報的問題，基本上未能重現。
 * 測試數個 apps 在 houdini 7.1 的問題。確認「王者荣耀」和「穿越火线」在 houdini 7.1 無法執行，但舊的 houdini 6 反倒可以。在 houdini 8 也可執行。
-* 在 8.0 Settings 加入 manufacturer info。
 * 下週工作：
   - 解決 houdini 8 在 oreo-x86 的使用問題。
   - 移植 Settings & frameworks/base。
