@@ -1,3 +1,5 @@
+[2017-10-23 ~ 2017-10-27个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-10-23--2017-10-27%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-10-23 ~ 2017-10-27工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-10-23--2017-10-27%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-10-16 ~ 2017-10-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-10-16--2017-10-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-10-16 ~ 2017-10-20工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-10-16--2017-10-20%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-09-25 ~ 2017-09-29个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-09-25--2017-09-29%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
@@ -73,6 +75,51 @@
 [2017-01-09 ~ 2017-01-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2017-01-09 ~ 2017-01-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-01-09--2017-01-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
+
+# 2017-10-23 ~ 2017-10-27个人周报
+
+# 王之旭
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |调研手柄事件
+
+# 陈鹏
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |提升90％多点触控性能
+
+# 卢宁
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |轮盘的放大缩小
+
+# 王明
+### 本周已完成任务<br />
+|id|发现时间|说明|
+|---|---|---|
+| | |压缩解压缩的预览
+
+### 本周未完成任务<br />
+|id|发现时间|说明|未完成原因|
+|---|---|---|---|
+| | | 物业项目的学习
+
+# 2017-10-23 ~ 2017-10-27工作计划
+## 王之旭
+- 调研手柄事件
+
+## 陈鹏
+- 实现多点触控
+
+## 卢宁
+- 轮盘的放大缩小
+
+## 王明
+- 压缩解压缩软件预览
+- 物业项目的学习
 
 # 2017-10-16 ~ 2017-10-20个人周报
 
