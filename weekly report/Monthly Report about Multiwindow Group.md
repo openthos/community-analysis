@@ -8,6 +8,10 @@
 ### 刘晓旭
   - 1.首先协助SystemUI组完成Android7.1 Openthos任务栏以及Startupmenu的开发工作
   - 2.整合各开发小组基于Android7.1的开发工作，并解决相关多窗口出现的冲突问题
+  
+### 罗浩
+  - 1.协助SystemUI组完成Android7.1 任务栏实现
+  - 2.完成Multiwindow-7.1的其它内容
 
 ## 个人月总结
 
@@ -21,6 +25,14 @@
   - 7.实现DecorCaptionView通过鼠标Hover事件控制，自动隐藏和显示功能
   - 8.实现自定义的任务栏OpenthosStatusbar界面
   - 9.实现点击自定义的任务栏OpenthosStatusbar上通知按钮，弹出通知栏
+  
+### 罗浩
+  - 1.实现了基于缩放框的缩放方式
+  - 2.实现了基于窗口缩放的窗口停靠
+  - 3.初步实现了任务栏图表区域
+  - 4.解决了关闭应用时窗口抖动的bug
+  - 5.解决了移动/缩放窗口时窗口内容不稳定给的bug
+  - 6.进一步理解了Multiwindow-7.1的窗口控制系统代码
 
 # 2017年8月 -- Multiwindow组 总结
 
