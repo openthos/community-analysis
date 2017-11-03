@@ -1,3 +1,17 @@
+# 2017-10-30 ~ 2017-11-03 工作总结
+## 黃志偉
+* 繼續 oreo-x86 移植：
+  - 合併先前的 Settings patches 至 oreo-x86 branch。
+  - 將 ro.product.manufacturer 和 ro.product.model 移出 build.prop，由 init.sh 設定。
+  - 更新 Taskbar 至最新 master branch。
+  - 更新 libdrm, drm_hwcomposer, mesa 以解決 virgl 的顯示問題。
+  - 研究 audio 時好時壞的問題，仍無結論。
+* 測試 cm-x86-14.1 branch。遇到網路無法使用以及 built-in browser 崩潰的問題。
+  - 經比對以及與社群其他開發者討論後，必須 disable dex pre-optimization。
+* 下週工作：
+  - 繼續 oreo-x86 移植。
+  - 準備 cm-x86-14.1-rc1 release。
+
 # 2017-10-23 ~ 2017-10-27 工作总结
 ## 黃志偉
 * 繼續 oreo-x86 移植：
@@ -6,7 +20,7 @@
   - 在 libnb 加入 houdini 8 的支援。
 * 更新 cm-x86-14.1 branch。
 * 下週工作：
-  - 測試並準備 cm-x86-14.1 release
+  - 測試並準備 cm-x86-14.1-rc1 release
   - 繼續 oreo-x86 移植
   
 # 2017-10-16 ~ 2017-10-20 工作总结
