@@ -1,7 +1,27 @@
+# 2017年10月 -- Multiwindow组 总结
+
+## 月小结
+  - 本月主要工作，基于Android8.0，进行多窗口的移植工作以及应用多开的调研。截止到月底，已完成Android8.0上多窗口的移植工作，以及与Systemui组交互。对于应用多开，已调研出市场上主流的应用多开实现方式，并在github上总结了相关文档。
+  
+## 下月计划
+
+### 刘晓旭
+  - 待定
+  
+## 个人月总结
+
+### 刘晓旭
+  - 1.在android 8.0-emulator上增加动态控制DecorCaption的显示和隐藏功能，通过双指点击来实现
+  - 2.测试multiwindows在8.0-emulator上运行
+  - 3.增加feature： 在全屏、窗口Dock状态下，隐藏DecorCaption横竖屏切换功能按钮
+  - 4.形成多窗口DecorCaption的功能需求和实现文档，已上传。     
+    [Android 8.0多窗口之DecorCaption功能需求与实现文档.md](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/Android%208.0%E5%A4%9A%E7%AA%97%E5%8F%A3%E4%B9%8BDecorCaption%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82%E4%B8%8E%E5%AE%9E%E7%8E%B0%E6%96%87%E6%A1%A3.md#内容)
+  - 5.调研Android 8.0上app多开实现
+
 # 2017年9月 -- Multiwindow组 总结
 
 ## 月小结
-  - 本月主要功能：基于Android7.1进行openthos多窗口开发工作。截止到月底，月初制定的多窗口开发目标，已全部完成。月末最后一周协助SystemUI组进行基于Android7.1 Openthos任务栏以及Startupmenu的开发，计划两周内初步完成openthos SystemUI组的开发工作。
+  - 本月主要工作：基于Android7.1进行openthos多窗口开发工作。截止到月底，月初制定的多窗口开发目标，已全部完成。月末最后一周协助SystemUI组进行基于Android7.1 Openthos任务栏以及Startupmenu的开发，计划两周内初步完成openthos SystemUI组的开发工作。
   
 ## 下月计划
 
