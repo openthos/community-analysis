@@ -7,7 +7,12 @@
 
 ### 刘晓旭
   - 待定
-  
+
+### 罗浩
+  - 1.进一步调研多开相关内容
+  - 2.着手处理Multiwindow-8.0中缩放问题的解决方案
+  - 3.Multiwindow-8.0的其它内容
+
 ## 个人月总结
 
 ### 刘晓旭
@@ -17,6 +22,11 @@
   - 4.形成多窗口DecorCaption的功能需求和实现文档，已上传。     
     [Android 8.0多窗口之DecorCaption功能需求与实现文档.md](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/Android%208.0%E5%A4%9A%E7%AA%97%E5%8F%A3%E4%B9%8BDecorCaption%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82%E4%B8%8E%E5%AE%9E%E7%8E%B0%E6%96%87%E6%A1%A3.md#内容)
   - 5.调研Android 8.0上app多开实现
+
+### 罗浩
+  - 1.将Multiwindow-7.1上的内容全部一直到8.0
+  - 2.改善任务栏图标的出现消失时机使之更合理
+  - 3.调研应用多开并尝试实现方案
 
 # 2017年9月 -- Multiwindow组 总结
 
