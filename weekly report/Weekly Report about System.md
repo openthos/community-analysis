@@ -1,3 +1,12 @@
+# 2017-11-06 ~ 2017-11-10 工作总结
+## 黃志偉
+* 本週在 oreo-x86 的移植上取得較重大進展：
+  - 將 android.hardware.graphics.allocator 設為 passthrough mode 後 gralloc.drm 已能運作。
+  - 解決 audio 問題，將 android.hardware.audio 設為 binderized mode。
+  - 加入 configstore, dumpstate, media.omx, renderscript 和 usb 等 HIDL HALs。
+* 下週工作：
+  - 繼續解決 oreo-x86 剩下的問題，包括 wifi、sensors、bluetooth 等。
+
 # 2017-10-30 ~ 2017-11-03 工作总结
 ## 黃志偉
 * 繼續 oreo-x86 移植：
