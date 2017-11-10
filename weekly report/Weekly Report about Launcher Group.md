@@ -1,3 +1,5 @@
+[2017-11-06 ~ 2017-11-10个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-11-06--2017-11-10%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
+[2017-11-06 ~ 2017-11-10工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-11-06--2017-11-10%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-10-30 ~ 2017-11-03个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-10-30--2017-11-03%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
 [2017-10-30 ~ 2017-11-03工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-10-30--2017-11-03%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)<br />
 [2017-10-23 ~ 2017-10-27个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2017-10-23--2017-10-27%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)&nbsp;
