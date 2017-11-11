@@ -19,7 +19,8 @@
     - 3、OTO8.0 修正任务栏应用图标焦点显示问题 完成: 100%  完成时间: 2017-11-10  完成人: 罗俊欢
     
 ## 总结
-  - Oreo8.0现版本存在的问题:
+  - Oreo8.0现版本存在的大小问题:
+    - https://github.com/openthos/systemui-analysis/blob/master/Oreo/Oreo%E7%9B%AE%E5%89%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98.md
 
 # 2017年10月30日 - 2017年11月03日
 ## 曹永韧
