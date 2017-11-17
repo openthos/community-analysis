@@ -1,3 +1,16 @@
+# 2017-11-13 ~ 2017-11-17 工作总结
+## 黃志偉
+* 本週繼續解決 oreo-x86 剩餘問題：
+  - 更新 mesa 至 17.3-rc3。
+  - 解決 audio driver 在某些平台無法正確載入的問題。和 oreo-x86 改用 toybox modprobe 有關。改用 init 來實作 modprobe 解決(先前的做法)。
+  - 解決 wifi service 無法找到 network interface 的問題，暫時 disable p2p support。
+  - 加入 binderized power HAL.
+* 釋出 cm-x86-14.1-rc1 (基於 Android-x86 7.1-rc2 + LineageOS 14.1)。
+  - 研究 kernel 4.9.54 在 Intel Atom N270 無法開機的問題，但無所獲。問題突然消失。
+* 將 kernel-4.14 branch rebase 到 4.14 final release。測試成功。
+* 下週工作：
+  - 繼續解決 oreo-x86 剩下的問題，包括 sensors、bluetooth、camera、lights、ANR 等。
+
 # 2017-11-06 ~ 2017-11-10 工作总结
 ## 黃志偉
 * 本週在 oreo-x86 的移植上取得較重大進展：
