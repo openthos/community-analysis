@@ -1,10 +1,22 @@
+# 2017-11-20 ~ 2017-11-24 工作总结
+## 黃志偉
+* 本週繼續解決 oreo-x86 剩餘問題：
+  - 更新 mesa 至 17.3-rc5。
+  - 改用 wpa_supplicant_overlay.conf 來 disable p2p，無需刪除原本的 wpa_supplicant.conf。
+  - 更新 sensors HAL API version to 1_3 以解決 sensors init failed 的問題。
+  - 加入 binderized power HAL.
+  - 在 init 加入 ctrl-alt-ctl 的處理，可叫出 poweroff menu。
+  - 改進 drm_gralloc 尋找 drm device 的方式，不再依賴 driver 載入的順序。
+* 下週工作：
+  - 繼續解決 oreo-x86 剩下的問題，包括 bluetooth、camera、lights、ANR 等。
+  - 研究 kernel 4.14 的問題。
+
 # 2017-11-13 ~ 2017-11-17 工作总结
 ## 黃志偉
 * 本週繼續解決 oreo-x86 剩餘問題：
   - 更新 mesa 至 17.3-rc3。
   - 解決 audio driver 在某些平台無法正確載入的問題。和 oreo-x86 改用 toybox modprobe 有關。改用 init 來實作 modprobe 解決(先前的做法)。
   - 解決 wifi service 無法找到 network interface 的問題，暫時 disable p2p support。
-  - 加入 binderized power HAL.
 * 釋出 cm-x86-14.1-rc1 (基於 Android-x86 7.1-rc2 + LineageOS 14.1)。
   - 研究 kernel 4.9.54 在 Intel Atom N270 無法開機的問題，但無所獲。問題突然消失。
 * 將 kernel-4.14 branch rebase 到 4.14 final release。測試成功。
