@@ -6,7 +6,8 @@
 5. 打通了OPENTHOS 2.0的BootChart功能，初步确认了Openthos2.0启动慢，系统zygote之前程序拖慢了系统  
 6. 为qemu打通了bridged网络
 7. 为OTA升级了文件签名及验证功能  
-8. 为BUSYBOX移植了XPosed的安装脚本，并开始为OPENTHOS1编译64位xposed.  
+8. 为BUSYBOX移植了XPosed的安装脚本，并开始为OPENTHOS1编译64位xposed.  
+9. 无锡出差
 
 # 2017-10
 协助同方营销团队在各咱机器上安装了试用环境  
