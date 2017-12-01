@@ -1,3 +1,30 @@
+# 2017-11月報
+## 個人月總结
+## 黃志偉
+本月繼續解決 Android-x86 8.0 的問題，包括：
+* 修正 gralloc.drm 在 8.0 的問題，成功啟用 GPU 3D 硬件加速。
+* 解決 audio、wifi、sensors、power 等 HAL 問題。
+* 修正 Bluetooth 無法使用的問題(未完成)。
+* 修正 vold 掛載 ntfs/exfat/ext4 的問題。
+* 解決 video playback 問題。
+* 移植 kernel 4.14 初步測試成功，但仍有不少問題如 wifi 無法使用。
+
+Android-x86 相關：
+* 釋出 cm-x86-14.1-rc1。
+* 修正 gralloc.drm 綁定 /dev/dri/card0 的問題，不再依賴 fb driver 載入的次序。
+
+# 2017-10月報
+## 個人月總结
+## 黃志偉
+本月繼續 Android6 8.0 的移植：
+* 修正 AnalyticsService 在 8.0 問題。
+* 更新 libnb 到 native_bridge version 3。
+* 修改 Settings About page 顯示 manufacturer、OpenGL version。
+* 完成 frameworks/base 移植。
+
+Android-x86 相關：
+* 解決 7.1-rc2 pending issue 並釋出 7.1-rc2。
+
 # 2017-09月报
 ## 个人月总结
 ## 黃志偉
