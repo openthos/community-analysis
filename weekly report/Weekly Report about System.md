@@ -1,3 +1,16 @@
+# 2017-11-27 ~ 2017-12-01 工作总结
+## 黃志偉
+* 本週繼續解決 oreo-x86 剩餘問題：
+  - 解決開機完成後必發的 ANR。
+  - 更新 Intel libsensors HAL API 到 version to 1_3。
+  - 修正 vold 無法掛載 ntfs/exfat/ext4 的問題。
+  - 移植 frameworks/av 相關 patches，解決 video playback 問題。
+  - 研究 Bluetooth hci command 無法寫入的問題，參考 android-ia patch 可解決。
+* 下週工作：
+  - 繼續解決 oreo-x86 剩下的問題，包括 camera、lights、ANR 等。
+  - 建立 openthos_x86(_64) targets 以便移植。
+  - 研究 kernel 4.14 的問題。
+
 # 2017-11-20 ~ 2017-11-24 工作总结
 ## 黃志偉
 * 本週繼續解決 oreo-x86 剩餘問題：
