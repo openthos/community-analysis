@@ -12,9 +12,11 @@
   - 重点任务
   
 ## 卢宁
-  - 完成feature 个
-  - 完成bug 个
+  - 完成feature 4个
+  - 完成bug 4个
   - 重点任务
+     - 清理launcher3代码
+     - 键盘映射轮盘缩放状态保存
   
 ## 王明
   - 完成feature 个
