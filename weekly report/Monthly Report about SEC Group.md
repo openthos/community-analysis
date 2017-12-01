@@ -3,7 +3,7 @@
 2. 学会了编写测试样例
 3. wifi测试样例，缺一个点击“oslab”网络的步骤，自动关闭有线及打开有线及wifi均成功  
 4. 搞清了如何安装及使用appium，并通过appium为特定应用生成测试代码。分别在三种平台上实现Windows、Linux及OS X上  
-5. 初步确认了Openthos2.0启动慢，系统zygote之前程序拖慢了系统  
+5. 打通了OPENTHOS 2.0的BootChart功能，初步确认了Openthos2.0启动慢，系统zygote之前程序拖慢了系统  
 6. 为qemu打通了bridged网络
 7. 为OTA升级了文件签名及验证功能  
 8. 为BUSYBOX移植了XPosed的安装脚本，并开始为OPENTHOS1编译64位xposed.  
