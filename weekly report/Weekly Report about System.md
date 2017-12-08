@@ -1,3 +1,14 @@
+# 2017-12-04 ~ 2017-12-08 工作總結
+## 黃志偉
+* 本週繼續處理 oreo-x86 問題：
+  - 解決 Bluetooth socket 的讀寫問題。測試數種 BT 設備(Speaker, keyboard, mouse)成功。
+  - 測試 Google kernel/common android-mainline-tracking branch (4.14)，大致正常，但有些 firmware 需更新。
+  - 更新 device/generic/firmware 以配合 kernel 4.14
+  - 合併 android-8.1.0_r1。(未完成)
+* 下週工作：
+  - 繼續完成合併 android-8.1.0_r1。
+  - 準備 OS2ATC 2017 演講及訓練。
+    
 # 2017-11-27 ~ 2017-12-01 工作总结
 ## 黃志偉
 * 本週繼續解決 oreo-x86 剩餘問題：
