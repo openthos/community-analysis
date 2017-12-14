@@ -14,6 +14,30 @@
   - 如您还有其他问题反馈，可登录禅道https://dev.openthos.org/zentao/zentao/bug-browse-1.html
     - 用户名aihaozhe，密码123456
 -----------------------------------------
+# 20171214版本(包含1213patch）
+
+## 修复问题
+
+ - ExternalApp:替换应用程序版本
+ - 解决OTA:更改OTA的地址的问题
+ - 解决bilibili和VLC视频匹配窗口大小的问题
+ - 修复安装系统时,systemUI崩溃的错误
+ - OtoOta添加签名验证
+ - OtoOta：修复连接Tuna Server失败导致升级错误的问题
+ - OtoOta：修复关于签名验证的命令
+ - OtoOta：修复手动升级可能崩溃的bug
+ - OtoOta：删除升级的描述前面的空字符
+ - OtoOta：删除升级的描述前面的空字符
+ - OtoOta：解决公钥不匹配，则无法升级的问题
+ - OtoOta：解决手动升级需要GPG格式签名包的问题
+
+# 20171130版本(包含1129patch）
+
+## 修复问题
+
+ - 修复安装系统,systemUI崩溃的错误
+ - otolauncher:优化和清理代码的ver.02
+
 # 20171123版本(包含1122patch）
 
 ## 修复问题
