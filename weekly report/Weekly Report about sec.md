@@ -1,3 +1,12 @@
+# 2017-12-11 ~ 2017-12-15  
+1. OTA升级更新到发行版本及测试版本不同密钥的体系  
+2. XPosed到Openthos1.0的移植：  
+* 合并了代码（共进行了两次，目前完成了art目录的合并，第一次合并时通过openthos与aosp原生版本差异强制合并到了Xposed_art中，后发现出现了大量错误。
+第二次半手工，将Xposed_art与AOSP原生版本的差异合并到了OPENTHOS，通过手工合并检查发现，diff默认出来的patch不包含某一方的单方面出现的文件）  
+* 合并art文件夹后的尝试编译xposed相关目标，make -j4 TARGET_CPU_SMP=true xposed libxposed_art libart libart-compiler libart-disassembler libsigchain dex2oat oatdump patchoat，经过编译过程中简单的调整，全部目标中除xposed全部编译通过。  
+
+下一步， 需要修改frameworks/base/cmds/xposed的文件。  理论上xposed目标能够通过编译，即能生成Xposed for OPENTHOS的安装包  
+
 # 2017-12-04 ~ 2017-12-08   
 1. 掌握了XPosed的编译方法，在aosp原生x86版本上得到验证  
 2. 为XPosed增加了x86_64支持，在aosp原生x86_64代码中编译成功并验证通过  
