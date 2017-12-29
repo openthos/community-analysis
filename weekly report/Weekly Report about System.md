@@ -1,5 +1,11 @@
 # 2017-12-25 ~ 2017-12-29 工作总结
 ## 黃志偉
+* 本週繼續 oreo-x86 問題：
+  - 加入 Camera HIDL HAL
+  - 修正 8.1 藍牙問題
+  - 解決 8.1 modules 載入問題，改回單一 process 載入
+  - 加入新的 iio-sensor-hal，在 Surface 3 測試成功
+  - 討論 8.x listview bug，在 AOSP Gerrit 找到 patch 可解決
 
 ## 肖络元
 * 源代码的自研代码模块，加上OPENTHOS版权声明；
@@ -11,6 +17,8 @@
 
 # 2017-12-11 ~ 2017-12-15 工作总结
 ## 黃志偉
+* 與實驗室交流培訓
+* 解決 SurfaceFlinger hwc1 bug in 8.1.
 
 ## 肖络元
 * 协助CP解决seafile云服务无法使用的bug，在升级kernel4.9后，seafile使用到的proot运行错误，现已修复；
