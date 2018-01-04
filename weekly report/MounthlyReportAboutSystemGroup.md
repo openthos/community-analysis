@@ -1,6 +1,15 @@
 # 2017-12月报
-## 个人月总结
+## 個人月總结
 ## 黃志偉
+* 本月主要任務是前往北京演講與交流培訓
+  - https://github.com/openthos/system-analysis/blob/master/meeting/training-scheduling.md
+  - https://drive.google.com/open?id=1-Q0uKwO9KTtc15Zlf-DbO_J_dWfdKIe4
+* 繼續解決 oreo-x86 問題：
+  - 完成 oreo-x86 升級到 8.1.0，重寫了新的 module loading for ueventd。
+  - 解決 Bluetooth 在 8.x 的問題。
+  - 加入 Camera HIDL HAL。
+  - 加入新 iio-sensor-hal from 01.org。
+  - 解決 mouse 無法 select listview 的 bug。
 
 ## 肖络元
 * linux kernel自动化测试kAFL部署；
