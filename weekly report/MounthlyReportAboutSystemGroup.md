@@ -1,3 +1,21 @@
+# 2017-12月报
+## 个人月总结
+## 黃志偉
+
+## 肖络元
+* linux kernel自动化测试kAFL部署；
+* 源代码的自研代码模块，添加OPENTHOS版权声明；
+* openthos的HOSTNAME设置 OPENTHOS，/system目录大文件包如printer、 seafile、fennec等清理；
+* autotest自动化测试系统卡住、qemu未测试等bug修改代码解决之；
+* 协助CP解决seafile云服务无法使用的bug，在升级kernel4.9后，seafile使用到的proot运行错误，已修复；
+* 黄SIR来京培训，学习并试验；
+* ZSM入职相关事务，写关于开发环境等文档；
+* 协助CYR，5.1预集成system下不可卸载APK；
+* 协助CW解决xposed错误等；
+* 8.0升级8.1，编译系统及HAL相关bug的试验解决；
+
+## 张善民
+
 # 2017-11月報
 ## 個人月總结
 ## 黃志偉
