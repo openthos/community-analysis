@@ -24,6 +24,18 @@
 * 8.0升级8.1，编译系统及HAL相关bug的试验解决；
 
 ## 张善民
+* android-x86 oreo 相关工作
+  - 搭建android-x86编译环境
+  - 草拟培训大纲
+  - 对android-x86解决方案可行性试验，编写培训总结
+  - 对repo,manifest进行规范化工作（目的：形成openthos(oreo)开发起点，并与ci工具、自动测试工具对接）
+  - 整理openthos(oreo)设备配置文件
+* 自动测试环境的相关工作
+  - 学习jenkins,beaker,lava,docker等工具的使用，编写相关文档
+  - 在docker中构建基于ubuntu 16.04的jenkins master服务器
+  - 分别基于物理机和docker的jenkins slave服务器
+  - 完成jenkins对接，可以实现master服务器控制下的，多台build slave，多台validate slave协同工作，可自动分配build，validate任务到不同的slave，可根据任务属性和slave的硬件特征进行qemu测试和kAFL测试（kAFL部分由肖络元负责）
+  - 初步实现基于jenkis的android-x86编译环境（未来可实现android自动更新，完成repo,manifest,buildsystem规范化是先决条件）
 
 # 2017-11月報
 ## 個人月總结
