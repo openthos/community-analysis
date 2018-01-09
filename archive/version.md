@@ -21,6 +21,7 @@
 
  - 设备：通用：添加应用程序opsxposed
  - 解决开始菜单优化问题
+ - Internet Browser添加字体
 
 # 20180105版本(包含0104patch）
 
