@@ -1,4 +1,14 @@
-# 2018-01-02 ~ 2018-02-05 工作總結
+# 2018-01-08 ~ 2018-01-12 工作總結
+## 黃志偉
+* 本週主要準備 7.1-r1 relase
+  - 修正 Baytrail micphone、backlight 等已知問題。
+  - 移植 efibootmgr。
+  - 在 installer 加入 efiboormgr 來建立 boot entry。
+  - 修正安裝到 ntfs 無法啟動的問題。
+  - 嘗試在 initrd.img 加入 fsck，但沒有 tools，暫時放棄。
+* 研究如何調整錄音的音量。
+
+# 2018-01-02 ~ 2018-01-05 工作總結
 ## 黃志偉
 * 修正 libgralloc_drm.so 在某些情況下 crashing 的問題。
 * 合併 7.1.2_r36 到 nougat-x86，測試正常。
