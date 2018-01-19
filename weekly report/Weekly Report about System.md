@@ -1,3 +1,12 @@
+# 2018-01-15 ~ 2018-01-10 工作總結
+## 黃志偉
+* 繼續準備 7.1-r1 relase
+  - 在 installer 的選擇 disk menu 提供更多資訊。
+  - 改進 grub.cfg，可啟動其它 OSes (Windows, Fedora, Ubuntu)。
+  - 增加 grub savedefault 的功能。
+* 研究 browser benchmark 的 view port 問題。結論與 browser 本身處理縮放的方式有關。
+* 嘗試在 OPENTHOS 使用 kernel 4.14，但會 kernel panic。還要研究...
+
 # 2018-01-08 ~ 2018-01-12 工作總結
 ## 黃志偉
 * 本週主要準備 7.1-r1 relase
