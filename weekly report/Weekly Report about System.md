@@ -1,4 +1,19 @@
-# 2018-01-15 ~ 2018-01-10 工作總結
+# 2018-01-22 ~ 2018-01-26 工作總結
+## 黃志偉
+* 本週繼續 installer 的改進，加入自動安裝功能：
+  - AUTO_INSTALL=n - auto install Android-x86 to the n-th disk or /dev/$n
+                       if n is a device node name. If the specified disk
+                       doesn't exist, the installer will ask you to select
+                       the target disk.
+  - AUTO_INSTALL=force - auto install Android-x86 to the first disk
+                       without any confirmation.
+  - AUTO_INSTALL=update - auto update Android-x86 to the first partition
+                       with label Android-x86, or the first ext4 partition
+                       and install boot loader.
+* 討論 DPI 與顯示的關係
+* 再測試「王者榮耀」，確定在 7.1 無法運行?
+
+# 2018-01-15 ~ 2018-01-19 工作總結
 ## 黃志偉
 * 繼續準備 7.1-r1 relase
   - 在 installer 的選擇 disk menu 提供更多資訊。
