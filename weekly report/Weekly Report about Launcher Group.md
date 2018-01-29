@@ -7,7 +7,7 @@
 [2018-01-22 ~ 2017-01-26工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-22--2018-01-26%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-01-22 ~ 2017-01-26个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-22--2018-01-26%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
-# 2018-01-22 ~ 2018-01-26工作计划
+# 2018-01-22 ~ 2018-01-26个人周报
 ## 王之旭
 - samba client 测试以及修改bug 
   - samba前进后退有界面bug
