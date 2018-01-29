@@ -2,6 +2,60 @@
 [2018-01-02 ~ 2017-01-05个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-02--2018-01-05%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-01-08 ~ 2017-01-12工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-08--2018-01-12%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-01-08 ~ 2017-01-12个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-08--2018-01-12%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-01-15 ~ 2017-01-19工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-15--2018-01-19%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-01-15 ~ 2017-01-19个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-15--2018-01-19%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-01-22 ~ 2017-01-26工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-22--2018-01-26%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-01-22 ~ 2017-01-26个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-22--2018-01-26%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-01-22 ~ 2018-01-26工作计划
+## 王之旭
+- samba client 测试以及修改bug 
+  - samba前进后退有界面bug
+  - 下载功能
+  - 增加提示
+
+## 陈鹏
+- seafile
+  - 给定应用列表，从应用商店下载  完成100%
+
+## 卢宁
+- seafile
+  - 代码移植，使得saefile完全后台运行，不依靠文件管理器运行 完成100%
+
+## 王明
+- 攥写FIT楼会议设计文档 未完成（毛豆方没给）
+
+
+# 2018-01-22 ~ 2018-01-26工作计划
+## 王之旭
+- samba client 测试以及修改bug
+
+## 陈鹏
+- seafile
+  - 给定应用列表，从应用商店下载
+
+## 卢宁
+- seafile
+  - 代码移植，使得saefile完全后台运行，不依靠文件管理器运行
+
+## 王明
+- 攥写FIT楼会议设计文档
+
+
+# 2018-01-15 ~ 2018-01-19个人周报
+## 王之旭
+- 网上邻居 基本完成samba client
+
+## 陈鹏
+- seafile
+  - 给定应用列表，从应用商店下载 完成60％
+
+## 卢宁
+- seafile
+  - 可能出现多个DATA Library 完成60％
+
+## 王明
+- 攥写FIT楼会议系统文档 时间关系未完成
 
 # 2018-01-15 ~ 2018-01-19工作计划
 ## 王之旭
