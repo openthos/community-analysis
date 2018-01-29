@@ -20,7 +20,7 @@
 ## 修复问题
 
  - 增加otf思源字体,包括SourceHanSansCN、SourceHanSansTW、SourceHanSerifCN、SourceHanSerifTW，各７种字体重。
-   其中系统默认中文字体选用SourceHanSansCN，默认繁体选用SourceHanSansCN。
+   系统默认中文字体选用SourceHanSansCN，默认繁体选用SourceHanSansTW。
 
 # 20180126版本(包含0125patch）
 
