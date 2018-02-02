@@ -1,3 +1,14 @@
+# 2018-01-29 ~ 2018-02-02 工作總結
+## 黃志偉
+* 解決 libsensorservice.so 崩潰的問題。
+* 加入 Advanced options 到 boot menu。
+* 加入 startup.nsh 做為 UEFI 啟動的 fallback 項目。
+* 研究並解決 Superuser 無法儲存選擇結果的 bug。
+* 研究能否用 Firebase SDK 取代 Google Analytics SDK。沒有好的結果。
+* 下週任務：
+  - 準備 final 7.1-r1
+  - Build Oreo image with kernel 4.15 and Mesa master
+
 # 2018-01-22 ~ 2018-01-26 工作總結
 ## 黃志偉
 * 本週繼續 installer 的改進，加入自動安裝功能：
