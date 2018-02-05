@@ -1,6 +1,23 @@
 # 2018-01月報
 ## 個人月總结
 ## 黃志偉
+* 本月主要工作為 7.1-r1 stable release 做準備，修正一些 pending issues：
+  - 合併 7.1.2_r36 到 nougat-x86。
+  - 修正 libgralloc_drm.so 在某些情況下的崩潰問題。
+  - 修正 ASUS T100 microphone 和 backlight。
+  - 改善 installer 長期存在的幾個問題：
+    - 加入 efibootmgr 以建立正確的 EFI boot entry。
+    - 修正安裝到 ntfs partition 無法啟動的問題。
+    - 在 partition / disk selection menu 提供更多資訊。
+    - 增加 grub2 savedefault 功能。
+    - 加入自動安裝功能，提供三種模式。
+    - 增加 advanced submenu。
+    - 加入 startup.nsh 做為 fallback boot。
+  - 解決 Superuser 無法儲存選擇結果的問題。
+  - 解決 libsensorservice.so 崩潰的問題。
+* 根據測試組測試結果，調整 default 錄音音量。
+* 研究 browser benchmark view port 問題，結果與 browser 處理縮放的方式有關。
+* 研究討論 display、DPI 的問題。
 
 ## 肖络元
 * OPENTHOS Autotest测试系统qemu无测试bug的修复；
