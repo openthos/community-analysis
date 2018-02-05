@@ -6,10 +6,44 @@
 [2018-01-15 ~ 2017-01-19个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-15--2018-01-19%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-01-22 ~ 2017-01-26工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-22--2018-01-26%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-01-22 ~ 2017-01-26个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-22--2018-01-26%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-01-29 ~ 2017-02-02工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-29--2018-02-02%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-01-29 ~ 2017-02-02个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-29--2018-02-02%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-01-29 ~ 2018-02-02个人总结
+## 王之旭
+- 已完成任务
+  - 集成录音程序
+     - 默认高音质
+     - 增加中文语言资源
+     - 手机模式显示，修改窗口尺寸变化会导致record和saved recording显示不全的bug
+     - 默认录音目录改为~/Music/Recording/，默认录音文件名格式改为 2018-01-24_16:53:24.mp4
+     - 作为系统核心应用集成，不可删除，改名 OTORecorder，中文“录音机“ 英文 "Sound Recorder"
+     - About内容保留原内容，在最前面增加OPENTHOS 版权说明
+- 未完成任务
+  - samba client扫描问题，目前在基于ARP扫描来进行扫描，还未完成
+
+## 陈鹏
+- 基本完成 调研samba server，目前存在问题是windows无法很好的发现ubuntu端
+
+## 卢宁
+- seafile
+  - 整理代码 完成度60%
+
+## 王明
+- 未完成任务：
+  - 攥写FIT楼会议设计文档，毛豆未给
+  - 尝试移植Sound Recorder，经过尝试，各种错误解决不了
 
 # 2018-01-29 ~ 2018-02-02工作计划
 ## 王之旭
 - samba client扫描问题
+- 集成录音程序
+   - 默认高音质
+   - 增加中文语言资源
+   - 手机模式显示，修改窗口尺寸变化会导致record和saved recording显示不全的bug
+   - 默认录音目录改为~/Music/Recording/，默认录音文件名格式改为 2018-01-24_16:53:24.mp4
+   - 作为系统核心应用集成，不可删除，改名 OTORecorder，中文“录音机“ 英文 "Sound Recorder"
+   - About内容保留原内容，在最前面增加OPENTHOS 版权说明
 
 ## 陈鹏
 - 调研samba server
@@ -20,6 +54,7 @@
 
 ## 王明
 - 攥写FIT楼会议设计文档
+- 尝试移植Sound Recorder
 
 # 2018-01-22 ~ 2018-01-26个人周报
 ## 王之旭
