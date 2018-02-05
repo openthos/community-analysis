@@ -20,14 +20,14 @@
      - 作为系统核心应用集成，不可删除，改名 OTORecorder，中文“录音机“ 英文 "Sound Recorder"
      - About内容保留原内容，在最前面增加OPENTHOS 版权说明
 - 未完成任务
-  - samba client扫描问题，目前在基于ARP扫描来进行扫描，还未完成
+  - samba client扫描问题，目前在基于ARP扫描来进行扫描，还未完成
 
 ## 陈鹏
 - 基本完成 调研samba server，目前存在问题是windows无法很好的发现ubuntu端
 
 ## 卢宁
 - seafile
-  - 整理代码 完成度60%
+  - 整理代码 完成度60%
 
 ## 王明
 - 未完成任务
