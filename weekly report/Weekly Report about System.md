@@ -1,3 +1,12 @@
+# 2018-02-05 ~ 2018-02-09 工作總結
+## 黃志偉
+* 本週完成 7.1-r1 的釋出：
+  - 更新 device/generic/firmware
+  - 更新 kernel 4.9.80
+* 修正 auto update 可能 freeze 問題
+* 修改 grub android.cfg 可啟動更多 OSes
+* 更新 cm-x86 branch 並準備 cm 14.1-r1
+
 # 2018-01-29 ~ 2018-02-02 工作總結
 ## 黃志偉
 * 解決 libsensorservice.so 崩潰的問題。
