@@ -1,9 +1,11 @@
 # OPENTHOS 1.1版本目标
 
+内核升级到4.14 LTS，增加intel Coffee Lake, Cannon Lake和AMD Raven Ridge APU支持（APU支持待定，可能来不及）
+默认集成XPOSED，但是不暴露对外的GUI界面（不显示xposed installer，也不允许用户自行安装）
 
 ## 核心应用
 - Internet浏览器升级到58.0-------------------目前重装可使用58.0，无法通过系统ota或应用商店升级到58.0
-- Seafile云服务(包括client和server)
+- Seafile云服务(包括client和server)，server提供web界面，包括用户账号（注册、修改密码和其他信息、关闭账号等）功能，以及无用户界面的OAUTH2服务和seafile服务，server建设在图书馆的服务器集群上，专人维护
 - 文本编辑器
    - 界面优化，操作符合Windows用户习惯
    - 实现鼠标左键拖动选中文本，右键拷贝粘贴撤销重做等功能
@@ -19,4 +21,8 @@
 - Termux集成，可正常工作
 
 ## DPI
-- 适配1080p、4k显示器
+- 适配笔记本768p/1080p、台式机显示器1080p/4k、电视机1080p/4k等分辨率，用户自行安装时，由安装程序选择合适的DPI值写入build.prop；工厂预装时，为工厂提供指导原则写入DPI值与设备名称/型号等OEM数据。
+
+## 安全
+- 使用商密算法进行OTA签名和校验
+- 系统启动静态信任链（基于UEFI预置证书）
