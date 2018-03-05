@@ -8,6 +8,25 @@
 [2018-01-22 ~ 2017-01-26个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-22--2018-01-26%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-01-29 ~ 2017-02-02工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-29--2018-02-02%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-01-29 ~ 2017-02-02个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-01-29--2018-02-02%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-02-26 ~ 2017-03-02工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-02-26--2018-03-02%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-02-26 ~ 2017-03-02个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-02-26--2018-03-02%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-03-05 ~ 2017-03-09工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-05--2018-03-09%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+
+
+# 2018-03-05 ~ 2018-03-09工作计划
+## 王之旭
+- [bug 2218] 首次配置完成后有时提示setupwizard已停止运行，且进入桌面后无法显示任务栏
+
+## 陈鹏
+- 编写samba server的用户可用界面
+
+
+## 卢宁
+- 文件管理器中增加云服务状态界面
+
+## 王明
+- 物业系统文档
+
 
 # 2018-02-26 ~ 2018-03-02个人总结
 ## 王之旭
