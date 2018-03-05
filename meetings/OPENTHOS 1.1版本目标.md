@@ -1,4 +1,4 @@
-# OPENTHOS 1.1项目目标
+# OPENTHOS 1.1版本目标
 
 
 ## 核心应用
