@@ -1,3 +1,14 @@
+# 2018-02-12 ~ 2018-03-02 工作總結
+## 黃志偉
+* 農曆春節
+* 完成 cm-x86 14.1-r1 的釋出
+* 繼續 oreo-x86 開發
+  - 合併最新 nougat-x86 的修改。
+  - 修正 modprobe 忽略 options 的問題。
+  - 修正 superuser patches 在 oreo-x86 的衝突與編譯錯誤。
+  - 研究 read-write 安裝無法啟動的原因，與 selinux 有關。還在構思解決方法。
+  - 加入 nativebridge 設定到 Settings。
+
 # 2018-02-05 ~ 2018-02-09 工作總結
 ## 黃志偉
 * 本週完成 7.1-r1 的釋出：
