@@ -13,23 +13,78 @@
 [2018-03-05 ~ 2017-03-09工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-05--2018-03-09%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-03-05 ~ 2017-03-09个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-05--2018-03-09%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-03-12 ~ 2017-03-16工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-12--2018-03-16%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-03-12 ~ 2017-03-16个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-12--2018-03-16%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-03-19 ~ 2017-03-23工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-19--2018-03-23%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 
+# 2018-03-19 ~ 2018-03-23工作计划
+## 王之旭
+- samba client点击后空白 逻辑的优化 bug：2288
+- samba client上传文件失败
+- seafile
+- OTA升级后，卸载旧应用的功能 bug：2265
+- 使用网上邻居访问文件，按win+d快捷键时，文件管理器崩溃 bug： 2278
+- Termux 字体，样式文件的整理
+
+## 陈鹏
+- 网上邻居服务端新增多目录共享功能
+- Samba Server增加用户管理界面 bug：2271 2273
+- Samba Server增加权限说明 bug：2280
+- 文件管理器图标资源的增加 bug：2284
+
+## 卢宁
+- Seafile中应用数据的备份和还原
+
+## 王明
+- 物业项目技术文档
+- FileManager中左侧收藏的动态化
+
+# 2018-03-12 ~ 2018-03-16个人总结
+## 王之旭
+- 已完成任务
+  - [bug 2218] 首次配置完成后有时提示setupwizard已停止运行，且进入桌面后无法显示任务栏
+  - 优化seafile备份还原代码，预留aidl通信接口
+  - 移植termux源码
+  - setupwizard无法正常结束
+
+## 陈鹏
+- 已完成任务
+  - 优化samba server的用户可用界面
+- 有人命令行的限制，还未完成samba server 多目录的共享
+
+## 卢宁
+- 已完成任务
+  - 文件管理器中云服务状态界面的修改
+  - seafile压力测试
+- Seafile中应用数据的备份和还原， 由于文件比较分散，还未找到合适的方法来备份
+
+## 王明
+- 未完成任务
+  - 物业项目技术文档
+  - FileManager中左侧收藏的动态化
+  - 设置云服务配置（绑定跳转因Settings代码看不懂，没有很好的实现，暂未提交相关补丁）
 
 # 2018-03-12 ~ 2018-03-16工作计划
 ## 王之旭
 - [bug 2218] 首次配置完成后有时提示setupwizard已停止运行，且进入桌面后无法显示任务栏
-- Seafile核心代码重构整理
-  - seafile的网址可以配置
-  - 代码整理
+- 优化seafile备份还原代码
+- 移植termux源码
+- setupwizard无法正常结束
 
 ## 陈鹏
-- 多文件夹共享的samba
+- 优化网上邻居服务端
+- 网上邻居服务端新增多目录共享功能
 
 ## 卢宁
-- seafile 应用数据的备份
+- 云服务状态界面
+   - 2233 界面调整建议：1、同步与解除同步的字体颜色看不清，改成黑色 2、Openthos帐号分为了两行，建议一行或者直接写帐号
+   - 2236 云服务信息界面点击解除同步，确定后再次打开，选项仍为同步，且data文件状态没有变化
+- seafile压力测试
+- Seafile中应用数据的备份和还原
 
 ## 王明
-  - 物业系统文档
+- 物业项目技术文档
+- FileManager中左侧收藏的动态化
+- 设置云服务配置
 
 # 2018-03-05 ~ 2018-03-09个人总结
 ## 王之旭
