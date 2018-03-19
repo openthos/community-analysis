@@ -1,3 +1,11 @@
+# 2018-03-12 ~ 2018-03-16 工作總結
+## 黃志偉
+* 研究 kernel 4.14 在 VM fail 的問題。
+  - Virtual Box 已解決
+  - VMware 有進展，但仍未找到解決方法
+* 研究以 overlayfs 解決 read-write mode 問題，但 selinux 有問題，無法 keep selinux label。
+* 更新並測試 GMS 8.1，還有許多 crashing。
+
 # 2018-03-05 ~ 2018-03-09 工作總結
 ## 黃志偉
 * 本週主要工作在完成 kernel-4.14 的移植與 oreo-x86 的搭配測試：
