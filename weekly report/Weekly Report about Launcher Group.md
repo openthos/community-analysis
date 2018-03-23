@@ -15,11 +15,49 @@
 [2018-03-12 ~ 2017-03-16工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-12--2018-03-16%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-03-12 ~ 2017-03-16个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-12--2018-03-16%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-03-19 ~ 2017-03-23工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-19--2018-03-23%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-03-19 ~ 2017-03-23个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-19--2018-03-23%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-03-26 ~ 2017-03-30工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-26--2018-03-30%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+
+# 2018-03-26 ~ 2018-03-30工作计划
+## 王之旭
+- OTA升级后，卸载旧应用的功能 bug：2265
+- 使用网上邻居访问文件，按win+d快捷键时，文件管理器崩溃 bug： 2278
+- Termux 字体，样式文件的整理
+
+## 陈鹏
+- samba client 新的实现
+
+## 卢宁
+
+
+## 王明
+
+# 2018-03-19 ~ 2018-03-23个人总结
+## 王之旭
+- 已完成任务
+  - 第一次配置安装预装软件，可能因为目录的不存在崩溃
+  - seafile 帐号注册，登录整体优化
+- 未完成任务
+  - OTA升级后，卸载旧应用的功能 bug：2265
+  - 使用网上邻居访问文件，按win+d快捷键时，文件管理器崩溃 bug： 2278
+  - Termux 字体，样式文件的整理
+
+## 陈鹏
+- 未完成任务
+  - samba client 新的实现
+
+## 卢宁
+- 基本完成，还在优化
+  - Seafile中应用数据的备份和还原
+
+## 王明
+- 未完成任务
+  - 物业项目技术文档
 
 # 2018-03-19 ~ 2018-03-23工作计划
 ## 王之旭
 - 第一次配置安装预装软件，可能因为目录的不存在崩溃
-- seafile
+- seafile 帐号注册，登录整体优化
 - OTA升级后，卸载旧应用的功能 bug：2265
 - 使用网上邻居访问文件，按win+d快捷键时，文件管理器崩溃 bug： 2278
 - Termux 字体，样式文件的整理
@@ -32,7 +70,6 @@
 
 ## 王明
 - 物业项目技术文档
-- FileManager中左侧收藏的动态化
 
 # 2018-03-12 ~ 2018-03-16个人总结
 ## 王之旭
@@ -45,7 +82,7 @@
 ## 陈鹏
 - 已完成任务
   - 优化samba server的用户可用界面
-- 有人命令行的限制，还未完成samba server 多目录的共享
+- 由于命令行的限制，还未完成samba server 多目录的共享
 
 ## 卢宁
 - 已完成任务
