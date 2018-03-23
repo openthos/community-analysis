@@ -1,3 +1,10 @@
+# 2018-03-19 ~ 2018-03-23 工作總結
+## 黃志偉
+* 在 oreo-x86 測試 GMS 8.1。解決大部分問題。但 Google Play service 在 i965 driver 仍經常崩潰
+* 研究以 overlayfs 解決 system partition read-write 問題，但 overlayfs 無法正確反應 lowerdir 的 selinux label。與 Red Hat 開發者討論但無具體結論。
+* 更新 libdrm 2.4.91 + mesa 18.0-rc5。不過 Google Play service crashing 問題仍存在。
+* 在 OPENTHOS 1.1 嘗試使用 kernel-4.14。必須 disable selinux。大致正常。
+
 # 2018-03-12 ~ 2018-03-16 工作總結
 ## 黃志偉
 * 研究 kernel 4.14 在 VM fail 的問題。
