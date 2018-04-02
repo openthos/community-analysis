@@ -18,9 +18,9 @@
 [2018-03-19 ~ 2017-03-23个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-19--2018-03-23%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-03-26 ~ 2017-03-30工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-26--2018-03-30%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-03-26 ~ 2017-03-30个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-26--2018-03-30%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2018-04-02 ~ 2017-04-04工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-02--2018-04-04%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-04-02 ~ 2017-04-08工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-02--2018-04-08%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 
-# 2018-04-02 ~ 2018-04-04工作计划
+# 2018-04-02 ~ 2018-04-08工作计划
 
 # 2018-03-26 ~ 2018-03-30个人总结
 ## 王之旭
