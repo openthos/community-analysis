@@ -17,20 +17,64 @@
 [2018-03-19 ~ 2017-03-23工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-19--2018-03-23%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-03-19 ~ 2017-03-23个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-19--2018-03-23%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-03-26 ~ 2017-03-30工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-26--2018-03-30%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-03-26 ~ 2017-03-30个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-26--2018-03-30%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-04-02 ~ 2017-04-04工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-02--2018-04-04%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+
+# 2018-04-02 ~ 2018-04-04工作计划
+
+# 2018-03-26 ~ 2018-03-30个人总结
+## 王之旭
+- 已完成
+  - 去掉Internet浏览器49.0和Flash Master
+  - 使用网上邻居访问文件，按win+d快捷键时，文件管理器崩溃 bug： 2278  
+  - 修改bug2323：首次配置设置语言为英文，进入桌面后，系统语言仍为中文 
+- 未完成任务
+  - samba client 以命令行形式来实现-----正在调研，还没有找到比较合适的方法，只能采用临时方案
+  - Seafile增加监测，若同步状态出现问题，则重启Seafile-----网络问题，未完成
+  - OTA补丁自动提醒，添加选项供用户选择是否开启自动提醒（提示方式？）-----挂起
+  - Termux 字体，样式文件的整理-----挂起
+  - 与肖络元配合完成OpenthosID、Seafile云服务的帐号注册-----肖洛元未完成，挂起
+
+## 陈鹏
+- OTA升级后，卸载旧应用的功能 bug：2265-----基本完成，调整样式
+
+## 卢宁
+- Seafile支持多个浏览器数据还原-----
+- seafile壁纸等数据备份以及恢复测试-----完成测试
+- 云服务data进去后空白-----未复现
+
+## 王明
+- 已完成
+  - 压缩解压缩初始化进度无法结束
+- 未完成
+  - 文件管理器收藏动态-----80%
+  - 压缩解压缩左上角崩溃-----0%
+  - 第一次解压会出现重名提示-----0%
 
 # 2018-03-26 ~ 2018-03-30工作计划
 ## 王之旭
-- OTA升级后，卸载旧应用的功能 bug：2265
-- 使用网上邻居访问文件，按win+d快捷键时，文件管理器崩溃 bug： 2278
+- samba client 以命令行形式来实现
+- 去掉Internet浏览器49.0和Flash Master
+- Seafile增加监测，若同步状态出现问题，则重启Seafile
+- OTA补丁自动提醒，添加选项供用户选择是否开启自动提醒（提示方式？）
+- 使用网上邻居访问文件，按win+d快捷键时，文件管理器崩溃 bug： 2278  
 - Termux 字体，样式文件的整理
+- 修改bug2323：首次配置设置语言为英文，进入桌面后，系统语言仍为中文 
+- 与肖络元配合完成OpenthosID、Seafile云服务的帐号注册
 
 ## 陈鹏
-- samba client 新的实现
+- OTA升级后，卸载旧应用的功能 bug：2265
 
 ## 卢宁
-
+- Seafile支持多个浏览器数据还原
+- seafile壁纸等数据备份以及恢复测试
+- 云服务data进去后空白
 
 ## 王明
+- 文件管理器收藏动态
+- 压缩解压缩左上角崩溃
+- 压缩解压缩初始化进度无法结束
+- 第一次解压会出现重名提示
 
 # 2018-03-19 ~ 2018-03-23个人总结
 ## 王之旭
