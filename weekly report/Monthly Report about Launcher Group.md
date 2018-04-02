@@ -29,8 +29,9 @@
 - 物业项目技术文档
 - seafile配置的备份还原
 ## 总结
-3月samba和seafile基本完成。
-4月任务目标，Openthos的1.1版本发布！
+3月samba和seafile完成度80%。
+后面会针对seafile samba filemanager launcher进行系列的优化和维护
+4月任务目标，配合Openthos的1.1版本发布！
 
 
 
