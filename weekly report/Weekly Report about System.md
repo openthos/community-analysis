@@ -1,3 +1,12 @@
+# 2018-03-26 ~ 2018-03-31 工作總結
+## 黃志偉
+* 在 mesa 18.1-devel 修正 i965 bug 導致的 Google Play service 崩潰。
+* 在 kernel 4.14 加入 Surface 3 battery patch。
+* 研究 snd-hdmi-lpe-audio 無法自動載入的問題，原因在 modalias 不 match。
+* 研究如何偵測 snd-hdmi-lpe-audio 的 jack 插入。但不 reliable，放棄。測試 single_port patch 但不 work。
+* 在 Settings 加入 Android-x86 的設定。
+* 修正 /dev/memcg 無法掛載的問題。
+
 # 2018-03-19 ~ 2018-03-23 工作總結
 ## 黃志偉
 * 在 oreo-x86 測試 GMS 8.1。解決大部分問題。但 Google Play service 在 i965 driver 仍經常崩潰
