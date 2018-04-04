@@ -1,7 +1,7 @@
 # 2018年03月 -- Multiwindow组 总结
 
 ## 月小结
-  - 本月主要完成openthos-1.1的大目标，主要设计的工作有：权限管理器相机、录音、位置权限功能更改及otobrowser(fx58 openthos UI)的更新迭代工作，截止到月末已完成大部分工作；
+  - 本月主要完成openthos-1.1的大目标，主要设计的工作有：权限管理器相机、录音、位置权限功能更改、TaskManager切断关联启动功能及otobrowser(fx58 openthos UI)的更新迭代工作，截止到月末基本已完成；
   
 ## 下月计划
 
