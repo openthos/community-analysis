@@ -19,8 +19,66 @@
 [2018-03-26 ~ 2017-03-30工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-26--2018-03-30%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-03-26 ~ 2017-03-30个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-03-26--2018-03-30%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-04-02 ~ 2017-04-08工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-02--2018-04-08%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-04-02 ~ 2017-04-08个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-02--2018-04-08%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-04-09 ~ 2017-04-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-09--2018-04-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+
+# 2018-04-09 ~ 2018-04-13工作计划
+## 王之旭
+- OTA补丁自动提醒，添加选项供用户选择是否开启自动提醒（提示方式？）
+- FX61的升级工作
+- Termux 字体，样式文件的整理
+- 与肖络元配合完成OpenthosID、Seafile云服务的帐号注册
+
+## 陈鹏
+- U盘 文件权限
+
+## 卢宁
+- Seafile 文件权限
+
+## 王明
+- 文件管理器收藏动态
+- 压缩解压缩左上角崩溃
+- 第一次解压会出现重名提示
+
+# 2018-04-02 ~ 2018-04-08个人总结
+## 王之旭
+-已完成
+  - [高优先级] samba client 确定实现方案
+  - Seafile增加监测，若同步状态出现问题，则重启Seafile
+  - 2309 文件管理器无法通过tab键切换到云服务和网上邻居
+  - 将samba客户端的扫描速度由30秒缩短到5秒
+未完成
+  - OTA补丁自动提醒，添加选项供用户选择是否开启自动提醒（提示方式？）  未完成，20%
+
+## 陈鹏
+- U盘 文件权限 还没有找到解决办法
+
+## 卢宁
+- Seafile 文件权限 还没有找到解决办法
+
+## 王明
+- 文件管理器收藏动态  未完成，60%
+- 压缩解压缩左上角崩溃  未完成，0%
+- 第一次解压会出现重名提示  未完成，0%
 
 # 2018-04-02 ~ 2018-04-08工作计划
+## 王之旭
+- [高优先级] samba client 确定实现方案
+- Seafile增加监测，若同步状态出现问题，则重启Seafile
+- OTA补丁自动提醒，添加选项供用户选择是否开启自动提醒（提示方式？）
+- 2309 文件管理器无法通过tab键切换到云服务和网上邻居
+- 将samba客户端的扫描速度由30秒缩短到5秒
+
+## 陈鹏
+- U盘 文件权限
+
+## 卢宁
+- Seafile 文件权限
+
+## 王明
+- 文件管理器收藏动态
+- 压缩解压缩左上角崩溃
+- 第一次解压会出现重名提示
 
 # 2018-03-26 ~ 2018-03-30个人总结
 ## 王之旭
