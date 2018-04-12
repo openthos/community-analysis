@@ -1,7 +1,7 @@
 # OPENTHOS 1.1版本目标
 
-内核升级到4.14 LTS，增加intel Coffee Lake, Cannon Lake和AMD Raven Ridge APU支持（APU支持待定，可能来不及）--------内核升级后，网易云音乐、王者荣耀无法打开，闪退
-默认集成XPOSED，但是不暴露对外的GUI界面（不显示xposed installer，也不允许用户自行安装）
+- 内核升级到4.14 LTS，增加intel Coffee Lake, Cannon Lake和AMD Raven Ridge APU支持（APU支持待定，可能来不及）--------内核升级后，网易云音乐、王者荣耀无法打开，闪退
+- 默认集成XPOSED，但是不暴露对外的GUI界面（不显示xposed installer，也不允许用户自行安装）
 
 ## 核心应用
 - Internet浏览器升级到58.0-----------------------------------已升级至60.0
