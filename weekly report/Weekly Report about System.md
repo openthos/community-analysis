@@ -1,3 +1,12 @@
+# 2018-04-02 ~ 2018-04-13 工作總結
+## 黃志偉
+* 更新 SwitftShader 至 4.0.3。
+* 在 kernel 加入 WM5102 相關 patches。
+* 更新 oreo-x86 到 android-8.1.0_r22。
+* 修正 HdmiLpeAudio 導致 Surface 3 無聲的問題。
+* 修正 kbdsensor 導致 system_server high load 的問題。
+* 嘗試更新 grub-efi，64-bit OK 但 32-bit 未成功。
+
 # 2018-03-26 ~ 2018-03-31 工作總結
 ## 黃志偉
 * 在 mesa 18.1-devel 修正 i965 bug 導致的 Google Play service 崩潰。
