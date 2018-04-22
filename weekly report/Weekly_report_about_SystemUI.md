@@ -2,10 +2,10 @@
 ## 曹永韧
 ### 本周总结
   - 工作简述:
-    - TaskManager中将内存显示和设置中保持一致 完成100% 完成时间: 2018-04-18 完成人: 曹永韧
-    - 分析TaskManager中cpu的显示信息
-    - 分析TaskManager中在kernal-15时，不能显示应用内存；
-    - 学习将Xposed 集成到系统，并测试TaskManager，分析问题；
+    - TaskManager中将内存显示和设置中保持一致 完成100% 完成时间: 2018-04-18 完成人: 曹永韧
+    - 分析TaskManager中cpu的显示信息
+    - 分析TaskManager中在kernal-15时，不能显示应用内存；
+    - 学习将Xposed 集成到系统，并测试TaskManager，分析问题；
     
 ## 罗俊欢
 ### 本周总结：
