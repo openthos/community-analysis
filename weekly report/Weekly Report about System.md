@@ -23,6 +23,15 @@
 * 修正 kbdsensor 導致 system_server high load 的問題。
 * 嘗試更新 grub-efi，64-bit OK 但 32-bit 未成功。
 
+## 萧络元
+* 部署校内服务器，包括seafile server, OpenthosID server, AppStore server, 系统更新Server，最后实现多网络服务统一OAuth验证。待继续
+* kAFL自动化kernel测试，每天循环更新最新kernel并自动启动kAFL测试，测试结果数据的分析可视化；
+测试结果数据查看：http://192.168.0.77/kafl/
+* 同方电视移植定制并刷系统, 本周已还原出一个原生版本，并=周一给用户刷系统.
+
+
+## 张善民
+
 # 2018-03-26 ~ 2018-03-31 工作總結
 ## 黃志偉
 * 在 mesa 18.1-devel 修正 i965 bug 導致的 Google Play service 崩潰。
