@@ -1,3 +1,10 @@
+# 2018-04-16 ~ 2018-04-20 工作總結
+## 黃志偉
+* 更新 grub-efi 至 2.02
+* 經過多種方法嘗試，終於編出 OPENTHOS + mesa 18.1 + LLVM 6.0 image。基本測試可開機。
+* 嘗試解決 Google Play service 在 nougat-x86 i965 crashing 問題。
+* 更新 GMS for nougat-x86 為 7.1-r2 做準備。
+
 # 2018-04-02 ~ 2018-04-13 工作總結
 ## 黃志偉
 * 更新 SwitftShader 至 4.0.3。
