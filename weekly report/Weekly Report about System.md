@@ -5,6 +5,15 @@
 * 嘗試解決 Google Play service 在 nougat-x86 i965 crashing 問題。
 * 更新 GMS for nougat-x86 為 7.1-r2 做準備。
 
+## 萧络元
+* 辅助应用组解决Seafile、Samba共享文件权限被应用修改的问题；
+尝试了SDCARD文件同步和mount --bind sdcard特定文件夹两种方式，最后讨论决定使用mount --bind sdcard文件夹方式，时同步共享的文件都在sdcard某个目录，解决权限被随意修改的问题；
+* 协助应用组关于客户端连接新Seafile server oauth验证的问题。seafile server安装刘总要求可正常oauth验证，服务端已完成；
+* 与可信计算交流，了解可信代码组成，创建对应分支security，并帮助解决他们遇到的一些git代码操作相关的问题；
+* 根据测试组的测试结果，openthos repo 代码默认内核升到kernel-4.15.
+
+## 张善民
+
 # 2018-04-02 ~ 2018-04-13 工作總結
 ## 黃志偉
 * 更新 SwitftShader 至 4.0.3。
