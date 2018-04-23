@@ -21,6 +21,86 @@
 [2018-04-02 ~ 2017-04-08工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-02--2018-04-08%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-04-02 ~ 2017-04-08个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-02--2018-04-08%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-04-09 ~ 2017-04-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-09--2018-04-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-04-09 ~ 2017-04-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report
+/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-09--2018-04-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-04-16 ~ 2017-04-20工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-16--2018-04-20%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-04-16 ~ 2017-04-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-16--2018-04-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-04-16 ~ 2018-04-20个人总结
+## 王之旭
+-已完成
+  - samba client 路径修改 
+  - samba client 不显示共享文件，命令行可以看到
+  - samba client 文件无法打开(部分文本可使用浏览器打开，文档、图片、视频等无法打开)
+  - Seafile 文件权限(sdcard/data下限制应用修改权限)
+  - OTA升级自动提醒通知不显示
+  - 所有自研应用命名格式oto.xxx或者org.openthos.xxx
+  - 文件管理器降低权限后，U盘不可卸载格式化的bug
+  - 移除文件管理器，OTA，Seafile的SU用户警告 
+- 未完成
+  - samba client 文件名称不显示中文（缺少其他操作系统测试）
+  - seafile的用户配置备份还原整体重构
+
+## 陈鹏
+- 已完成
+  - 处理文件管理器降低权限后，samba server不可使用的问题
+- 未完成
+  - 与肖络元配合完成OpenthosID、Seafile云服务的帐号注册 
+
+## 卢宁
+- 已完成
+  - Seafile应用数据备份与恢复（由于云服务端降低权限，导致该功能失效，还需要修改）
+  - 谷歌拼音输入法 报名的修改
+
+## 王明
+- 未完成
+  - 文件管理器收藏动态 80%
+
+
+# 2018-04-16 ~ 2018-04-20工作计划
+## 王之旭
+- samba client 路径修改 
+- samba client 不显示共享文件，命令行可以看到
+- samba client 文件无法打开(部分文本可使用浏览器打开，文档、图片、视频等无法打开)
+- samba client 文件名称不显示中文
+- Seafile 文件权限(sdcard/data下限制应用修改权限)
+- OTA升级自动提醒通知不显示
+- 所有自研应用命名格式oto.xxx或者org.openthos.xxx
+- 文件管理器降低权限后，U盘不可卸载格式化的bug
+- 移除文件管理器，OTA，Seafile的SU用户警告 
+
+
+## 陈鹏
+- 处理文件管理器降低权限后，samba server不可使用的问题
+- 与肖络元配合完成OpenthosID、Seafile云服务的帐号注册 
+
+## 卢宁
+- Seafile应用数据备份与恢复
+-  谷歌拼音输入法 报名的修改
+
+## 王明
+- 文件管理器收藏动态
+
+# 2018-04-09 ~ 2018-04-13个人总结
+## 王之旭
+- 已完成
+  - OTA补丁自动提醒，添加选项供用户选择是否开启自动提醒（提示方式？）
+  - Termux 字体，样式文件的整理
+  
+- 未完成
+  - 与肖络元配合完成OpenthosID、Seafile云服务的帐号注册，时间来不及
+
+
+## 陈鹏
+- U盘 文件权限 调研完毕未解决
+
+
+## 卢宁
+- Seafile 文件权限 调研完毕未解决
+
+## 王明
+- 文件管理器收藏动态  未完成，80%
+
 
 # 2018-04-09 ~ 2018-04-13工作计划
 ## 王之旭
