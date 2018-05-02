@@ -1,3 +1,14 @@
+# 2018-04-23 ~ 2018-04-27 工作總結
+## 黃志偉
+* 更新 kernel 4.14.35 for oreo-x86。
+* 更新 kernel 4.9.95 for nougat-x86。
+  - 開啟 cpuset 相關設定。
+* 加入 abipicker patches 到 nougat-x86 framework。
+* 加入 e2label。
+* 修正 stagefright-plugins 的 memory leaks。
+* 修正 Android bison 編譯新 kernel 時無法找到 m4 檔案的問題。
+* 修正 7.1-r2 在 Hyper-V legacy mode 無法進入 graphic mode 的問題。
+
 # 2018-04-16 ~ 2018-04-20 工作總結
 ## 黃志偉
 * 更新 grub-efi 至 2.02
