@@ -1,3 +1,24 @@
+# 2018-04 月報
+## 個人月總结
+## 黃志偉
+* 準備 7.1-r2：
+  - 修正 kbdsensor 導致 system_server high load 問題。
+  - 更新 grub-efi 64-bit 至 2.02。
+  - 修正 installer 一些問題。
+  - 嘗試修正 i965 導致 Google Play Service crashing。似有改善。
+  - 更新 kernel 至 4.9.95，打開 cpuset 相關設定。
+  - 加入 abipicker patches 以提升對 RPC apps 相容性。
+  - 修正 stagefright-plugins memory leak。
+  - 修正 Hyper-V legacy boot 的顯示和 mouse 問題。
+  - 加入 e2label、fbset。
+  - 修正 getSupportedPreviewFpsRange exception。
+* 準備 8.1-rc1：
+  - 更新 kernel-4.14，加入 WM5102 patches
+  - 合併 android-8.1.0_r22
+  - 解決 HdmiLpeAudio 在 VivoStick & Surface 3 的問題。
+* OPENTHOS + Mesa 18.1：
+  - 修正 llvm 6.0、mesa 18.1 編譯的諸多問題。測試可開機。
+
 # 2018-01月報
 ## 個人月總结
 ## 黃志偉
