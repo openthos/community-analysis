@@ -24,6 +24,62 @@
 [2018-04-09 ~ 2017-04-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-09--2018-04-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-04-16 ~ 2017-04-20工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-16--2018-04-20%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-04-16 ~ 2017-04-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-16--2018-04-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-04-23 ~ 2017-04-28工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-23--2018-04-28%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-04-23 ~ 2017-04-28个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-23--2018-04-28%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-04-23 ~ 2018-04-28个人总结
+## 王之旭
+- 已完成
+  - samba client 文件名称不显示中文
+  - samba client 切换网络到无线网再切回有线网后，部分设备的共享文件夹打开无内容，终端显示获取文件信息失败，也无法删除这个文件
+  - seafile无法跟随系统启动而启动，data目录为空
+  - seafile云服务壁纸备份与还原
+  - seafile云服务wifi备份与还原
+  - seafile云服务应用商店备份与还原
+  - seafile云服务还原不能正常结束，第一次设置界面卡在正在从应用商店下载应用
+  - seafile2405 云服务恢复应用数据后，开始菜单崩溃
+  - seafile2399 云服务：第一次启动恢复各项数据，桌面壁纸拉伸
+  - seafile文件管理器增加U盘格式化确定提示框，以防误操作
+  - seafile首次配置不登录ID，跳过后进入系统，无法在设置中绑定帐号
+
+## 陈鹏
+- 已完成
+  - 与肖络元配合完成OpenthosID、Seafile云服务的帐号注册
+
+## 卢宁
+- 已完成
+  - Seafile应用数据备份与恢复
+  - Seafile开始菜单备份与恢复
+  - 云服务目录中出现两个UserConfig
+
+## 王明
+- 未完成
+  - 文件管理器收藏动态
+
+# 2018-04-23 ~ 2018-04-28工作计划
+## 王之旭
+- samba client 文件名称不显示中文
+- samba client 切换网络到无线网再切回有线网后，部分设备的共享文件夹打开无内容，终端显示获取文件信息失败，也无法删除这个文件
+- seafile无法跟随系统启动而启动，data目录为空
+- seafile云服务壁纸备份与还原
+- seafile云服务wifi备份与还原
+- seafile云服务应用商店备份与还原
+- seafile云服务还原不能正常结束，第一次设置界面卡在正在从应用商店下载应用
+- seafile2405 云服务恢复应用数据后，开始菜单崩溃
+- seafile2399 云服务：第一次启动恢复各项数据，桌面壁纸拉伸
+- seafile文件管理器增加U盘格式化确定提示框，以防误操作
+- seafile首次配置不登录ID，跳过后进入系统，无法在设置中绑定帐号
+
+## 陈鹏
+- 与肖络元配合完成OpenthosID、Seafile云服务的帐号注册
+
+## 卢宁
+- Seafile应用数据备份与恢复
+- Seafile开始菜单备份与恢复
+- 云服务目录中出现两个UserConfig
+
+## 王明
+- 文件管理器收藏动态
 
 # 2018-04-16 ~ 2018-04-20个人总结
 ## 王之旭
