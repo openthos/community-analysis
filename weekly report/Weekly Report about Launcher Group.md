@@ -26,6 +26,38 @@
 [2018-04-16 ~ 2017-04-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-16--2018-04-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-04-23 ~ 2017-04-28工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-23--2018-04-28%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-04-23 ~ 2017-04-28个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-04-23--2018-04-28%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-05-02 ~ 2017-05-04工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-02--2018-05-04%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-05-02 ~ 2017-05-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-02--2018-05-04%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-05-02 ~ 2018-05-04个人总结
+## 王之旭
+- 由于涉及代码较多，结构较复杂，完成度20%
+  - 重构文件管理器前进后退向上逻辑
+
+## 陈鹏
+- 未完成，完成度20%
+  - 完善samba service（多目录共享，用户列表）
+
+## 卢宁
+- 未完成，完成度20%
+  - 云服务状态提醒
+
+## 王明
+- 未完成
+  - 文件管理器收藏动态
+
+# 2018-05-02 ~ 2018-05-04工作计划
+## 王之旭
+- 重构文件管理器前进后退向上逻辑
+
+## 陈鹏
+- 完善samba service（多目录共享，用户列表）
+
+## 卢宁
+- 云服务状态提醒
+
+## 王明
+- 文件管理器收藏动态
 
 # 2018-04-23 ~ 2018-04-28个人总结
 ## 王之旭
