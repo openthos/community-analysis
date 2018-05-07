@@ -11,6 +11,15 @@
   - 1.[bug2421] 强行停止权限管理器后重新打开，粗略位置不生效
   - 2.[bug2423]学堂在线进入一个课程，点击左下角去上课（需登录），点视频中的开始学习，应用崩溃
 
+# 罗浩
+
+### 本周任务
+  - 1.基本明白了窗口leak和缩放窗口错位的原因。个人认为改为线框方式进行缩放能够避免该问题。进一步修改该问题的方法主要源于在DecorView的上层所使用的View仍应该是DecorView类。这里初步的设计是对DecorView和OpenthosDecor（暂定名）进行分析总结，让OpenThosDecor仍作为DecorView类（以此来适配所有通过Instanceof判断的内容）存在并位于DecorView的上层，位于窗口结构的顶层。其内部包含DecorCaption，包含一个contentparent，该contentparent内部只有DecorView，应用可见的ViewRoot仍为DecorView，系统可见的则为OpenThosDecor。目前实现该功能有几个问题点。1是对于非多窗口的窗口如何处理（直接进入不包含OpenThosDecor？在OpenThosDecor中进行特殊适配？）。2是如何保证OpenThosDecor不被外界所获取（例如通过View的getParent方法是无论如何都能够获取到View的父View的，这点目前看来需要对DecorView做额外适配）。
+  - 2考察新版本的Fennec，目前没有发现有价值的升级版本。
+
+### 下周任务
+  - 1.听从下一阶段安排
+
 
 # 2018年04月23日 - - 2018年04月29日
 
