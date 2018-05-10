@@ -18,6 +18,17 @@
   - 解決 HdmiLpeAudio 在 VivoStick & Surface 3 的問題。
 * OPENTHOS + Mesa 18.1：
   - 修正 llvm 6.0、mesa 18.1 編譯的諸多問題。測試可開機。
+  
+##　萧络元
+* 部署校内服务器，包括seafile server, OpenthosID server, AppStore server, 系统更新Server，最后实现多网络服务统一OAuth验证;
+* 同方电视按照刘总需求移植定制并刷系统;
+* 辅助Launcher组解决Seafile、Samba问题:
+  - 尝试了SDCARD文件同步和mount --bind sdcard特定文件夹两种方式，最后讨论决定使用mount --bind sdcard文件夹方式，时同步共享的文件都在sdcard某个目录，解决权限被随意修改的问题。
+* 与可信计算交流，了解可信代码组成，创建对应分支security，并帮助解决他们遇到的一些git代码操作相关的问题;
+* 根据测试组的测试结果，openthos repo 代码默认内核升到kernel-4.15;
+* 为适配seafile命令行客户端进行seafile的OAuth验证，根据刘总临时方案的说法，通过同步OpenthosID OAuth和seafile server账号数据库，解决了现有的seaf-cli命令行不能使用的问题;
+* [bug 2378] 设置dpi为120，从wps或微软office文档中使用打印机时崩溃。发现是应用对该dpi的资源文件缺失问题，与后端打印机无关；感谢罗浩帮忙解决并已提交代码;
+* [bug 855] OTA升级启动到桌面后，显示“‘查询出错 -refreshJobs- Cups start failed’”。调查跟踪到Printer/src/com/github/openthos/printer/localprint/task/，与曹永韧合作解决并提交代码;
 
 # 2018-01月報
 ## 個人月總结
