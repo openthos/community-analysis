@@ -4,6 +4,11 @@
 * 釋出 cm-x86 14.1-r2 (基於 7.1-r2)。
 * 合併 7.1-r2 的修正到 oreo-x86。
 
+## 萧络元
+* kernel4.15与xposed集成的试验，重现移植xposed art到openthos，问题解决
+* 对测试发现的众多应用闪退问题，跟踪之，发现都是被xposed force stop，进而跟踪到任务管理器，它把把新安装的应用加入启动阻止列表，例如当微博新安装后，启动几秒后则被任务管理器结束。于CYR交流，解决方式是修改任务管理器app的阻止名单规则
+* kernel4.15时的应用内存占用统计，有些出现为0KB的现象，正协助CYR解决中。
+
 # 2018-04-23 ~ 2018-04-27 工作總結
 ## 黃志偉
 * 更新 kernel 4.14.35 for oreo-x86。
@@ -14,6 +19,11 @@
 * 修正 stagefright-plugins 的 memory leaks。
 * 修正 Android bison 編譯新 kernel 時無法找到 m4 檔案的問題。
 * 修正 7.1-r2 在 Hyper-V legacy mode 無法進入 graphic mode 的問題。
+
+## 萧络元
+* 为适配seafile命令行客户端进行seafile的OAuth验证，根据刘总临时方案的说法，通过同步OpenthosID OAuth和seafile server账号数据库，解决了现有的seaf-cli命令行不能使用的问题
+* [bug 2378] 设置dpi为120，从wps或微软office文档中使用打印机时崩溃。发现是应用对该dpi的资源文件缺失问题，与后端打印机无关；感谢罗浩帮忙解决并已提交代码
+* [bug 855] OTA升级启动到桌面后，显示“‘查询出错 -refreshJobs- Cups start failed’”。调查跟踪到Printer/src/com/github/openthos/printer/localprint/task/，与曹永韧合作解决并提交代码
 
 # 2018-04-16 ~ 2018-04-20 工作總結
 ## 黃志偉
