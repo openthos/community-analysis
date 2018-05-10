@@ -18,8 +18,8 @@
   - 解決 HdmiLpeAudio 在 VivoStick & Surface 3 的問題。
 * OPENTHOS + Mesa 18.1：
   - 修正 llvm 6.0、mesa 18.1 編譯的諸多問題。測試可開機。
-  
-##　萧络元
+
+## 萧络元
 * 部署校内服务器，包括seafile server, OpenthosID server, AppStore server, 系统更新Server，最后实现多网络服务统一OAuth验证;
 * 同方电视按照刘总需求移植定制并刷系统;
 * 辅助Launcher组解决Seafile、Samba问题:
