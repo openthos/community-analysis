@@ -1,3 +1,19 @@
+# 罗浩
+
+### 本周任务
+  - 1.将54个8.0的multiwindow补丁全部打到8.1上。
+  - 2.解决systemui接口相关问题
+  - 3.解决statusbar无法点击问题
+  - 4.解决Launcher3持续崩溃问题
+  - 5.暂时取消窗口缩放模式的限制，暂时关闭缩引发的relaunch，来保证应用运行更稳定。经测试如此做之后暂时没有再出现窗口错位。
+  - 6.处理setRequestedOrientation，处理方法为调用changeOrientation
+  - 7.在真机上进行测试，发现长时间睡眠后无法唤醒问题。
+  - 8.将目前multiwindow-oreo的工作提交到服务器上
+  - 9.尝试在最新版openthos上运行android studio成功
+  
+### 下周任务
+  - 1.听从下一阶段安排
+
 # 2018年05月02日 - - 2018年05月04日
 
 # 刘晓旭
