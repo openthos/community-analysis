@@ -1,3 +1,11 @@
+# 2018-05-07 ~ 2018-05-11 工作總結
+## 黃志偉
+* 在 grub android.cfg 增加 lookback iso 的支持。
+* 改用 dd seek 來產生 large file，對 ext4 and ntfs 有效。
+* 改用 ext4 格式的 system.img 來解決 read-write 的安裝模式問題。
+* 嘗試在 OPENTHOS 加入 NVMe SSD 支援，但未測試。
+* 編譯測試 Intel Celadon project，但不支援 live mode。
+
 # 2018-04-30 ~ 2018-05-04 工作總結
 ## 黃志偉
 * 釋出 7.1-r2 以修正 7.1-r1 以來發現的問題。
