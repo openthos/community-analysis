@@ -31,7 +31,7 @@
 [2018-05-07 ~ 2017-05-11工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-07--2018-05-11%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-05-07 ~ 2017-05-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-07--2018-05-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
-# 2018-04-23 ~ 2018-04-28个人总结
+# 2018-05-07 ~ 2018-05-11个人总结
 ## 王之旭
 - 已完成
   - 重构文件管理器前进后退向上逻辑
