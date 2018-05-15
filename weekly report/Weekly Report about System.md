@@ -6,6 +6,13 @@
 * 嘗試在 OPENTHOS 加入 NVMe SSD 支援，但未測試。
 * 編譯測試 Intel Celadon project，但不支援 live mode。
 
+## 萧络元
+* 协助黄SIR，升级mesa18到实验室，主要用于新i7机器与AMD机器；
+* 维护dev.openthos.org服务器，解决drupal中病毒服务器被用于挖矿，ＣＰＵ占用奇高，通过整体升级已修复；
+* android8.1 repo源码环境创建，docker开发环境部署好；
+* 协助samba server多目录共享以及用户列表支持，编译了初步镜像给ＣＰ进行应用测试；
+* 协助支持同方笔记本新CPU和显卡，现mesa13可跑在s1, Mesa18可跑在s2，不过Mesa18存在应用crash问题待解决；　
+
 # 2018-04-30 ~ 2018-05-04 工作總結
 ## 黃志偉
 * 釋出 7.1-r2 以修正 7.1-r1 以來發現的問題。
