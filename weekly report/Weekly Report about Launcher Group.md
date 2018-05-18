@@ -30,6 +30,51 @@
 [2018-05-02 ~ 2017-05-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-02--2018-05-04%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-05-07 ~ 2017-05-11工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-07--2018-05-11%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-05-07 ~ 2017-05-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-07--2018-05-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-05-14 ~ 2017-05-18工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-14--2018-05-18%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-05-14 ~ 2017-05-18个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-14--2018-05-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-05-07 ~ 2018-05-11个人总结
+## 王之旭
+- 已完成
+  - 自研应用性能分析，给出报告
+  - openthos 1.1上使用Android Studio
+  - Seafile云服务注册登录修改
+  - Seafile云服务同步，接触同步的修改
+  - Seafile云服务开启停止的修改
+
+## 陈鹏
+- 未完成（功能完成，存在代码问题导致的卡顿）
+  - Termux 1.drawer移动至上方并固定显示  2.Tab上增加“x”，右侧增加“+”
+
+## 卢宁
+- 已完成
+  - seafile 无法正常使用调研（服务器问题，已告知肖洛元）
+- 未完成
+  - seafile 切换dev服务器，提取代码
+
+## 王明
+- 未完成
+  - 合并文件管理器和桌面，为以后拖拽、优化代码做准备-----截止第二周进展30%
+
+# 2018-05-14 ~ 2018-05-18工作计划
+## 王之旭
+- 自研应用性能分析，给出报告
+- openthos 1.1上使用Android Studio
+- Seafile云服务注册登录修改
+- Seafile云服务同步，接触同步的修改
+- Seafile云服务开启停止的修改
+
+## 陈鹏
+- Termux
+   - drawer移动至上方并固定显示
+   - Tab上增加“x”，右侧增加“+”
+
+## 卢宁
+- seafile 无法正常使用调研
+- seafile 切换dev服务器，提取代码
+
+## 王明
+- 合并文件管理器和桌面，为以后拖拽、优化代码做准备
 
 # 2018-05-07 ~ 2018-05-11个人总结
 ## 王之旭
