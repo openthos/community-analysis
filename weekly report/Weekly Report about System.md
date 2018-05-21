@@ -9,6 +9,7 @@
 * Android-x86 8.1:
   - 測試將 mouse right button 改為 Back，基本上可用。
   - 加入 Intel IPTS touch driver。在 Surface Pro 4 測試可用。
+  - 加入 grub theme support。
   - Kernel 4.14 似乎不穩定。研究哪些修改導致...
 * 其他：
   - 繼續測試 Celadon。按照 Intel 提供的方法 enable live mode，但仍無法開機成功。
