@@ -2,6 +2,17 @@
 
 # 2018-05-14 ~ 2018-05-18 工作總結
 ## 黃志偉
+* OPENTHOS:
+  - NVME SSD support
+  - 研究 mesa 18 crashing log，但無結果。
+  - 移除 data ramdisk 512MB 限制。
+* Android-x86 8.1:
+  - 測試將 mouse right button 改為 Back，基本上可用。
+  - 加入 Intel IPTS touch driver。在 Surface Pro 4 測試可用。
+  - Kernel 4.14 似乎不穩定。研究哪些修改導致...
+* 其他：
+  - 繼續測試 Celadon。按照 Intel 提供的方法 enable live mode，但仍無法開機成功。
+  
 
 ## 萧络元
 * 为提高服务器开发效率，与各组确认模块编译方案，并与刘老师讨论购买SSD的方案；
