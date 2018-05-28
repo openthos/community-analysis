@@ -1,4 +1,14 @@
+# 2018-05-21 ~ 2018-05-25 工作總結
+## 黃志偉
+* OPENTHOS:
+  - 完成 OPENTHOS 2.0 device configuration makefiles。
+  - 更新 mesa 至 18.1.0 for OPENTHOS 1.1。
 
+* Android-x86 8.1:
+  - 更新 libdrm 至 2.4.92。
+  - 更新 mesa 至 18.1.0。
+  - 合併 android_8.1.0_r29，但有些奇怪的 conflicts 待解決。
+  - kernel 4.14.x 的穩定性問題仍未解決。打算在 8.1-rc1 仍用 kernel 4.9。
 
 # 2018-05-14 ~ 2018-05-18 工作總結
 ## 黃志偉
