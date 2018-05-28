@@ -32,6 +32,52 @@
 [2018-05-07 ~ 2017-05-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-07--2018-05-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-05-14 ~ 2017-05-18工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-14--2018-05-18%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-05-14 ~ 2017-05-18个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-14--2018-05-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-05-21 ~ 2017-05-25工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-21--2018-05-25%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-05-21 ~ 2017-05-25个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-21--2018-05-25%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-05-21 ~ 2018-05-25个人总结
+## 王之旭
+- 已完成
+  - 自研应用性能优化
+  - [bug 2435] 文件管理器更换壁纸导致界面混乱
+  - 更换默认壁纸
+- 未完成（本周大部分时间都在学习和研究性能测试，以下文件管理器问题下周解决）
+  - [bug 2301] 特定操作后，文件管理器崩溃
+  - [bug 2178] 文件管理器不能搜索文件，界面空白
+  - [bug 2300] 文件管理器特定操作下，地址栏与实际目录不符
+
+## 陈鹏
+- 已完成
+  - Termux 1.drawer移动至上方并固定显示  2.Tab上增加“x”，右侧增加“+”
+
+## 卢宁
+- 已完成
+  - seafile云服务注册、登录、使用更换为dev服务器
+
+## 王明
+- 未完成
+  - 合并文件管理器和桌面，为以后拖拽、优化代码做准备-----截止第三周进展60%
+
+# 2018-05-21 ~ 2018-05-25工作计划
+## 王之旭
+- 自研应用性能优化
+- [bug 2301] 特定操作后，文件管理器崩溃
+- [bug 2178] 文件管理器不能搜索文件，界面空白
+- [bug 2300] 文件管理器特定操作下，地址栏与实际目录不符
+- [bug 2435] 文件管理器更换壁纸导致界面混乱
+- 更换默认壁纸
+- [bug 2433] 文件管理器中复制粘贴的文件不会立即显示，需要排序才会显示
+
+## 陈鹏
+- Termux
+   - drawer移动至上方并固定显示
+   - Tab上增加“x”，右侧增加“+”
+
+## 卢宁
+- seafile云服务注册、登录、使用更换为dev服务器
+
+## 王明
+- 合并文件管理器和桌面，为以后拖拽、优化代码做准备
 
 # 2018-05-14 ~ 2018-05-18个人总结
 ## 王之旭
