@@ -4,4 +4,5 @@
 使用无线网卡，注意要选择免驱动的，比如TP-LINK的TL-WN726N，使用前要先在windows上运行一下自带的程序，再回到openthos上即可直接使用。
 2. 需要更多的命令行工具，编译生成的ELF文件的分析处理工具，如readelf / pandoc命令  
 **解决方案：**  
-chroot解决
+chroot解决  
+1.1RC2解决：将**所有** busybox符号链接方式提供的命令，替换成ubuntu linux 18.04中对应的原始命令，并提供man-pages以便查询帮助
