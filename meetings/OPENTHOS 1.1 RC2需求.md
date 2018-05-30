@@ -25,3 +25,5 @@
     - SYSTEM分区，gdisk 使用t命令修改partition type code为a006 (android system) ,使用c命令修改partition name为oto-sys，并使用e2label将volume命名为oto-sys
     - DATA分区，gdisk 使用t命令修改partition type code为a008 (android data) ,使用c命令修改partition name为oto-data，并使用e2label将volume命名为oto-data
     - 注意分区和文件系统都要命名
+  - 系统中执行busybox会显示其提供的命令集，并以符号链接的方式在路径中代替了相应命令，由于busybox体积限制，命令功能较弱，而且和linux不完全兼容，需要将**所有** busybox符号链接方式提供的命令，替换成ubuntu linux 18.04中对应的原始命令，并提供man-pages以便查询帮助。
+    - 另外，由于gzip/bzip2都是单线程版本性能较差，建议增加pigz,pbzip2等多线程版本工具，file manager如有需要，应调用对应的多线程版本。
