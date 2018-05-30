@@ -20,4 +20,8 @@
   - 2.腾讯游戏
   - 3.Termux
   - 4.云服务
-  - 5.安装完之后分区类型及名称设置成a006 OPENTHOS system和a008 OPENTHOS data
+  - 5.安装分区命名规范：以linux gdisk为例，openthos标准安装到三个分区中：
+    - EFI分区，如果系统已经存在EFI分区，直接使用
+    - SYSTEM分区，gdisk 使用t命令修改partition type code为a006 (android system) ,使用c命令修改partition name为oto-sys，并使用e2label将volume命名为oto-sys
+    - DATA分区，gdisk 使用t命令修改partition type code为a008 (android data) ,使用c命令修改partition name为oto-data，并使用e2label将volume命名为oto-data
+    - 注意分区和文件系统都要命名
