@@ -1,3 +1,12 @@
+# 2018-05-28 ~ 2018-06-01 工作總結
+## 黃志偉
+* 加入 unload second GPU driver patch，但測試後認為沒有幫助而移除。
+* 合併 kernel 4.9.103 + ipts patches，但 ipts patches 導致 Baytrail 無法開機? 暫時移除。
+* 加入 abipicker patches 並解決 conflicts，測試 OK。
+* 更新 libva + vaapi。需更新 config_android.h，已提交 pull request 給 Intel。
+* 嘗試合併陳剛 mesa vaapi patches，暫無法測試。
+* 合併 kernel 4.9.105。
+
 # 2018-05-21 ~ 2018-05-25 工作總結
 ## 黃志偉
 * OPENTHOS:
