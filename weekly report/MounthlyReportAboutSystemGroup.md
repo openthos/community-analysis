@@ -1,3 +1,24 @@
+# 2018-05 月報
+## 個人月總结
+## 黃志偉
+* Android-x86：
+  - 完成 7.1-r2 的釋出。
+  - 完成 cm-x86 14.1-r2 的釋出。
+  - 嘗試解決 oreo-x86 read-write mode 問題。嘗試多種方法，最終改回 system.img in system.sfs 的方式。
+  - 合併 hwaccel-simple 至 oreo-x86，基本測試 OK。
+  - Kernel 4.14.x 在某些機台仍不穩定，未能找到根本原因。
+  - 加入 theme support 至 grub-efi。
+  - 更新 libdrm 至 2.4.92，mesa 至 18.1.0。
+  - 加入 abipicker patches 到 oreo-x86 並解決衝突。
+  - 更新 libva 和 vaapi 至最新 master branch，解決 Android 編譯問題。
+* OPENTHOS：
+  - 解決 NVMe SSD 的安裝問題。
+  - 移除 ramdisk 512MB 限制。
+  - 完成 OPENTHOS 2.0 device configuration makefiles。
+  - 更新 mesa 至 18.1.0。
+* 其他：
+  - 研究 Intel Celadon project，但 live mode 仍無法開機成功。
+
 # 2018-04 月報
 ## 個人月總结
 ## 黃志偉
