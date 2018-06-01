@@ -7,6 +7,13 @@
 * 嘗試合併陳剛 mesa vaapi patches，暫無法測試。
 * 合併 kernel 4.9.105。
 
+## 萧络元
+* 为提高服务器编译效率，一个是等待刘老师购的服务器新SSD及其连接附件；一个是图书馆空余服务器用于各组编译服务，不过目前单个服务器空间甚至低于100G，正在构建网络存储方案；
+* Seafile云服务迁移到dev服务器，大部分功能已迁移；Seafile-Server:　http://dev.openthos.org/ ,OAuth:　http://dev.openthos.org/id/
+* 协助samba server多目录共享以及用户列表支持，对于出现的samba问题，都进行了修复，并重新编译等待，app端试验；
+* 升级mesa18出现的解决应用崩溃：pcmark、3dmark、hpeprint问题以及微信、亚马逊购物HD、亚马逊Kindle无法登录问题；待进一步跟踪解决；
+* 目前情况： 在webview的线程GpuThread对　来自InProcessCommandBuffer的GPU渲染命令包 进行解码时，调用GLES2DecoderImpl::WasContextLost(),再调用函数glGetGraphicsResetStatusARB()，接着会调用opengl API在glGetGraphicsResetStatusEXT()，此时再单步跟进将crash. 已定位到Mesa API glGetGraphicsResetStatusEXT，已邮件请求黄SIR帮忙；
+
 # 2018-05-21 ~ 2018-05-25 工作總結
 ## 黃志偉
 * OPENTHOS:
@@ -18,6 +25,12 @@
   - 更新 mesa 至 18.1.0。
   - 合併 android_8.1.0_r29，但有些奇怪的 conflicts 待解決。
   - kernel 4.14.x 的穩定性問題仍未解決。打算在 8.1-rc1 仍用 kernel 4.9。
+
+## 萧络元
+* 确保openthos1.1在S1/Z2上正常运行，对不同内核与mesa版本进行比对试验；
+* Mesa18升级导致的应用崩溃：pcmark、3dmark、hpeprint，微信、亚马逊购物HD、亚马逊Kindle无法登录等问题；已定位到在创建线程new GpuInProcessThread后立即crash，原因暂未知。
+* Seafile云服务网络问题分析，联系了图书管服务器管理员关于网络慢的问题，没有好的解决方法，故计划暂时用dev.openthos.org服务器,把已经部署的迁移过去；
+* 讨论OPENTHOS device configuration 的修改，gcc-7.3 for Kernel的修改，并将仓库push维护到服务器；
 
 # 2018-05-14 ~ 2018-05-18 工作總結
 ## 黃志偉
