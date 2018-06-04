@@ -34,6 +34,71 @@
 [2018-05-14 ~ 2018-05-18个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-14--2018-05-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-05-21 ~ 2018-05-25工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-21--2018-05-25%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-05-21 ~ 2018-05-25个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-21--2018-05-25%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-05-28 ~ 2018-06-01工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-28--2018-06-01%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-05-28 ~ 2018-06-01个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-28--2018-06-01%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-05-21 ~ 2018-05-25个人周报
+## 王之旭
+- 已完成
+  - [bug 2433] 文件管理器中复制粘贴的文件不会立即显示，需要排序才会显示
+  - 使用Openthos
+- 未完成
+  - Termux
+     - 菜单改成安卓标准的“汉堡”式菜单，菜单下面是：新建分页/选择URL/拷贝/粘贴/Reset/配色/字体/关闭分页
+    - 取消长按弹出上面工具栏功能
+    - 默认字体变小，需确定一个合理的字体大小(可能需要读取dpi设置来自动调整)
+    - 快捷键功能整合到汉堡式菜单里，并在菜单项后面注明快捷键
+    - 修改默认apt源
+    - 调整对“～”的解释
+    - 文本复制粘贴功能，选中复制、粘贴快捷键
+  - 发布照片时无法识别到文件管理器中的图片
+
+## 陈鹏
+- 已完成
+  - 使用Openthos
+- 已完成调研 未解决
+  - [bug 2301] 特定操作后，文件管理器崩溃
+- 未完成
+  - 快速按F5刷新桌面导致桌面崩溃
+   
+## 卢宁
+- 已完成
+  - 解决seafile通知乱窜问题
+  - 使用Openthos
+
+## 王明
+- 已完成
+  - 使用Openthos
+- 未完成
+  - 合并文件管理器和桌面，为以后拖拽、优化代码做准备
+  
+# 2018-05-28 ~ 2018-06-01工作计划
+## 王之旭
+- [bug 2433] 文件管理器中复制粘贴的文件不会立即显示，需要排序才会显示
+- Termux
+   - 菜单改成安卓标准的“汉堡”式菜单，菜单下面是：新建分页/选择URL/拷贝/粘贴/Reset/配色/字体/关闭分页
+   - 取消长按弹出上面工具栏功能
+   - 默认字体变小，需确定一个合理的字体大小(可能需要读取dpi设置来自动调整)
+   - 快捷键功能整合到汉堡式菜单里，并在菜单项后面注明快捷键
+   - 修改默认apt源
+   - 调整对“～”的解释
+   - 文本复制粘贴功能，选中复制、粘贴快捷键
+- 发布照片时无法识别到文件管理器中的图片
+- 使用Openthos
+
+## 陈鹏
+- [bug 2301] 特定操作后，文件管理器崩溃
+- 快速按F5刷新桌面导致桌面崩溃
+- 使用Openthos
+   
+## 卢宁
+- 解决seafile通知乱窜问题
+- 解决输入法词库问题
+- 使用Openthos
+
+## 王明
+- 合并文件管理器和桌面，为以后拖拽、优化代码做准备
+- 使用Openthos
 
 # 2018-05-21 ~ 2018-05-25个人周报
 ## 王之旭
