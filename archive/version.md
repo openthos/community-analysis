@@ -1,5 +1,6 @@
 # 镜像位置
 - [tuna清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/openthos/)(速度较快)
+   - 镜像位置：Release/1.1(或1.0)/nightly-build/dev/openthos-1.1.0.180514.img
 - 下载镜像地址:http://pan.baidu.com/s/1kVauJ5t
 - 提取码:y48g
 
