@@ -1,5 +1,5 @@
 # 镜像位置
-
+- [tuna清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/openthos/)(速度较快)
 - 下载镜像地址:http://pan.baidu.com/s/1kVauJ5t
 - 提取码:y48g
 
