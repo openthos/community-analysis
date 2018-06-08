@@ -1,6 +1,9 @@
 
 # 2018-06-04 ~ 2018-06-08 工作總結
 ## 黃志偉
+* 修正 OPENTHOS 1.1 mesa 18.1 webview crashing 問題。
+* 修正 OPENTHOS 1.1 mesa 18.1 HDMI out 問題。
+* 支援 Computex 會場解說。
 
 ## 萧络元
 * 提高服务器编译效率，新购SSD做bcache；图书馆空余服务器可用于各组编译服务，不过目前单个服务器空间甚至低于100G，正在构建网络存储方案；　
