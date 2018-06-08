@@ -19,6 +19,18 @@
 * 其他：
   - 研究 Intel Celadon project，但 live mode 仍無法開機成功。
 
+## 萧络元
+* kernel4.15与xposed集成的试验，重现移植xposed art到openthos，重新合并由官方合并完art后问题解决；
+* 对测试组发现的众多应用闪退问题，跟踪之，发现都是被xposed force stop，进而跟踪到任务管理器，它把把新安装的应用加入启动阻止列表，例如当微博新安装后，启动几秒后则被任务管理器结束。于CYR交流，解决方式是修改任务管理器app的阻止名单规则；
+* kernel4.15时的应用内存占用统计，有些出现为0KB的现象，协助CYR修复，先已把任务移交给他了；
+* 对于新新CPU和显卡的同方机器S1/Z2，试验了mesa13与mesa18的运行情况，并总结结果；
+* 部署android8.1开发环境，给multiwindow组提供必要的支持；
+* Repo代码库维护，合并security分支，讨论OPENTHOS device configuration 的修改，gcc-7.3 for Kernel的修改；
+* 对samba server多目录共享以及用户列表支持,　CP邮件中提到的samba问题，都进行了修复，并重新编译，对APP端试验问题进行及时修复；
+* 提高服务器编译效率，等待刘老师购的新SSD及其连接附件；图书馆空余服务器可用于各组编译服务，不过目前单个服务器空间甚至低于100G，正在构建网络存储方案。目前还在进行中；　
+* Seafile云服务、OAuth验证等服务迁移到dev服务器，已迁移完成并发送使用说明邮件；
+* 升级mesa18出现的解决应用崩溃：pcmark、3dmark、hpeprint问题以及微信、亚马逊购物HD、亚马逊Kindle无法登录问题；待进一步跟踪解决；目前情况定位到mesa API glGetGraphicsResetStatusEXT,且该函数入口由mesa的入口分发表动态分发。黄ＳＩＲ提供了二进制webview方案。
+
 # 2018-04 月報
 ## 個人月總结
 ## 黃志偉
