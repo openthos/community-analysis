@@ -1,3 +1,16 @@
+
+# 2018-05-28 ~ 2018-06-01 工作總結
+## 黃志偉
+
+## 萧络元
+* 提高服务器编译效率，新购SSD做bcache；图书馆空余服务器可用于各组编译服务，不过目前单个服务器空间甚至低于100G，正在构建网络存储方案；　
+* Seafile云服务、OAuth验证等服务迁移到dev服务器，并已发送使用说明邮件；同时对APP组与服务器用户密码等交互的问题进行修复解决；
+* 协助samba server多目录共享以及用户列表支持,　邮件中提到的samba问题，都进行了修复，并重新编译，陈鹏试验后多用户共享还有一些bug，继续源代码调试解决中；
+* 升级mesa18出现的解决应用崩溃：pcmark、3dmark、hpeprint问题以及微信、亚马逊购物HD、亚马逊Kindle无法登录问题。
+  - 目前黄sir提供了webview google库的方案，试验效果不错；
+  - 我在继续跟踪mesa源代码，争取能走通mesa问题的关键，现在bug API glGetGraphicsResetStatusEXT地址值，通过mesa eglGetProcAddress()函数动态获得的，故之前无法从源代码搜索到，真研究与其相关的mesa的函数指针分发表机制；
+
+
 # 2018-05-28 ~ 2018-06-01 工作總結
 ## 黃志偉
 * 加入 unload second GPU driver patch，但測試後認為沒有幫助而移除。
