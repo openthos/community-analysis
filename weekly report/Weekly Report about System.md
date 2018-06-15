@@ -1,6 +1,15 @@
 
 # 2018-06-11 ~ 2018-06-15 工作總結
 ## 黃志偉
+* 嘗試修改 drm_gralloc 支援第二個 GPU，但未成功。
+* 由社群開發者 Luke 提供的 script 來更新 bootia32.efi 成功。
+* 修改 short URL，加入 t.cn 以便於大陸使用者下載。
+* 更新 Taskbar 到 3.9.2。
+* 在 Settings 加入 Android-x86 統計選項。
+* 以 quiet loglevel=0 的方式關閉 console 的 kernel messages 成功。
+* 合併 android-8.1.0_r33 至 oreo-x86。
+* 合併 mesa 18.1.1 至 oreo-x86。
+* 更新 device/generic/firmware。
 
 ## 萧络元
 * mesa18 kernel4.17在新机器s1上投影无法使用；uevent以及gralloc源码分析hdmi输出过程并进行log打印，最后发现通过重新sync代码，make clean问题好了，试验了t45和s1新笔记本；
