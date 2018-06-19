@@ -6,6 +6,7 @@
     - status bar 自动隐藏体验 完成 50％
 
 ### 罗俊欢
+  - startupMenu优化 80%
 
 ### 下周任务
   - startupMenu 优化
