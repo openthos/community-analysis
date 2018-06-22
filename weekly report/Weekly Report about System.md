@@ -1,4 +1,10 @@
 
+# 2018-06-19 ~ 2018-06-22 工作總結
+## 黃志偉
+* 釋出 Android-x86 8.1-rc1。
+* 在 camera HAL 加入 workaround 以忽略 invalid camera。
+* 研究如何用 clang 編譯 kernel。修改 kernel.mk，搭配 kernel 4.9 並修改少數錯誤後測試成功。
+
 # 2018-06-11 ~ 2018-06-15 工作總結
 ## 黃志偉
 * 嘗試修改 drm_gralloc 支援第二個 GPU，但未成功。
