@@ -7,7 +7,7 @@
     - alt + f1 失效，分析原因　完成50%
 
 ### 罗俊欢
-  - startupMenu优化 80%
+  - startupMenu优化 99%
 
 ### 下周任务
   - startupMenu 优化代码提交完成
