@@ -1,3 +1,11 @@
+# 2018-06-25 ~ 2018-06-29 工作總結
+## 黃志偉
+* 本週主要研究以 clang 編譯 kernel 的方法，參考來源：https://www.linuxplumbersconf.org/2017/ocw//system/presentations/4799/original/LPC%202017-%20Clang%20built%20kernels.pdf
+  - 編譯 64-bit x86_64 kernel 4.9 成功，有部分 drivers 有小錯誤，可修正。
+  - Kernel 4.14 64-bit x86_64 需加入額外 patches 方能編譯成功。
+  - 32-bit x86 kernel 目前仍無法編譯。
+  - Kernel 4.17 或以上無法編譯成功，相關 issues 討論見：https://github.com/ClangBuiltLinux/linux/issues
+* 研究 mesa 18.1 搭配 LLVM 7.0，可編譯成功。待測試。
 
 # 2018-06-19 ~ 2018-06-22 工作總結
 ## 黃志偉
