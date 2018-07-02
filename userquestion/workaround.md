@@ -18,3 +18,6 @@ chroot解决
 6. Termux中代码显示不完整，或半屏显示  
 **解决方案：**
 点击放大缩小窗口能够使代码termux正常显示，或者不要su，在普通用户目录下操作
+7. openthos在chroot到Ubuntu 时，adb无法使用  
+**解决方案：**
+问题在ubuntu与adb server交互的端口被chroot外的openthos占用了。解决方法是指定新的端口即可，即在执行"export DISPLAY=192.168.0.111:0"后，增加一句`alias adb='adb -P 5030'`
