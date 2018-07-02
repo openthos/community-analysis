@@ -21,3 +21,6 @@ chroot解决
 7. openthos在chroot到Ubuntu 时，adb无法使用  
 **解决方案：**
 问题在ubuntu与adb server交互的端口被chroot外的openthos占用了。解决方法是指定新的端口即可，即在执行"export DISPLAY=192.168.0.111:0"后，增加一句`alias adb='adb -P 5030'`
+8. 系统升级或重置导致的有线网络无法连接。
+**解决方案：**
+使系统睡眠，然后再唤醒
