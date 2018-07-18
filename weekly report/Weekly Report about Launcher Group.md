@@ -36,6 +36,248 @@
 [2018-05-21 ~ 2018-05-25个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-21--2018-05-25%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-05-28 ~ 2018-06-01工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-28--2018-06-01%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-05-28 ~ 2018-06-01个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-05-28--2018-06-01%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-06-04 ~ 2018-06-08工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-06-04--2018-06-08%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-06-04 ~ 2018-06-08个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-06-04--2018-06-08%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-06-11 ~ 2018-06-15工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-06-11--2018-06-15%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-06-11 ~ 2018-06-15个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-06-11--2018-06-15%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-06-19 ~ 2018-06-22工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-06-19--2018-06-22%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-06-19 ~ 2018-06-22个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-06-19--2018-06-22%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-06-25 ~ 2018-06-29工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-06-25--2018-06-29%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-06-25 ~ 2018-06-29个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-06-25--2018-06-29%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-07-02 ~ 2018-07-06工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-02--2018-07-06%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-07-02 ~ 2018-07-06个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-02--2018-07-06%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-07-09 ~ 2018-07-13工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-09--2018-07-13%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-07-09 ~ 2018-07-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-09--2018-07-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-07-16 ~ 2018-07-20工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-16--2018-07-20%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-07-16 ~ 2018-07-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-16--2018-07-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-07-16 ~ 2018-07-20个人周报
+## 王之旭
+## 陈鹏
+## 卢宁
+## 王明
+
+# 2018-07-17 ~ 2018-07-20工作计划
+## 王之旭
+- Ota:手动升级校验失败
+- Termux:
+## 陈鹏
+## 卢宁
+## 王明
+
+# 2018-07-09 ~ 2018-07-13个人周报
+## 王之旭
+- 已完成
+  - 恢复修改过的谷歌输入法，可在设置中配置
+  - Termux卡顿以及使用logcat会停止运行
+  - 文件管理器手机模式下显示不正常
+## 陈鹏
+- 未完成
+  - 云服务中对其他library 的显示（内容较多）
+## 卢宁
+- 已完成
+  - 云服务恢复数据后，浏览器书签未恢复，bilibili停止运行
+- 未完成
+  - 云服务备份恢复的完善
+## 王明
+- 未完成
+  - 压缩解压缩修改为默认直接显示（类似Windows）（第三周，进展预计50%）
+
+# 2018-07-09 ~ 2018-07-13工作计划
+## 王之旭
+- 恢复修改过的谷歌输入法，可在设置中配置
+- Termux卡顿以及使用logcat会停止运行
+- 文件管理器手机模式下显示不正常
+## 陈鹏
+- 云服务中对其他library 的显示
+## 卢宁
+- 云服务恢复数据后，浏览器书签未恢复，bilibili停止运行
+- 云服务备份恢复的完善
+## 王明
+- 压缩解压缩修改为默认直接显示（类似Windows）
+
+# 2018-07-02 ~ 2018-07-06个人周报
+## 王之旭
+- 已完成
+  - 文件管理器云服务中对其他library 的显示
+  - samba 共享一个目录后切换另一个目录共享时，无法显示共享文件
+  - samba目录显示重复，路径不正常
+  - OTA商密算法流程验证
+## 陈鹏
+- 已完成
+  - 云服务增加其他library模块
+## 卢宁
+- 已完成
+  - 云服务：新建文件文件夹，需按enter两次才可创建成功（0627）
+  - 云服务备份时选择默认未选中的app不会备份相关数据（0628）
+  - 恢复配置时openthos浏览器和Termux崩溃（0628）
+  - 更改服务器地址时直接选择而不是输入（0706）
+
+## 王明
+- 未完成
+  - 压缩解压缩修改为默认直接显示（类似Windows）（第三周，进展预计40%）
+
+# 2018-07-02 ~ 2018-07-06工作计划
+## 王之旭
+- 文件管理器云服务中对其他library 的显示
+- samba 共享一个目录后切换另一个目录共享时，无法显示共享文件
+- samba目录显示重复，路径不正常
+- OTA商密算法流程验证
+## 陈鹏
+- 云服务增加其他library模块
+## 卢宁
+- 云服务：新建文件文件夹，需按enter两次才可创建成功（0627）
+- 云服务备份时选择默认未选中的app不会备份相关数据（0628）
+- 恢复配置时openthos浏览器和Termux崩溃（0628）
+- 更改服务器地址时直接选择而不是输入（0706）
+## 王明
+- 压缩解压缩修改为默认直接显示（类似Windows）
+
+# 2018-06-25 ~ 2018-06-29个人周报
+## 王之旭
+- 未完成
+  - 云服务中对其他library 的显示（周末加班完成）
+## 陈鹏
+- 未完成
+  - 云服务中对其他library 的显示（周末加班完成）
+## 卢宁
+- 未完成
+  - 云服务注册提示失败（周末加班完成）
+  - 数据同步只显示waiting for sync的问题（周末加班完成）
+  - 云服务DATA目录状态不会刷新（周末加班完成）
+  - 云服务显示多个userconfig和data（周末加班完成）
+## 王明
+- 未完成
+  - 压缩解压缩修改为默认直接显示（类似Windows）（第三周，进展预计10%）
+
+# 2018-06-25 ~ 2018-06-29工作计划
+## 王之旭
+- 云服务中对其他library 的显示
+## 陈鹏
+- 云服务中对其他library 的显示
+## 卢宁
+- 云服务注册提示失败
+- 数据同步只显示waiting for sync的问题
+- 云服务DATA目录状态不会刷新
+- 云服务显示多个userconfig和data
+## 王明
+- 压缩解压缩修改为默认直接显示（类似Windows）
+
+
+# 2018-06-19 ~ 2018-06-22个人周报
+## 王之旭
+- 已完成
+  - Termux菜单改成安卓标准的“汉堡”式菜单，菜单下面是：新建分页/选择URL/拷贝/粘贴/Reset/配色/字体/关闭分页
+  - Termux默认字体变小，需确定一个合理的字体大小(可能需要读取dpi设置来自动调整)
+  - Termux快捷键功能整合到汉堡式菜单里，并在菜单项后面注明快捷键
+  - Termux机器睡眠唤醒后，termux无法使用，需要关闭重新打开
+  - 输入exit无法退出某个tab，按回车后termux崩溃
+  - 禁用自研谷歌输入法，使用第三方谷歌输入法
+  - 去掉本地打印服务、windows系统恢复，在User版中去掉OtoVirtual
+## 陈鹏
+- 未完成
+  - 云服务官方API修改移植(进展40%)
+## 卢宁
+- 未完成
+  - 云服务官方API修改移植(进展40%)
+## 王明
+- 未完成
+  - 云服务其他资料库界面显示(进展40%)
+
+
+# 2018-06-19 ~ 2018-06-22工作计划
+## 王之旭
+- Termux菜单改成安卓标准的“汉堡”式菜单，菜单下面是：新建分页/选择URL/拷贝/粘贴/Reset/配色/字体/关闭分页
+- Termux默认字体变小，需确定一个合理的字体大小(可能需要读取dpi设置来自动调整)
+- Termux快捷键功能整合到汉堡式菜单里，并在菜单项后面注明快捷键
+- Termux机器睡眠唤醒后，termux无法使用，需要关闭重新打开
+- 输入exit无法退出某个tab，按回车后termux崩溃
+- 禁用自研谷歌输入法，使用第三方谷歌输入法
+- 去掉本地打印服务、windows系统恢复，在User版中去掉OtoVirtual
+## 陈鹏
+- 云服务官方API修改移植
+## 卢宁
+- 云服务官方API修改移植
+## 王明
+- 云服务其他资料库界面显示
+
+# 2018-06-11 ~ 2018-06-15个人周报
+## 王之旭
+- 已完成
+  - 复制、粘贴、剪切快捷键
+  - 崩溃后再次打开页面混乱，只能清理缓存重新打开
+  - 增加Tab窗口后，关闭Termux，再打开，Tab窗口不可见，只剩下“＋”可见
+  - 修改应用名、图标
+- 未完成
+  - OTA升级验签 （工具不支持大文件，已告知软件所）
+## 陈鹏
+- 已完成
+  - 云服务外链分享
+- 未完成
+  - 云服务官方API修改移植(进展20%)
+## 卢宁
+- 已完成
+  - 云服务地址动态
+- 未完成
+  - 云服务官方API修改移植(进展20%)
+## 王明
+- 未完成
+  - 云服务其他资料库界面显示(进展20%)
+
+# 2018-06-11 ~ 2018-06-15工作计划
+## 王之旭
+- 复制、粘贴、剪切快捷键
+- 崩溃后再次打开页面混乱，只能清理缓存重新打开
+- 增加Tab窗口后，关闭Termux，再打开，Tab窗口不可见，只剩下“＋”可见
+- 修改应用名、图标
+- OTA升级验签
+## 陈鹏
+- 云服务外链分享
+- 云服务官方API修改移植
+## 卢宁
+- 云服务地址动态
+- 云服务官方API修改移植
+## 王明
+- 云服务其他资料库界面显示
+
+
+# 2018-06-04 ~ 2018-06-08个人周报
+## 王之旭
+- 已完成
+  - Termux取消长按弹出上面工具栏功能
+  - Termux快捷键功能整合到汉堡式菜单里，并在菜单项后面注明快捷键
+  - Termux文本复制粘贴功能，选中复制、粘贴快捷键
+  - 支持新的nvme分区挂载功能
+  - 微信识别图片目录
+## 陈鹏
+- 未完成
+  - 快速按F5刷新桌面导致桌面崩溃
+  
+## 卢宁
+- 已完成
+  - seafile云服务OAUTH统一验证
+- 未完成
+  - [bug 2301] 特定操作后，文件管理器崩溃
+## 王明
+- 未完成
+  - 合并文件管理器和桌面，为以后拖拽、优化代码做准备
+
+# 2018-06-04 ~ 2018-06-08工作计划
+## 王之旭
+- Termux取消长按弹出上面工具栏功能
+- Termux快捷键功能整合到汉堡式菜单里，并在菜单项后面注明快捷键
+- Termux文本复制粘贴功能，选中复制、粘贴快捷键
+- 支持新的nvme分区挂载功能
+- 微信识别图片目录
+## 陈鹏
+- 快速按F5刷新桌面导致桌面崩溃
+## 卢宁
+- seafile云服务OAUTH统一验证
+- [bug 2301] 特定操作后，文件管理器崩溃
+## 王明
+- 合并文件管理器和桌面，为以后拖拽、优化代码做准备
+
+
 
 # 2018-05-28 ~ 2018-06-01个人周报
 ## 王之旭
