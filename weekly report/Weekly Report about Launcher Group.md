@@ -50,6 +50,50 @@
 [2018-07-09 ~ 2018-07-13个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-09--2018-07-13%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-07-16 ~ 2018-07-20工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-16--2018-07-20%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-07-16 ~ 2018-07-20个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-16--2018-07-20%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-07-23 ~ 2018-07-27工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-23--2018-07-27%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-07-23 ~ 2018-07-27个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-23--2018-07-27%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-07-30 ~ 2018-08-03工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-30--2018-08-03%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-07-30 ~ 2018-08-03个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-30--2018-08-03%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-07-30 ~ 2018-08-03工作计划
+## 王之旭
+- Termux修改默认字体大小，Tab的大小，Tab的名称
+- 图片管理器更换中文名称
+## 陈鹏
+- 云服务其他library的代码清理
+- 云服务打开文件判断的完善
+- 云服务重命名增加提醒
+## 卢宁
+- 云服务其他Library界面重做
+- 云服务更换服务器地址无法正常使用的bug
+## 王明
+- 压缩解压缩修改为默认直接显示（类似Windows）
+
+# 2018-07-23 ~ 2018-07-27个人周报
+## 王之旭
+- 已完成
+  - OTA升级恢复到gnupg验签方式
+  - 图片管理器升级到最新代码，解决大量bug
+## 陈鹏
+- 已完成
+  - 云服务其他library完善（文件，文件夹的显示，移除特殊Library）
+## 卢宁
+- 已完成
+  - 云服务OpenthosId迁移
+## 王明
+- 未完成
+  - 压缩解压缩修改为默认直接显示（类似Windows）（过去第五周，进展预计80%）
+
+# 2018-07-23 ~ 2018-07-27工作计划
+## 王之旭
+- OTA升级恢复到gnupg验签方式
+- 图片管理器升级到最新代码，解决大量bug
+## 陈鹏
+- 云服务其他library完善（文件，文件夹的显示，移除特殊Library）
+## 卢宁
+- 云服务OpenthosId迁移
+## 王明
+- 压缩解压缩修改为默认直接显示（类似Windows）
 
 # 2018-07-16 ~ 2018-07-20个人周报
 ## 王之旭
