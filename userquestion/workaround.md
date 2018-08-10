@@ -5,7 +5,8 @@
 如果安装后无法正常使用应用，在/data/data/目录下修改com.termux的权限，权限查看/data/system/packages.list
 2. 如何使用android studio  
 **解决方案：**  
-在Androidx86-8.1中进行安装。所需文件在180服务器：/var/www/html/dl/oto-android-studio/目录下。  
+在Androidx86-8.1中进行安装。（镜像位置:lh@192.168.0.180:/var/www/html/dl/android_x86_64.iso）  
+所需文件在180服务器：/var/www/html/dl/oto-android-studio/目录下。  
 启动脚本的运行方法是sh startas.sh  
 scp、ssh不可用的情况下使用wget下载文件  
 参考文档：  
