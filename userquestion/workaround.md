@@ -6,7 +6,7 @@
 2. 如何使用android studio  
 **解决方案：**  
 在Androidx86-8.1中进行安装。（镜像位置:lh@192.168.0.180:/var/www/html/dl/android_x86_64.iso）  
-**请勿直接dd制作U盘，会导致U盘无法识别**  
+**请勿直接dd制作U盘，会导致U盘无法识别。使用dd if=/dev/zero of=/dev/sdX bs=1M count=1**  
 所需文件在180服务器：/var/www/html/dl/oto-android-studio/目录下。  
 启动脚本的运行方法是sh startas.sh  
 scp、ssh不可用的情况下使用wget下载文件  
