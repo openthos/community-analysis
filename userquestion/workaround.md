@@ -4,7 +4,10 @@
 安装termux，pkg install openssh
 2. 如何使用android studio  
 **解决方案：**  
-在Androidx86-8.1中进行安装。  
+在Androidx86-8.1中进行安装。所需文件在180服务器：/var/www/html/dl/oto-android-studio/目录下。  
+启动脚本的运行方法是sh startas.sh  
+scp、ssh不可用的情况下使用wget下载文件  
+参考文档：  
 https://github.com/openthos/jenkins-ci-analysis/blob/master/docs/App_Development_with_Android_Studio_on_OPENTHOS.md
 
 
