@@ -1,4 +1,13 @@
-# OPENTHOS使用问题变通方案
+# OPENTHOS8.1使用问题变通方案
+1. 无法使用ssh连接180  
+**解决方案：**  
+安装termux，pkg install openssh
+2. 如何使用android studio  
+**解决方案：**  
+https://github.com/openthos/jenkins-ci-analysis/blob/master/docs/App_Development_with_Android_Studio_on_OPENTHOS.md
+在Androidx86-8.1中进行安装
+
+# OPENTHOS2.0使用问题变通方案
 1. 无wifi的台式机无法使用微信聊天记录迁移等功能  
 **解决方案：**  
 使用无线网卡，注意要选择免驱动的，比如TP-LINK的TL-WN726N，使用前要先在windows上运行一下自带的程序，再回到openthos上即可直接使用。
