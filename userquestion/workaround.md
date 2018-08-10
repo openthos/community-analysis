@@ -1,7 +1,8 @@
 # OPENTHOS8.1使用问题变通方案
 1. 无法使用ssh连接180  
 **解决方案：**  
-安装termux，pkg install openssh
+安装termux，pkg install openssh  
+如果安装后无法正常使用应用，在/data/data/目录下修改com.termux的权限，权限查看/data/system/packages.list
 2. 如何使用android studio  
 **解决方案：**  
 在Androidx86-8.1中进行安装。所需文件在180服务器：/var/www/html/dl/oto-android-studio/目录下。  
