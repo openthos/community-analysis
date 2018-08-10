@@ -4,8 +4,9 @@
 安装termux，pkg install openssh
 2. 如何使用android studio  
 **解决方案：**  
+在Androidx86-8.1中进行安装。  
 https://github.com/openthos/jenkins-ci-analysis/blob/master/docs/App_Development_with_Android_Studio_on_OPENTHOS.md
-在Androidx86-8.1中进行安装
+
 
 # OPENTHOS2.0使用问题变通方案
 1. 无wifi的台式机无法使用微信聊天记录迁移等功能  
