@@ -6,7 +6,7 @@
 - 设置中的需求及bug问题
 
 # 肖罗元组
-- * refind uefi集成已完成，安装到硬盘可正常运行，但是Live USB无法启动运行，计划最需要解决；
+- refind uefi集成已完成，安装到硬盘可正常运行，但是Live USB无法启动运行，计划最需要解决；
 - Android Studio集成使用，还未完成；
 - SSH crash问题已经修复；
 - GMS组件集成已完成
