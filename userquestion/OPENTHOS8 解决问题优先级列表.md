@@ -12,10 +12,7 @@
 - GMS组件集成已完成
 
 # 王之旭组
-- 继续移植代码到8.1，使得5.1 8.1代码通用，包含
-- OtoCompress, OtoRecorder, OtoPhotoManager, OtoLauncher, OtoPinYinIME
-- 完善云服务
-- 合并压缩解压缩
+- 继续移植代码到8.1，使得5.1 8.1代码通用，包含OtoCompress, OtoRecorder, OtoPhotoManager, OtoLauncher, OtoPinYinIME
 
 # 曹永韧组
 - editor 本组测试，在8.1上功能基本正常, 等待集成就可以.
