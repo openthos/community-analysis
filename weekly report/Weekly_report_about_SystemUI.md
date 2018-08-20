@@ -8,6 +8,7 @@
 ### 罗俊欢
   - 解决openthos 8.0 上输入法切换图标问题 完成: 100% 完成时间: 2018-08-17 完成人: 罗俊欢
   - 优化开始菜单与任务栏之间图标显示问题 完成: 100% 完成时间: 2018-08-17 完成人: 罗俊欢
+  - 整理openthos 8.0还待完成任务 [待完善部分](https://github.com/openthos/systemui-analysis/blob/master/LJH/Openthos%208.1%20%E6%9C%AA%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98.md)
   
 ### 下周任务
   - 逐步完善8.1的功能；
