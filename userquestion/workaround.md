@@ -12,6 +12,9 @@
 scp、ssh不可用的情况下使用wget下载文件  
 参考文档：  
 https://github.com/openthos/jenkins-ci-analysis/blob/master/docs/App_Development_with_Android_Studio_on_OPENTHOS.md
+3. termux无法使用scp  
+**解决方案：** 
+打开termux，编辑`vi ../usr/bin/login`,去掉该行`export PATH=/system/bin:$PATH`，然后重新安装`pkg install openssh`
 
 
 # OPENTHOS2.0使用问题变通方案
