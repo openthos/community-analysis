@@ -12,6 +12,10 @@
   - 写android-5.1的SystemUI组文档；完成: 100% 完成时间: 2018-0８-29 完成人: 曹永韧
   - 查看学习fileManager组和multiwindow的文档；
 
+#### 计划
+  - 卢宁进入SystemUI组熟悉android-8.1开发。
+  - 逐步进入8.1的开发。
+
 # 2018年07月  SystemUI组　总结
 ***
 ## 曹永韧
