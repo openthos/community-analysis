@@ -1,3 +1,14 @@
+# 2018年08月27日 - - 2018年08月31日
+
+# 刘晓旭
+### 本周任务
+  - 1.总结openthos8.1多窗口DecorCaptionView部分相关文档
+  - 2.学习SystemUi和Desktop组项目相关文档
+  - 3.分析openthos8.1多窗口DecorCaptionView初始化、显示流程。
+  
+### 下周任务
+  - 1.openthos8.1多窗口分析
+  
 # 2018年08月20日 - - 2018年08月24日
 
 # 刘晓旭
