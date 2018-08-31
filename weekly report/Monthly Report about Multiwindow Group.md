@@ -1,4 +1,4 @@
-# 2018年07月 -- Multiwindow组 总结
+# 2018年08月 -- Multiwindow组 总结
 
 ## 月小结
   - 本月主要解决openthos-2.0多窗口相关重要bugs,截至到月底基本完成openthos-2.0需要修复的多窗口bugs,下月主要工作转移到openthos－8.1多窗口上，同时修复openthos－2.0出现的重要bugs。
