@@ -54,6 +54,22 @@
 [2018-07-23 ~ 2018-07-27个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-23--2018-07-27%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-07-30 ~ 2018-08-03工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-30--2018-08-03%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-07-30 ~ 2018-08-03个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-30--2018-08-03%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-09-03 ~ 2018-09-07工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-30--2018-08-03%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-09-03 ~ 2018-09-07个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-07-30--2018-08-03%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-09-03 ~ 2018-09-07个人周报
+## 王之旭
+- 已完成
+  - 云服务备份还原的重构（有bug）
+## 陈鹏
+- 已完成
+  - 云服务 备份还原增加上传下载逻辑
+
+# 2018-09-03 ~ 2018-09-07工作计划
+## 王之旭
+- 云服务备份还原的重构
+## 陈鹏
+- 云服务 备份还原增加上传下载逻辑
 
 # 2018-07-30 ~ 2018-08-03工作计划
 ## 王之旭
@@ -498,9 +514,9 @@
       - [bug 2248]进入个人空间 ->进入音乐，之后按文件管理器工具栏的左键头按钮，界面返回到计算机界面，应该回到个人空间界面
       - [bug 2411] 未登录ID时，文件管理器点击设置，点击云服务信息，文件管理器崩溃，log见附件
       - [bug 2426] 文件管理器添加收藏界面按钮文字显示不全，如图
-  - Termux移除网络下载数据
+  - Termux移除网络下载数据
 - 未完成（重构文件管理器第一版代码工作量过大）
-  - [bug 2301] 特定操作后，文件管理器崩溃
+  - [bug 2301] 特定操作后，文件管理器崩溃
   - [bug 2178] 文件管理器不能搜索文件，界面空白
   - [bug 2302] 压缩软件点击窗口标题栏的返回按钮或按esc键会崩溃
   - [bug 2196] 图片管理器有时左滑图片会翻到下一张图片，有时会放大图片，且放大后无法缩放回来（同一个文件夹内的图）。希望统一为翻页操作
@@ -1014,7 +1030,7 @@
      - 手机模式显示，修改窗口尺寸变化会导致record和saved recording显示不全的bug
      - 默认录音目录改为~/Music/Recording/，默认录音文件名格式改为 2018-01-24_16:53:24.mp4
      - 作为系统核心应用集成，不可删除，改名 OTORecorder，中文“录音机“ 英文 "Sound Recorder"
-     - About内容保留原内容，在最前面增加OPENTHOS 版权说明
+     - About内容保留原内容，在最前面增加OPENTHOS 版权说明
 - 未完成任务
   - samba client扫描问题，目前在基于ARP扫描来进行扫描，还未完成
 
