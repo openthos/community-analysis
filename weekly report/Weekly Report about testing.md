@@ -1,9 +1,11 @@
 # 2018-09-03～2018-09-07 工作总结
 ## 张琳苹
-1. openthos2.0 20180827、20180829版本全面测试
-2. 整理本周任务列表
-3. openthos和android 8.1游戏测试
-4. 整理version list
+1. 汇总openthos8.1使用情况、问题、以及本周工作任务
+2. openthos2.0 云服务测试
+3. 自动化测试用例修改
+4. 学习交流自动化测试相关内容
+5. openthos 8.1 usb live模式启动测试
+6. vmware、virtualbox上测试使用openthos
 
 ## 江沁
 1. 测试20180906版本云服务
