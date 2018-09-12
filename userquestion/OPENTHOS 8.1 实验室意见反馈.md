@@ -27,6 +27,7 @@
 - 鼠标右键无法使用，在文件管理器中，长按鼠标左键，应用停止运行。(openthos)
 - 自带的chrome，地址栏输入，应用停止运行(openthos)
 - openthos-8.1上第三方termux安装后无法使用(openthos)
+- 鼠标滚轮不好用，在微信朋友圈中使用滚轮滑动，结束后会返回初始位置
 
 ## 曹永韧
 - Temux 在su状态下无法使用scp，ssh  (x86)  openthos-8.1上termux不能使用(openthos)
