@@ -5,6 +5,8 @@
   - home键实现.完成: 50% 完成时间: 2018-09-14 完成人: 曹永韧
 
 ### 卢宁
+  - 解决开始菜单图标点击后始终有背景色的问题.完成：50％ 完成时间：2018-09-14 完成人：卢宁  
+  - 学习SystemUI,https://github.com/openthos/systemui-analysis/blob/master/LuNing/SystemUI学习总结.md
 
 ### 下周计划
   - 开始菜单的背景色去除.
