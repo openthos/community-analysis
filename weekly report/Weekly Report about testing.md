@@ -1,4 +1,4 @@
-# 2018-09-25～2018-09-30 工作总结
+# 2018-10-08～2018-10-12 工作总结
 ## 江沁
 1. 编译并测试本周patch
    - 0001-oto8-avoid-duplicate-kernel-cmdline.patch
