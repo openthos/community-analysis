@@ -1,6 +1,8 @@
+This document explains how to debug SurfaceFlinger issue via adb over Ethernet.
+
 * Boot OPENTHOS in DEBUG mode
 
-* Disable surfaceflinger: modify /init.rc like, then exit
+* Disable surfaceflinger service temporarily: modify /init.rc like:
 
   diff --git a/rootdir/init.rc b/rootdir/init.rc
 index dc20052..32e9661 100644
@@ -15,18 +17,21 @@ index dc20052..32e9661 100644
  service drm /system/bin/drmserver
      class main
 
-* Enable network: netcfg eth0 dhcp, check the ip by ifconfig eth0
+* Continue booting: type 'exit', or ctrl-D
 
-* It's strange using 'adb connect ip'? To workaround it, I use the ssh port forward method:
+* Enable Ethernet:
+  - netcfg eth0 dhcp
+
+* It's strange using 'adb connect ip' not work. To workaround it, I use the ssh port forward technique:
   - Open another VT: openvt, switch to Alt-F4
 
   - ssh cwhuang@10.0.1.1 -R 5556:127.0.0.1:5555
-    where 10.0.1.1 is my Linux debug host
+    where 10.0.1.1 is the Linux debug host
 
 * On the Linux host 10.0.1.1, connect to port 5556:
   - adb connect 127.0.0.1:5556
   - adb logcat -v threadtime
 
-* Start surfaceflinger manually
-  - Switch to VT1 (Alt-F1) on the OPENTHOS device
+* Start surfaceflinger manually on the OPENTHOS device:
+  - Switch to VT1 (Alt-F1)
   - start surfaceflinger
