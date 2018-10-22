@@ -6,6 +6,12 @@
   - 32-bit x86 kernel 目前仍無法編譯。
   - Kernel 4.17 或以上無法編譯成功，相關 issues 討論見：https://github.com/ClangBuiltLinux/linux/issues
 * 研究 mesa 18.1 搭配 LLVM 7.0，可編譯成功。待測試。
+## 萧络元
+- 外网服务器搭建，提供openthosID验证、seafile云服务，增加统一的https出口；
+- 协助MQQ修改更新cloud.openthos.org/id网站的页面；
+- seafile客户端增加文件上传下载提示功能，配合LH修改state文件路径，方便上层文件监听；
+- 云服务server关闭共享功能，目前只把共享上传下载链接功能关闭，还需关闭所有的共享创建功能；
+
 
 # 2018-06-19 ~ 2018-06-22 工作總結
 ## 黃志偉
