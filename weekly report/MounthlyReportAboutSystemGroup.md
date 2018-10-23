@@ -1,6 +1,33 @@
-# 2018-07 月報
+# 2018-09 月報
 ## 個人月總结
 ## 黃志偉
+* OPENTHOS
+  - 將 SwiftShader 加入到 OPENTHOS 2.0 multiwindow branch 以支持 VM。在 Qemu/VMware/VirtualBox 測試成功。
+  - 關閉 mesa x86 asm 時增加 app (特別是遊戲)的相容性。
+  - 分析某些遊戲不能用的原因是缺乏正確的 x86 libraries。此問題在 8.1 已有 patches，但 5.1 沒有。
+  - 在 oto installer 加入安裝 system partition 的進度條。
+  - 測試組發現 oto installer 無法安裝啟動項目? 找到原因並修正。
+  - 與陳威討論協助 amdgpu 的支援。
+  
+* Android-x86
+  - 更新至 android-8.1.0_r46。
+  - 加入 Mauro 的 oreo-x86_llvm70_soong branch，更新 mesa 到 18.2。
+  - 放棄 kernel 4.14 因為非常不穩定。改測試 kernel 4.18。大致正常，但仍有特定裝置有 regressions 需解決。
+  
+## 萧络元
+* 从东主楼搬迁5台服务器，检查共60个硬盘，组raid，组Tstor，硬盘运行过程中不断出现损坏并重新修复部署，联系了刘老师购置新硬盘；
+* 外网服务器搭建，提供openthosID验证、seafile云服务和系统镜像放置(0827)
+    - 共5台服务器从搬迁到天天网联，并部署好外网IP以及cloud、git域名解析；
+    - 修复了云服务帐户注册，并发送确认邮件；
+    - 协助MQQ修改更新http://cloud.openthos.org/id 网站的页面；
+* seafile客户端与服务器交互的加密方式，在征询刘总意见后，命令行使用token的形式实现； 
+    - 相比原来的变化：首次通过用户密码获取token后，之后的与服务器的交换验证操作，在token半年有效期内，可以只使用token而不需要用户密码；
+
+* seafile客户端增加文件上传下载提示功能，通过自动创建上传下载状态文件，达到及时把状态通知到上层app；
+    - 状态文件内容描述：”fetch“ 库正在clone下载；“uploading” 文件正在sync上传；“downloading” 文件正在sync下载；
+
+# 2018-07 月報
+## 個人月總结
 
 ## 萧络元
 * 佳能打印首次打开时，点击同意协议按钮会停止运行，查看logcat会扫描camera服务，底层与/dev/video相关并已修复；
