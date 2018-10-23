@@ -1,3 +1,111 @@
+# 2018-09 月報
+## 個人月總结
+## 黃志偉
+* OPENTHOS
+  - 將 SwiftShader 加入到 OPENTHOS 2.0 multiwindow branch 以支持 VM。在 Qemu/VMware/VirtualBox 測試成功。
+  - 關閉 mesa x86 asm 時增加 app (特別是遊戲)的相容性。
+  - 分析某些遊戲不能用的原因是缺乏正確的 x86 libraries。此問題在 8.1 已有 patches，但 5.1 沒有。
+  - 在 oto installer 加入安裝 system partition 的進度條。
+  - 測試組發現 oto installer 無法安裝啟動項目? 找到原因並修正。
+  - 與陳威討論協助 amdgpu 的支援。
+  
+* Android-x86
+  - 更新至 android-8.1.0_r46。
+  - 加入 Mauro 的 oreo-x86_llvm70_soong branch，更新 mesa 到 18.2。
+  - 放棄 kernel 4.14 因為非常不穩定。改測試 kernel 4.18。大致正常，但仍有特定裝置有 regressions 需解決。
+  
+## 萧络元
+* 从东主楼搬迁5台服务器，检查共60个硬盘，组raid，组Tstor，硬盘运行过程中不断出现损坏并重新修复部署，联系了刘老师购置新硬盘；
+* 外网服务器搭建，提供openthosID验证、seafile云服务和系统镜像放置(0827)
+    - 共5台服务器从搬迁到天天网联，并部署好外网IP以及cloud、git域名解析；
+    - 修复了云服务帐户注册，并发送确认邮件；
+    - 协助MQQ修改更新http://cloud.openthos.org/id 网站的页面；
+* seafile客户端与服务器交互的加密方式，在征询刘总意见后，命令行使用token的形式实现； 
+    - 相比原来的变化：首次通过用户密码获取token后，之后的与服务器的交换验证操作，在token半年有效期内，可以只使用token而不需要用户密码；
+
+* seafile客户端增加文件上传下载提示功能，通过自动创建上传下载状态文件，达到及时把状态通知到上层app；
+    - 状态文件内容描述：”fetch“ 库正在clone下载；“uploading” 文件正在sync上传；“downloading” 文件正在sync下载；
+
+# 2018-07 月報
+## 個人月總结
+
+## 萧络元
+* 佳能打印首次打开时，点击同意协议按钮会停止运行，查看logcat会扫描camera服务，底层与/dev/video相关并已修复；
+* 协助罗俊欢修复chroot到ubuntu无法使用adb的bug，解决方案已经发到群里，并试验可行；
+* 维护三处服务器的seafile云存储环境正常运行，有问题及时给予解决；
+* 协助王之旭解决termux卡顿的问题，与dex2oat频繁出现SIGSEGV错误相关，现问题好了；
+* mesa18 kernel4.17 pcmark无pcmark在跑benchmark时，运行到视频编码阶段，线程会崩溃。邮件上黄SIR提示跟RGBA_8888格式支持有关，现已经修复。
+* user版编译后出现应用缺失，与img创建时的mksquashfs丢失文件有关，通过增大img空间已修复；
+* 分离软件所商密代码，主要通过git rebase清除他们的代码提交；
+* 故障代码服务器硬盘坏了，重建之；
+* 修复dev.opentos.org的seafile服务器客户端连接失败问题；
+* 基于8.1的openthos-2.0先期的部署；
+
+# 2018-05 月報
+## 個人月總结
+## 黃志偉
+* Android-x86：
+  - 完成 7.1-r2 的釋出。
+  - 完成 cm-x86 14.1-r2 的釋出。
+  - 嘗試解決 oreo-x86 read-write mode 問題。嘗試多種方法，最終改回 system.img in system.sfs 的方式。
+  - 合併 hwaccel-simple 至 oreo-x86，基本測試 OK。
+  - Kernel 4.14.x 在某些機台仍不穩定，未能找到根本原因。
+  - 加入 theme support 至 grub-efi。
+  - 更新 libdrm 至 2.4.92，mesa 至 18.1.0。
+  - 加入 abipicker patches 到 oreo-x86 並解決衝突。
+  - 更新 libva 和 vaapi 至最新 master branch，解決 Android 編譯問題。
+* OPENTHOS：
+  - 解決 NVMe SSD 的安裝問題。
+  - 移除 ramdisk 512MB 限制。
+  - 完成 OPENTHOS 2.0 device configuration makefiles。
+  - 更新 mesa 至 18.1.0。
+* 其他：
+  - 研究 Intel Celadon project，但 live mode 仍無法開機成功。
+
+## 萧络元
+* kernel4.15与xposed集成的试验，重现移植xposed art到openthos，重新合并由官方合并完art后问题解决；
+* 对测试组发现的众多应用闪退问题，跟踪之，发现都是被xposed force stop，进而跟踪到任务管理器，它把把新安装的应用加入启动阻止列表，例如当微博新安装后，启动几秒后则被任务管理器结束。于CYR交流，解决方式是修改任务管理器app的阻止名单规则；
+* kernel4.15时的应用内存占用统计，有些出现为0KB的现象，协助CYR修复，先已把任务移交给他了；
+* 对于新新CPU和显卡的同方机器S1/Z2，试验了mesa13与mesa18的运行情况，并总结结果；
+* 部署android8.1开发环境，给multiwindow组提供必要的支持；
+* Repo代码库维护，合并security分支，讨论OPENTHOS device configuration 的修改，gcc-7.3 for Kernel的修改；
+* 对samba server多目录共享以及用户列表支持,　CP邮件中提到的samba问题，都进行了修复，并重新编译，对APP端试验问题进行及时修复；
+* 提高服务器编译效率，等待刘老师购的新SSD及其连接附件；图书馆空余服务器可用于各组编译服务，不过目前单个服务器空间甚至低于100G，正在构建网络存储方案。目前还在进行中；　
+* Seafile云服务、OAuth验证等服务迁移到dev服务器，已迁移完成并发送使用说明邮件；
+* 升级mesa18出现的解决应用崩溃：pcmark、3dmark、hpeprint问题以及微信、亚马逊购物HD、亚马逊Kindle无法登录问题；待进一步跟踪解决；目前情况定位到mesa API glGetGraphicsResetStatusEXT,且该函数入口由mesa的入口分发表动态分发。黄ＳＩＲ提供了二进制webview方案。
+
+# 2018-04 月報
+## 個人月總结
+## 黃志偉
+* 準備 7.1-r2：
+  - 修正 kbdsensor 導致 system_server high load 問題。
+  - 更新 grub-efi 64-bit 至 2.02。
+  - 修正 installer 一些問題。
+  - 嘗試修正 i965 導致 Google Play Service crashing。似有改善。
+  - 更新 kernel 至 4.9.95，打開 cpuset 相關設定。
+  - 加入 abipicker patches 以提升對 RPC apps 相容性。
+  - 修正 stagefright-plugins memory leak。
+  - 修正 Hyper-V legacy boot 的顯示和 mouse 問題。
+  - 加入 e2label、fbset。
+  - 修正 getSupportedPreviewFpsRange exception。
+* 準備 8.1-rc1：
+  - 更新 kernel-4.14，加入 WM5102 patches
+  - 合併 android-8.1.0_r22
+  - 解決 HdmiLpeAudio 在 VivoStick & Surface 3 的問題。
+* OPENTHOS + Mesa 18.1：
+  - 修正 llvm 6.0、mesa 18.1 編譯的諸多問題。測試可開機。
+
+## 萧络元
+* 部署校内服务器，包括seafile server, OpenthosID server, AppStore server, 系统更新Server，最后实现多网络服务统一OAuth验证;
+* 同方电视按照刘总需求移植定制并刷系统;
+* 辅助Launcher组解决Seafile、Samba问题:
+  - 尝试了SDCARD文件同步和mount --bind sdcard特定文件夹两种方式，最后讨论决定使用mount --bind sdcard文件夹方式，时同步共享的文件都在sdcard某个目录，解决权限被随意修改的问题。
+* 与可信计算交流，了解可信代码组成，创建对应分支security，并帮助解决他们遇到的一些git代码操作相关的问题;
+* 根据测试组的测试结果，openthos repo 代码默认内核升到kernel-4.15;
+* 为适配seafile命令行客户端进行seafile的OAuth验证，根据刘总临时方案的说法，通过同步OpenthosID OAuth和seafile server账号数据库，解决了现有的seaf-cli命令行不能使用的问题;
+* [bug 2378] 设置dpi为120，从wps或微软office文档中使用打印机时崩溃。发现是应用对该dpi的资源文件缺失问题，与后端打印机无关；感谢罗浩帮忙解决并已提交代码;
+* [bug 855] OTA升级启动到桌面后，显示“‘查询出错 -refreshJobs- Cups start failed’”。调查跟踪到Printer/src/com/github/openthos/printer/localprint/task/，与曹永韧合作解决并提交代码;
+
 # 2018-01月報
 ## 個人月總结
 ## 黃志偉

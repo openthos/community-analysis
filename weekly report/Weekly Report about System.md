@@ -1,3 +1,217 @@
+# 2018-06-25 ~ 2018-06-29 工作總結
+## 黃志偉
+* 本週主要研究以 clang 編譯 kernel 的方法，參考來源：https://www.linuxplumbersconf.org/2017/ocw//system/presentations/4799/original/LPC%202017-%20Clang%20built%20kernels.pdf
+  - 編譯 64-bit x86_64 kernel 4.9 成功，有部分 drivers 有小錯誤，可修正。
+  - Kernel 4.14 64-bit x86_64 需加入額外 patches 方能編譯成功。
+  - 32-bit x86 kernel 目前仍無法編譯。
+  - Kernel 4.17 或以上無法編譯成功，相關 issues 討論見：https://github.com/ClangBuiltLinux/linux/issues
+* 研究 mesa 18.1 搭配 LLVM 7.0，可編譯成功。待測試。
+## 萧络元
+- 外网服务器搭建，提供openthosID验证、seafile云服务，增加统一的https出口；
+- 协助MQQ修改更新cloud.openthos.org/id网站的页面；
+- seafile客户端增加文件上传下载提示功能，配合LH修改state文件路径，方便上层文件监听；
+- 云服务server关闭共享功能，目前只把共享上传下载链接功能关闭，还需关闭所有的共享创建功能；
+
+
+# 2018-06-19 ~ 2018-06-22 工作總結
+## 黃志偉
+* 釋出 Android-x86 8.1-rc1。
+* 在 camera HAL 加入 workaround 以忽略 invalid camera。
+* 研究如何用 clang 編譯 kernel。修改 kernel.mk，搭配 kernel 4.9 並修改少數錯誤後測試成功。
+
+# 2018-06-11 ~ 2018-06-15 工作總結
+## 黃志偉
+* 嘗試修改 drm_gralloc 支援第二個 GPU，但未成功。
+* 由社群開發者 Luke 提供的 script 來更新 bootia32.efi 成功。
+* 修改 short URL，加入 t.cn 以便於大陸使用者下載。
+* 更新 Taskbar 到 3.9.2。
+* 在 Settings 加入 Android-x86 統計選項。
+* 以 quiet loglevel=0 的方式關閉 console 的 kernel messages 成功。
+* 合併 android-8.1.0_r33 至 oreo-x86。
+* 合併 mesa 18.1.1 至 oreo-x86。
+* 更新 device/generic/firmware。
+
+## 萧络元
+* mesa18 kernel4.17在新机器s1上投影无法使用；uevent以及gralloc源码分析hdmi输出过程并进行log打印，最后发现通过重新sync代码，make clean问题好了，试验了t45和s1新笔记本；
+* mesa18 kernel4.17 pcmark无法跑完，还在尝试分析解决中；
+* 提高服务器编译效率，在编译服务器180和158上，安装好新SSD；图书馆空余服务器可用于各组编译服务，不过目前单个服务器空间小，还在构建大硬盘方案；　
+* 服务器seafile部署到实验室局域网192.168.0.158服务器上；
+* 刘总通知给用户的同方电视刷原生系统；
+* 185服务器硬盘损坏，开发代码无法提交，还在解决中；
+
+# 2018-06-04 ~ 2018-06-08 工作總結
+## 黃志偉
+* 修正 OPENTHOS 1.1 mesa 18.1 webview crashing 問題。
+* 修正 OPENTHOS 1.1 mesa 18.1 HDMI out 問題。
+* 支援 Computex 會場解說。
+
+## 萧络元
+* 提高服务器编译效率，新购SSD做bcache；图书馆空余服务器可用于各组编译服务，不过目前单个服务器空间甚至低于100G，正在构建网络存储方案；　
+* Seafile云服务、OAuth验证等服务迁移到dev服务器，并已发送使用说明邮件；同时对APP组与服务器用户密码等交互的问题进行修复解决；
+* 协助samba server多目录共享以及用户列表支持,　邮件中提到的samba问题，都进行了修复，并重新编译，陈鹏试验后多用户共享还有一些bug，继续源代码调试解决中；
+* 升级mesa18出现的解决应用崩溃：pcmark、3dmark、hpeprint问题以及微信、亚马逊购物HD、亚马逊Kindle无法登录问题。
+  - 目前黄sir提供了webview google库的方案，试验效果不错；
+  - 我在继续跟踪mesa源代码，争取能走通mesa问题的关键，现在bug API glGetGraphicsResetStatusEXT地址值，通过mesa eglGetProcAddress()函数动态获得的，故之前无法从源代码搜索到，真研究与其相关的mesa的函数指针分发表机制；
+
+
+# 2018-05-28 ~ 2018-06-01 工作總結
+## 黃志偉
+* 加入 unload second GPU driver patch，但測試後認為沒有幫助而移除。
+* 合併 kernel 4.9.103 + ipts patches，但 ipts patches 導致 Baytrail 無法開機? 暫時移除。
+* 加入 abipicker patches 並解決 conflicts，測試 OK。
+* 更新 libva + vaapi。需更新 config_android.h，已提交 pull request 給 Intel。
+* 嘗試合併陳剛 mesa vaapi patches，暫無法測試。
+* 合併 kernel 4.9.105。
+
+## 萧络元
+* 为提高服务器编译效率，一个是等待刘老师购的服务器新SSD及其连接附件；一个是图书馆空余服务器用于各组编译服务，不过目前单个服务器空间甚至低于100G，正在构建网络存储方案；
+* Seafile云服务迁移到dev服务器，大部分功能已迁移；Seafile-Server:　http://dev.openthos.org/ ,OAuth:　http://dev.openthos.org/id/
+* 协助samba server多目录共享以及用户列表支持，对于出现的samba问题，都进行了修复，并重新编译等待，app端试验；
+* 升级mesa18出现的解决应用崩溃：pcmark、3dmark、hpeprint问题以及微信、亚马逊购物HD、亚马逊Kindle无法登录问题；待进一步跟踪解决；
+* 目前情况： 在webview的线程GpuThread对　来自InProcessCommandBuffer的GPU渲染命令包 进行解码时，调用GLES2DecoderImpl::WasContextLost(),再调用函数glGetGraphicsResetStatusARB()，接着会调用opengl API在glGetGraphicsResetStatusEXT()，此时再单步跟进将crash. 已定位到Mesa API glGetGraphicsResetStatusEXT，已邮件请求黄SIR帮忙；
+
+# 2018-05-21 ~ 2018-05-25 工作總結
+## 黃志偉
+* OPENTHOS:
+  - 完成 OPENTHOS 2.0 device configuration makefiles。
+  - 更新 mesa 至 18.1.0 for OPENTHOS 1.1。
+
+* Android-x86 8.1:
+  - 更新 libdrm 至 2.4.92。
+  - 更新 mesa 至 18.1.0。
+  - 合併 android_8.1.0_r29，但有些奇怪的 conflicts 待解決。
+  - kernel 4.14.x 的穩定性問題仍未解決。打算在 8.1-rc1 仍用 kernel 4.9。
+
+## 萧络元
+* 确保openthos1.1在S1/Z2上正常运行，对不同内核与mesa版本进行比对试验；
+* Mesa18升级导致的应用崩溃：pcmark、3dmark、hpeprint，微信、亚马逊购物HD、亚马逊Kindle无法登录等问题；已定位到在创建线程new GpuInProcessThread后立即crash，原因暂未知。
+* Seafile云服务网络问题分析，联系了图书管服务器管理员关于网络慢的问题，没有好的解决方法，故计划暂时用dev.openthos.org服务器,把已经部署的迁移过去；
+* 讨论OPENTHOS device configuration 的修改，gcc-7.3 for Kernel的修改，并将仓库push维护到服务器；
+
+# 2018-05-14 ~ 2018-05-18 工作總結
+## 黃志偉
+* OPENTHOS:
+  - NVME SSD support
+  - 研究 mesa 18 crashing log，但無結果。
+  - 移除 data ramdisk 512MB 限制。
+* Android-x86 8.1:
+  - 測試將 mouse right button 改為 Back，基本上可用。
+  - 加入 Intel IPTS touch driver。在 Surface Pro 4 測試可用。
+  - 加入 grub theme support。
+  - Kernel 4.14 似乎不穩定。研究哪些修改導致...
+* 其他：
+  - 繼續測試 Celadon。按照 Intel 提供的方法 enable live mode，但仍無法開機成功。
+  
+
+## 萧络元
+* 为提高服务器开发效率，与各组确认模块编译方案，并与刘老师讨论购买SSD的方案；
+* 确保openthos1.1在S1/Z2上正常运行,源码跟踪crash:pcmark、3dmark、hpeprint, 微信、亚马逊购物HD、亚马逊Kindle无法登录问题；
+* Seafile云服务网络问题分析，查找慢的原因；
+*　合并中科院开发的security分支；
+* 协助samba server多目录共享以及用户列表支持，多目录共享还有问题需要调整；
+* 协助黄sir进行mesa升级；
+
+
+# 2018-05-07 ~ 2018-05-11 工作總結
+## 黃志偉
+* 在 grub android.cfg 增加 lookback iso 的支持。
+* 改用 dd seek 來產生 large file，對 ext4 and ntfs 有效。
+* 改用 ext4 格式的 system.img 來解決 read-write 的安裝模式問題。
+* 嘗試在 OPENTHOS 加入 NVMe SSD 支援，但未測試。
+* 編譯測試 Intel Celadon project，但不支援 live mode。
+
+## 萧络元
+* 协助黄SIR，升级mesa18到实验室，主要用于新i7机器与AMD机器；
+* 维护dev.openthos.org服务器，解决drupal中病毒服务器被用于挖矿，ＣＰＵ占用奇高，通过整体升级已修复；
+* android8.1 repo源码环境创建，docker开发环境部署好；
+* 协助samba server多目录共享以及用户列表支持，编译了初步镜像给ＣＰ进行应用测试；
+* 协助支持同方笔记本新CPU和显卡，现mesa13可跑在s1, Mesa18可跑在s2，不过Mesa18存在应用crash问题待解决；　
+
+# 2018-04-30 ~ 2018-05-04 工作總結
+## 黃志偉
+* 釋出 7.1-r2 以修正 7.1-r1 以來發現的問題。
+* 釋出 cm-x86 14.1-r2 (基於 7.1-r2)。
+* 合併 7.1-r2 的修正到 oreo-x86。
+
+## 萧络元
+* kernel4.15与xposed集成的试验，重现移植xposed art到openthos，问题解决
+* 对测试发现的众多应用闪退问题，跟踪之，发现都是被xposed force stop，进而跟踪到任务管理器，它把把新安装的应用加入启动阻止列表，例如当微博新安装后，启动几秒后则被任务管理器结束。于CYR交流，解决方式是修改任务管理器app的阻止名单规则
+* kernel4.15时的应用内存占用统计，有些出现为0KB的现象，正协助CYR解决中。
+
+# 2018-04-23 ~ 2018-04-27 工作總結
+## 黃志偉
+* 更新 kernel 4.14.35 for oreo-x86。
+* 更新 kernel 4.9.95 for nougat-x86。
+  - 開啟 cpuset 相關設定。
+* 加入 abipicker patches 到 nougat-x86 framework。
+* 加入 e2label。
+* 修正 stagefright-plugins 的 memory leaks。
+* 修正 Android bison 編譯新 kernel 時無法找到 m4 檔案的問題。
+* 修正 7.1-r2 在 Hyper-V legacy mode 無法進入 graphic mode 的問題。
+
+## 萧络元
+* 为适配seafile命令行客户端进行seafile的OAuth验证，根据刘总临时方案的说法，通过同步OpenthosID OAuth和seafile server账号数据库，解决了现有的seaf-cli命令行不能使用的问题
+* [bug 2378] 设置dpi为120，从wps或微软office文档中使用打印机时崩溃。发现是应用对该dpi的资源文件缺失问题，与后端打印机无关；感谢罗浩帮忙解决并已提交代码
+* [bug 855] OTA升级启动到桌面后，显示“‘查询出错 -refreshJobs- Cups start failed’”。调查跟踪到Printer/src/com/github/openthos/printer/localprint/task/，与曹永韧合作解决并提交代码
+
+# 2018-04-16 ~ 2018-04-20 工作總結
+## 黃志偉
+* 更新 grub-efi 至 2.02
+* 經過多種方法嘗試，終於編出 OPENTHOS + mesa 18.1 + LLVM 6.0 image。基本測試可開機。
+* 嘗試解決 Google Play service 在 nougat-x86 i965 crashing 問題。
+* 更新 GMS for nougat-x86 為 7.1-r2 做準備。
+
+## 萧络元
+* 辅助应用组解决Seafile、Samba共享文件权限被应用修改的问题；
+尝试了SDCARD文件同步和mount --bind sdcard特定文件夹两种方式，最后讨论决定使用mount --bind sdcard文件夹方式，时同步共享的文件都在sdcard某个目录，解决权限被随意修改的问题；
+* 协助应用组关于客户端连接新Seafile server oauth验证的问题。seafile server安装刘总要求可正常oauth验证，服务端已完成；
+* 与可信计算交流，了解可信代码组成，创建对应分支security，并帮助解决他们遇到的一些git代码操作相关的问题；
+* 根据测试组的测试结果，openthos repo 代码默认内核升到kernel-4.15.
+
+## 张善民
+
+# 2018-04-02 ~ 2018-04-13 工作總結
+## 黃志偉
+* 更新 SwitftShader 至 4.0.3。
+* 在 kernel 加入 WM5102 相關 patches。
+* 更新 oreo-x86 到 android-8.1.0_r22。
+* 修正 HdmiLpeAudio 導致 Surface 3 無聲的問題。
+* 修正 kbdsensor 導致 system_server high load 的問題。
+* 嘗試更新 grub-efi，64-bit OK 但 32-bit 未成功。
+
+## 萧络元
+* 部署校内服务器，包括seafile server, OpenthosID server, AppStore server, 系统更新Server，最后实现多网络服务统一OAuth验证。待继续
+* kAFL自动化kernel测试，每天循环更新最新kernel并自动启动kAFL测试，测试结果数据的分析可视化；
+测试结果数据查看：http://192.168.0.77/kafl/
+* 同方电视移植定制并刷系统, 本周已还原出一个原生版本，并=周一给用户刷系统.
+
+
+## 张善民
+
+# 2018-03-26 ~ 2018-03-31 工作總結
+## 黃志偉
+* 在 mesa 18.1-devel 修正 i965 bug 導致的 Google Play service 崩潰。
+* 在 kernel 4.14 加入 Surface 3 battery patch。
+* 研究 snd-hdmi-lpe-audio 無法自動載入的問題，原因在 modalias 不 match。
+* 研究如何偵測 snd-hdmi-lpe-audio 的 jack 插入。但不 reliable，放棄。測試 single_port patch 但不 work。
+* 在 Settings 加入 Android-x86 的設定。
+* 修正 /dev/memcg 無法掛載的問題。
+
+# 2018-03-19 ~ 2018-03-23 工作總結
+## 黃志偉
+* 在 oreo-x86 測試 GMS 8.1。解決大部分問題。但 Google Play service 在 i965 driver 仍經常崩潰
+* 研究以 overlayfs 解決 system partition read-write 問題，但 overlayfs 無法正確反應 lowerdir 的 selinux label。與 Red Hat 開發者討論但無具體結論。
+* 更新 libdrm 2.4.91 + mesa 18.0-rc5。不過 Google Play service crashing 問題仍存在。
+* 在 OPENTHOS 1.1 嘗試使用 kernel-4.14。必須 disable selinux。大致正常。
+
+# 2018-03-12 ~ 2018-03-16 工作總結
+## 黃志偉
+* 研究 kernel 4.14 在 VM fail 的問題。
+  - Virtual Box 已解決
+  - VMware 有進展，但仍未找到解決方法
+* 研究以 overlayfs 解決 read-write mode 問題，但 selinux 有問題，無法 keep selinux label。
+* 更新並測試 GMS 8.1，還有許多 crashing。
+
 # 2018-03-05 ~ 2018-03-09 工作總結
 ## 黃志偉
 * 本週主要工作在完成 kernel-4.14 的移植與 oreo-x86 的搭配測試：
