@@ -1,3 +1,15 @@
+# 2018-10-22 ~ 2018-10-26 工作總結
+## 黃志偉
+
+## 萧络元
+- 外网服务器搭建，提供openthosID验证、seafile云服务，增加统一的https出口；
+- 协助MQQ修改更新cloud.openthos.org/id网站的页面；
+- seafile客户端增加文件上传下载提示功能，配合LH修改state文件路径，方便上层文件监听；
+- 云服务server关闭共享功能，目前只把共享上传下载链接功能关闭，还需关闭所有的共享创建功能；
+- tstor若干硬盘损坏，使用其他好盘替代tstor block方式修复存储,等待新硬盘；
+- seafile keeper跟随系统开机启动，类似logd等守护进程,初步搭建编译与类的框架；
+- seafile cli客户端执行程序预置到system目录的/system/linux下，权限等状态预设好，运行时的目录通过"mount --bind"方式挂在/data/data/下对应目录。lh试验在只读模式运行，但失败，还需进一步跟踪运行时对文件或目录的读写；
+
 # 2018-06-25 ~ 2018-06-29 工作總結
 ## 黃志偉
 * 本週主要研究以 clang 編譯 kernel 的方法，參考來源：https://www.linuxplumbersconf.org/2017/ocw//system/presentations/4799/original/LPC%202017-%20Clang%20built%20kernels.pdf
@@ -6,12 +18,6 @@
   - 32-bit x86 kernel 目前仍無法編譯。
   - Kernel 4.17 或以上無法編譯成功，相關 issues 討論見：https://github.com/ClangBuiltLinux/linux/issues
 * 研究 mesa 18.1 搭配 LLVM 7.0，可編譯成功。待測試。
-## 萧络元
-- 外网服务器搭建，提供openthosID验证、seafile云服务，增加统一的https出口；
-- 协助MQQ修改更新cloud.openthos.org/id网站的页面；
-- seafile客户端增加文件上传下载提示功能，配合LH修改state文件路径，方便上层文件监听；
-- 云服务server关闭共享功能，目前只把共享上传下载链接功能关闭，还需关闭所有的共享创建功能；
-
 
 # 2018-06-19 ~ 2018-06-22 工作總結
 ## 黃志偉
