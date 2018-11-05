@@ -60,6 +60,18 @@
 [2018-10-15 ~ 2018-10-19个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-10-15--2018-10-19%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-10-22 ~ 2018-10-26工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-10-22--2018-10-26%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-10-22 ~ 2018-10-26个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-10-22--2018-10-26%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-10-29 ~ 2018-11-02工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-10-29--2018-11-02%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-10-29 ~ 2018-11-02个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-10-29--2018-11-02%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-10-29 ~ 2018-11-02个人周报
+## 王之旭
+- 整理云服务代码-----已完成
+- 使云服务脱离seafile keeper 可运行-----已完成
+
+# 2018-10-29 ~ 2018-11-02工作计划
+## 王之旭
+- 整理云服务代码
+- 使云服务脱离seafile keeper 可运行
 
 # 2018-10-22 ~ 2018-10-26个人周报
 ## 王之旭
