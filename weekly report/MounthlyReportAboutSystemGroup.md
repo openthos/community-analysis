@@ -1,3 +1,26 @@
+
+
+# 2018-10 月報
+## 個人月總结
+## 黃志偉
+* OPENTHOS
+  - 清理 oto installer 代碼，移除重複的 cmdline。
+  - 在 oto2 編譯 llvm70 branch 成功。
+  - 修正 gallium_dri.so 在 oto2 不能載入的問題。
+  - 合併 8.1-rc2 到 multiwindow-oreo branch。
+  - 嘗試在 oto2 加入 gbm_gralloc + drm_hwcomposer，修正編譯錯誤，在 Intel Apollo Lake 測試成功。
+  - 修正 system partition UUID 重複的問題。
+  - 將 ABI picker patches 加入到 multiwindow branch。
+
+* Android-x86
+  - 解決 ASUS T100 用新 kernel 的藍牙問題。
+  - 在 kernel 4.18 加入 Surface 3 battery patches。
+  - 更新 device/generic/firmware。
+  - 合併 android-8.1.0_r48 並釋出 8.1-rc2。
+  - 以 git bisect 找出 Google Play Store 在 SwiftShader 不穩定的原因，是 GLES 3.0 導致。
+  - 修正 9p filesystem 不能安裝 app 的問題。
+
+
 # 2018-09 月報
 ## 個人月總结
 ## 黃志偉
