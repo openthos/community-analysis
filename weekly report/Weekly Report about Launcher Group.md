@@ -64,6 +64,18 @@
 [2018-10-29 ~ 2018-11-02个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-10-29--2018-11-02%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-11-05 ~ 2018-11-09工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-05--2018-11-09%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-11-05 ~ 2018-11-09个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-05--2018-11-09%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-11-12 ~ 2018-11-16工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-12--2018-11-16%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-11-12 ~ 2018-11-16个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-12--2018-11-16%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-11-12 ~ 2018-11-16个人周报
+## 王之旭
+- 整理云服务代码-----已完成
+- Auto-Mount的显示EFI分区的问题-----已完成
+
+# 2018-11-12 ~ 2018-11-16工作计划
+## 王之旭
+- 整理云服务代码
+- Auto-Mount的显示EFI分区的问题
 
 # 2018-11-05 ~ 2018-11-09个人周报
 ## 王之旭
