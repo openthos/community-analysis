@@ -1,3 +1,13 @@
+# 2018年11月19日 - - 2018年11月23日
+
+# 刘晓旭
+### 本周任务
+  - s1笔记本上gfxbench无法连接服务器的问题，协助系统组分析此问题。
+    - [GFXBench应用无法连接服务器问题分析文档](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/GFXBench%20OpenGL%20%E5%88%86%E6%9E%90%E6%96%87%E6%A1%A3.md)
+
+### 下周任务
+  - 待定
+  
 # 2018年11月12日 - - 2018年11月16日
 
 # 刘晓旭
