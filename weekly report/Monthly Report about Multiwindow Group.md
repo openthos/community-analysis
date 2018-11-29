@@ -1,3 +1,26 @@
+# 2018年11月 -- Multiwindow组 总结
+
+## 月小结
+  - 本月主要参与云服务的功能实现、及bug修复，修复openthos2.0上其他重要bug
+
+## 下月计划
+### 刘晓旭
+  - 1.修复openthos2.0重要bug。
+
+## 个人月总结
+
+### 刘晓旭
+  - 1..测试、提交关于s1笔记本点击以太网gui重启的问题
+  - 2.与黄sir沟通关于usb摄像头提示错误信息问题，并测试黄sir提供的解决方案(有些暴力，但目前还没有找到更grateful的处理方法
+  - 3.gfxbench运行高水平测试时报内存不足错误-----------通过测试定位mesa18.1.8存在此问题，mesa升级到18.1.9后问题消失
+  - 4.增加seafile登录成功后获取token的方法
+  - 5.s1笔记本上gfxbench无法连接服务器的问题，协助系统组分析此问题。
+    - [GFXBench OpenGL 分析文档](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/GFXBench%20OpenGL%20%E5%88%86%E6%9E%90%E6%96%87%E6%A1%A3.md)
+  - 6.测试openthos2.0跨kernel版本、Mesa版本升级
+    - [测试结果](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/%E6%B5%8B%E8%AF%95openthos2.0%E8%B7%A8kernel%E7%89%88%E6%9C%AC%E3%80%81Mesa%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7.md)
+  - 7.尝试Android[静态分析]smali插桩方式，分析应用glbench无法连接服务器问题，经过分析调试，因smali语法不熟，还无法达到插入smali代码收集log 信息、修改smali代码调试要求
+    - [具体分析流程](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/Android%20smali%22%E6%8F%92%E6%A1%A9%22%E8%B0%83%E8%AF%95apk.md)
+
 # 2018年10月 -- Multiwindow组 总结
 
 ## 月小结
