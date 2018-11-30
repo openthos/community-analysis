@@ -1,4 +1,32 @@
+# 2018-11 月報
+## 個人月總结
+## 黃志偉
 
+## 萧络元
+* 出差乌镇互联网大会，展出RISCV OS和OPENTHOS；
+
+* Seafile Keeper功能完成
+  - 1.seafile keeper跟随系统开机启动，类似logd等守护进程;
+  - 2.seafile keeper在自身启动完后，启动seafile cli客户端daemon，并监测客户端运行状态信息如PID，若发现运行不正常重启之；
+  - 3.seafile keeper可对seafile cli客户端进行相应的命令操作功能，如执行命令"seaf-cli status"；
+  - 4.获取客户端状态信息，如上传下载状态、传输速度、传输文件数等，把状态信息写到指定log文件，以对接应用GUI；
+  - 5.首次登录时应用GUI层接收的用户账户信息，通过写到指定文件的方式，seafile keeper监听并读取该文件，以登录该账户；
+
+* Seafile Keeper bug修复
+  - 修改代码增加默认同步目录Documents和Pictures的功能；
+  - seafile在/system read-only模式运行的支持；
+  - 修复重复mount占用system空间的bug；
+  - seafile keeper开机启动研究，并记录seafile keeper日志文件；
+  - 目录/tmp不再使用777权限，而通过用seafile app的uid权限来使得app可读写文件，根据刘总需求使用tmpfs；
+  - 修复seaf-cli中文字符崩溃bug;
+
+* GFXbench提示连不上服务器,阅读LXX文档对该bug初步了解，搜集MYM同学之前对kernel bug的分析文档，并尝试从内核角度分析；
+
+* 外网服务器，提供openthosID验证、seafile云服务和系统镜像放置
+  - 协助刘老师对openthos.org网站备案；
+  - 云服务server关闭共享功能，目前先把共享上传下载链接功能关闭，还需关闭所有的共享创建功能；
+  - 协助马青青修改更新cloud.openthos.org/id网站的页面，她负责具体页面设计，我负责提供后台等环境问题；
+  - 管理内部git、github、来广营服务器，multiwindow不涉密的源码放在github上，正等待xposed和refind源码梳理完；
 
 # 2018-10 月報
 ## 個人月總结
