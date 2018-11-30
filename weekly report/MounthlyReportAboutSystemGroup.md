@@ -20,6 +20,20 @@
   - 以 git bisect 找出 Google Play Store 在 SwiftShader 不穩定的原因，是 GLES 3.0 導致。
   - 修正 9p filesystem 不能安裝 app 的問題。
 
+## 萧络元
+* 外网服务器搭建，提供openthosID验证、seafile云服务和系统镜像放置
+  - 共5台服务器从搬迁到天天网联，并部署好外网IP以及cloud、git域名解析;
+  - Tstor有4块硬盘损坏，联系刘老师购买新硬盘，然后写好操作说明后安排高英凯去天天网联数据中心替换硬盘；
+  - 修复了云服务帐户注册，并可自动发送确认邮件；
+  - 增加服务器https协议，服务器增加统一的https出口;
+  - 协助MQQ修改更新cloud.openthos.org/id网站的页面，初步有版本;
+
+* seafile相关 
+  - seafile cli客户端执行程序预置到system目录的/system/linux下，权限等状态预设好，运行时的目录通过"mount --bind"方式挂在/data/data/下对应目录，请lh试验；
+  - seafile客户端与服务器交互的加密方式，在征询刘总意见后，命令行使用token的形式实现;
+  相比原来的变化：首次通过用户密码获取token后，之后的与服务器的交换验证操作，在token半年有效期内，可以只使用token而不需要用户密码；
+  - seafile客户端增加文件上传下载提示功能，通过自动创建上传下载状态文件，达到及时把状态通知到上层app；
+  状态文件内容描述：”fetch“ 库正在clone下载；“uploading” 文件正在sync上传；“downloading” 文件正在sync下载；
 
 # 2018-09 月報
 ## 個人月總结
