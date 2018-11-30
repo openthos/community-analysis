@@ -3,7 +3,7 @@
 1. 编译并全面测试20181123版本
 2. 测试云服务功能
 3. 整理云服务需求、解决任务优先级、测试用例
-4. [对比三台设备上开关smt的性能跑分](https://github.com/openthos/app-testing-results/blob/master/testresult/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9B%B8%E5%85%B3/%E5%BC%80%E5%85%B3smt%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95.md)
+4. 对比三台设备上开关smt的性能跑分
 5. 处理无锡同方反馈的问题
 
 ## 石振兴
