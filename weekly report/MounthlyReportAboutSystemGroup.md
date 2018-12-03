@@ -2,6 +2,23 @@
 ## 個人月總结
 ## 黃志偉
 
+* OPENTHOS
+  - 編譯 gbm_gralloc + drm_hwcomposer 完成，在 Apollo Lake 測試成功。
+  - 研究 camera 崩潰 log，提出簡單 workaround 來解決。
+  - 測試並解決 oto2 & oto8 在 Ubuntu 18.04 的編譯問題。寫了簡單文件。
+  - 研究 GFXBench 連網問題。追出導致問題的 kernel "bad" commits。
+  - 更新 oto2 bionic kernel uapi headers 並解決編譯問題。
+  - 找到 kernel 4.19 加 cmdline nosmt 可避開 GFXBench 連網問題。
+  - 提出簡單 kernel 補丁以解決 GFXBench 連網問題。
+  
+* Android-x86
+  - 加入社群提供的 Silead touchscreen patch。
+  - 按社群用戶建議加入更多 Cherrytrail drivers。
+  - 解決 wificond 因無法取得 NL80211_STA_INFO_TX_FAILED 而無信號強度的問題。
+  - 解決 AOSP prebuilt flex 在 Ubuntu 18.04 崩潰的問題。
+  - 加入 Mauro mesa i915 patch 並合併 mesa 18.2.6。
+  - 開始 pie-x86。
+
 ## 萧络元
 * 出差乌镇互联网大会，展出RISCV OS和OPENTHOS；
 
