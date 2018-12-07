@@ -1,3 +1,15 @@
+# 2018-12-03～2018-12-07 工作总结
+## 江沁
+1. 编译并测试本周的云服务修改，[20181204测试结果](https://github.com/openthos/app-testing-results/blob/master/%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9%E5%8F%8A%E7%BB%93%E6%9E%9C/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9B%B8%E5%85%B3/%E4%BA%91%E6%9C%8D%E5%8A%A1/testresult/%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A820181204.md)，[20181205-20181206测试结果](https://github.com/openthos/app-testing-results/blob/master/%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9%E5%8F%8A%E7%BB%93%E6%9E%9C/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9B%B8%E5%85%B3/%E4%BA%91%E6%9C%8D%E5%8A%A1/testresult/%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A820181205.md)，[20181207测试结果](https://github.com/openthos/app-testing-results/blob/master/%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9%E5%8F%8A%E7%BB%93%E6%9E%9C/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9B%B8%E5%85%B3/%E4%BA%91%E6%9C%8D%E5%8A%A1/testresult/20181203%7E20181207%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C.md)
+2. 了解备份还原功能涉及哪些应用和选项
+3. [重新整理云服务测试相关内容](https://github.com/openthos/app-testing-results/tree/master/%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9%E5%8F%8A%E7%BB%93%E6%9E%9C/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9B%B8%E5%85%B3/%E4%BA%91%E6%9C%8D%E5%8A%A1)
+4. 协助开发工程师安装ss-qt5
+5. 验证并答复无锡同方发来的160条问题列表
+6. 找到合适的镜像临时提供给无锡工厂发货
+7. 和爱好者沟通linux子系统以及系统使用问题
+
+## 石振兴
+
 # 2018-11-26～2018-11-30 工作总结
 ## 江沁
 1. 编译并全面测试20181123版本
