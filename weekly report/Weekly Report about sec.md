@@ -1,3 +1,8 @@
+# 2018-12-03 〜 2018-12-07
+深入学习了shim的工作原理，，及自签名程序的方法，在没有安装专用PK的机器上，通过shim成功走通了secureboot的标准流程，已经能正常启动OPENTHOS。  
+学习了dm-verity的底层所需要用到的dm mapper的相关知识，并在linux环境下做了dm-mapper的相关实验。  
+学习了dm-verity的hash表是怎么生成的，镜像在如何生成的。  
+
 # 2018-11-26 〜 2018-11-30
 OTO2复验完成，OREO的总结完成。
 UEFI方面，本周学习了Shim0.2及15的源码，大致弄清了shim进行secureboot的思路
