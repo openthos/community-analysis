@@ -70,6 +70,36 @@
 [2018-11-19 ~ 2018-11-23个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-19--2018-11-23%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-11-26 ~ 2018-11-30工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-26--2018-11-30%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-11-26 ~ 2018-11-30个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-26--2018-11-30%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-12-03 ~ 2018-12-07工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-12-03--2018-11-07%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-12-03 ~ 2018-11-07个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-12-03--2018-11-07%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2018-12-03 ~ 2018-12-07个人周报
+## 王之旭
+- 待机后无法自动运行云服务-----已完成
+- 目前云服务无法通过文件管理器上传、删除和变更文件，可能和当前版本的kernel没有inotify有关-----已完成
+- 备份还原-----已完成
+- 首次配置登录云服务帐号后，会卡在初始化壁纸进不了桌面-----已完成
+- 没有正常挂载documents和pictures目录-----已完成
+- 目前云服务只能在实验室的网络环境中使用，外网只能绑定帐号-----已完成
+- 去掉初始化DATA和UserConfig的代码-----已完成
+- 文件管理器中点击云服务，光标不会选中云服务-----已完成
+
+## 苗德行
+- 熟悉Python基本知识，熟悉Python网络编程，了解一些常用的第三方库requests、scrapy等
+
+# 2018-12-03 ~ 2018-12-07工作计划
+## 王之旭
+- 待机后无法自动运行云服务
+- 目前云服务无法通过文件管理器上传、删除和变更文件，可能和当前版本的kernel没有inotify有关
+- 备份还原
+- 首次配置登录云服务帐号后，会卡在初始化壁纸进不了桌面
+- 没有正常挂载documents和pictures目录
+- 目前云服务只能在实验室的网络环境中使用，外网只能绑定帐号
+- 去掉初始化DATA和UserConfig的代码
+- 文件管理器中点击云服务，光标不会选中云服务
+
+## 苗德行
+- 仿apkpure编写爬虫脚本
 
 # 2018-11-26 ~ 2018-11-30个人周报
 ## 王之旭
