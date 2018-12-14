@@ -70,8 +70,59 @@
 [2018-11-19 ~ 2018-11-23个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-19--2018-11-23%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2018-11-26 ~ 2018-11-30工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-26--2018-11-30%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
 [2018-11-26 ~ 2018-11-30个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-11-26--2018-11-30%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2018-12-03 ~ 2018-12-07工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-12-03--2018-11-07%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
-[2018-12-03 ~ 2018-11-07个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-12-03--2018-11-07%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-12-03 ~ 2018-12-07工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-12-03--2018-12-07%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-12-03 ~ 2018-11-07个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-12-03--2018-12-07%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2018-12-10 ~ 2018-12-14工作计划](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-12-10--2018-12-14%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92)&nbsp;
+[2018-12-10 ~ 2018-11-14个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2018-12-10--2018-12-14%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+
+# 2018-12-10 ~ 2018-12-14个人周报
+## 王之旭
+- 已完成
+  - 特殊符号也能成为id
+  - 自动备份按钮状态保存
+  - 还原增加重启提示
+  - 更明朗的界面
+  - seafile 重启需要再给一次账号的问题
+  - 未登录帐号的情况下登录云服务，提示no found openthos id，点击exit按钮设置应用会关闭，建议像文件管理器一样跳转到登录页面
+  - 点击绑定235服务器的帐号后，长时间没有任何提示响应，且之后再进入别的服务器也不会有响应，建议设置15秒超时限制
+  - 多次绑定解绑会出现云服务停止运行错误
+  - 有时候云服务的Pictures和Documents没有东西
+  - 部分电脑（比如s6笔记本）绑定帐号后重启电脑，文件管理器的云服务仍提示未绑定帐号
+  - 应用新patch后首次配置登录云服务帐号后，会卡在初始化壁纸进不了桌面
+  - 文件管理器云服务看不到Pictures和Documents内容的问题
+
+## 苗德行
+- 仿apkpure 对google play 爬取信息， 目前仅完成apk列表的爬取
+
+## 董鹏
+- 未完成，对代码理解不够，周末加班完成
+  - openthos 云 需求文档
+  - openthos 云 设计文档
+  - openthos 云 桌面版主页面左右分栏的效果
+
+# 2018-12-10 ~ 2018-12-14工作计划
+## 王之旭
+  - 特殊符号也能成为id
+  - 自动备份按钮状态保存
+  - 还原增加重启提示
+  - 更明朗的界面
+  - seafile 重启需要再给一次账号的问题
+  - 未登录帐号的情况下登录云服务，提示no found openthos id，点击exit按钮设置应用会关闭，建议像文件管理器一样跳转到登录页面
+  - 点击绑定235服务器的帐号后，长时间没有任何提示响应，且之后再进入别的服务器也不会有响应，建议设置15秒超时限制
+  - 多次绑定解绑会出现云服务停止运行错误
+  - 有时候云服务的Pictures和Documents没有东西
+  - 部分电脑（比如s6笔记本）绑定帐号后重启电脑，文件管理器的云服务仍提示未绑定帐号
+  - 应用新patch后首次配置登录云服务帐号后，会卡在初始化壁纸进不了桌面
+  - 文件管理器云服务看不到Pictures和Documents内容的问题
+
+## 苗德行
+- 仿apkpure 对google play 爬取信息
+
+## 董鹏
+- openthos 云 需求文档
+- openthos 云 设计文档
+- openthos 云 桌面版主页面左右分栏的效果
 
 # 2018-12-03 ~ 2018-12-07个人周报
 ## 王之旭
