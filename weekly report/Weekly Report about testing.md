@@ -1,5 +1,8 @@
 # 2018-12-10 ~ 2018-12-14 工作总结
 ## 江沁
+1. [测试云服务新增多个patch](https://github.com/openthos/app-testing-results/blob/master/%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9%E5%8F%8A%E7%BB%93%E6%9E%9C/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9B%B8%E5%85%B3/%E4%BA%91%E6%9C%8D%E5%8A%A1/%E4%BA%91%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%85%88%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E5%88%97%E8%A1%A8.md)
+2. [增加云服务测试项目](https://github.com/openthos/app-testing-results/blob/master/%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9%E5%8F%8A%E7%BB%93%E6%9E%9C/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9B%B8%E5%85%B3/%E4%BA%91%E6%9C%8D%E5%8A%A1/testresult/%E6%A8%A1%E6%9D%BF.md)
+3. 给无锡同方的同事提供支持
 
 ## 石振兴
 1. 基于AOSP kernel 4.19.5测试云服务功能
