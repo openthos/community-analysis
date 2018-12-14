@@ -94,6 +94,8 @@
 
 ## 苗德行
 - 仿apkpure 对google play 爬取信息， 目前仅完成apk列表的爬取
+  - 先使用requests和BeautifulSoup，存储在json，后发现处理速度较慢而且复杂，换用了scrapy框架加mogondb，实现了apkpure的apk信息抓取
+  - 目前已经实现了抓取主页及子页面的部分apk信息，并存储于本地数据库
 
 ## 董鹏
 - 未完成，对代码理解不够，周末加班完成
