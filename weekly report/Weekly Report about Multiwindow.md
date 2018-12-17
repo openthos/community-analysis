@@ -8,6 +8,18 @@
 ### 下周任务
   - 待定
 
+# 罗浩
+### 本周任务
+  - 完成新版本seaf-cli升级工作，并清理proot环境内容
+  - 完成切断全部可见task的接口desync-all
+  - 定位暂停自动同步api位置并完成python端接口
+  - 尝试使用范津同学提供的jar包完成seaf-cli的功能，自行编译openthos能够使用的libjunixsocket库后发现依赖仍不满足，且seaf-daemon无法运行，因此得出改方案暂时无法实施的结论
+  - 分析本地同步过程中容量达到上限后只能desync再sync的问题，从代码来看该问题只raise一次，之后当前repo_sync_task便会进入waiting for sync状态且无法结束，具体无法通过desync再sync以外的方式再次开始同步的根本原因尚不明确
+  - 协助分析启动是mount相关问题和sync路径冲突等问题，协助规划seaf-cli重置方案
+  
+### 下周任务
+  - 待定
+
 # 2018年12月03日 - - 2018年12月07日
 # 刘晓旭
 ### 本周任务
