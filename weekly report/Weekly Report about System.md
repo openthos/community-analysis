@@ -1,3 +1,13 @@
+# 2018-12-17 ~ 2018-12-21 工作總結
+## 黃志偉
+
+## 萧络元
+- cloud,dev,158多台服务的代码修改的合并；
+- seafile keeper在init.rc中以late_start方式启动的试验，并邮件发出可用patch；
+- seafile keeeper运行时对字符串处理的错误修复，代码已告知LXX；
+- ext4 project quota可行性的调研与试验，并尝试移植了e2fsprogs和quota-tools；
+- 管理内部git、github、来广营服务器；
+
 # 2018-10-22 ~ 2018-10-26 工作總結
 ## 黃志偉
 
