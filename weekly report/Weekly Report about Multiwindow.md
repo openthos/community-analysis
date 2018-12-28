@@ -5,6 +5,9 @@
   - seafile 本地空间通过project quota设置磁盘配额部分代码已完成，等待萧洛元提供project quota超过限额后通知警告接口，然后完成seafile GUI部分的quota提示
   - 补充seafile云关于容量quota文档
     - [seafile云容量quota需求、实现文档](https://github.com/openthos/multiwin-analysis/blob/master/seafile/Seafile%20project%20quota%20implementation.md)
+    
+### 下周任务
+  - 待定
 
 # 2018年12月17日 - - 2018年12月21日
 # 刘晓旭
