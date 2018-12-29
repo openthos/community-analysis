@@ -2,7 +2,7 @@
 # 刘晓旭
 ### 本周任务
   - 修改网页版云服务修改密码使token失效，可以弹出登陆窗。但无论输入新密码还是旧密码均无法登陆，提示用户名或密码错误。而在网页版云服务还是输入旧密码才能登陆。只有在设置里解除绑定再重新绑定后，云服务才能正常同步
-  - seafile 本地空间通过project quota设置磁盘配额部分代码已完成，等待萧洛元提供project quota超过限额后通知警告接口，然后完成seafile GUI部分的quota提示
+  - seafile 本地空间通过project quota设置磁盘配额部分代码已完成，seafile GUI部分quota提示等待合并
   - 补充seafile云关于容量quota文档
     - [seafile云容量quota需求、实现文档](https://github.com/openthos/multiwin-analysis/blob/master/seafile/Seafile%20project%20quota%20implementation.md)
     
