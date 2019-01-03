@@ -7,6 +7,7 @@
   - Seafile Server创建用户时的初始模板，默认创建DATA和.UserConfig；
   - 对罗浩进行seafile服务器代码修改提供帮助，包括如何编辑源代码并生效，如何在代码中插入log调试信息并打印等；
   - 协助LN和ＷZX等工程师在对seafile keeper的熟悉修改时，相关问题的技术协助，如对用户账号文件的处理逻辑，远程库列表的获取并创建键值对的逻辑；
+  - Ext4 Project Quota特性在OPENTHOS的构建与应用；
 
 * 服务器相关：
   - 天天网联tstor03服务器故障，与GYK沟通并到机房更换硬盘，然后重建tstor存储服务；
