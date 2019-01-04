@@ -1,7 +1,23 @@
 # 2018-12 月報
 ## 個人月總结
 ## 黃志偉
-
+* OPENTHOS
+  - 提供以 sdcard service 掛載 Pictures 等目錄的想法以及 demo code。
+  - 協助更新 e2fsprogs 以支援 project quota。
+  - 研究 com.tencent.tmgp.sgame 卡住問題。無具體結果，懷疑為 app 與 5.1 的相容問題(與 houdini 有關)。
+  
+* Android-x86
+  - 完成 kernel-4.19 移植測試。
+  - 加入 external/kernel-drivers project 包含
+    - wl
+	- rtl8723bu
+	- rtl8812au
+  - 更新 mesa 至 18.3.1，以及 drm_gralloc。
+  - 更新 libva 和 vaapi。
+  - 討論 gralloc_handle_t 的 patch 以及消除 owner member 的可行性。
+  - 修改 installer 更新機制，允許升級任意名稱目錄。
+  - 修改 android.cfg 支持多目錄的啟動。  
+ 
 ## 萧络元
 * 云服务相关:
   - Seafile Server创建用户时的初始模板，默认创建DATA和.UserConfig；
