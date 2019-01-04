@@ -1,5 +1,7 @@
 # 2019-01-03 ~ 2019-01-04 工作总结
 ## 江沁
+1. 云服务每日patch测试
+2. openthos云windows端、linux端测试
 
 ## 石振兴
 1. 每日patch测试：修正quota若干问题
