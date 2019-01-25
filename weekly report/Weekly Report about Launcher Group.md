@@ -1,6 +1,24 @@
+[2019-01-21 ~ 2019-01-25个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-21--2019-01-25%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-14 ~ 2019-01-18个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-14--2019-01-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-07 ~ 2019-01-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-02 ~ 2019-01-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2019-01-21 ~ 2019-01-25个人周报
+## 王之旭
+- 完成8.0图片管理器打开崩溃问题
+- 8.0自研应用打开文件需要提供一个统一的方法（完成100%，待整理提交）
+- 之后计划
+  - 8.0录音机崩溃的问题
+
+## 苗德行
+- 测试原有应用商店程序，解决google play需要验证码和短信验证，完成60%
+- 之后计划
+  - 增加黑名单，白名单功能
+  - 脱离真机环境，建议VMvare（硬件或其他支援）
+  - 实现自动化（人工维护耗时，一周4小时）
+  
+## 董鹏
+- 初步完成openthos云增加桌面版效果，包括桌面版初始页面和回退按钮（但讨论后整体方案有问题，需要重做）
 
 # 2019-01-14 ~ 2019-01-18个人周报
 ## 王之旭
