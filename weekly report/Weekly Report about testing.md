@@ -6,6 +6,10 @@
 4. 更新微信号上的信息
 
 ## 石振兴
+1. 测试ZSM的工作：基于内核5.0的android X86，lollipop和oreo对Xserver的支持，seafile客户端在ubuntu下的编译
+2. 测试DP的工作：安桌手机上的seafile客户端
+3. 测试MDX的工作：抓取google play应用
+4. 20190129版本全面测试
 
 # 2019-01-21 ~ 2019-01-25 工作总结
 ## 江沁
