@@ -1,7 +1,37 @@
+[2019-02-25 ~ 2019-03-01个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-02-25--2019-03-01%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2019-02-18 ~ 2019-02-22个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-02-18--2019-02-22%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-21 ~ 2019-01-25个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-21--2019-01-25%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-14 ~ 2019-01-18个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-14--2019-01-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-07 ~ 2019-01-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-02 ~ 2019-01-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2019-02-25 ~ 2019-03-01个人周报
+## 王之旭
+- 完成修复文件管理器打开文件崩溃的问题
+- 完成修复桌面打开文件崩溃的问题
+- 完成录音机运行崩溃的问题
+- 下周计划
+  - 打开图片错误，包括系统自带的文件应用。
+  - 桌面和文件管理器无法打开文档和apk
+
+## 苗德行
+
+# 2019-01-18 ~ 2019-01-22个人周报
+## 王之旭
+- 完成更新云服务技术文档
+- 完成更新云服务用户手册
+- 完成录音机打开崩溃的问题
+- 下周计划
+  - 录音机录制音频崩溃的bug
+  - 桌面和文件管理器打开文件崩溃的bug
+
+
+## 苗德行
+- 配合测试工程师完成测试，修复bug:抓取不到分类、下载apk异常、下载目录不规范；
+- 增加断点继续、日志邮件等功能
+- 下周计划
+  - 增加环境搭建自动化脚本
+  - Android9.0移植研究
 
 # 2019-01-21 ~ 2019-01-25个人周报
 ## 王之旭
