@@ -5,6 +5,9 @@
 3. 筛选简历并参与面试测试人员
 
 ## 石振兴
+1. 编译seafile for android客户端, 编译chromium
+2. 编译测试openthos for Pixel C, google TV, generic pc
+3. 
 
 # 2019-02-18 ~ 2019-02-22 工作总结
 ## 江沁
