@@ -7,7 +7,7 @@
 ## 石振兴
 1. 编译seafile for android客户端, 编译chromium
 2. 编译测试openthos for Pixel C, google TV, generic pc
-3. 
+3. 参与面试
 
 # 2019-02-18 ~ 2019-02-22 工作总结
 ## 江沁
