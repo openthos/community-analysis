@@ -1,3 +1,14 @@
+# 罗浩
+### 本周任务
+  - 1.调整taskbar图表的保存方案，保证其有序性
+  - 2.调整AMS和taskbar图标之间的接口数据结构，把从ActivityRecord中获取改为直接从TaskRecord中获取保证图标和TaskRecord的严格绑定关系
+  - 3.改用packageName记录之前focus的图标。
+  - 4.调整homeActivity相关机制，解决launcher会打开多个，以及全屏下关闭应用laucher会覆盖其他应用的bug
+  
+### 下周任务
+  - 1.其他多窗口相关问题
+  - 2.初步尝试将应用适配代码进行整合（以微信为主）
+
 # 2019年02月25日 - - 2019年03月01日
 # 刘晓旭
 ### 本周任务
