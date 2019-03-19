@@ -8,10 +8,17 @@
 [2019-01-07 ~ 2019-01-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-02 ~ 2019-01-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
-# 2019-03-18 ~ 2019-03-22个人周报
+# 2019-03-18 ~ 2019-03-22工作计划
 ## 王之旭
-- 完成云服务地址的更换
-- 完成日历的隐藏
+- 云服务地址的更换
+- Openthos2.0上日历的隐藏
+- 应用商店增加
+## 卢宁
+-Alt-Tab列表中的回到桌面功能，以及回到桌面后再次打Alt-Tab无焦点问题
+## 董鹏
+- 桌面版模式右侧添加右键菜单
+- 单个下载功能
+- 加入收藏功能
 
 # 2019-03-11 ~ 2019-03-15个人周报
 ## 王之旭
