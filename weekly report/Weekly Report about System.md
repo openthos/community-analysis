@@ -1,3 +1,12 @@
+# 2019-03-18 ~ 2019-03-22 工作总结
+## 萧络元
+### 本周计划
+ * 云服务器修改成https后，登录时出现ssl.SSLException的错误提示问题；
+ * 多窗口组请求device/generic/common下overlay frameworks相关文件调整到device/openthos/common；
+ * oto2: 同时安装openthos和神州网信系统时，openthos的首次配置时会提示停止运行的bug
+ * oto8：蓝牙系统底层支持，协助MDX对该问题的分析解决
+ 
+ 
 # 2019-03-11 ~ 2019-03-15 工作總結
 ## 萧络元
 ### 本周任务
@@ -6,12 +15,6 @@
 * oto8：以太网系统底层支持，试验确认系统底层有线网正常，等待UI界面的设置功能的移植；
 * 工厂反馈问题161：搭配SSD安装系统时，安装界面会出现字符输出；
   - 问题161中的字符输出为安装过程中的正常提示信息，且在正常硬盘安装也是输出的，已经和无锡工厂人员说明情况，对方回复说不影响使用。
-
-### 下周计划
- * 云服务器修改成https后，登录时出现ssl.SSLException的错误提示问题；
- * 多窗口组请求device/generic/common下overlay frameworks相关文件调整到device/openthos/common；
- * oto2: 同时安装openthos和神州网信系统时，openthos的首次配置时会提示停止运行的bug
- * oto8：蓝牙系统底层支持，协助MDX对该问题的分析解决
    
 # 2018-12-17 ~ 2018-12-21 工作總結
 ## 黃志偉
