@@ -1,9 +1,27 @@
+[2019-03-18 ~ 2019-03-22个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-18--2019-03-22%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2019-03-11 ~ 2019-03-15个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-11--2019-03-15%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2019-03-04 ~ 2019-03-08个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-04--2019-03-08%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-02-25 ~ 2019-03-01个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-02-25--2019-03-01%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-02-18 ~ 2019-02-22个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-02-18--2019-02-22%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-21 ~ 2019-01-25个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-21--2019-01-25%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-14 ~ 2019-01-18个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-14--2019-01-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-07 ~ 2019-01-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-02 ~ 2019-01-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2019-03-18 ~ 2019-03-22个人周报
+## 王之旭
+- 完成云服务地址的更换
+- 完成日历的隐藏
+
+# 2019-03-11 ~ 2019-03-15个人周报
+## 王之旭
+- 完成修复文件管理器打开文件崩溃的问题，并确定存在的问题
+- 完成应用商店静默安装功能
+
+# 2019-03-04 ~ 2019-03-08个人周报
+## 王之旭
+- 初步文件管理器打开文件崩溃的问题，测试存在的问题
+- 调研回收站内的还原和删除功能无效
 
 # 2019-02-25 ~ 2019-03-01个人周报
 ## 王之旭
