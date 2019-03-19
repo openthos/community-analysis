@@ -2,13 +2,13 @@
 
 ## 江沁
 
-1. oto2测试
+1. oto2完成剩余的patch测试
 2. oto8 for androidX86测试
 3. 学习自动化测试
 
 ## 石振兴
 
-1. oto2测试
+1. oto2完成剩余的patch测试
 2. oto8 for AOSP测试
 3. 学习自动化测试
 
