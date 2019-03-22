@@ -1,3 +1,11 @@
+
+# 2019-03-25 ~ 2019-03-29 工作总结
+## 萧络元
+### 本周计划
+ * 基于musl libc，着手移植Linux GNU常用命令工具到openthos8.1；
+
+### 任务情况
+
 # 2019-03-18 ~ 2019-03-22 工作总结
 ## 萧络元
 ### 本周计划
@@ -5,6 +13,11 @@
  * 多窗口组请求device/generic/common下overlay frameworks相关文件调整到device/openthos/common；
  * oto2: 同时安装openthos和神州网信系统时，openthos的首次配置时会提示停止运行的bug
  * oto8：蓝牙系统底层支持，协助MDX对该问题的分析解决
+ 
+### 任务情况
+ * 云服务器修改成https后，登录时出现ssl.SSLException的错误提示问题；
+ * 多窗口组请求device/generic/common下overlay frameworks相关文件调整到device/openthos/common。具体patch已邮件交付给LXX，反馈说功能正常；
+ * 云服务器openthos.com域名问题导致的部分登录问题的处理；
  
 ## 张善民
 ### 本周计划
