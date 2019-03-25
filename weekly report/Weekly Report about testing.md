@@ -12,7 +12,7 @@
 
 1. oto2完成剩余的patch测试
 2. oto8 for AOSP测试
-3. 学习自动化测试
+3. android desktop pie编译测试
 4. oto2全面测试
 
 ## 齐建卫
