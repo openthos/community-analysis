@@ -1,3 +1,12 @@
+# 2019年03月25日 - - 2019年03月29日 周总结
+# 刘晓旭
+  - 1.oto8窗口状态记录，包括最大化，全屏，左右停靠
+  - 2.oto8窗口修复左右停靠时，横竖切换按钮隐藏不显示
+  - 3.分析oto8 狂野飙车8、央视影音、佳能打印打开闪退
+    - 央视影音hd：java.lang.UnsatisfiedLinkError: dlopen failed: "/data/user/0/cn.cntvhd/files/libexec.so" has unexpected e_machine，log显示与libexec.so库有关，而在凤凰OS7.1上，可以正常运行，分析与x86库加载有关。
+    - 佳能打印：java.lang.NullPointerException: Attempt to invoke virtual method 'android.net.wifi.p2p.WifiP2pManager$Channel android.net.wifi.p2p.WifiP2pManager.initialize，在凤凰OS7.1上，同样无法运行，error相同，对比oto2.0 8.1 分析与WifiP2pManager更新有关。
+    - 狂野飙车8：还没有分析出问题。
+
 # 2019年03月25日 - - 2019年03月29日 工作计划
 # 刘晓旭
   - 1.设置、保存oto8窗口最大化、docked状态flag，简化代码
