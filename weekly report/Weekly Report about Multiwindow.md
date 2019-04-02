@@ -6,6 +6,12 @@
     - 央视影音hd：java.lang.UnsatisfiedLinkError: dlopen failed: "/data/user/0/cn.cntvhd/files/libexec.so" has unexpected e_machine，log显示与libexec.so库有关，而在凤凰OS7.1上，可以正常运行，分析与x86库加载有关。
     - 佳能打印：java.lang.NullPointerException: Attempt to invoke virtual method 'android.net.wifi.p2p.WifiP2pManager$Channel android.net.wifi.p2p.WifiP2pManager.initialize，在凤凰OS7.1上，同样无法运行，error相同，对比oto2.0 8.1 分析与WifiP2pManager更新有关。
     - 狂野飙车8：还没有分析出问题。
+    
+# 罗浩
+  - 1.初步完成使用新的PhoneWindow-DecorView结构来完成微信窗口适配的功能
+  - 2.分析新版微信内容被遮挡和聊天界面标题栏错位问题，初步解决
+  - 3.分析新版本微信点击事件偏移问题，初步解决
+  - 4.分析部分应用仍会移动到Launcher下方问题，初步找到解决方案
 
 # 2019年03月25日 - - 2019年03月29日 工作计划
 # 刘晓旭
