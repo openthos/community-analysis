@@ -13,3 +13,5 @@
   -  在 CameraService 初始化过程中，通过 CameraProviderManager 来获取已注册的 Provider，并实例化、初始化 CameraProvider；
   -  CameraProvider 初始化过程中，从动态库中加载了 HAL 层的关键结构，并将其封装到 CameraModule 中；
   -  将获取到的 CameraProvider 保存在 ProviderInfo 中，以便后续的使用。
+  -  最后通过 CameraModule 及其内部的 camera_module_t 连接到 Camera HAL。
+- CameraModule定义在hardware/libhardware/include/hardware/camera_common.h
