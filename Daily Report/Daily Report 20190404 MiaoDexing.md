@@ -16,7 +16,7 @@
 # 思考
 - 既然现在已经明确每次应用open时都会调用底层open，进而ioctl，那可以根据权限是否被授予来决定open的是虚拟还是物理摄像头
 - 可能遇到的问题：
-   -   vivid的移植，移植成功后生成的设备节点不明，以及怎样解决从上层传递到底层
-     -   已经解决：vivid生成ko文件，insmod加载时有问题，需要使用命令modprope手动加载依赖模块：videobuf2-v4l2,v4l2-tpg,videobuf2-vmalloc,videobuf2-common,videobuf2-dma-contig
-     -   在dev下面会多出两个设备节点：video2,video3
+   - vivid的移植，移植成功后生成的设备节点不明，以及怎样解决从上层传递到底层
+      - 已经解决：vivid生成ko文件，insmod加载时有问题，需要使用命令modprope手动加载依赖模块：videobuf2-v4l2,v4l2-tpg,videobuf2-vmalloc,videobuf2-common,videobuf2-dma-contig
+      - 在dev下面会多出两个设备节点：video2,video3
   - 摄像头在打开前需要设置相关属性信息，对于虚拟摄像头而言，这些属性信息需要设置吗？需要设置又怎样设置
