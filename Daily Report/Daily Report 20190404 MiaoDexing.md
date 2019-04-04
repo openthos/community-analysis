@@ -9,14 +9,12 @@
   - mCameraManager.getCameraIdList()来获取cameraId列表，mCameraManager.getCameraCharacteristics(id) 获取每个id对应摄像头的参数，进而获取各个摄像头（主要是前置摄像头和后置摄像头）的参数。
   - 关于CameraCharacteristics里面的参数，其中LENS_FACING：前置摄像头（LENS_FACING_FRONT）后置摄像头（LENS_FACING_BACK），如果添加虚拟摄像头，需要处理前置摄像头、后置摄像头与虚拟摄像头的关系。
 - 上层应用调用 mCameraManager.openCamera(currentCameraId, stateCallback, backgroundHandler)时，在HAL层会最终调用V4L2Camera::Open (const char *device)打开摄像头，摄像头灯亮
-- 上层应用调用 Camera.open(cameraId)时，传递的cameraId
-
-# 思考：
 - 系统启动完成cameraservice的注册，完成HAL的加载
-- 每个应用每次打开摄像头时，都会调用HAL层的open函数，在HAL层调用"V4L2Camera.cpp"文件中的V4L2Camera::Open()函数，最终是使用
- if ((fd = open(device, O_RDWR)) == -1) {
-        ALOGE("ERROR opening V4L interface %s: %s", device, strerror(errno));
-        return -1;
-    }       
- ret = ioctl (fd, VIDIOC_QUERYCAP, &videoIn->cap);
- 打开设备
+- 每个应用每次打开摄像头时（不管在应用中有没有手动关闭摄像头），都会调用HAL层的open函数，在HAL层调用"V4L2Camera.cpp"文件中的V4L2Camera::Open()函数，最终是使用open(device, O_RDWR)打开设备，得到fd，然后使用ioctl (fd, VIDIOC_QUERYCAP, &videoIn->cap);调用驱动
+- 此处的device是在"CameraHardware.cpp"中的函数property_get(CAMERA_POWER_FILE, mCameraPowerFile, "")拿到mCameraPowerFile将值传递给open作为device，而CAMERA_POWER_FILE被define 为"camera.power_file"，注释为“File to control camera power”，看样子应该是个属性值，但不知在某处被赋值的
+
+# 思考
+- 既然现在已经明确每次应用open时都会调用底层open，进而ioctl，那可以根据权限是否被授予来决定open的是虚拟还是物理摄像头
+- 可能遇到的问题：
+  - vivid的移植，移植成功后生成的设备节点不明，以及怎样解决从上层传递到底层
+  - 摄像头在打开前需要设置相关属性信息，对于虚拟摄像头而言，这些属性信息需要设置吗？需要设置又怎样设置
