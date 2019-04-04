@@ -17,7 +17,6 @@
  if ((fd = open(device, O_RDWR)) == -1) {
         ALOGE("ERROR opening V4L interface %s: %s", device, strerror(errno));
         return -1;
-    }
-        
+    }       
  ret = ioctl (fd, VIDIOC_QUERYCAP, &videoIn->cap);
  打开设备
