@@ -4,3 +4,7 @@
 - 3、相机拍照的一般流程是首先获取CameraManager，然后获取相机列表，进而获取各个摄像头（前置摄像头和后置摄像头）的参数；CameraCharacteristics 是描述相机设备的属性类，包括：曝光补偿（Exposure compensation）、自动曝光/自动对焦/自动白平衡模式（AE / AF / AWB mode）、自动曝光/自动白平衡锁（AE / AWB lock）、自动对焦触发器（AF trigger）、拍摄前自动曝光触发器（Precapture AE trigger）、测量区域（Metering regions）、闪光灯触发器（Flash trigger）、曝光时间（Exposure time）、感光度（ISO Sensitivity）、帧间隔（Frame duration）、镜头对焦距离（Lens focus distance）、色彩校正矩阵（Color correction matrix）、JPEG 元数据（JPEG metadata）、色调映射曲线（Tonemap curve）、裁剪区域（Crop region）、目标 FPS 范围（Target FPS range）、拍摄意图（Capture intent）、硬件视频防抖（Video stabilization）等。
 
 官方文档链接：https://developer.android.google.cn/reference/android/hardware/camera2/CameraCharacteristics
+
+
+# Next
+- 1、根据与黄志伟的沟通，驱动起vivid
