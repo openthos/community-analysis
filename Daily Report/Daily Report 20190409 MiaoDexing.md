@@ -3,4 +3,5 @@
 - 2、hardware/libcamera/V4L2Camera.cpp中的open函数，可以通过传参来决定打开哪个设备
 
 # NEXT
-- audio
+- Audio
+  - https://www.alsa-project.org/main/index.php/Matrix:Module-dummy
