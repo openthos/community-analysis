@@ -15,11 +15,10 @@ static const char * const audio_interfaces[] = {
 - 每种音频设备接口由一个对应的so库提供支持。AudioFlinger::loadHwModule(const char *name)/*name就是前面audio_interfaces 数组成员中的字符串*/
   - Step1@ loadHwModule_l. 首先查找mAudioHwDevs是否已经添加了变量name所指示的audio interface，如果是的话直接返回。第一次进入时mAudioHwDevs的size为0，所以还会继续往下执行。
   - Step2@ loadHwModule_l. 加载指定的audiointerface，比如“primary”、“a2dp”或者“usb”。函数load_audio_interface用来加载 设备所需的库文件，然后打开设备并创建一个audio_hw_device_t实例。音频接口设备所对应的库文件名称是有一定格式的，比如a2dp的模块 名可能是audio.a2dp.so或者audio.a2dp.default.so等等。查找路径主要有两个，即：
+  /** Base path of the hal modules */
   
-   /** Base path of the hal modules */
-
-   #define HAL_LIBRARY_PATH1 "/system/lib/hw"
-
-   #define HAL_LIBRARY_PATH2 "/vendor/lib/hw"
+  #define HAL_LIBRARY_PATH1 "/system/lib/hw"
+  
+  #define HAL_LIBRARY_PATH2 "/vendor/lib/hw"
   - Step3@ loadHwModule_l，进行初始化操作。其中init_check是为了确定这个audio interface是否已经成功初始化，0是成功，其它值表示失败。接下来如果这个device支持主音量，我们还需要通过 set_master_volume进行设置。在每次操作device前，都要先改变mHardwareStatus的状态值，操作结束后将其复原为 AUDIO_HW_IDLE(根据源码中的注释，这样做是为了方便dump时正确输出内部状态，这里我们就不去深究了)。
   - Step4@ loadHwModule_l. 把加载后的设备添加入mAudioHwDevs键值对中，其中key的值是由nextUniqueId生成的，这样做保证了这个audiointerface拥有全局唯一的id号。
