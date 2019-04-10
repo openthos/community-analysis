@@ -10,6 +10,7 @@ static const char * const audio_interfaces[] = {
    AUDIO_HARDWARE_MODULE_ID_A2DP, //蓝牙A2DP音频
    
    AUDIO_HARDWARE_MODULE_ID_USB, //USB音频，早期的版本不支持
+   
 };
 
 - 每种音频设备接口由一个对应的so库提供支持。AudioFlinger::loadHwModule(const char *name)/*name就是前面audio_interfaces 数组成员中的字符串*/
