@@ -15,6 +15,7 @@ static const char * const audio_interfaces[] = {
 - 每种音频设备接口由一个对应的so库提供支持。AudioFlinger::loadHwModule(const char *name)/*name就是前面audio_interfaces 数组成员中的字符串*/
   - Step1@ loadHwModule_l. 首先查找mAudioHwDevs是否已经添加了变量name所指示的audio interface，如果是的话直接返回。第一次进入时mAudioHwDevs的size为0，所以还会继续往下执行。
   - Step2@ loadHwModule_l. 加载指定的audiointerface，比如“primary”、“a2dp”或者“usb”。函数load_audio_interface用来加载 设备所需的库文件，然后打开设备并创建一个audio_hw_device_t实例。音频接口设备所对应的库文件名称是有一定格式的，比如a2dp的模块 名可能是audio.a2dp.so或者audio.a2dp.default.so等等。查找路径主要有两个，即：
+  
   /** Base path of the hal modules */
   
   #define HAL_LIBRARY_PATH1 "/system/lib/hw"
