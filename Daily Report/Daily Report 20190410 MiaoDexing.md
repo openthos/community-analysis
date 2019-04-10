@@ -6,7 +6,9 @@ audio_policy.conf同时定义了多个audio接口,每一个audio接口包含若�
 /*frameworks/av/services/audioflinger/AudioFlinger.cpp*/
 static const char * const audio_interfaces[] = {
    AUDIO_HARDWARE_MODULE_ID_PRIMARY, //主音频设备，必须存在
+   
    AUDIO_HARDWARE_MODULE_ID_A2DP, //蓝牙A2DP音频
+   
    AUDIO_HARDWARE_MODULE_ID_USB, //USB音频，早期的版本不支持
 };
 
