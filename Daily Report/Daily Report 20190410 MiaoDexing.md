@@ -24,3 +24,4 @@ static const char * const audio_interfaces[] = {
       #define HAL_LIBRARY_PATH2 "/vendor/lib/hw"
   - Step3@ loadHwModule_l，进行初始化操作。其中init_check是为了确定这个audio interface是否已经成功初始化，0是成功，其它值表示失败。接下来如果这个device支持主音量，我们还需要通过 set_master_volume进行设置。在每次操作device前，都要先改变mHardwareStatus的状态值，操作结束后将其复原为 AUDIO_HW_IDLE(根据源码中的注释，这样做是为了方便dump时正确输出内部状态，这里我们就不去深究了)。
   - Step4@ loadHwModule_l. 把加载后的设备添加入mAudioHwDevs键值对中，其中key的值是由nextUniqueId生成的，这样做保证了这个audiointerface拥有全局唯一的id号。
+  - ![blockchain](https://github.com/Midysen/googleplay/blob/master/%E8%AE%BE%E5%A4%87%E5%8C%B9%E9%85%8D.png)
