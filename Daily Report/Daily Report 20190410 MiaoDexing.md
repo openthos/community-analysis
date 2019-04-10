@@ -1,0 +1,3 @@
+# audio_policy.conf配置文件
+- 在AudioPolicyManager创建过程中会通过加载audio_policy.conf配置文件来加载音频设备,Android为每种音频接口定义了对应的硬件抽象层。每种音频接口定义了不同的输入输出，一个接口可以具有多个输入或者输出，每个输入输出可以支持不同的设备，通过读取audio_policy.conf文件可以获取系统支持的音频接口参数，在AudioPolicyManager中会优先加载/vendor/etc/audio_policy.conf配置文件, 如果该配置文件不存在, 则加载/system/etc/audio_policy.conf配置文件。AudioPolicyManager加载完所有音频接口后,就知道了系统支持的所有音频接口参数,可以为音频输出提供决策。
+audio_policy.conf同时定义了多个audio接口,每一个audio接口包含若干output和input,而每个output和input又同时支持多种输入输出模式,每种输入输出模式又支持若干种设备. 
