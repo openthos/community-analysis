@@ -11,7 +11,7 @@ static const char * const audio_interfaces[] = {
    
    AUDIO_HARDWARE_MODULE_ID_USB, //USB音频，早期的版本不支持
    
-};
+      };
 
 - 每种音频设备接口由一个对应的so库提供支持。AudioFlinger::loadHwModule(const char *name)/*name就是前面audio_interfaces 数组成员中的字符串*/
   - Step1@ loadHwModule_l. 首先查找mAudioHwDevs是否已经添加了变量name所指示的audio interface，如果是的话直接返回。第一次进入时mAudioHwDevs的size为0，所以还会继续往下执行。
