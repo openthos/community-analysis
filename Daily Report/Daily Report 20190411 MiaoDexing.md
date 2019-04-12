@@ -1,4 +1,5 @@
-- 1、external/tinyalsa/pcm.c
+- 1、分析audio框架，明确设备打开及其他操作
+external/tinyalsa/pcm.c
 ```
 struct pcm *pcm_open(unsigned int card, unsigned int device,
                      unsigned int flags, struct pcm_config *config)
@@ -29,3 +30,4 @@ struct pcm *pcm_open(unsigned int card, unsigned int device,
 。。。。。。
 }
 ```
+-2、分析GPS框架，讨论GPS解决方案
