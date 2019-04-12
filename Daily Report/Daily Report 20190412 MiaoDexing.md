@@ -22,7 +22,7 @@ AudioFlinger::PlaybackThread::mixer_state AudioFlinger::DirectOutputThread::prep
 
 ```
 
--3 、frameworks/av/services/audioflinger/Threads.cpp.cpp
+- 3 、frameworks/av/services/audioflinger/Threads.cpp.cpp
 
 ```
 // PlaybackThread::createTrack_l() must be called with AudioFlinger::mLock held
