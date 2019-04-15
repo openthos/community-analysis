@@ -24,7 +24,7 @@
 ## 罗晨阳
 
 1. 测试系统设置在oto8上的运行情况
-2. 测试oto8上多个patchj g j
+2. 测试oto8上多个patch
 3. 测试学习强国app在oto2上的运行情况
 4. 了解ubantu 系统和简单接触Uiautomator
 
