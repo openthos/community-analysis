@@ -14,3 +14,5 @@
    - DirectOutputThread：直输回放线程类，由 PlaybackThread 派生，负责处理标识为 AUDIO_OUTPUT_FLAG_DIRECT 的音频流，这种音频流数据不需要软件混音，直接输出到音频设备即可
    - DuplicatingThread：复制回放线程类，由 MixerThread 派生，负责复制音频流数据到其他输出设备，使用场景如主声卡设备、蓝牙耳机设备、USB 声卡设备同时输出
    - OffloadThread：硬解回放线程类，由 DirectOutputThread 派生，负责处理标识为 AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD 的音频流，这种音频流未经软件解码的（一般是 MP3、AAC 等格式的数据），需要输出到硬件解码器，由硬件解码器解码成 PCM 数据
+
+# 基本思路是根据packageName或者PID找到对应的Track，删除此Track，或者将输出buffer置空
