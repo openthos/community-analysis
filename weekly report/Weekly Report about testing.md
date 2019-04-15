@@ -12,8 +12,7 @@
 
 1. oto8日常测试
 2. oto8 Bug定位：通知中心打不开的原因、带滚动条页面的回弹问题
-3. 
-android原理分析：Activity组件、Binder进程间通信
+3. android原理分析：Activity组件、Binder进程间通信
 
 ## 齐建卫
 
