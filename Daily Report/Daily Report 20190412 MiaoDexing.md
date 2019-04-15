@@ -1,3 +1,4 @@
+# 分析mixer
 - 1、混音以track为源，mainBuffer为目标，frameCount为一次混音长度。AudioMixer最多能维护32个track。
 
 - 2、frameworks/av/services/audioflinger/Threads.cpp.cpp
@@ -43,3 +44,4 @@ sp<AudioFlinger::PlaybackThread::Track> AudioFlinger::PlaybackThread::createTrac
 {
 
 ```
+# 开会、讨论关于权限管理的可行性方案
