@@ -1,4 +1,4 @@
-# 基本概念
+# 重要的类
 - AudioPolicyService 与 AudioFlinger 是 Android 音频系统的两大基本服务。前者是音频系统策略的制定者，负责音频设备切换的策略抉择、音量调节策略等；后者是音频系统策略的执行者，负责音频流设备的管理及音频流数据的处理传输，所以 AudioFlinger 也被认为是 Android 音频系统的引擎。
   - AudioResampler.cpp：重采样处理类，可进行采样率转换和声道转换；由录制线程 AudioFlinger::RecordThread 直接使用
   - AudioMixer.cpp：混音处理类，包括重采样、音量调节、声道转换等，其中的重采样复用了 AudioResampler；由回放线程 AudioFlinger::MixerThread 直接使用
