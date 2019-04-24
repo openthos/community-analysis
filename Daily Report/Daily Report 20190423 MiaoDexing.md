@@ -92,3 +92,18 @@
 
 
 ```
+
+- 4、hardware/libcamera/V4L2Camera.cpp
+```
+ if(property_get_bool(CAMERA_USE_FAKE,1) == 0){
+        if ((fd = open("/dev/video2", O_RDWR)) == -1) {
+                ALOGE("ERROR opening V4L interface %s: %s", "/dev/video2", strerror(errno));
+                return -1;
+        }
+    }
+    else  if ((fd = open(device, O_RDWR)) == -1) {
+            ALOGE("ERROR opening V4L interface %s: %s", device, strerror(errno));
+            return -1;
+    }
+
+```
