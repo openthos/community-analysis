@@ -73,3 +73,22 @@
 
 
 ```
+- 3、frameworks/base/core/java/android/hardware/camera2/CameraManager.java
+
+```
+  private CameraDevice openCameraDeviceUserAsync(String cameraId,
+            CameraDevice.StateCallback callback, Handler handler, final int uid)
+            throws CameraAccessException {
+
+
+  if(Settings.Global.getInt(mContext.getContentResolver(), mContext.getPackageName() + AppOpsManager.OP_CAMERA, 1) == 1){
+               
+                SystemProperties.set("persist.camera.use_fake", 1);
+        }else{
+                
+                SystemProperties.set("persist.camera.use_fake", 0);
+        }
+
+
+
+```
