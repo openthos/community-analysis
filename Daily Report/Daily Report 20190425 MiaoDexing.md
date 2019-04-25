@@ -111,5 +111,8 @@ STREAM_VOLUME_ALIAS_DEFAULT其实和Voice映射是一样的，对应其他的设
     };
 ```
 映射关系如下：
+![blockchain](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB.png)
+<br>所以在手机设备中，从上表来看，我们能调节的其实就5个音量。当你想调节STREAM_SYSTEM，STREAM_NOTIFICATION等流类型的音量时，实际上是调节了STREAM_RING的音量。当前可控的流类型可以通过下表更直观地显示：<br>
 
+![blockchain](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/2019-04-25%2016-38-01%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
 
