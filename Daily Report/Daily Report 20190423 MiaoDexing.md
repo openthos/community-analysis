@@ -1,5 +1,6 @@
 - 1、build/tools/buildinfo.sh   此脚本生成default.prop文件
   echo "persist.camera.use_fake=1"
+  -- 已经不需要
   
 - 2、packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/ui/handheld/AppPermissionsFragment.java
 ```
