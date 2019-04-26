@@ -73,6 +73,17 @@
 ```
 - 2、frameworks/av/services/camera/libcameraservice/CameraService.cpp +1298
 ```
+template<class CALLBACK, class CLIENT>
+Status CameraService::connectHelper(const sp<CALLBACK>& cameraCb, const String8& cameraId,
+        int halVersion, const String16& clientPackageName, int clientUid, int clientPid,
+        apiLevel effectiveApiLevel, bool legacyMode, bool shimUpdateOnly,
+        /*out*/sp<CLIENT>& device) {
+    binder::Status ret = binder::Status::ok();
+
+    String8 clientName8(clientPackageName);
+
+
+
  String8 key = clientName8+".permission.camera";
     char value[PROPERTY_VALUE_MAX];
     property_get(key, value, "phy_camera");
