@@ -104,3 +104,50 @@
 ```
 - 5 、PackageInstaller/AndroidManifest.xml<br>
    ```  <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" /> ```
+   
+- 6、services/core/java/com/android/server/pm/PackageManagerService.java  
+```
+ && ps.isSystem()) {
+             flags |= MATCH_ANY_USER;
+         }
++        if (!permissions.isEmpty()) {
++            String camera = "android.permission.CAMERA";
++            String flag = SystemProperties.get(p.packageName+".permission.camera", "phy_camera");
++            if (flag.equals("vir_camera")) {
++                permissions.remove(camera);
++            }
++        }
+
+         PackageInfo packageInfo = PackageParser.generatePackageInfo(p, gids, flags,
+                 ps.firstInstallTime, ps.lastUpdateTime, permissions, state, userId);
+
+
+  throw new IllegalArgumentException("Unknown package: " + packageName);
+             }
+
++            if(name.contains("CAMERA")) {
++                SystemProperties.set(packageName+".permission.camera", "phy_camera");
++            }
++
+             enforceDeclaredAsUsedAndRuntimeOrDevelopmentPermission(pkg, bp);
+
+
+
+  if (pkg == null) {
+                 throw new IllegalArgumentException("Unknown package: " + packageName);
+             }
++            if (name.contains("CAMERA")) {
++                SystemProperties.set(packageName+".permission.camera", "vir_camera");
++                return;
++            }
+             final PackageSetting ps = (PackageSetting) pkg.mExtras;
+
++            if (name.contains("CAMERA")) {
++                String flags = SystemProperties.get(packageName+".permission.camera", "phy_camera");
++                if (flags.equals("vir_camera")) return;
++            }
+             final PackageSetting ps = (PackageSetting) pkg.mExtras;
+             if (ps == null
+
+
+```
