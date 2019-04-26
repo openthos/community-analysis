@@ -102,3 +102,5 @@
 
 
 ```
+- 5 、PackageInstaller/AndroidManifest.xml
+  -    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
