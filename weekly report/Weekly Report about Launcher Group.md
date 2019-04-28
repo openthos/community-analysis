@@ -13,16 +13,16 @@
 [2019-01-07 ~ 2019-01-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-02 ~ 2019-01-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-02--2019-01-04%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 
-# 2019-04-222019-04-26周报
+# 2019-04-22 ~ 2019-04-26周报
 ## 王之旭
 - 编写应用组文档
 - 云服务崩溃bug兼容问题
 
-# 2019-04-15 2019-04-19人周报
+# 2019-04-15 ~ 2019-04-19人周报
 ## 王之旭
 - 编写应用组文档
 
-# 2019-04-08~ 2019-04-12人周报
+# 2019-04-08 ~ 2019-04-12个人周报
 ## 王之旭
 - 解决8.0桌面两个菜单的问题
 - 调研网络邻居不能使用的问题
