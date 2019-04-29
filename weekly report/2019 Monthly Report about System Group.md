@@ -2,18 +2,18 @@
 ## 黃志偉
 ### 个人月总结
 * pie-x86 移植
- - 修改 libexfat 為 shared library 並加入 mount.exfat
- - 修改 enable_nativebridge 以支持 houdini 9
- - 修正 wifi 問題
- - 修正 libcamera 以支持更多 video node 含 vivid
- - 研究如何移植 Celadon 的 minigbm & iacomposer
- - 加入 disable offlining of non-boot cpus patches
+  - 修改 libexfat 為 shared library 並加入 mount.exfat
+  - 修改 enable_nativebridge 以支持 houdini 9
+  - 修正 wifi 問題
+  - 修正 libcamera 以支持更多 video node 含 vivid
+  - 研究如何移植 Celadon 的 minigbm & iacomposer
+  - 加入 disable offlining of non-boot cpus patches
 * Android-x86 網站更新 (www2.android-x86.org)
- - 修改 javascript 加入 back-to-top button
- - 調整 css 形式讓頁面好看
- - Review and fix typo errors
+  - 修改 javascript 加入 back-to-top button
+  - 調整 css 形式讓頁面好看
+  - Review and fix typo errors
 * 其他
- - 討論虛擬設備權限控管問題，提出建議
+  - 討論虛擬設備權限控管問題，提出建議
  
 ### 下月计划
 * 完成網站更新並轉移至新網站
