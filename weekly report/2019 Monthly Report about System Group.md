@@ -1,21 +1,25 @@
 # 2019-04 月报
-## 个人月总结
 ## 黃志偉
+### 个人月总结
+* 
+### 下月计划
+* 
 
 ## 苗德行
-### 工作内容
+### 个人月总结
 - 1、移植goldfish的camera至openthos8.1，最终确认AndroidX86不支持goldfish，此方案行不通
 - 2、chromium编译、测试
 - 3、移植camera vivid
 - 4、camera vivid 与 Android权限管理结合，目前已经基本完成，仍有优化的空间
 - 5、分析Android系统的Audio子系统，并与权限管理结合，目前正在验证测试阶段
 
-#### 下月计划
+### 下月计划
 - 1、完成Android的Audio子系统与权限管理的结合
 - 2、将张善民的虚拟GPS加入到权限管理中
 - 3、优化现有的方案
 
 ## 张善民
+### 个人月总结
 * fake camera
  - 讨论camera hal和carmera service控制virtual camera的问题，并形成过渡方案。
  - 协助进行ndk/java framework接口的分析。
@@ -39,9 +43,11 @@
 * chinamobile 全互联笔记本
  - 协调intel平台Goodix 触控板、触摸屏 Linux驱动的问题，硬件厂商的工程师已跟进
  - 协调紫光展锐的aosp源码，预计源码开通权限后，android-desktop-oreo将加入紫光展锐的支持
+### 下月计划
+* 
 
 ## 萧络元
-### 工作内容
+### 个人月总结
 * 云服务器openthos.com域名证书问题，导致登录时出现ssl.SSLException的错误，已修复。
 * openthos　5.1中文件管理器查看云服务中的目录无法执行mv操作，原因在于mv命令是弱化版本，基于musl库编译gnu　mv，已修复该bug;
 * openthos 8.1无法U盘启动系统的bug调试,已修复并提交patch
