@@ -1,6 +1,12 @@
 -1 、frameworks/base/media/java/android/media/AudioRecord.java
 
 ```
+import android.os.SystemProperties;
+import android.provider.Settings;
+import android.content.Context;
+import android.content.ContentResolver;
+
+
 619         String packageName = ActivityThread.currentPackageName();
 620         final ContentResolver resolver = ((Context) ActivityThread.
 621                     currentActivityThread().getSystemContext()).getContentResolver();
@@ -15,7 +21,13 @@
 ```
 - 2、frameworks/base/media/java/android/media/MediaRecord.java
 
+
 ```
+import android.os.SystemProperties;
+import android.provider.Settings;
+import android.content.Context;
+import android.content.ContentResolver;
+
 755         String packageName = ActivityThread.currentPackageName();
  756         final ContentResolver resolver = ((Context) ActivityThread.
  757                     currentActivityThread().getSystemContext()).getContentResolver();
