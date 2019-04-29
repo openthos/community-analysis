@@ -1,3 +1,8 @@
+[2019-04-22 ~ 2019-04-26个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-04-01--2019-04-05%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2019-04-15 ~ 2019-04-19个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-04-15--2019-04-19%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2019-04-08 ~ 2019-04-12个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-04-08--2019-04-12%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2019-04-02 ~ 2019-04-05个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-04-02--2019-04-05%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+[2019-03-25 ~ 2019-03-29个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-25--2019-03-29%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-03-18 ~ 2019-03-22个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-18--2019-03-22%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-03-11 ~ 2019-03-15个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-11--2019-03-15%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-03-04 ~ 2019-03-08个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-04--2019-03-08%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
@@ -7,6 +12,32 @@
 [2019-01-14 ~ 2019-01-18个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-14--2019-01-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-07 ~ 2019-01-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
 [2019-01-02 ~ 2019-01-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-02--2019-01-04%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+
+# 2019-04-22 ~ 2019-04-26周报
+## 王之旭
+- 编写应用组文档
+- 云服务崩溃bug兼容问题
+
+# 2019-04-15 ~ 2019-04-19人周报
+## 王之旭
+- 编写应用组文档
+
+# 2019-04-08 ~ 2019-04-12个人周报
+## 王之旭
+- 解决8.0桌面两个菜单的问题
+- 调研网络邻居不能使用的问题
+
+# 2019-04-02 ~ 2019-04-05个人周报
+## 王之旭
+- 调研网络邻居不能使用的问题
+- 解决8.0云服务崩溃的bug
+
+# 2019-03-25 ~ 2019-03-29个人周报
+## 王之旭
+- 初步完成应用商店添加静默下载状态问题，由于某些原因，可能需要重构代码
+- 修复桌面因某些图标不存在，按ctrl+a等操作崩溃的bug
+- 修复从桌面删除文件后，进回收站还原概率失败的问题
+- 修复回收站由于路径不存在还原失败的bug
 
 # 2019-03-18 ~ 2019-03-22工作计划
 ## 王之旭
