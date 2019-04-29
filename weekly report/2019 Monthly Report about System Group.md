@@ -41,6 +41,7 @@
  - 协调紫光展锐的aosp源码，预计源码开通权限后，android-desktop-oreo将加入紫光展锐的支持
 
 ## 萧络元
+### 工作内容
 * 云服务器openthos.com域名证书问题，导致登录时出现ssl.SSLException的错误，已修复。
 * openthos　5.1中文件管理器查看云服务中的目录无法执行mv操作，原因在于mv命令是弱化版本，基于musl库编译gnu　mv，已修复该bug;
 * openthos 8.1无法U盘启动系统的bug调试,已修复并提交patch
@@ -52,3 +53,9 @@
 * 国产Linux发行版测评，跑测试用例，搜集数据，并整理成规范文档；
 * 撰写文档：OPENTHOS系统开发环境构建与维护项目设计文档、OPENTHOS系统支持移动存储多分区设计文档；
 * 整理文档格式：Android虚拟设备权限管理技术总结报告等等；
+### 下月计划
+根据openthos 8.1 项目进度表：
+* 基于musl libc，移植Linux GNU常用命令工具到openthos 8.1;
+* 无法通过adb命令连接到其它android设备（但可以ping通）
+* ota升级功能移植(陈威主负责)
+
