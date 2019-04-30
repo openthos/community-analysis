@@ -7,14 +7,34 @@ import android.content.Context;
 import android.content.ContentResolver;
 
 
-619         String packageName = ActivityThread.currentPackageName();
-620         final ContentResolver resolver = ((Context) ActivityThread.
-621                     currentActivityThread().getSystemContext()).getContentResolver();
-622         int audioState = Settings.Global.getInt(
-623                     resolver, packageName + AppOpsManager.OP_RECORD_AUDIO, 0);
-624         SystemProperties.set("audio.use_fake", String.valueOf(audioState));
-625 
-626         // start recording
+973     //---------------------------------------------------------
+ 974     // Transport control methods
+ 975     //--------------------
+ 976     /**
+ 977      * Starts recording from the AudioRecord instance.
+ 978      * @throws IllegalStateException
+ 979      */
+ 980     public void startRecording()
+ 981     throws IllegalStateException {
+ 982         if (mState != STATE_INITIALIZED) {
+ 983             throw new IllegalStateException("startRecording() called on an "
+ 984                     + "uninitialized AudioRecord.");
+ 985         }
+ 986 
+ 987         String packageName = ActivityThread.currentPackageName();
+ 988         String  audio = SystemProperties.get(packageName + ".permission.record_audio","phy_audio");
+ 989         Log.w(TAG, "mdx--------audio " + audio);
+ 990         SystemProperties.set("audio.use_fake", audio);                                                                                                                                                        
+ 991 
+ 992         // start recording
+ 993         synchronized(mRecordingStateLock) {
+ 994             if (native_start(MediaSyncEvent.SYNC_EVENT_NONE, 0) == SUCCESS) {
+ 995                 handleFullVolumeRec(true);
+ 996                 mRecordingState = RECORDSTATE_RECORDING;
+ 997             }
+ 998         }
+ 999     }
+
 
 
 
@@ -28,14 +48,13 @@ import android.provider.Settings;
 import android.content.Context;
 import android.content.ContentResolver;
 
-755         String packageName = ActivityThread.currentPackageName();
- 756         final ContentResolver resolver = ((Context) ActivityThread.
- 757                     currentActivityThread().getSystemContext()).getContentResolver();
- 758         int audioState = Settings.Global.getInt(
- 759                     resolver, packageName + AppOpsManager.OP_RECORD_AUDIO, 0);
- 760         SystemProperties.set("audio.use_fake", String.valueOf(audioState));
- 761 
- 762         _prepare();
+
+969         String packageName = ActivityThread.currentPackageName();
+ 970         String  audio = SystemProperties.get(packageName + ".permission.record_audio","phy_audio"); 
+ 971         Log.w(TAG, "mdx--------audio " + audio);
+ 972         SystemProperties.set("audio.use_fake", audio);
+
+ _prepare();
 
 ```
 
