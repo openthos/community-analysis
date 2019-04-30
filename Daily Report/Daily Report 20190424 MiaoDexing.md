@@ -30,7 +30,7 @@
 
 
         if (newValue == Boolean.TRUE) {
-            group.grantRuntimePermissions(true);
+            group.grantRuntimePermissions(false);
             //Settings.Global.putInt(resolver, packageName + AppOpsManager.OP_CAMERA, 1);
             SystemProperties.set(packageName+".permission.camera", "phy_camera");
         } else {
