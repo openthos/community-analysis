@@ -25,3 +25,16 @@
  895     pcm->fd = open(fn, O_RDWR|O_NONBLOCK);
 
 ```
+- 4、snd-dummy 设备节点在/proc/asound/Dummy
+- 5、Android中的PCM设备介绍 https://www.cnblogs.com/chenzhizhong/p/6604405.html
+  -  那些以pcm打头的设备就是提供播放或录音的设备即要探讨的PCM设备，其他的设备提供效果、合成等功能。
+音频设备的命名规则为 [device type]C[card index]D[device index][capture/playback]，即名字中含有4部分的信息：
+   -   device type
+设备类型，通常只有compr/hw/pcm这3种。从上图可以看到声卡会管理很多设备，PCM设备只是其中的一种设备。
+   -   card index
+声卡的id，代表第几块声卡。通常都是0，代表第一块声卡。手机上通常都只有一块声卡。
+   -   device index
+设备的id，代表这个设备是声卡上的第几个设备。设备的ID只和驱动中配置的DAI link的次序有关。如果驱动没有改变，那么这些ID就是固定的。
+   -   capture/playback
+只有PCM设备才有这部分，只有c和p两种。c代表capture，说明这是一个提供录音的设备，p代表palyback，说明这是一个提供播放的设备。
+   -   系统会在/proc/asound/pcm文件中列出所有的音频设备的信息，如果是肉眼查看，/proc/asound/pcm中的信息会更直观一些：
