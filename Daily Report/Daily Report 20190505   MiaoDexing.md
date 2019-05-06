@@ -37,4 +37,5 @@
 设备的id，代表这个设备是声卡上的第几个设备。设备的ID只和驱动中配置的DAI link的次序有关。如果驱动没有改变，那么这些ID就是固定的。
    -   capture/playback
 只有PCM设备才有这部分，只有c和p两种。c代表capture，说明这是一个提供录音的设备，p代表palyback，说明这是一个提供播放的设备。
-   -   系统会在/proc/asound/pcm文件中列出所有的音频设备的信息，如果是肉眼查看，/proc/asound/pcm中的信息会更直观一些：
+   -   系统会在/proc/asound/pcm文件中列出所有的音频设备的信息，如果是肉眼查看，/proc/asound/pcm中的信息会更直观一些.
+ - 发送Android系统下多应用分别控制音量的可行性分析邮件
