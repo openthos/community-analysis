@@ -19,4 +19,4 @@
 -  AudioTrack 与 AudioFlinger::PlaybackThread 之间通过 FIFO 来交换音频数据，AudioTrack 是 FIFO 生产者，AudioFlinger::PlaybackThread 是 FIFO 消费者
 ，如何解决生产者与消费者的问题？
 - 另外，音量的调节是依赖AudioManager中的setStreamVolume方法，此方法原型有三个参数，如果要实现各个应用的音量分别控制，那么此方法必须重写，需要在底层知道是哪一个应用在调节音量。
-- 目前市面上还没有哪一款Android系统实现此功能，这确实是一个创新，但是事有两面性，为什么没有人做，是没有市场需求还是难度较大？
+- 目前市面上还没有哪一款Android系统实现此功能，这确实是一个创新，但感觉难度很大
