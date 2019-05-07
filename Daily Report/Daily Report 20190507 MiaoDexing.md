@@ -2,8 +2,6 @@
 - 1、frameworks/base/media/java/android/media/AudioRecord.java
 ```
 import android.os.SystemProperties;
-import android.provider.Settings;
-import android.content.Context;
 
 
 
