@@ -25,7 +25,7 @@
  895     pcm->fd = open(fn, O_RDWR|O_NONBLOCK);
 
 ```
-- 4、snd-dummy 设备节点在/proc/asound/Dummy
+- 4、snd-dummy 设备信息在/proc/asound/Dummy，设备节点在/dev/snd下
 - 5、Android中的PCM设备介绍 https://www.cnblogs.com/chenzhizhong/p/6604405.html
   -  那些以pcm打头的设备就是提供播放或录音的设备即要探讨的PCM设备，其他的设备提供效果、合成等功能。
 音频设备的命名规则为 [device type]C[card index]D[device index][capture/playback]，即名字中含有4部分的信息：
