@@ -36,9 +36,7 @@ import android.os.SystemProperties;
 - 2、frameworks/base/media/java/android/media/MediaRecord.java
 ```
 import android.os.SystemProperties;
-import android.provider.Settings;
-import android.content.Context;
-import android.content.ContentResolver;
+
 
 
  969         String packageName = ActivityThread.currentPackageName();
