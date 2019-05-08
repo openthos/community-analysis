@@ -12,9 +12,8 @@ cat vendor
 ```
 此处是笔记本自带的物理摄像头
 
--2、虚拟摄像头信息在/sys/class/video4linux/video2
+- 2、虚拟摄像头信息在/sys/class/video4linux/video2
 cat name 得到 vivid000-vid-cap
-
 - 3、实现在HAL层准确知道虚拟camera
 ```
         FILE *fp;
