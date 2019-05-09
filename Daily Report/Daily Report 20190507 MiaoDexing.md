@@ -19,10 +19,7 @@ import android.os.SystemProperties;
  984                     + "uninitialized AudioRecord.");
  985         }
  986 
- 987         String packageName = ActivityThread.currentPackageName();
- 988         String  audio = SystemProperties.get(packageName + ".permission.record_audio","phy_audio");
- 989         Log.w(TAG, "mdx--------audio " + audio);
- 990         SystemProperties.set("audio.use_fake", audio);                                                                                                                                                        
+         SystemProperties.set("audio.use_fake", SystemProperties.get(ActivityThread.currentPackageName() + ".permission.record_audio","phy_audio"));                                                                                                                                                       
  991 
  992         // start recording
  993         synchronized(mRecordingStateLock) {
@@ -39,10 +36,7 @@ import android.os.SystemProperties;
 
 
 
- 969         String packageName = ActivityThread.currentPackageName();
- 970         String  audio = SystemProperties.get(packageName + ".permission.record_audio","phy_audio"); 
- 971         Log.w(TAG, "mdx--------audio " + audio);
- 972         SystemProperties.set("audio.use_fake", audio);
+ SystemProperties.set("audio.use_fake", SystemProperties.get(ActivityThread.currentPackageName() + ".permission.record_audio","phy_audio"));
 
              _prepare();
  ```
