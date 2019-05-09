@@ -23,3 +23,7 @@ void AudioFlinger::PlaybackThread::setStreamVolume(audio_stream_type_t stream, f
     mAudioMixer->setParameter(name, param,AudioMixer::VOLUME1, &vrf);
 
     所以最后还是通过AudioMixer真正去乘以VOLUME0和VOLUME1来设置音量。
+- 5、Android中的流类型与音频管理策略有关，例如：<br>
+     音频流的音量管理，调节一个类型的音频流音量，不会影响到其他类型的音频流
+
+     根据流类型选择合适的输出设备；比如插着有线耳机期间，音乐声（STREAM_MUSIC）只会输出到有线耳机，而铃声（STREAM_RING）会同时输出到有线耳机和外放
