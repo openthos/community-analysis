@@ -37,5 +37,5 @@ cat name 得到 vivid000-vid-cap
  82             return -1;
  83         }
  84     }
- 85                   
+ 85     pclose(fp);             
 ```
