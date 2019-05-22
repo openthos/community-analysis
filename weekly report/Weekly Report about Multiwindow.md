@@ -1,11 +1,15 @@
 # 2019年05月13日 - - 2019年05月20日 周总结
 
-#刘老师
-近两周应用获取Resources相关API拦截、伪装进展
+# 刘晓旭
+近两周强制手机模式相关进展
 
-以微信为例，设计应用的强制手机模式。具体的设计、实现包括三个方面。
-1.View的层级结构设计
-新增NewPhoneWindow窗口类，在Activity的attach方法中创建PhoneWindow时根据当前应用模式，创建标准PhoneWindow或者NewPhoneWindow窗口，而在NewPhoneWindow窗口中定义NewDecorView继承标准DecorView、定义FakeDecor继承FrameLayout，View的层级结构是NewPhoneWindow&NewDecorView--DecorCaptionView--FakeDecor--ContentView，且应用getDecorView时返回定义的FakeDecor，避免应用获取DecorView修改view结构，保证了窗口view层级结构的完整性。
+以微信为例，最终实现应用在强制手机模式下运行。
+
+之前针对微信已完成的工作包括：（1）设计新的窗口实现类NewPhoneWindow，修改view显示的层级结构，增加定义FakeDecor，同时修改接口getDecorView，返回给应用FakeDecor，避免微信操作窗口标题栏DecorCaptionView。（2）修改微信各控件屏幕坐标：拦截微信中各事件获取的坐标，在大屏幕上窗口化显示应用，Event事件获取的坐标增加窗口左上角坐标偏移值，模拟绝对坐标显示。（3）拦截、伪装微信通过资源文件获取的屏幕像素值为当前窗口宽、高。
+
+
+
+
 
 
 # 罗浩
