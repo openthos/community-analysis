@@ -7,7 +7,11 @@
 
 之前针对微信已完成的工作包括：（1）设计新的窗口实现类NewPhoneWindow，修改view显示的层级结构，增加定义FakeDecor，同时修改接口getDecorView，返回给应用FakeDecor，避免微信操作窗口标题栏DecorCaptionView。（2）修改微信各控件屏幕坐标：拦截微信中各事件获取的坐标，在大屏幕上窗口化显示应用，Event事件获取的坐标增加窗口左上角坐标偏移值，模拟绝对坐标显示。（3）拦截、伪装微信通过资源文件获取的屏幕像素值为当前窗口宽、高。
 
+近两周针对微信做的工作：
 
+（1）微信获取屏幕分辨率方式：context.getResources().getDisplayMetrics()，初步设计拦截、伪装Resources持有的DisplayMetrics对象，返回给微信一套屏幕伪集。在NewPhoneWindow的getResources、onConfigurationChanged方法中拦截、伪装，微信内容部分显示生效，仅仅在NewPhoneWindow中无法做到全部拦截。
+
+（2）接着设计在context创建时拦截、伪装Resources持有的DisplayMetrics对象。应用持有的context类型只要包括三种：Applition、Service、Activity，一个应用context的数量为1个Application+Service个数+Activity个数，而各种类型的Context提供的相关接口最终都是在ContextImpl实现类中完成的，在Activity、Service中持有ContextImpl对象实例来实现context接口调用，Activity、Service持有的ContextImpl对象是通过ContextImpl实现类中createActivityContext、createAppContext方法创建、绑定到Activity、Service中的。
 
 
 
