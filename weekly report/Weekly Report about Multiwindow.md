@@ -23,6 +23,7 @@
 
 （3）微信朋友圈拦截失效问题，由于在NewPhoneWindow的getSpecialDecor方法中mAppcontext.getResources.getDisplayMetrics获取的DisplayMetrics实例数据重置为默认值导致此问题，但是mAppcontext.getResources获取的Resources实例没有发生变化，Resources的updateConfiguration没有被调用，DisplayMetrics的setTo没有被调用，DisplayMetrics数据如何被重置为默认值暂未分析出原因。
 
+（4）当前应用访问其他应用界面时，拦截失效。
 
 # 罗浩
 近两周高斯模糊相关进展
