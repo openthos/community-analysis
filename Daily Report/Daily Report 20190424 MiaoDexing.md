@@ -1,7 +1,7 @@
 # 更新后的camera权限设置：
 - 1、实现在setting界面取消应用camera权限，但实际应用仍具有camera权限，这时根据应用的packageName+".permission.camera"设置属性，key为包名，值为vir_camera（虚拟摄像头），phy_camera（物理摄像头）
 - 2、CameraService中，当应用请求service时，获取此应用的packageName+".permission.camera"对应的属性值，如果存在，且是"phy_camera"，此时设置"persist.camera.use_fake"属性的值为"phy_camera";如果存在，且是"vir_camera"，设置"persist.camera.use_fake"属性的值为"vir_camera"，供在HAL层open camera判断。
-- 3、在camera HAL的open中，首先获得属性"persist.camera.use_fake"的值，如果存在且值为"vir_camera"，则认为使用的是虚拟摄像头，打开设备"/dev.video2"，否则使用的是物理摄像头
+- 3、在camera HAL的open中，首先获得属性"persist.camera.use_fake"的值，如果存在且值为"vir_camera"，则认为使用的是虚拟摄像头，打开设备"/dev/video2"，否则使用的是物理摄像头
 - 4、此方法适用使用Java API 及NDK开发的Camera
 
 
@@ -98,6 +98,10 @@ Status CameraService::connectHelper(const sp<CALLBACK>& cameraCb, const String8&
 ```
 - 3、hardware/libcamera/V4L2Camera.cpp
 ```
+ #include <cutils/properties.h>
+ #define CAMERA_USE_FAKE "persist.camera.use_fake"
+ 
+ 
  char value[PROPERTY_VALUE_MAX];
     property_get(CAMERA_USE_FAKE, value, NULL);
     if(strcmp(value,"vir_camera") == 0){
