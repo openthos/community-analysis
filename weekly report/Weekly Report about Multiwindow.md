@@ -1,3 +1,8 @@
+# 2019年05月21日 - - 2019年05月27日 周总结
+# 刘晓旭
+  - 1.拦截、伪装Resources持有的DisplayMetrics数据，微信朋友圈图片无法满铺窗口预览问题，分析由于伪装的densityDpi与Bitmap持有的density两者不一致导致的，只是让两者保持一直，微信此问题可以解决，但对于有些应用需求，两者可能需要不一致。所以初步的解决方案是特殊应用特殊处理。
+  - 2.强制手机模式：拦截、伪装应用通过Context获取屏幕相关信息API，解决方案：设计兼容性ContextImpl（NewContextImpl，继承ContextImpl）实现类，重写ContextImpl的createAppContext、createActivityContext、getResources方法，拦截、伪装Resources持有的DisplayMetrics数据，并在Resources的updateConfiguration方法内拦截DisplayMetrics更新。测试此设计方案生效。
+
 # 2019年05月13日 - - 2019年05月20日 周总结
 
 # 刘晓旭
