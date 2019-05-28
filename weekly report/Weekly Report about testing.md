@@ -9,10 +9,10 @@
 
 ## 石振兴
 
-1. 
-2. 
-3. 
-4. 
+1. patch测试：oto8上权限管理
+2. openthos on aosp测试
+3. kernel升级测试
+4. 获取抓取google play的源码，建立环境
 
 ## 齐建卫
 
