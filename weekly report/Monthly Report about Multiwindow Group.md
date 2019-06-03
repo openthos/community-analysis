@@ -1,3 +1,20 @@
+# 2019年05月 -- Multiwindow组 总结
+## 月小结
+  - 本月主要设计、实现窗口模糊功能，应用兼容模式运行功能，截止到月底，窗口模糊功能基本已实现完成，应用兼容模式运行UI已完成，功能只初步完成普通模式、全屏模式切换，强制手机模式（横、竖屏）功能未完成。
+  
+## 下月计划
+### 刘晓旭
+  - 实现应用兼容模式（普通模式、全屏模式、强制手机模式（横、竖屏））切换功能
+  - 实现应用通过WindowManager.getDefaultDisplay方式获取屏幕信息截获、位置。
+
+## 个人月总结
+### 刘晓旭
+  - 1.窗口DecorCaption的UI重构
+  - 2.应用兼容模式（普通模式、全屏模式）切换功能
+  - 3.调研分析，应用通过Resources资源获取屏幕信息的流程，并尝试截获、位置返回的屏幕信息。
+  - 4.通过设计兼容性ContextImpl（NewContextImpl，继承ContextImpl）实现类，重写ContextImpl的createAppContext、createActivityContext、getResources方法，拦截、伪装Resources持有的DisplayMetrics数据，并在Resources的updateConfiguration方法内拦截DisplayMetrics更新，实现对Resources资源持有的屏幕信息截获、伪装。
+  - 5.分析微信在强制手机竖屏模式下运行，朋友圈图片无法满铺窗口显示的问题，定位到是由于伪装的densityDpi与Bitmap持有的density两者不一致导致的，只是让两者保持一直，微信此问题可以解决，但对于有些应用需求，两者可能需要不一致。所以初步的解决方案是特殊应用特殊处理。
+
 # 2019年04月 -- Multiwindow组 总结
 ## 月小结
   - 本月主要讨论、设计oto8应用适配方案、功能实现，以及oto8窗口亚克力模糊效果分析、实现。
