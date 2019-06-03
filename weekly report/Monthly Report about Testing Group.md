@@ -21,7 +21,11 @@
 
 
 ## 齐建卫
-
+- 测试oto8的多个新功能：蓝牙、openthos cloud，权限管理等
+- 准备鉴定会演示demo
+- 写Openthos功能测试报告
+- 修改Openthos设计文档格式
+- oto8自动化测试：学习uiautomator+python
 
 
 # 2019-4月～月报
