@@ -1,8 +1,7 @@
 # 镜像位置
 - [tuna清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/openthos/)(速度较快)
-   - 镜像位置：Release/1.1(或1.0)/nightly-build/dev/openthos-1.1.0.180514.img
-- 下载镜像地址:http://pan.baidu.com/s/1kVauJ5t
-- 提取码:y48g
+   - 镜像位置：Release/2.0/openthos-2.0.0.190329.img
+- 百度网盘下载镜像地址:https://pan.baidu.com/s/1GkRzp3hROcPC6CxnRCbYXw  提取码:unx6
 
 # 用户反馈
   
@@ -11,6 +10,10 @@
     - 用户名aihaozhe，密码123456
     
 ***
+# 20190614版本(包含20190329-20190614patch）
+- **目前实验室工作重点放在openthos8.0上，2.0的更新速度放缓** 
+## 修复问题
+- 回收站还原文件时如果之前的文件存放目录不存在则无法还原
 
 # 20190329版本(包含20190222-20190328patch）
 - **此版本已修改云服务目录quota功能，支持用户安装时根据需要自己选择是否格式化data分区。** 
