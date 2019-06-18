@@ -22,13 +22,19 @@ Following the above process will result in a repo directory, which you simply ne
 ## Local Demo Repo HOWTO
 
 - This is a full HOWTO to setup your own repository wherever you want to host it. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First, this HOWTO will walk through setting up a test repo that is not very secure. Then it will walk through setting up a repo for real world use, with the signing key on a separate machine from the public webserver. Before you start, you need to get the fdroidserver tools and a webserver. For the webserver, this HOWTO will use nginx since its lightweight, but any will do if you already have one running.
-
+```
     sudo apt-get install nginx
+    
+```
 - 更改/etc/nginx/sites-available/default配置文件，修改nginx的工作目录
 ```
  root /var/www/;  
 ```
-
+- 创建fdroid目录
+```
+sudo mkdir /var/www/fdroid
+sudo chown -R $USER /var/www/fdroid
+```
 
 # Real World Setup
 
