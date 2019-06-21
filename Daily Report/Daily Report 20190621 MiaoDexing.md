@@ -1,4 +1,4 @@
-# Android ContentProvider调用报错"Bad call: specified package xxx under uid 10032 but it is really 10001"
+# Android ContentProvider调用报错"Bad call: specified package xxx under uid 10032 but it is really 10001"解决办法：
 -
 ```
  5715             final long token = Binder.clearCallingIdentity();
