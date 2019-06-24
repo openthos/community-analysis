@@ -1,0 +1,23 @@
+
+# camera虚拟权限管理（修正）
+- https://blog.csdn.net/gnnulzy/article/details/79462722  Linux C利用libxml2解析xml文件
+# 尝试在CameraService::connectHelper中添加，CameraService启动失败，此方法行不通
+```
+         tinyxml2::XMLDocument doc;
+1292     doc.LoadFile(SETTINGS);
+1293     tinyxml2::XMLElement* root = doc.FirstChildElement();
+1294     tinyxml2::XMLElement *dictEle = root->FirstChildElement();                                                                                                                                         
+1295     while(dictEle)
+1296     {
+1297         const char *value = (const char *)malloc(64);
+1298         dictEle->QueryStringAttribute("name",&value);
+1299         if (strcmp(value,key) == 0)
+1300         {
+1301             dictEle->QueryStringAttribute("value",&value);
+1302             break;
+1303         }
+1304         dictEle = dictEle->NextSiblingElement();
+1305     }
+
+
+```
