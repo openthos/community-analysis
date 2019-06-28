@@ -1,4 +1,22 @@
 # 2019-06 月报
+## 黃志偉
+### 个人月总结
+* 準備 8.1-r2 release
+  - 加入 dummy memtrack HAL 以避免 log 報錯
+  - 研究並加入 virt_wifi 以 Ethernet 模擬 wifi 功能
+  - 研究更改 network interface 名稱的方法，測試過 Google rename_netiface, wireless-tools 的 ifrename。最後發現 AOSP 自帶的 ip 指令就可以改名。
+  - Unload wl driver if unnecessary
+  - 合併 8.1-r2 至 multiwindow-oreo
+* Android-x86 9.0 pie-x86
+  - 移植 mesa 19.1.x 和 master branch 至 pie-x86，解決 vulkan makefiles 諸多問題，並提交 patches 至 mesa-dev list
+  - 移植 libbt-vendor 至 pie-x86，測試 Bluetooth OK
+  - 更新 houdini 至 9.0.0b_y.49939
+  - 研究如何更新 GMS for pie-x86
+
+### 下月计划
+* 完善 Android-x86 9.0 pie-x86
+* 準備 Android Q 的移植
+
 ## 萧络元
 ### 个人月总结
 * 将oto2的代码同步到github并可下载编译成镜像	协助测试工程师解决编译问题，已测试通过；
