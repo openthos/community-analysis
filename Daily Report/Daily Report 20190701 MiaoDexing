@@ -1,0 +1,18 @@
+- frameworks/av/camera/aidl/android/hardware/ICameraService.aidl
+
+```
+void putPackageMap(String p);
+```
+
+- frameworks/base/core/java/android/hardware/camera2/CameraManager.java +357
+
+```
+ cameraService.putPackageMap(packageName); 
+```
+
+- frameworks/av/services/camera/libcameraservice/CameraService.h
+
+```
+virtual  void  putPackageMap(String8 packageName);
+
+```
