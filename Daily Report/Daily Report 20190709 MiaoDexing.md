@@ -36,18 +36,17 @@
         tinyxml2::XMLElement* root = doc.FirstChildElement();
         if (root) {
             tinyxml2::XMLElement *dictEle = root->FirstChildElement();
-            //if (dictEle) {
+            
              while(dictEle) {
                 const char *value = (const char *)malloc(64);
                 if (dictEle->QueryStringAttribute("name",&value) == 0) { 
-                    ALOGW("mdx------value %s",value);
+                    
                     if (strcmp(value,key) == 0) { 
                         dictEle->QueryStringAttribute("value",&value);
-                        ALOGW("mdx------key value %s",value);
+                       
                         if (strcmp(value,"phy_camera") == 0) { 
                             property_set("persist.camera.use_fake", "phy_camera");
-                         } else if (strcmp(value,"vir_camera") == 0) {                                                                                                                                      
-                             property_set("persist.camera.use_fake", "vir_camera");
+                         } else if (strcmp(value,"vir_camera") == 0) {                                                                                   property_set("persist.camera.use_fake", "vir_camera");
                          }    
 
                         break;
@@ -56,9 +55,7 @@
                 }    
             }    
         }    
-    } else {
-        ALOGE("LoadFile error!!!!");
-    }    
+    }
 
   
   ```
