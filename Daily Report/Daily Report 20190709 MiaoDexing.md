@@ -5,7 +5,7 @@
 
 # 再次探索在C++中完成xml解析
 - 目前使用的是tinyxml2完成xml解析
-  - 第一步：external/tinyxml2/tinyxml2.h
+  - 第一步：在external/tinyxml2/tinyxml2.h中添加方法QueryStringAttribute
   ```
   int QueryStringAttribute(const char* name, const char** value) const   { const XMLAttribute* a = FindAttribute(name); if (!a) { return XML_NO_ATTRIBUTE;} *value = a->Value(); return XML_SUCCESS; 
 
@@ -26,7 +26,7 @@
              .......
 
   ```
-  - 第三步：frameworks/av/services/camera/libcameraservice/CameraService.cpp
+  - 第三步：在frameworks/av/services/camera/libcameraservice/CameraService.cpp中的connectHelper方法添加
   
   ```
    String8 clientName8(clientPackageName);
