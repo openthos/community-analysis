@@ -29,8 +29,7 @@
   - 第三步：在frameworks/av/services/camera/libcameraservice/CameraService.cpp中的connectHelper方法添加
   
   ```
-   String8 clientName8(clientPackageName);
-    String8 key = clientName8 + ".permission.camera";
+  String8 key = clientName8 + ".permission.camera";
     tinyxml2::XMLDocument doc; 
     if (doc.LoadFile(SETTINGS) == 0) { 
         tinyxml2::XMLElement* root = doc.FirstChildElement();
@@ -46,16 +45,18 @@
                        
                         if (strcmp(value,"phy_camera") == 0) { 
                             property_set("persist.camera.use_fake", "phy_camera");
-                         } else if (strcmp(value,"vir_camera") == 0) {                                                                                   property_set("persist.camera.use_fake", "vir_camera");
-                         }    
+                         } else if (strcmp(value,"vir_camera") == 0) { 
+                             property_set("persist.camera.use_fake", "vir_camera");
+                         }
 
                         break;
-                    }    
+                    }
                     dictEle = dictEle->NextSiblingElement();
-                }    
-            }    
-        }    
-    }
+                }
+            }
+        }
+    } 
+
 
   
   ```
