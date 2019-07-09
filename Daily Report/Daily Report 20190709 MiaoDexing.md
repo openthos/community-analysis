@@ -29,7 +29,7 @@
   - 第三步：在frameworks/av/services/camera/libcameraservice/CameraService.cpp中的connectHelper方法添加
   
   ```
-  String8 key = clientName8 + ".permission.camera";
+    String8 key = clientName8 + ".permission.camera";
     tinyxml2::XMLDocument doc; 
     if (doc.LoadFile(SETTINGS) == 0) { 
         tinyxml2::XMLElement* root = doc.FirstChildElement();
