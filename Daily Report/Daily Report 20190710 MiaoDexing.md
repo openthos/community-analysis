@@ -53,4 +53,5 @@ private File getSettingsFile(int key) {
 
 - frameworks/base/packages/SettingsProvider/src/com/android/providers/settings/SettingsState.java
    -   migrateLegacySettingsLocked()方法执行完毕后，调用systemSettings.persistSyncLocked()，systemSettings是SettingsState的实例，代表的是settings_system.xml所有的设置项，persistSyncLocked()方法就是把systemSettings持有的所有的设置项从内存中固化到文件settings_system.xml中。migrateLegacySettingsForUserLocked()方法中省略的代码，就是和上文的这几个方法一样，把settings_global.xml、settings_secure.xml两个文件中的所有设置项封装到Setting中，被SettingsState持有。也就是说，settings_global.xml、settings_secure.xml、settings_system.xml三个文件的所有设置项间接被SettingsState持有，而SettingsState又被封装到类SettingsProvider.java的变量mSettingsStates中，mSettingsStates是SparseArray”SettingsState”的实例。
+   -   https://blog.csdn.net/myfriend0/article/details/59107989
 
