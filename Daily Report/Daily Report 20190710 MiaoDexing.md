@@ -57,3 +57,25 @@ private File getSettingsFile(int key) {
 ##  基于上述分析做出以下改动：
 - persistSyncLocked()方法就是把systemSettings持有的所有的设置项从内存中固化到文件，在migrateLegacySettingsLocked方法中使用globalSettings.persistSyncLocked()固话设置项到文件时，实际调用的是doWriteState()方法。为了不污染原有文件，在此方法中当完成/data/system/users/0/settings_global.xml文件的永久化之后，将其拷贝到指定目录下
 - 因settings_global.xml文件属于system组，拷贝后cameraserver仍没有权力访问
+   - 所以使用Java NIO方式完成权限更改，例如：
+   ```
+   private void changeFolderPermission(File dirFile) throws IOException {
+    Set<PosixFilePermission> perms = new HashSet<PosixFilePermission>();
+    perms.add(PosixFilePermission.OWNER_READ);
+    perms.add(PosixFilePermission.OWNER_WRITE);
+    perms.add(PosixFilePermission.OWNER_EXECUTE);
+    perms.add(PosixFilePermission.GROUP_READ);
+    perms.add(PosixFilePermission.GROUP_WRITE);
+    perms.add(PosixFilePermission.GROUP_EXECUTE);
+    perms.add(PosixFilePermission.OTHERS_READ);
+    perms.add(PosixFilePermission.OTHERS_WRITE);
+    perms.add(PosixFilePermission.OTHERS_EXECUTE);
+    try {
+        Path path = Paths.get(dirFile.getAbsolutePath());
+        Files.setPosixFilePermissions(path, perms);
+    } catch (Exception e) {
+        logger.log(Level.SEVERE, "Change folder " + dirFile.getAbsolutePath() + " permission failed.", e);
+        }
+    }
+   ```
+   
