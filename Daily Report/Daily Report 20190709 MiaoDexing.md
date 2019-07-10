@@ -60,3 +60,5 @@
 
   
   ```
+# 目前所遇到的问题
+- settings_global.xml 文件 cameraservice 没有权限读写
