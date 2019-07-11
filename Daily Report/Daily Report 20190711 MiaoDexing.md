@@ -1,4 +1,4 @@
-# 存在的问题
+# 解决文件拷贝后仍无法操作的问题，目前仍在探索中
 - 在frameworks/base/packages/SettingsProvider/src/com/android/providers/settings/SettingsState.java的doWriteState()方法中完成文件拷贝和权限更改
 ```
  644         if (wroteState) {                                                                                                                                                                              
@@ -53,3 +53,58 @@
 
 
 ````
+
+- device/generic/common/init.x86.rc
+```
+ 20 on post-fs-data
+ 21     mkdir /data/misc/wifi 0770 wifi wifi
+ 22     mkdir /data/misc/wifi/sockets 0770 wifi wifi
+ 23     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
+ 24     mkdir /data/misc/dhcp 0770 dhcp dhcp
+ 25     mkdir /data/system 0775 system system
+ 26     mkdir /data/misc/camera  0777 system  cameraserver           
+```
+- CameraService.cpp
+
+```
+1284 template<class CALLBACK, class CLIENT>
+1285 Status CameraService::connectHelper(const sp<CALLBACK>& cameraCb, const String8& cameraId,
+1286         int halVersion, const String16& clientPackageName, int clientUid, int clientPid,
+1287         apiLevel effectiveApiLevel, bool legacyMode, bool shimUpdateOnly,
+1288         /*out*/sp<CLIENT>& device) {
+1289     binder::Status ret = binder::Status::ok();
+1290 
+1291     String8 clientName8(clientPackageName);
+1292     String8 key = clientName8 + ".permission.camera";
+1293 
+1294     tinyxml2::XMLDocument doc;
+1295     if (doc.LoadFile(SETTINGS) == 0) {
+1296         ALOGW("mdx tinyxml2------LoadFile");                                                                                                                                                           
+1297         tinyxml2::XMLElement* root = doc.FirstChildElement();
+1298         if (root) {             
+1299             ALOGW("mdx tinyxml2------root");
+1300             tinyxml2::XMLElement *dictEle = root->FirstChildElement();
+1301              while(dictEle) {   
+1302                 const char *value = (const char *)malloc(64);
+1303                 if (dictEle->QueryStringAttribute("name",&value) == 0) {
+1304                         ALOGW("mdx tinyxml2------name %s",value);
+1305                     if (strcmp(value,key) == 0) {
+1306                         dictEle->QueryStringAttribute("value",&value);
+1307                         ALOGW("mdx tinyxml2------value %s",value);
+1308                         if (strcmp(value,"phy_camera") == 0) {
+1309                             property_set(USE_FAKE, "phy_camera");
+1310                          } else if (strcmp(value,"vir_camera") == 0) {
+1311                              property_set(USE_FAKE, "vir_camera");
+1312                          }   
+1313                          
+1314                         break;
+1315                     }   
+1316                     dictEle = dictEle->NextSiblingElement();
+1317                 }   
+1318             }   
+1319         }   
+1320     } else {
+1321         ALOGE("LoadFile error!!!!");
+1322     } 
+
+```
