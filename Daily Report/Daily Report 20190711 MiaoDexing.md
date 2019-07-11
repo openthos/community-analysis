@@ -41,8 +41,7 @@
  682         perms.add(PosixFilePermission.GROUP_WRITE);
  683         perms.add(PosixFilePermission.GROUP_EXECUTE);
  684         perms.add(PosixFilePermission.OTHERS_READ);
- 685         perms.add(PosixFilePermission.OTHERS_WRITE);
- 686         perms.add(PosixFilePermission.OTHERS_EXECUTE);
+
  687         try {
  688             Path path = Paths.get(file.getAbsolutePath());
  689             Files.setPosixFilePermissions(path, perms);
@@ -62,7 +61,7 @@
  23     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
  24     mkdir /data/misc/dhcp 0770 dhcp dhcp
  25     mkdir /data/system 0775 system system
- 26     mkdir /data/misc/camera  0777 system  cameraserver           
+ 26     mkdir /data/misc/camera  0775 system  cameraserver           
 ```
 - CameraService.cpp
 
