@@ -4,6 +4,6 @@
 而我们这里为了完成物理设备与虚拟设备的切换，其实都是”PERMISSION_DENIED“，只不过访问的是物理设备还是虚拟设备而已。
 
    -   基于上述论断，在PMS中使用Setting Global来完成权限状态存储，本地是XML文件。滑动开关的状态为”ON“，Settings.Global.putString中存储的就是物理设备；滑动开关的状态为”OFF“，Settings.Global.putString
-中存储的就是虚拟设备，putString中根据每一个应用的包名为key来存储的信息。
+中存储的就是虚拟设备，putString中根据每一个应用的包名拼接的特定字符串为key来存储的信息。
    -   frameworks中，camera或者audio的service中都是可以得到请求应用的包名，根据包名，得到当前应用的具体权限是物理设备还是虚拟设备，然后设置property属性值
    -   因为在同一时刻只能有一个应用占用camera或者audio，所以在HAL中，可以根据property的属性值，完成虚拟设备或者物理设备的切换
