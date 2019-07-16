@@ -302,7 +302,114 @@ GrantPermissionsActivity其实是利用GroupState对象与PKMS通信，远程更
    -  permissionsState.grantRuntimePermission(bp, userId); 更新内存中的权限授予情况 
    -  mSettings.writeRuntimePermissionsForUserLPr(userId, false); 将更新的权限持久化到文件data/system/user/0/runtime-permissions.xml中
 
-这些持久化的数据会在手机启动的时候由PMS读取,开机启动，PKMS扫描Apk，并更新package信息，检查/data/system/packages.xml是否存在，这个文件是在解析apk时由writeLP()创建的，里面记录了系统的permissions，以及每个apk的name,codePath,flags,ts,version,uesrid等信息，这些信息主要通过apk的AndroidManifest.xml解析获取，解析完apk后将更新信息写入这个文件并保存到flash，下次开机直接从里面读取相关信息添加到内存相关列表中，当有apk升级，安装或删除时会更新这个文件，packages.xml放的只包括installpermission，runtimepermissiono由runtime-permissions.xml存放。
+这些持久化的数据会在手机启动的时候由PMS读取,开机启动，PKMS扫描Apk，并更新package信息，检查/data/system/packages.xml是否存在，这个文件是在解析apk时由writeLP()创建的，里面记录了系统的permissions，以及每个apk的name,codePath,flags,ts,version,uesrid等信息，这些信息主要通过apk的AndroidManifest.xml解析获取，解析完apk后将更新信息写入这个文件并保存到flash，下次开机直接从里面读取相关信息添加到内存相关列表中，当有apk升级，安装或删除时会更新这个文件，packages.xml放的只包括installpermission，只要granted="true"，就是永远是取得授权的；runtimepermissiono由runtime-permissions.xml存放。
 
 
-- 
+- packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/ui/ManagePermissionsActivity.java
+```
+55             case Intent.ACTION_MANAGE_APP_PERMISSIONS: {
+ 56                 String packageName = getIntent().getStringExtra(Intent.EXTRA_PACKAGE_NAME);
+ 57                 if (packageName == null) {
+ 58                     Log.i(LOG_TAG, "Missing mandatory argument EXTRA_PACKAGE_NAME");
+ 59                     finish();
+ 60                     return;
+ 61                 }
+ 62                 if (DeviceUtils.isWear(this)) {
+ 63                     fragment = AppPermissionsFragmentWear.newInstance(packageName);
+ 64                 } else if (DeviceUtils.isTelevision(this)) {
+ 65                     fragment = com.android.packageinstaller.permission.ui.television
+ 66                             .AppPermissionsFragment.newInstance(packageName);
+ 67                 } else {
+ 68                     final boolean allPermissions = getIntent().getBooleanExtra(
+ 69                             EXTRA_ALL_PERMISSIONS, false);
+ 70                     if (allPermissions) {
+ 71                         fragment = com.android.packageinstaller.permission.ui.handheld
+ 72                                 .AllAppPermissionsFragment.newInstance(packageName);
+ 73                     } else {
+ 74                         fragment = com.android.packageinstaller.permission.ui.handheld
+ 75                                 .AppPermissionsFragment.newInstance(packageName);
+ 76                     }
+ 77                 }
+ 78             } break;
+ 79 
+ 80             case Intent.ACTION_MANAGE_PERMISSION_APPS: {
+ 81                 String permissionName = getIntent().getStringExtra(Intent.EXTRA_PERMISSION_NAME);
+ 82                 if (permissionName == null) {
+ 83                     Log.i(LOG_TAG, "Missing mandatory argument EXTRA_PERMISSION_NAME");
+ 84                     finish();
+ 85                     return;
+ 86                 }
+ 87                 if (DeviceUtils.isTelevision(this)) {
+ 88                     fragment = com.android.packageinstaller.permission.ui.television
+ 89                             .PermissionAppsFragment.newInstance(permissionName);
+ 90                 } else {
+ 91                     fragment = com.android.packageinstaller.permission.ui.handheld
+ 92                             .PermissionAppsFragment.newInstance(permissionName);
+ 93                 }
+ 94             } break;
+
+```
+Setting中可以针对某个应用的权限或者全部应用的权限进行管理，这里分析单个应用，也就是AppPermissionsFragment
+
+- packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/ui/handheld/AppPermissionsFragment.java
+
+```
+293     public boolean onPreferenceChange(final Preference preference, Object newValue) {
+294         String groupName = preference.getKey();
+295         final AppPermissionGroup group = mAppPermissions.getPermissionGroup(groupName);
+296 
+297         if (group == null) {
+298             return false;
+299         }
+300                                                                                                                                                                                                         
+301         addToggledGroup(group);
+302 
+303         if (LocationUtils.isLocationGroupAndProvider(group.getName(), group.getApp().packageName)) {
+304             LocationUtils.showLocationDialog(getContext(), mAppPermissions.getAppLabel());
+305             return false;
+306         }
+307         ContentResolver resolver = getContext().getContentResolver();
+308         String packageName = group.getApp().packageName;
+309         if (newValue == Boolean.TRUE) {
+310             group.grantRuntimePermissions(false);
+311             Settings.Global.putString(resolver,packageName+".permission.camera","phy_camera");
+312         } else {
+313             final boolean grantedByDefault = group.hasGrantedByDefaultPermission();
+314             if (grantedByDefault || (!group.doesSupportRuntimePermissions()
+315                     && !mHasConfirmedRevoke)) {
+316                 new AlertDialog.Builder(getContext())
+317                         .setMessage(grantedByDefault ? R.string.system_warning
+318                                 : R.string.old_sdk_deny_warning)
+319                         .setNegativeButton(R.string.cancel, (DialogInterface dialog, int which) -> {
+320                             if (preference instanceof MultiTargetSwitchPreference) {
+321                                 ((MultiTargetSwitchPreference) preference).setCheckedOverride(true);
+322                             }
+323                         })
+324                         .setPositiveButton(R.string.grant_dialog_button_deny_anyway,
+325                                 (DialogInterface dialog, int which) -> {
+326                             ((SwitchPreference) preference).setChecked(false);
+327 
+328                             Settings.Global.putString(resolver,packageName+".permission.camera","vir_camera");
+329                             /*group.revokeRuntimePermissions(false);
+330                             if (Utils.areGroupPermissionsIndividuallyControlled(getContext(),
+331                                     group.getName())) {
+332                                 updateSummaryForIndividuallyControlledPermissionGroup(
+333                                         group, preference);
+334                             }
+335                             if (!grantedByDefault) {
+336                                 mHasConfirmedRevoke = true;                                                                                                                                             
+337                             }*/
+338                         })
+339                         .show();
+340                 return false;
+341             } else {
+342                 group.revokeRuntimePermissions(false);
+343             }
+344         }
+345 
+346         return true;
+347     }
+
+```
+此处授予权限依然是调用的PackageManagerService的方法grantRuntimePermission完成权限授予
+
