@@ -8,7 +8,7 @@
 ## 具体分析PackageManagerService
 - frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
 ```
-5353     @Override
+ 5353     @Override
  5354     public int checkUidPermission(String permName, int uid) {
  5355         final int callingUid = Binder.getCallingUid();
  5356         final int callingUserId = UserHandle.getUserId(callingUid);
@@ -69,7 +69,7 @@
 
 ```
 
-其中关键在于mSettings里面保存的SettingBase对象，它记录了PermissionsState也就是权限的授予情况。
+其中关键在于mSettings里面保存的SettingBase对象，它记录了PermissionsState也就是权限的授予情况。此处要提前明确一件事，Settings.getPackageLPw方法，是在安装应用扫描的时候scanPackageDirtyLI方法调用的，里面可以看到Settings类中的mUserIds、mPackages里面存的value还有PackageManagerService中的mPackages.pkg. mExtras都是同一个PackageSetting，差异仅在于可以动态修改：也就是修改PermissionState的mGranted值。
 
 -  frameworks/base/services/core/java/com/android/server/pm/PermissionsState.java
 ```
@@ -85,7 +85,9 @@
 275     }
 
 ```
-从上面的代码可以很清晰看出，除了声明了权限之外，还必须是授权了的。授权有两个地方，一个是设置里面的入口，还有一个是申请权限弹框界面的入口，代码都在PackageInstaller里面，分别是ManagePermissionsActivity和GrantPermissionsActivity。重点分析GrantPermissionsActivity，在这个Activity里面，如果一开始没有获得权限，就会弹出权限申请对话框，根据用户的操作去更新PKMS中的权限信息，同时将更新的结构持久化到runtime-permissions.xml中去。
+从上面的代码可以很清晰看出，除了声明了权限之外，还必须是授权了的。
+### 权限授予分析
+授权有两个地方，一个是设置里面的入口，还有一个是申请权限弹框界面的入口，代码都在PackageInstaller里面，分别是ManagePermissionsActivity和GrantPermissionsActivity。重点分析GrantPermissionsActivity，在这个Activity里面，如果一开始没有获得权限，就会弹出权限申请对话框，根据用户的操作去更新PKMS中的权限信息，同时将更新的结构持久化到runtime-permissions.xml中去。
 
 - packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/ui/GrantPermissionsActivity.java
 ```
@@ -412,5 +414,64 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
 347     }
 
 ```
-此处授予权限依然是调用的PackageManagerService的方法grantRuntimePermission完成权限授予
+此处授予权限依然是调用的PackageManagerService的方法grantRuntimePermission来完成
 
+### 权限未授予分析
+- packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/ui/GrantPermissionsActivity.java
+```
+305     public void onPermissionGrantResult(String name, boolean granted, boolean doNotAskAgain) {
+306         KeyguardManager kgm = getSystemService(KeyguardManager.class);
+307                                                                                                                                                                                                         
+308         if (kgm.isDeviceLocked()) {
+309             kgm.requestDismissKeyguard(this, new KeyguardManager.KeyguardDismissCallback() {
+310                         @Override
+311                         public void onDismissError() {
+312                             Log.e(LOG_TAG, "Cannot dismiss keyguard perm=" + name + " granted="
+313                                    + granted + " doNotAskAgain=" + doNotAskAgain);
+314                         }
+315 
+316                         @Override
+317                         public void onDismissCancelled() {
+318                             // do nothing (i.e. stay at the current permission group)
+319                         }
+320 
+321                         @Override
+322                         public void onDismissSucceeded() {
+323                             // Now the keyguard is dismissed, hence the device is not locked
+324                             // anymore
+325                             onPermissionGrantResult(name, granted, doNotAskAgain);
+326                         }
+327                     });
+328 
+329             return;
+330         }
+331 
+332         GroupState groupState = mRequestGrantPermissionGroups.get(name);
+333         if (groupState.mGroup != null) {
+334             if (granted) {
+335                 groupState.mGroup.grantRuntimePermissions(doNotAskAgain,
+336                         groupState.affectedPermissions);
+337                 groupState.mState = GroupState.STATE_ALLOWED;
+338             } else {
+339                 groupState.mGroup.revokeRuntimePermissions(doNotAskAgain,
+340                         groupState.affectedPermissions);
+341                 groupState.mState = GroupState.STATE_DENIED;
+342 
+343                 int numRequestedPermissions = mRequestedPermissions.length;
+344                 for (int i = 0; i < numRequestedPermissions; i++) {
+345                     String permission = mRequestedPermissions[i];
+346 
+347                     if (groupState.mGroup.hasPermission(permission)) {
+348                         EventLogger.logPermissionDenied(this, permission,
+349                                 mAppPermissions.getPackageInfo().packageName);
+350                     }
+351                 }
+352             }
+353             updateGrantResults(groupState.mGroup);
+354         }
+355         if (!showNextPermissionGroupGrantRequest()) {
+356             setResultAndFinish();
+357         }
+358     }
+
+```
