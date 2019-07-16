@@ -180,7 +180,8 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
    216     }
 
    ```
-      -   services/core/java/com/android/server/pm/PermissionsState.java
+   此处转到
+       -    services/core/java/com/android/server/pm/PermissionsState.java
       ```
       559     private int grantPermission(BasePermission permission, int userId) {
 
