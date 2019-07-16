@@ -21,17 +21,7 @@
  5363 
  5364         synchronized (mPackages) {
  5365             Object obj = mSettings.getUserIdLPr(UserHandle.getAppId(uid));
- 5366             if (obj != null) {
- 5367                 if (obj instanceof SharedUserSetting) {
- 5368                     if (isCallerInstantApp) {
- 5369                         return PackageManager.PERMISSION_DENIED;
- 5370                     }
- 5371                 } else if (obj instanceof PackageSetting) {
- 5372                     final PackageSetting ps = (PackageSetting) obj;
- 5373                     if (filterAppAccessLPr(ps, callingUid, callingUserId)) {
- 5374                         return PackageManager.PERMISSION_DENIED;
- 5375                     }
- 5376                 }
+                  ...............................................................
  5377                 final SettingBase settingBase = (SettingBase) obj;
  5378                 final PermissionsState permissionsState = settingBase.getPermissionsState();
  5379                 if (permissionsState.hasPermission(permName, userId)) {
@@ -44,24 +34,7 @@
  5386                         return PackageManager.PERMISSION_GRANTED;
  5387                     }
  5388                 }
- 5389                 // Special case: ACCESS_FINE_LOCATION permission includes ACCESS_COARSE_LOCATION
- 5390                 if (Manifest.permission.ACCESS_COARSE_LOCATION.equals(permName) && permissionsState
- 5391                         .hasPermission(Manifest.permission.ACCESS_FINE_LOCATION, userId)) {
- 5392                     return PackageManager.PERMISSION_GRANTED;
- 5393                 }
- 5394             } else {
- 5395                 ArraySet<String> perms = mSystemPermissions.get(uid);
- 5396                 if (perms != null) {
- 5397                     if (perms.contains(permName)) {
- 5398                         return PackageManager.PERMISSION_GRANTED;
- 5399                     }
- 5400                     if (Manifest.permission.ACCESS_COARSE_LOCATION.equals(permName) && perms
- 5401                             .contains(Manifest.permission.ACCESS_FINE_LOCATION)) {
- 5402                         return PackageManager.PERMISSION_GRANTED;
- 5403                     }
- 5404                 }
- 5405             }
- 5406         }
+              .....................................................
  5407 
  5408         return PackageManager.PERMISSION_DENIED;                                                                                                                                                      
  5409     }
@@ -94,29 +67,7 @@
 305     public void onPermissionGrantResult(String name, boolean granted, boolean doNotAskAgain) {
 306         KeyguardManager kgm = getSystemService(KeyguardManager.class);
 307                                                                                                                                                                                                         
-308         if (kgm.isDeviceLocked()) {
-309             kgm.requestDismissKeyguard(this, new KeyguardManager.KeyguardDismissCallback() {
-310                         @Override
-311                         public void onDismissError() {
-312                             Log.e(LOG_TAG, "Cannot dismiss keyguard perm=" + name + " granted="
-313                                    + granted + " doNotAskAgain=" + doNotAskAgain);
-314                         }
-315 
-316                         @Override
-317                         public void onDismissCancelled() {
-318                             // do nothing (i.e. stay at the current permission group)
-319                         }
-320 
-321                         @Override
-322                         public void onDismissSucceeded() {
-323                             // Now the keyguard is dismissed, hence the device is not locked
-324                             // anymore
-325                             onPermissionGrantResult(name, granted, doNotAskAgain);
-326                         }
-327                     });
-328 
-329             return;
-330         }
+            .......................................................
 331 
 332         GroupState groupState = mRequestGrantPermissionGroups.get(name);
 333         if (groupState.mGroup != null) {
@@ -129,21 +80,7 @@
 340                         groupState.affectedPermissions);
 341                 groupState.mState = GroupState.STATE_DENIED;
 342 
-343                 int numRequestedPermissions = mRequestedPermissions.length;
-344                 for (int i = 0; i < numRequestedPermissions; i++) {
-345                     String permission = mRequestedPermissions[i];
-346 
-347                     if (groupState.mGroup.hasPermission(permission)) {
-348                         EventLogger.logPermissionDenied(this, permission,
-349                                 mAppPermissions.getPackageInfo().packageName);
-350                     }
-351                 }
-352             }
-353             updateGrantResults(groupState.mGroup);
-354         }
-355         if (!showNextPermissionGroupGrantRequest()) {
-356             setResultAndFinish();
-357         }
+               ...........................................
 358     }
 
 
@@ -205,18 +142,7 @@ GrantPermissionsActivity其实是利用GroupState对象与PKMS通信，远程更
  5713 
  5714         synchronized (mPackages) {
  5715             final PackageParser.Package pkg = mPackages.get(packageName);
- 5716             if (pkg == null) {
- 5717                 throw new IllegalArgumentException("Unknown package: " + packageName);
- 5718             }
- 5719             final BasePermission bp = mSettings.mPermissions.get(name);
- 5720             if (bp == null) {
- 5721                 throw new IllegalArgumentException("Unknown permission: " + name);
- 5722             }
- 5723             ps = (PackageSetting) pkg.mExtras;
- 5724             if (ps == null
- 5725                     || filterAppAccessLPr(ps, callingUid, userId)) {
- 5726                 throw new IllegalArgumentException("Unknown package: " + packageName);
- 5727             }
+ 5716             .................................................
  5728 
  5729             if (name.contains(Manifest.permission.CAMERA)) {
  5730                 handlerPermissionOfPhyOrVir(packageName+CAMERA,PHY_CAMERA,0);
@@ -225,75 +151,16 @@ GrantPermissionsActivity其实是利用GroupState对象与PKMS通信，远程更
  5733             if (name.contains(Manifest.permission.RECORD_AUDIO)) {
  5734                 handlerPermissionOfPhyOrVir(packageName+REC_AUDIO,PHY_AUDIO,1);
  5735             }
- 5736             enforceDeclaredAsUsedAndRuntimeOrDevelopmentPermission(pkg, bp);
- 5737 
- 5738             // If a permission review is required for legacy apps we represent
- 5739             // their permissions as always granted runtime ones since we need
- 5740             // to keep the review required permission flag per user while an
- 5741             // install permission's state is shared across all users.
- 5742             if (mPermissionReviewRequired
- 5743                     && pkg.applicationInfo.targetSdkVersion < Build.VERSION_CODES.M
- 5744                     && bp.isRuntime()) {
- 5745                 return;                                                                                                                                                                               
- 5746             }
+                  .......................................................
  5747 
  5748             uid = UserHandle.getUid(userId, pkg.applicationInfo.uid);
  5749 
  5750             final PermissionsState permissionsState = ps.getPermissionsState();
  5751 
- 5752             final int flags = permissionsState.getPermissionFlags(name, userId);
- 5753             if ((flags & PackageManager.FLAG_PERMISSION_SYSTEM_FIXED) != 0) {
- 5754                 throw new SecurityException("Cannot grant system fixed permission "
- 5755                         + name + " for package " + packageName);
- 5756             }
- 5757             if (!overridePolicy && (flags & PackageManager.FLAG_PERMISSION_POLICY_FIXED) != 0) {
- 5758                 throw new SecurityException("Cannot grant policy fixed permission "
- 5759                         + name + " for package " + packageName);
- 5760             }
- 5761 
- 5762             if (bp.isDevelopment()) {
- 5763                 // Development permissions must be handled specially, since they are not
- 5764                 // normal runtime permissions.  For now they apply to all users.
- 5765                 if (permissionsState.grantInstallPermission(bp) !=
- 5766                         PermissionsState.PERMISSION_OPERATION_FAILURE) {
- 5767                     scheduleWriteSettingsLocked();
- 5768                 }
- 5769                 return;
- 5770             }
- 5771 
- 5772             if (ps.getInstantApp(userId) && !bp.isInstant()) {
- 5773                 throw new SecurityException("Cannot grant non-ephemeral permission"
- 5774                         + name + " for package " + packageName);
- 5775             }
- 5776 
- 5777             if (pkg.applicationInfo.targetSdkVersion < Build.VERSION_CODES.M) {
- 5778                 Slog.w(TAG, "Cannot grant runtime permission to a legacy app");
- 5779                 return;
- 5780             }
+                  .............................................................
  5781 
  5782             final int result = permissionsState.grantRuntimePermission(bp, userId);
- 5783             switch (result) {
- 5784                 case PermissionsState.PERMISSION_OPERATION_FAILURE: {
- 5785                     return;
- 5786                 }
- 5787 
- 5788                 case PermissionsState.PERMISSION_OPERATION_SUCCESS_GIDS_CHANGED: {
- 5789                     final int appId = UserHandle.getAppId(pkg.applicationInfo.uid);
- 5790                     mHandler.post(new Runnable() {
- 5791                         @Override
-  5792                         public void run() {
- 5793                             killUid(appId, userId, KILL_APP_REASON_GIDS_CHANGED);
- 5794                         }
- 5795                     });
- 5796                 }
- 5797                 break;
- 5798             }
- 5799 
- 5800             if (bp.isRuntime()) {
- 5801                 logPermissionGranted(mContext, name, packageName);
- 5802             }
- 5803 
- 5804             mOnPermissionChangeListeners.onPermissionsChanged(uid);
+                  ......................................................
  5805 
  5806             // Not critical if that is lost - app has to request again.
  5807             mSettings.writeRuntimePermissionsForUserLPr(userId, false);
@@ -421,30 +288,7 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
 ```
 305     public void onPermissionGrantResult(String name, boolean granted, boolean doNotAskAgain) {
 306         KeyguardManager kgm = getSystemService(KeyguardManager.class);
-307                                                                                                                                                                                                         
-308         if (kgm.isDeviceLocked()) {
-309             kgm.requestDismissKeyguard(this, new KeyguardManager.KeyguardDismissCallback() {
-310                         @Override
-311                         public void onDismissError() {
-312                             Log.e(LOG_TAG, "Cannot dismiss keyguard perm=" + name + " granted="
-313                                    + granted + " doNotAskAgain=" + doNotAskAgain);
-314                         }
-315 
-316                         @Override
-317                         public void onDismissCancelled() {
-318                             // do nothing (i.e. stay at the current permission group)
-319                         }
-320 
-321                         @Override
-322                         public void onDismissSucceeded() {
-323                             // Now the keyguard is dismissed, hence the device is not locked
-324                             // anymore
-325                             onPermissionGrantResult(name, granted, doNotAskAgain);
-326                         }
-327                     });
-328 
-329             return;
-330         }
+307                                                                                                                                     ..............................................................
 331 
 332         GroupState groupState = mRequestGrantPermissionGroups.get(name);
 333         if (groupState.mGroup != null) {
