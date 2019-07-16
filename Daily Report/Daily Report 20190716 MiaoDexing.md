@@ -319,3 +319,85 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
 358     }
 
 ```
+- packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/model/AppPermissionGroup.java
+
+
+```
+433     public boolean revokeRuntimePermissions(boolean fixedByTheUser) {
+434         return revokeRuntimePermissions(fixedByTheUser, null);                                                                                                                                          
+435     }
+436         
+437     public boolean revokeRuntimePermissions(boolean fixedByTheUser, String[] filterPermissions) {
+438         final int uid = mPackageInfo.applicationInfo.uid;
+439 
+440         // We toggle permissions only to apps that support runtime
+441         // permissions, otherwise we toggle the app op corresponding
+442         // to the permission if the permission is granted to the app.
+443         for (Permission permission : mPermissions.values()) {
+444             if (filterPermissions != null
+445                     && !ArrayUtils.contains(filterPermissions, permission.getName())) {
+446                 continue;
+447             }
+448 
+449             if (mAppSupportsRuntimePermissions) {
+450                 // Do not touch permissions fixed by the system.
+451                 if (permission.isSystemFixed()) {
+452                     return false;
+453                 }
+454 
+455                 // Revoke the permission if needed.
+456                 if (permission.isGranted()) {
+457                     permission.setGranted(false);
+458                     mPackageManager.revokeRuntimePermission(mPackageInfo.packageName,
+459                             permission.getName(), mUserHandle);
+460                 }
+
+
+````
+此处mPackageManager.revokeRuntimePermission最终还是调用的是PackageManagerService的revokeRuntimePermission方法
+
+- frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+```
+5833     private void revokeRuntimePermission(String packageName, String name, int userId,
+ 5834             boolean overridePolicy) {
+ 5835         if (!sUserManager.exists(userId)) {
+ 5836             Log.e(TAG, "No such user:" + userId);
+ 5837             return;
+ 5838         }
+ 5839 
+ 5840         mContext.enforceCallingOrSelfPermission(
+ 5841                 android.Manifest.permission.REVOKE_RUNTIME_PERMISSIONS,
+ 5842                 "revokeRuntimePermission");
+ 5843 
+ 5844         enforceCrossUserPermission(Binder.getCallingUid(), userId,
+ 5845                 true /* requireFullPermission */, true /* checkShell */,
+ 5846                 "revokeRuntimePermission");
+ 5847                                                                                                                                                                                                       
+ 5848         final int appId;
+ 5849 
+ 5850         synchronized (mPackages) {
+ 5851             final PackageParser.Package pkg = mPackages.get(packageName);
+ 5852             if (pkg == null) {
+ 5853                 throw new IllegalArgumentException("Unknown package: " + packageName);
+ 5854             }
+ 5855             final PackageSetting ps = (PackageSetting) pkg.mExtras;
+ 5856             if (ps == null
+ 5857                     || filterAppAccessLPr(ps, Binder.getCallingUid(), userId)) {
+ 5858                 throw new IllegalArgumentException("Unknown package: " + packageName);
+ 5859             }
+ 5860             final BasePermission bp = mSettings.mPermissions.get(name);
+ 5861             if (bp == null) {
+ 5862                 throw new IllegalArgumentException("Unknown permission: " + name);
+ 5863             }
+ 5864 
+ 5865             if (name.contains(Manifest.permission.CAMERA)) {
+ 5866                 handlerPermissionOfPhyOrVir(packageName+CAMERA,VIR_CAMERA,0);
+ 5867                 return;
+ 5868             }
+ 5869             if (name.contains(Manifest.permission.RECORD_AUDIO)) {
+ 5870                 handlerPermissionOfPhyOrVir(packageName+REC_AUDIO,VIR_AUDIO,1);
+ 5871                 return;
+ 5872             }
+
+
+```
