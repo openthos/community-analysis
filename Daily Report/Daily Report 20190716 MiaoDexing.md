@@ -6,7 +6,7 @@
 ## 举个例子-定位服务LocationManagerService
 ![blockchain](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/location.png)
 ## 具体分析PackageManagerService
-1. frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+- frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
 ```
  5353     @Override
  5354     public int checkUidPermission(String permName, int uid) {
@@ -44,7 +44,7 @@
 
 其中关键在于mSettings里面保存的SettingBase对象，它记录了PermissionsState也就是权限的授予情况。此处要提前明确一件事，Settings.getPackageLPw方法，是在安装应用扫描的时候scanPackageDirtyLI方法调用的，里面可以看到Settings类中的mUserIds、mPackages里面存的value还有PackageManagerService中的mPackages.pkg. mExtras都是同一个PackageSetting，差异仅在于可以动态修改：也就是修改PermissionState的mGranted值。
 
-2. frameworks/base/services/core/java/com/android/server/pm/PermissionsState.java
+- frameworks/base/services/core/java/com/android/server/pm/PermissionsState.java
 ```
 266     public boolean hasPermission(String name, int userId) {                                                                                                                                             
 267         enforceValidUserId(userId);
@@ -219,10 +219,10 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
       700         
       701             return true;
       702         }   
-      ```
-      
-   <br>
-   修改PermissionData 中PermissionState 的 mGranted属性值为true
+      ```  
+       
+      修改PermissionData 中PermissionState 的 mGranted属性值为true
+     
    -  mSettings.writeRuntimePermissionsForUserLPr(userId, false); 将更新的权限持久化到文件data/system/user/0/runtime-permissions.xml中
 
 这些持久化的数据会在手机启动的时候由PMS读取,开机启动，PKMS扫描Apk，并更新package信息，检查/data/system/packages.xml是否存在，这个文件是在解析apk时由writeLP()创建的，里面记录了系统的permissions，以及每个apk的name,codePath,flags,ts,version,uesrid等信息，这些信息主要通过apk的AndroidManifest.xml解析获取，解析完apk后将更新信息写入这个文件并保存到flash，下次开机直接从里面读取相关信息添加到内存相关列表中，当有apk升级，安装或删除时会更新这个文件，packages.xml放的只包括installpermission，只要granted="true"，就是永远是取得授权的；runtimepermissiono由runtime-permissions.xml存放。
