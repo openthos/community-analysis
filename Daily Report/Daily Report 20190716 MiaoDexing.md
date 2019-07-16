@@ -168,7 +168,58 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
 
 ```
 
-   -  permissionsState.grantRuntimePermission(bp, userId); 更新内存中的权限授予情况 
+   -  permissionsState.grantRuntimePermission(bp, userId); 更新内存中的权限授予情况
+      -  services/core/java/com/android/server/pm/PermissionsState.java 
+   ```
+   210     public int grantRuntimePermission(BasePermission permission, int userId) {                                                                                                                          
+   211         enforceValidUserId(userId);
+   212         if (userId == UserHandle.USER_ALL) {
+   213             return PERMISSION_OPERATION_FAILURE;
+   214         }
+   215         return grantPermission(permission, userId);
+   216     }
+
+   ```
+      -   services/core/java/com/android/server/pm/PermissionsState.java
+      ```
+      559     private int grantPermission(BasePermission permission, int userId) {
+
+      569         if (!permissionData.grant(userId)) {
+      570             return PERMISSION_OPERATION_FAILURE;
+      571         }
+      572 
+      573         if (hasGids) {
+      574             final int[] newGids = computeGids(userId);
+      575             if (oldGids.length != newGids.length) {
+      576                 return PERMISSION_OPERATION_SUCCESS_GIDS_CHANGED;
+      577             }                                                                                                                                                                                           
+      578         }
+      579 
+      580         return PERMISSION_OPERATION_SUCCESS;
+      581     }
+      582 
+      
+      684         public boolean grant(int userId) {                                                                                                                                                              
+      685             if (!isCompatibleUserId(userId)) {
+      686                 return false;
+      687             }
+      688 
+      689             if (isGranted(userId)) {
+      690                 return false;
+      691             }
+      692                 
+      693             PermissionState userState = mUserStates.get(userId);
+      694             if (userState == null) {
+      695                 userState = new PermissionState(mPerm.name);
+      696                 mUserStates.put(userId, userState);
+      697             }
+      698 
+      699             userState.mGranted = true;
+      700         
+      701             return true;
+      702         }   
+      ```
+      修改PermissionData 中PermissionState 的 mGranted属性值为true
    -  mSettings.writeRuntimePermissionsForUserLPr(userId, false); 将更新的权限持久化到文件data/system/user/0/runtime-permissions.xml中
 
 这些持久化的数据会在手机启动的时候由PMS读取,开机启动，PKMS扫描Apk，并更新package信息，检查/data/system/packages.xml是否存在，这个文件是在解析apk时由writeLP()创建的，里面记录了系统的permissions，以及每个apk的name,codePath,flags,ts,version,uesrid等信息，这些信息主要通过apk的AndroidManifest.xml解析获取，解析完apk后将更新信息写入这个文件并保存到flash，下次开机直接从里面读取相关信息添加到内存相关列表中，当有apk升级，安装或删除时会更新这个文件，packages.xml放的只包括installpermission，只要granted="true"，就是永远是取得授权的；runtimepermissiono由runtime-permissions.xml存放。
