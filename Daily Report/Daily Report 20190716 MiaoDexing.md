@@ -6,7 +6,7 @@
 ## 举个例子-定位服务LocationManagerService
 ![blockchain](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/location.png)
 ## 具体分析PackageManagerService
-- frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+1. frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
 ```
  5353     @Override
  5354     public int checkUidPermission(String permName, int uid) {
@@ -44,7 +44,7 @@
 
 其中关键在于mSettings里面保存的SettingBase对象，它记录了PermissionsState也就是权限的授予情况。此处要提前明确一件事，Settings.getPackageLPw方法，是在安装应用扫描的时候scanPackageDirtyLI方法调用的，里面可以看到Settings类中的mUserIds、mPackages里面存的value还有PackageManagerService中的mPackages.pkg. mExtras都是同一个PackageSetting，差异仅在于可以动态修改：也就是修改PermissionState的mGranted值。
 
--  frameworks/base/services/core/java/com/android/server/pm/PermissionsState.java
+2. frameworks/base/services/core/java/com/android/server/pm/PermissionsState.java
 ```
 266     public boolean hasPermission(String name, int userId) {                                                                                                                                             
 267         enforceValidUserId(userId);
