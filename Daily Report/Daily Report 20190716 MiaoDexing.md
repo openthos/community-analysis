@@ -60,7 +60,7 @@
 ```
 从上面的代码可以很清晰看出，除了声明了权限之外，还必须是授权了的。
 ### 权限授予分析
-授权有两个地方，一个是设置里面的入口，还有一个是申请权限弹框界面的入口，代码都在PackageInstaller里面，分别是ManagePermissionsActivity和GrantPermissionsActivity。重点分析GrantPermissionsActivity，在这个Activity里面，如果一开始没有获得权限，就会弹出权限申请对话框，根据用户的操作去更新PKMS中的权限信息，同时将更新的结构持久化到runtime-permissions.xml中去。
+授权有两个地方，一个是设置里面的入口，还有一个是申请权限弹框界面的入口，代码都在PackageInstaller里面，分别是ManagePermissionsActivity和GrantPermissionsActivity。重点分析GrantPermissionsActivity，在这个Activity里面，如果一开始没有获得权限，就会弹出权限申请对话框，根据用户的操作去更新PMS中的权限信息，同时将更新的结构持久化到runtime-permissions.xml中去。
 
 - packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/ui/GrantPermissionsActivity.java
 ```
@@ -225,7 +225,7 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
      
    -  mSettings.writeRuntimePermissionsForUserLPr(userId, false); 将更新的权限持久化到文件data/system/user/0/runtime-permissions.xml中
 
-这些持久化的数据会在手机启动的时候由PMS读取,开机启动，PKMS扫描Apk，并更新package信息，检查/data/system/packages.xml是否存在，这个文件是在解析apk时由writeLP()创建的，里面记录了系统的permissions，以及每个apk的name,codePath,flags,ts,version,uesrid等信息，这些信息主要通过apk的AndroidManifest.xml解析获取，解析完apk后将更新信息写入这个文件并保存到flash，下次开机直接从里面读取相关信息添加到内存相关列表中，当有apk升级，安装或删除时会更新这个文件，packages.xml放的只包括installpermission，只要granted="true"，就是永远是取得授权的；runtimepermissiono由runtime-permissions.xml存放。
+这些持久化的数据会在手机启动的时候由PMS读取,开机启动，PMS扫描Apk，并更新package信息，检查/data/system/packages.xml是否存在，这个文件是在解析apk时由writeLP()创建的，里面记录了系统的permissions，以及每个apk的name,codePath,flags,ts,version,uesrid等信息，这些信息主要通过apk的AndroidManifest.xml解析获取，解析完apk后将更新信息写入这个文件并保存到flash，下次开机直接从里面读取相关信息添加到内存相关列表中，当有apk升级，安装或删除时会更新这个文件，packages.xml放的只包括installpermission，只要granted="true"，就是永远是取得授权的；runtimepermissiono由runtime-permissions.xml存放。
 
 
 这里开始分析ManagePermissionsActivity
