@@ -180,8 +180,8 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
    216     }
 
    ```
-   此处转到
-       -    services/core/java/com/android/server/pm/PermissionsState.java
+   <br>
+       -   services/core/java/com/android/server/pm/PermissionsState.java
       ```
       559     private int grantPermission(BasePermission permission, int userId) {
 
@@ -220,6 +220,8 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
       701             return true;
       702         }   
       ```
+      
+   <br>
    修改PermissionData 中PermissionState 的 mGranted属性值为true
    -  mSettings.writeRuntimePermissionsForUserLPr(userId, false); 将更新的权限持久化到文件data/system/user/0/runtime-permissions.xml中
 
