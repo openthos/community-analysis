@@ -182,7 +182,7 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
    ```
    -   services/core/java/com/android/server/pm/PermissionsState.java
    
-   ```
+      ```
       559     private int grantPermission(BasePermission permission, int userId) {
 
       569         if (!permissionData.grant(userId)) {
@@ -219,7 +219,7 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
       700         
       701             return true;
       702         }   
-    ```  
+      ```  
        
       修改PermissionData 中PermissionState 的 mGranted属性值为true
      
@@ -231,7 +231,7 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
 这里开始分析ManagePermissionsActivity
 - packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/ui/ManagePermissionsActivity.java
 ```
-55             case Intent.ACTION_MANAGE_APP_PERMISSIONS: {
+ 55             case Intent.ACTION_MANAGE_APP_PERMISSIONS: {
  56                 String packageName = getIntent().getStringExtra(Intent.EXTRA_PACKAGE_NAME);
  57                 if (packageName == null) {
  58                     Log.i(LOG_TAG, "Missing mandatory argument EXTRA_PACKAGE_NAME");
