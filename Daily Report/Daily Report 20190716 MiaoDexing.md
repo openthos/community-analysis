@@ -85,7 +85,7 @@
 
 
 ```
-GrantPermissionsActivity其实是利用GroupState对象与PKMS通信，远程更新权限的，当然，如果权限都已经授予了，那么就不需要再次弹出权限申请对话框。
+GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更新权限的，当然，如果权限都已经授予了，那么就不需要再次弹出权限申请对话框。
 
 - packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/model/AppPermissionGroup.java
 ```
@@ -400,4 +400,26 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
  5872             }
 
  5920             mSettings.writeRuntimePermissionsForUserLPr(userId, true);
+```
+
+- runtime-permissions.xml 示例
+
+```
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<runtime-permissions fingerprint="OPENTHOS/openthos_x86_64/openthos:8.1.0/OPM8.190605.003/root07040705:userdebug/test-keys">
+  <pkg name="org.android_x86.analytics">^M
+    <item name="android.permission.GET_ACCOUNTS" granted="true" flags="30" />
+  </pkg>
+  <pkg name="com.android.companiondevicemanager">^M
+    <item name="android.permission.ACCESS_COARSE_LOCATION" granted="true" flags="30" />
+  </pkg>
+  <pkg name="com.campmobile.snowcamera">
+    <item name="android.permission.READ_EXTERNAL_STORAGE" granted="false" flags="1" />
+    <item name="android.permission.READ_PHONE_STATE" granted="true" flags="0" />
+    <item name="android.permission.CAMERA" granted="true" flags="1" />
+    <item name="android.permission.WRITE_EXTERNAL_STORAGE" granted="false" flags="1" />
+    <item name="android.permission.RECORD_AUDIO" granted="true" flags="0" />
+  </pkg>
+
+
 ```
