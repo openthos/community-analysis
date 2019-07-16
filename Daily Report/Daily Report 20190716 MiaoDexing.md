@@ -463,6 +463,7 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
 ```
 
    -   services/core/java/com/android/server/pm/PermissionsState.java
+   
    这里与GrantRuntimePermission类似，不过是修改PermissionData 中PermissionState 的 mGranted属性值为false
    ```
     227     public int revokeRuntimePermission(BasePermission permission, int userId) {                                                                                                                         
@@ -515,7 +516,7 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
 
 
    ```
-   最后还是mSettings.writeRuntimePermissionsForUserLPr(userId, true); 持久化到 runtime-permissions.xml文件中
+   在revokeRuntimePermission方法中，最后还是mSettings.writeRuntimePermissionsForUserLPr(userId, true); 持久化到 runtime-permissions.xml文件中
 - runtime-permissions.xml 示例
 
 ```
