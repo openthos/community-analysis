@@ -452,10 +452,69 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
  5870                 handlerPermissionOfPhyOrVir(packageName+REC_AUDIO,VIR_AUDIO,1);
  5871                 return;
  5872             }
+ ............................................................................
+ 5908             if (permissionsState.revokeRuntimePermission(bp, userId) ==                                                                                                                               
+ 5909                     PermissionsState.PERMISSION_OPERATION_FAILURE) {
+ 5910                 return;
+ 5911             }
 
+ .............................................................................
  5920             mSettings.writeRuntimePermissionsForUserLPr(userId, true);
 ```
 
+   -   services/core/java/com/android/server/pm/PermissionsState.java
+   ```
+    227     public int revokeRuntimePermission(BasePermission permission, int userId) {                                                                                                                         
+    228         enforceValidUserId(userId);
+    229         if (userId == UserHandle.USER_ALL) {
+    230             return PERMISSION_OPERATION_FAILURE;
+    231         }
+    232         return revokePermission(permission, userId);
+    233     }
+
+  
+    583     private int revokePermission(BasePermission permission, int userId) {
+    584         if (!hasPermission(permission.name, userId)) {
+    585             return PERMISSION_OPERATION_FAILURE;
+    586         }
+    587 
+    588         final boolean hasGids = !ArrayUtils.isEmpty(permission.computeGids(userId));
+    589         final int[] oldGids = hasGids ? computeGids(userId) : NO_GIDS;
+    590 
+    591         PermissionData permissionData = mPermissions.get(permission.name);
+    592 
+    593         if (!permissionData.revoke(userId)) {
+    594             return PERMISSION_OPERATION_FAILURE;
+    595         }                                                                                                                                                                                               
+
+    607 
+    608         return PERMISSION_OPERATION_SUCCESS;
+    609     }
+    
+    
+    
+    704         public boolean revoke(int userId) {                                                                                                                                                             
+    705             if (!isCompatibleUserId(userId)) {
+    706                 return false; 
+    707             } 
+    708 
+    709             if (!isGranted(userId)) { 
+    710                 return false;
+    711             }
+    712             
+    713             PermissionState userState = mUserStates.get(userId);
+    714             userState.mGranted = false;
+    715         
+    716             if (userState.isDefault()) {
+    717                 mUserStates.remove(userId);
+    718             }
+    719         
+    720             return true;
+    721         }   
+
+
+   ```
+    
 - runtime-permissions.xml 示例
 
 ```
