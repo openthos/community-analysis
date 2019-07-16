@@ -5,7 +5,7 @@
 - AppOpsManager实现的动态管理的本质是：将鉴权放在每个服务内部，比如，如果App要申请定位权限，定位服务LocationManagerService会向AppOpsService查询是否授予了App定位权限，如果需要授权，就弹出一个系统对话框让用户操作，并根据用户的操作将结果持久化在文件中，如果在Setting里设置了响应的权限，也会去更新相应的权限操作持久化文件data/system/user/0/runtime-permissions.xml，下次再次申请服务的时候，服务会再次鉴定权限。
 ## 举个例子-定位服务LocationManagerService
 ![blockchain](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/location.png)
-
+## 具体分析PackageManagerService
 - frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
 ```
 5353     @Override
@@ -304,7 +304,7 @@ GrantPermissionsActivity其实是利用GroupState对象与PKMS通信，远程更
 
 这些持久化的数据会在手机启动的时候由PMS读取,开机启动，PKMS扫描Apk，并更新package信息，检查/data/system/packages.xml是否存在，这个文件是在解析apk时由writeLP()创建的，里面记录了系统的permissions，以及每个apk的name,codePath,flags,ts,version,uesrid等信息，这些信息主要通过apk的AndroidManifest.xml解析获取，解析完apk后将更新信息写入这个文件并保存到flash，下次开机直接从里面读取相关信息添加到内存相关列表中，当有apk升级，安装或删除时会更新这个文件，packages.xml放的只包括installpermission，只要granted="true"，就是永远是取得授权的；runtimepermissiono由runtime-permissions.xml存放。
 
-
+- 这里开始分析ManagePermissionsActivity
 - packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/ui/ManagePermissionsActivity.java
 ```
 55             case Intent.ACTION_MANAGE_APP_PERMISSIONS: {
