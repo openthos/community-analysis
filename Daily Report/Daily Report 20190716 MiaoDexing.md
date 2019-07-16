@@ -399,5 +399,5 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
  5871                 return;
  5872             }
 
-
+ 5920             mSettings.writeRuntimePermissionsForUserLPr(userId, true);
 ```
