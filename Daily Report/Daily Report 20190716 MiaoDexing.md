@@ -181,7 +181,8 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
 
    ```
    -   services/core/java/com/android/server/pm/PermissionsState.java
-      ```
+   
+   ```
       559     private int grantPermission(BasePermission permission, int userId) {
 
       569         if (!permissionData.grant(userId)) {
@@ -218,7 +219,7 @@ GrantPermissionsActivity其实是利用GroupState对象与PMS通信，远程更�
       700         
       701             return true;
       702         }   
-      ```  
+    ```  
        
       修改PermissionData 中PermissionState 的 mGranted属性值为true
      
