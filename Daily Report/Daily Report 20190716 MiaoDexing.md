@@ -292,11 +292,11 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
 304             LocationUtils.showLocationDialog(getContext(), mAppPermissions.getAppLabel());
 305             return false;
 306         }
-307         ContentResolver resolver = getContext().getContentResolver();
+307        
 308         String packageName = group.getApp().packageName;
 309         if (newValue == Boolean.TRUE) {
 310             group.grantRuntimePermissions(false);
-311             Settings.Global.putString(resolver,packageName+".permission.camera","phy_camera");
+311             
 312         } else {
 313             final boolean grantedByDefault = group.hasGrantedByDefaultPermission();
 314             if (grantedByDefault || (!group.doesSupportRuntimePermissions()
@@ -313,8 +313,8 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
 325                                 (DialogInterface dialog, int which) -> {
 326                             ((SwitchPreference) preference).setChecked(false);
 327 
-328                             Settings.Global.putString(resolver,packageName+".permission.camera","vir_camera");
-329                             /*group.revokeRuntimePermissions(false);
+328                             
+329                             group.revokeRuntimePermissions(false);
 330                             if (Utils.areGroupPermissionsIndividuallyControlled(getContext(),
 331                                     group.getName())) {
 332                                 updateSummaryForIndividuallyControlledPermissionGroup(
@@ -322,7 +322,7 @@ Setting中可以针对某个应用的权限或者全部应用的权限进行管�
 334                             }
 335                             if (!grantedByDefault) {
 336                                 mHasConfirmedRevoke = true;                                                                                                                                             
-337                             }*/
+337                             }
 338                         })
 339                         .show();
 340                 return false;
