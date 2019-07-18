@@ -118,6 +118,9 @@ SENSORS |    BODY_SENSORS
 SMS | · SEND_SMS <br> · RECEIVE_SMS <br> · READ_SMS <br> · RECEIVE_WAP_PUSH <br> · RECEIVE_MMS
 STORAGE | · READ_EXTERNAL_STORAGE <br> · WRITE_EXTERNAL_STORAGE
 
+# 获取权限控制组信息
+- 获取所有用户权限列表： adb shell pm list permissions -g -u -f
+- 获取危险权限列表，每个分组申请其中一个权限即可：  adb shell pm list permissions -d -f  -g
 
 # 同步AOSP 9.0
 - repo init -u  git://192.168.0.185/android-x86/platform/manifest.git -b android-9.0.0_r45
