@@ -1,4 +1,4 @@
-# Settings 中SwitchPreference控件针对camera和micrphone权限在每次refresh时永远为"ON"状态的问题分析
+# Settings 中SwitchPreference控件针对camera和microphone权限在每次refresh时永远为"ON"状态的问题分析
 1. ./src/com/android/packageinstaller/permission/ui/handheld/AppPermissionsFragment.java
 ```
 116     @Override
@@ -104,3 +104,16 @@
 
 
 ```
+# 权限控制组
+
+Permission Group|Permissions
+---|---|
+CALENDAR| ·READ_CALENDAR  ·WRITE_CALENDAR
+CAMERA| · CAMERA
+CONTACTS|·         READ_CONTACTS·         WRITE_CONTACTS ·         GET_ACCOUNTS
+LOCATION | 	·         ACCESS_FINE_LOCATION ·         ACCESS_COARSE_LOCATION
+MICROPHONE | 	·         RECORD_AUDIO
+PHONE |·   READ_PHONE_STATE·  CALL_PHONE· READ_CALL_LOG· WRITE_CALL_LOG· ADD_VOICEMAIL· USE_SIP· PROCESS_OUTGOING_CALLS
+SENSORS |    BODY_SENSORS
+SMS | ·         SEND_SMS·         RECEIVE_SMS·         READ_SMS·         RECEIVE_WAP_PUSH·         RECEIVE_MMS
+STORAGE | ·         READ_EXTERNAL_STORAGE·         WRITE_EXTERNAL_STORAGE
