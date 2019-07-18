@@ -1,0 +1,76 @@
+1. ./src/com/android/packageinstaller/permission/ui/handheld/AppPermissionsFragment.java
+```
+116     @Override
+117     public void onResume() {
+118         super.onResume();
+119         mAppPermissions.refresh();
+120         Log.w("mdx------onResume","mAppPermissions.refresh()");
+121         loadPreferences();
+122         setPreferencesCheckedState();                                                                                                                                                                   
+123     }
+
+
+```
+
+2、 ./src/com/android/packageinstaller/permission/ui/handheld/AppPermissionsFragment.java
+```
+403   private void setPreferencesCheckedState() {                                                                                                                                                         
+404         setPreferencesCheckedState(getPreferenceScreen());
+405         if (mExtraScreen != null) {
+406             setPreferencesCheckedState(mExtraScreen);
+407         }
+408     }
+
+```
+
+3、 ./src/com/android/packageinstaller/permission/ui/handheld/AppPermissionsFragment.java
+```
+410     private void setPreferencesCheckedState(PreferenceScreen screen) {                                                                                                                                  
+411         int preferenceCount = screen.getPreferenceCount();
+412         for (int i = 0; i < preferenceCount; i++) {
+413             Preference preference = screen.getPreference(i);
+414             if (preference instanceof SwitchPreference) {
+415                 SwitchPreference switchPref = (SwitchPreference) preference;
+416                 AppPermissionGroup group = mAppPermissions.getPermissionGroup(switchPref.getKey());
+417                 if (group != null) {
+418                     switchPref.setChecked(group.areRuntimePermissionsGranted());
+419                 }
+420             }
+421         }
+422     }
+
+```
+
+4、 src/com/android/packageinstaller/permission/model/AppPermissionGroup.java
+```
+299     public boolean areRuntimePermissionsGranted() {                                                                                                                                                     
+300         return areRuntimePermissionsGranted(null);
+301     }
+```
+
+5、 src/com/android/packageinstaller/permission/model/AppPermissionGroup.java
+```
+303     public boolean areRuntimePermissionsGranted(String[] filterPermissions) {
+304         if (LocationUtils.isLocationGroupAndProvider(mName, mPackageInfo.packageName)) {
+305             return LocationUtils.isLocationEnabled(mContext);
+306         }
+307         final int permissionCount = mPermissions.size();
+308         for (int i = 0; i < permissionCount; i++) {
+309             Permission permission = mPermissions.valueAt(i);
+310             if (filterPermissions != null
+311                     && !ArrayUtils.contains(filterPermissions, permission.getName())) {
+312                 continue;
+313             }
+314             if (mAppSupportsRuntimePermissions) {
+315                 if (permission.isGranted()) {                                                                                                                                                           
+316                     return true;
+317                 }
+318             } else if (permission.isGranted() && (permission.getAppOp() == null
+319                     || permission.isAppOpAllowed()) && !permission.isReviewRequired()) {
+320                 return true;
+321             }
+322         }
+323         return false;
+324     }
+
+```
