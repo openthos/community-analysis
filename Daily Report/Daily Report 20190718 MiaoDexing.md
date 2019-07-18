@@ -117,3 +117,8 @@ PHONE |· READ_PHONE_STATE <br> · CALL_PHONE <br> · READ_CALL_LOG <br> · W
 SENSORS |    BODY_SENSORS
 SMS | · SEND_SMS <br> · RECEIVE_SMS <br> · READ_SMS <br> · RECEIVE_WAP_PUSH <br> · RECEIVE_MMS
 STORAGE | · READ_EXTERNAL_STORAGE <br> · WRITE_EXTERNAL_STORAGE
+
+
+# 同步AOSP 9.0
+- repo init -u  git://192.168.0.185/android-x86/platform/manifest.git -b android-9.0.0_r45
+- repo sync
