@@ -216,3 +216,122 @@ scanPackageLI(pkg, xxx) -> scanPackageDirtyLI(pkg, …)
 ```
 该步骤与Permission相关的的操作主要是解析pkg即PackageParser.Package里的字段，将apk相关的信息保存到PackageManagerService里或mSettings里；
 根据pkg里解析出来的信息生成PackageSetting
+```
+pkgSetting = mSettings.getPackageLPw(pkg, …)
+        PackageSetting p = getPackageLPw(name, …)
+     //如果系统第一次开机启动，那么从Setting里是拿不到PackageSetting的，这时只能新生成一个，
+     //并将它通过addPackageSettingLPw加入到mSettings.mPackages里;
+     //如果不是第一次开机，那么将会直接从Settings.mPackages里取
+```
+
+# 更新permissions
+- 分为两种情况
+  -  在读取package.xml的时候已经grant了
+  -  第一次开机，updatePermissionsLPw 会 grant相应的权限
+
+```
+updatePermissionsLPw(null, null, updateFlags)->grantPermissionsLPw(pkg, …)
+//为每个package grant所请求的permissions
+
+void grantPermissionsLPw(PackageParser.Package pkg, boolean replace, String packageOfInterest) {
+
+final PackageSetting ps = (PackageSetting) pkg.mExtras;
+if (ps == null) { return; }
+//获得package的PackageSettings
+
+PermissionsState permissionsState = ps.getPermissionsState();
+//获得package的PermissionState类
+PermissionsState origPermissions = permissionsState;
+
+final int N = pkg.requestedPermissions.size();
+for (int i=0; i<N; i++) { //遍历当前所有请求的permissions，即<uses-permission>
+    final String name = pkg.requestedPermissions.get(i);
+                   //获得permisison name
+    final BasePermission bp = mSettings.mPermissions.get(name);
+                  //根据permission name获得permission所表示的结构
+final int level = bp.protectionLevel & PermissionInfo.PROTECTION_MASK_BASE;
+                  //获得permission的等级
+switch (level) {
+    case PermissionInfo.PROTECTION_NORMAL: {grant = GRANT_INSTALL}
+    case PermissionInfo.PROTECTION_DANGEROUS: {grant = GRANT_RUNTIME;}
+    case PermissionInfo.PROTECTION_SIGNATURE: {}
+}
+
+switch (grant) {
+    case GRANT_INSTALL: {
+    permissionsState.grantInstallPermission(bp)
+         //为所有用户颁布安装permission，即生成permission对应的PermissionState
+         //并用PermissionData的mUserStates来track
+         //其实这里grant install的操作在之前 readLPw就已经执行过了，这里没什么实际用处，主要是对sharedUser 进行一些update ?????
+
+    case GRANT_RUNTIME: {
+ }
+}
+```
+
+# grant默认的runtime 权限
+```
+mPackageManagerService.systemReady();  
+int[] grantPermissionsUserIds = EMPTY_INT_ARRAY;
+for (int userId : UserManagerService.getInstance().getUserIds()) {
+    if (!mSettings.areDefaultRuntimePermissionsGrantedLPr(userId)) {
+        grantPermissionsUserIds = ArrayUtils.appendInt(
+                grantPermissionsUserIds, userId);
+    }
+}
+
+// 如果是系统第一次启动，即没有runtime-permissions.xml, 那么系统会进入grant default permission的阶段.
+
+for (int userId : grantPermissionsUserIds) {
+    mDefaultPermissionPolicy.grantDefaultPermissions(userId);
+}
+```
+- 为系统级的app grant默认runtime权限
+```
+public void grantDefaultPermissions(int userId) {
+    grantPermissionsToSysComponentsAndPrivApps(userId);
+    grantDefaultSystemHandlerPermissions(userId);
+}
+
+void grantPermissionsToSysComponentsAndPrivApps(int userId) {
+  for (PackageParser.Package pkg : mService.mPackages.values()) {
+  if (!isSysComponentOrPersistentPlatformSignedPrivAppLPr(pkg)
+        || !doesPackageSupportRuntimePermissions(pkg)
+        || pkg.requestedPermissions.isEmpty()) {
+   /*
+   过滤出特定的apk, 
+   1, sdk version >= 23的 
+   2, platform签名 
+   3, persistent privilege App进行 grant runtime权限
+   */
+    continue;
+  }
+
+  Set<String> permissions = new ArraySet<>();
+  final int permissionCount = pkg.requestedPermissions.size();
+  for (int i = 0; i < permissionCount; i++) {
+    String permission = pkg.requestedPermissions.get(i);
+    BasePermission bp = mService.mSettings.mPermissions.get(permission);
+    if (bp != null && bp.isRuntime()) {
+        permissions.add(permission);
+    }
+  }
+  if (!permissions.isEmpty()) {
+    grantRuntimePermissionsLPw(pkg, permissions, true, userId);
+ }
+
+void grantRuntimePermissionsLPw(PackageParser.Package pkg, Set<String> permissions, boolean systemFixed, boolean overrideUserChoice,  int userId) {
+ mService.grantRuntimePermission(pkg.packageName, permission, userId);
+ mService.updatePermissionFlags (permission, pkg.packageName,
+        newFlags, newFlags, userId);
+}
+
+void grantRuntimePermission(String packageName, String name, final int userId) {
+    int result = permissionsState.grantRuntimePermission(bp, userId);
+    mOnPermissionChangeListeners.onPermissionsChanged(uid);
+    mSettings.writeRuntimePermissionsForUserLPr(userId, false);
+}
+```
+# Shared User ID 的权限
+- 在packages.xml 和 runtime-permissions.xml里有一节是 <shared-user>, 表示的是这个UID所获得的权限。在packages.xml或runtime-permissions.xml里会发现如果拥有相同uid的package，它们的grant 权限和UID在shared-user里获得的权限是一样的。（因为拥有相同UID, 且签名一样的话，他们可以彼此访问数据，理所当然应该获得所有的相同的权限）。
+ - SharedUserSettings继承于SettingBase, 因此也就有PermissionsState 权限状态类
