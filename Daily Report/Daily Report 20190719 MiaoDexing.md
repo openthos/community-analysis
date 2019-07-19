@@ -43,6 +43,7 @@ PermissionsState
 ```
 ### 结论
 6、7、8权限管理未出现大的变化
+具体分析参照 https://github.com/openthos/community-analysis/blob/master/Daily%20Report/Daily%20Report%2020190716%20MiaoDexing.md
 
 ## Android 9 权限管理
 1、 授权有两个地方，一个是设置里面的入口，还有一个是申请权限弹框界面的入口，代码都在PackageInstaller里面，分别是ManagePermissionsActivity和GrantPermissionsActivity。
