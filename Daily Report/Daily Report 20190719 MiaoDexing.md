@@ -197,4 +197,4 @@ services/core/java/com/android/server/pm/PermissionsState.java
   -  生成permission对应的PermissionData，并用加入到PermissionsState mPermissions里
   -  针对用户id,grant权限，生成PermissionState对象，并用mUserStates来track.
  
- - 注意：注意：如果是系统第一次开机的时候，系统里是没有package.xml的，那么将不会生成package对应的PackageSetting, 在这种情况下，PackageSetting会在扫描apk文件时进行生成.
+ - 注意：如果是系统第一次开机的时候，系统里是没有package.xml的，那么将不会生成package对应的PackageSetting, 在这种情况下，PackageSetting会在扫描apk文件时进行生成.
