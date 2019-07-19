@@ -1,6 +1,17 @@
 # 权限管理（PMS）分析
 ## 前言
 重要函数和数据结构说明
+
+### 数据结构说明
+PermissionsState 
+```
+784     public static final class PermissionState {
+785         private final String mName;   //权限名称
+786         private boolean mGranted;     //是否授予
+787         private int mFlags;
+
+```
+### 函数说明
 1. checkUidPermission
 ```
 此方法皆是由上层应用在请求相应service，其service来向AppOpsService查询是否授权，最后由PMS来完成鉴权
@@ -16,14 +27,13 @@
 264      * @return Whether the user has the permission.
 265      */
 ```
-
-数据结构 | 说明
-PermissionsState 
+3、grantRuntimePermission
 ```
-784     public static final class PermissionState {
-785         private final String mName;   //
-786         private boolean mGranted;
-787         private int mFlags;
-
+授权最终调用方法，修改PermissionState 的 mGranted属性值为true，最终持久化到runtime-permissions.xml
 ```
+4、revokeRuntimePermission
+```
+权限未授权调用方法，修改PermissionState 的 mGranted属性值为false，并持久化到runtime-permissions.xml
+```
+
 
