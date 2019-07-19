@@ -41,10 +41,10 @@ PermissionsState
 该函数的主要作用是
 生成permission对应的PermissionData，并加入到PermissionsState mPermissions里
 ```
-## 结论
+### 结论
 6、7、8权限管理未出现大的变化
 
-# Android 9 权限管理
+## Android 9 权限管理
 1、 授权有两个地方，一个是设置里面的入口，还有一个是申请权限弹框界面的入口，代码都在PackageInstaller里面，分别是ManagePermissionsActivity和GrantPermissionsActivity。
 2、 GrantPermissionsActivity
 ```
@@ -77,7 +77,8 @@ packages/apps/PackageInstaller/src/com/android/packageinstaller/permission/ui/Gr
 
 ```
 授权依然是调用的groupState.mGroup.grantRuntimePermissions，未授权还是groupState.mGroup.revokeRuntimePermissions
-2 、groupState.mGroup.grantRuntimePermissions
+
+2、groupState.mGroup.grantRuntimePermissions
 ```
 src/com/android/packageinstaller/permission/model/AppPermissionGroup.java
 
@@ -181,5 +182,126 @@ services/core/java/com/android/server/pm/permission/PermissionsState.java
 702             
 703             return true;
 704         }
+
+```
+
+
+## Android 10 权限管理
+1、入口  GrantPermissionsActivity
+```
+src/com/android/packageinstaller/permission/ui/GrantPermissionsActivity.java
+477         GroupState groupState = mRequestGrantPermissionGroups.get(name);
+478         if (groupState != null && groupState.mGroup != null) {
+479             if (granted) {
+480                 groupState.mGroup.grantRuntimePermissions(doNotAskAgain,
+481                         groupState.affectedPermissions);
+482                 groupState.mState = GroupState.STATE_ALLOWED;
+483             } else {
+484                 groupState.mGroup.revokeRuntimePermissions(doNotAskAgain,
+485                         groupState.affectedPermissions);
+486                 groupState.mState = GroupState.STATE_DENIED;
+487 
+488                 int numRequestedPermissions = mRequestedPermissions.length;
+489                 for (int i = 0; i < numRequestedPermissions; i++) {
+490                     String permission = mRequestedPermissions[i];
+491 
+492                     if (groupState.mGroup.hasPermission(permission)) {
+493                         EventLogger.logPermission(
+494                                 MetricsProto.MetricsEvent.ACTION_PERMISSION_DENIED, permission,
+495                                 mAppPermissions.getPackageInfo().packageName);
+496                     }
+497                 }
+498             }
+499             updateGrantResults(groupState.mGroup);
+500         }
+
+```
+
+2、 groupState.mGroup.grantRuntimePermissions
+```
+357     public boolean grantRuntimePermissions(boolean fixedByTheUser, String[] filterPermissions) {
+
+
+386                 // Grant the permission if needed.
+387                 if (!permission.isGranted()) {                                                                                                                                                          
+388                     permission.setGranted(true);
+389                     mPackageManager.grantRuntimePermission(mPackageInfo.packageName,
+390                             permission.getName(), mUserHandle);
+391                 }
+
+
+```
+3、 mPackageManager.grantRuntimePermission
+```
+1372     private void grantRuntimePermission(String permName, String packageName, boolean overridePolicy,
+1373             int callingUid, final int userId, PermissionCallback callback) {
+
+
+1453         final int result = permissionsState.grantRuntimePermission(bp, userId);       
+```
+4、 permissionsState.grantRuntimePermission
+```
+services/core/java/com/android/server/pm/permission/PermissionsState.java
+
+220     public int grantRuntimePermission(BasePermission permission, int userId) {                                                                                                                          
+221         enforceValidUserId(userId);
+222         if (userId == UserHandle.USER_ALL) {
+223             return PERMISSION_OPERATION_FAILURE;
+224         }
+225         return grantPermission(permission, userId);
+226     }
+
+```
+5、 grantPermission
+```
+600     private int grantPermission(BasePermission permission, int userId) {                                                                                                                                
+601         if (hasPermission(permission.getName(), userId)) {
+602             return PERMISSION_OPERATION_FAILURE;
+603         }   
+604         
+605         final boolean hasGids = !ArrayUtils.isEmpty(permission.computeGids(userId));
+606         final int[] oldGids = hasGids ? computeGids(userId) : NO_GIDS;
+607 
+608         PermissionData permissionData = ensurePermissionData(permission);
+609 
+610         if (!permissionData.grant(userId)) {
+611             return PERMISSION_OPERATION_FAILURE;
+612         }
+613 
+614         if (hasGids) {
+615             final int[] newGids = computeGids(userId);
+616             if (oldGids.length != newGids.length) {
+617                 return PERMISSION_OPERATION_SUCCESS_GIDS_CHANGED; 
+618             }
+619         }
+620             
+621         return PERMISSION_OPERATION_SUCCESS;
+622     }
+
+```
+6、 permissionData.grant
+```
+
+
+737         public boolean grant(int userId) {                                                                                                                                                              
+738             if (!isCompatibleUserId(userId)) {
+739                 return false;
+740             }
+741 
+742             if (isGranted(userId)) {
+743                 return false; 
+744             }
+745         
+746             PermissionState userState = mUserStates.get(userId);
+747             if (userState == null) {
+748                 userState = new PermissionState(mPerm.getName());
+749                 mUserStates.put(userId, userState);
+750             }
+751         
+752             userState.mGranted = true;
+753             
+754             return true;
+755         }  
+
 
 ```
