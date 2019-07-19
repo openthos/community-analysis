@@ -198,3 +198,23 @@ services/core/java/com/android/server/pm/PermissionsState.java
   -  针对用户id,grant权限，生成PermissionState对象，并用mUserStates来track.
  
  - 注意：如果是系统第一次开机的时候，系统里是没有package.xml的，那么将不会生成package对应的PackageSetting, 在这种情况下，PackageSetting会在扫描apk文件时进行生成.
+
+# 扫描系统apk文件，解析apk文件
+1、 
+```
+scanDirLI -> scanPackageLI(file, …) ->
+   pkg = pp.parsePackage(scanFile, parseFlags); //解析apk文件
+      parseClusterPackage
+      pkg = parseBaseApk(baseApk, assets, flags);
+        PackageParser.Package pkg = parseBaseApk(res, …) //解析apk中的AndroidManifest.xml
+```
+其中PackageParser.Package代表一个解析出来的apk, 而PackageParser指的是一个解析类。
+
+2、 
+```
+scanPackageLI(pkg, xxx) -> scanPackageDirtyLI(pkg, …)
+```
+该步骤
+
+与Permission相关的的操作主要是解析pkg即PackageParser.Package里的字段，将apk相关的信息保存到PackageManagerService里或mSettings里；
+根据pkg里解析出来的信息生成PackageSetting
