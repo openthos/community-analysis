@@ -153,9 +153,46 @@ services/core/java/com/android/server/pm/PermissionsState.java
 186         return grantPermission(permission, UserHandle.USER_ALL);                                                                                                                                        
 187     }        
 
+
+
+559     private int grantPermission(BasePermission permission, int userId) {                                                                                                                                
+560         if (hasPermission(permission.name, userId)) {
+561             return PERMISSION_OPERATION_FAILURE;
+562         }
+563 
+564         final boolean hasGids = !ArrayUtils.isEmpty(permission.computeGids(userId));
+565         final int[] oldGids = hasGids ? computeGids(userId) : NO_GIDS;
+566 
+567         PermissionData permissionData = ensurePermissionData(permission);
+568 
+569         if (!permissionData.grant(userId)) {
+570             return PERMISSION_OPERATION_FAILURE;
+571         }
+572     
+573         if (hasGids) {
+574             final int[] newGids = computeGids(userId);
+575             if (oldGids.length != newGids.length) {
+576                 return PERMISSION_OPERATION_SUCCESS_GIDS_CHANGED;
+577             }
+578         }
+579 
+580         return PERMISSION_OPERATION_SUCCESS;
+581     }
+
+
+
+ public PermissionData(PermissionData other) {
+658             this(other.mPerm);
+659             final int otherStateCount = other.mUserStates.size();
+660             for (int i = 0; i < otherStateCount; i++) {
+661                 final int otherUserId = other.mUserStates.keyAt(i);
+662                 PermissionState otherState = other.mUserStates.valueAt(i);                                                                                                                              
+663                 mUserStates.put(otherUserId, new PermissionState(otherState));
+664             }
+
 ```
 
 - 这些安装权限是apk在安装时自动grant的，都是normal的等级，不是dangeous权限。
-该函数的主要作用是
+该函数的主要作用是:
   -  生成permission对应的PermissionData，并用加入到PermissionsState mPermissions里
-  -  对用户id,grant权限，即生成PermissionState对象，并用mUserStates来track.
+  -  针对用户id,grant权限，生成PermissionState对象，并用mUserStates来track.
