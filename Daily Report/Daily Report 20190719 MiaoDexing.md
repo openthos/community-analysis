@@ -214,7 +214,5 @@ scanDirLI -> scanPackageLI(file, …) ->
 ```
 scanPackageLI(pkg, xxx) -> scanPackageDirtyLI(pkg, …)
 ```
-该步骤
-
-与Permission相关的的操作主要是解析pkg即PackageParser.Package里的字段，将apk相关的信息保存到PackageManagerService里或mSettings里；
+该步骤与Permission相关的的操作主要是解析pkg即PackageParser.Package里的字段，将apk相关的信息保存到PackageManagerService里或mSettings里；
 根据pkg里解析出来的信息生成PackageSetting
