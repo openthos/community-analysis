@@ -36,5 +36,6 @@ PermissionsState
 权限未授权调用方法，修改PermissionState 的 mGranted属性值为false，并持久化到runtime-permissions.xml
 ```
 
-## 结论，6、7、8权限管理未出现大的变化
+## 结论
+6、7、8权限管理未出现大的变化
 
