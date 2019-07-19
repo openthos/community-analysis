@@ -157,6 +157,5 @@ services/core/java/com/android/server/pm/PermissionsState.java
 
 - 这些安装权限是apk在安装时自动grant的，都是normal的等级，不是dangeous权限。
 该函数的主要作用是
-
--   生成permission对应的PermissionData，并用加入到PermissionsState mPermissions里
--   对用户id,grant权限，即生成PermissionState对象，并用mUserStates来track.
+  -  生成permission对应的PermissionData，并用加入到PermissionsState mPermissions里
+  -  对用户id,grant权限，即生成PermissionState对象，并用mUserStates来track.
