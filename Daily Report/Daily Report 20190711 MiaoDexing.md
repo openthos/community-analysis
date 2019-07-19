@@ -1,4 +1,4 @@
-# 解决文件拷贝后仍无法操作的问题，目前仍在探索中
+# 解决文件拷贝后仍无法操作的问题
 - 在frameworks/base/packages/SettingsProvider/src/com/android/providers/settings/SettingsState.java的doWriteState()方法中完成文件拷贝和权限更改
 ```
  644         if (wroteState) {                                                                                                                                                                              
