@@ -8,7 +8,7 @@ PermissionsState
 784     public static final class PermissionState {
 785         private final String mName;   //权限名称
 786         private boolean mGranted;     //是否授予
-787         private int mFlags;
+787         private int mFlags;           //最近修改权限的user的flag
 
 ```
 ### 函数说明
