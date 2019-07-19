@@ -108,6 +108,10 @@ services/core/java/com/android/server/pm/PackageManagerService.java
 
 
 1453         final int result = permissionsState.grantRuntimePermission(bp, userId);  
+
+1471         if (callback != null) {                                                                                                                                                                        
+1472             callback.onPermissionGranted(uid, userId); 
+1473         }
 ```
 3、permissionsState.grantRuntimePermission
 ```
@@ -182,6 +186,20 @@ services/core/java/com/android/server/pm/permission/PermissionsState.java
 702             
 703             return true;
 704         }
+
+```
+6、 最后调用callback.onPermissionGranted(uid, userId); 持久化数据
+```
+ 1908         @Override
+ 1909         public void onPermissionGranted(int uid, int userId) {
+ 1910             mOnPermissionChangeListeners.onPermissionsChanged(uid);
+ 1911 
+ 1912             // Not critical; if this is lost, the application has to request again.
+ 1913             synchronized (mPackages) {
+ 1914                 mSettings.writeRuntimePermissionsForUserLPr(userId, false);
+ 1915             }
+ 1916         }
+
 
 ```
 ### 变化
@@ -307,6 +325,18 @@ services/core/java/com/android/server/pm/permission/PermissionsState.java
 754             return true;
 755         }  
 
+
+```
+7、最后持久化数据
+```
+ 1915         public void onPermissionGranted(int uid, int userId) {
+ 1916             mOnPermissionChangeListeners.onPermissionsChanged(uid);
+ 1917 
+ 1918             // Not critical; if this is lost, the application has to request again.
+ 1919             synchronized (mPackages) {
+ 1920                 mSettings.writeRuntimePermissionsForUserLPr(userId, false);                                                                                                                           
+ 1921             }
+ 1922         }
 
 ```
 ### 变化
