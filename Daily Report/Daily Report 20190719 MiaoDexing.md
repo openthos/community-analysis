@@ -35,7 +35,12 @@ PermissionsState
 ```
 权限未授权调用方法，修改PermissionState 的 mGranted属性值为false，并持久化到runtime-permissions.xml
 ```
-
+5、grantInstallPermission
+```
+这些安装权限是apk在安装时自动grant的，都是normal的等级，不是dangeous权限。
+该函数的主要作用是
+生成permission对应的PermissionData，并加入到PermissionsState mPermissions里
+```
 ## 结论
 6、7、8权限管理未出现大的变化
 
