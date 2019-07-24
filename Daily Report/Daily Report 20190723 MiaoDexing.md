@@ -1,3 +1,23 @@
+# NDK开发camera流程
+- 调用的相关文件有 CameraActivity.java(上层应用)  --->  Camera.java  --->  android_android_Camera.java (JNI) --->     Camera.java   --->  CameraBase.cpp   --->  ServiceManaager.java  --->   CameraService.cpp  --->  CameraClient.cpp  --->  CameraHardwareInterface.cpp(HWI调用接口)
+
+- 基于NDK开发，使用自己封装PMS方法完成鉴权
+```
+core/java/android/hardware/Camera.java
+
+ public static Camera open(int cameraId) {
+129 +        if (ActivityThread.CameraPermissionInfo)
+130 +        {
+131 +            SystemProperties.set(CAMERA_USE_FAKE, VIR_CAMERA);
+132 +        } else {
+133 +            SystemProperties.set(CAMERA_USE_FAKE, PHY_CAMERA);                                                                                                                                         
+134 +        }
+135 +
+136          return new Camera(cameraId);
+137      }
+
+```
+
 # 错误信息 
 CameraHardwareInterface: dataCallback: memory pool ID 16 not found
 
