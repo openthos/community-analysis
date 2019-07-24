@@ -1,4 +1,4 @@
-# NDK开发camera流程
+# NDK开发camera调用流程
 - 调用的相关文件有 CameraActivity.java(上层应用)  --->  Camera.java  --->  android_android_Camera.java (JNI) --->     Camera.java   --->  CameraBase.cpp   --->  ServiceManaager.java  --->   CameraService.cpp  --->  CameraClient.cpp  --->  CameraHardwareInterface.cpp(HWI调用接口)
 
 - 基于NDK开发，使用自己封装PMS方法完成鉴权
