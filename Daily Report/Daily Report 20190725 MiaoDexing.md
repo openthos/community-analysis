@@ -86,3 +86,11 @@
 
       }
      ```
+ - 这个回调里面有4个方法；
+  -  onLocationChanged：当位置发生改变后就会回调该方法，经纬度相关信息存在Location里面；
+  -  onStatusChanged：我们所采用的provider状态改变时会回调，该状态有3种；
+  -  LocationProvider.OUT_OF_SERVICE = 0：无服务
+  -  LocationProvider.AVAILABLE = 2：provider可用
+  -  LocationProvider.TEMPORARILY_UNAVAILABLE = 1：provider不可用
+  -  onProviderEnabled：当provider可用时被触发，比如定位模式切换到了使用精确位置时GPSProvider就会回调该方法；
+  -  onProviderDisabled：当provider不可用时被触发，比如定位模式切换到了使用使用网络定位时GPSProvider就会回调该方法；
