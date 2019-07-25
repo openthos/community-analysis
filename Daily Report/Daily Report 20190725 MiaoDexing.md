@@ -18,6 +18,7 @@
     缺点：精确度不高；
    - PASSIVE_PROVIDER：被动接收更新地理位置信息，而不用自己请求地理位置信息。 
      PASSIVE_PROVIDER 返回的位置是通过其他 providers 产生的，可以查询 getProvider() 方法决定位置更新的由来，需要 ACCESS_FINE_LOCATION 权限，但是如果未启用 GPS，则此 provider 可能只返回粗略位置匹配；
+   
    3、 获取provider的方法有getProviders，getAllProviders，getBestProvider（根据一组条件来返回合适的provider）
    ```
    List<String> list = locationManager.getProviders(true);
@@ -62,26 +63,26 @@
         }
     }
    ```
-   打印出来的结果就是passive，gps，network；
-   4、 注册一个位置监听器来接受结果
-   ```
-   private final class MyLocationListener implements LocationListener{
-   
-    public void onLocationChanged(Location location) {
-        Log.e("mdx", "onLocationChanged" + location.toString());
-    }
 
-    public void onStatusChanged(String provider, int status, Bundle extras) {
-        Log.e("mdx", "onStatusChanged" + status);
-    }
+4、 注册一个位置监听器来接受结果
+    ```
+     private final class MyLocationListener implements LocationListener{
 
-    public void onProviderEnabled(String provider) {
-        Log.e("mdx", "onProviderEnabled");
-    }
+      public void onLocationChanged(Location location) {
+          Log.e("mdx", "onLocationChanged" + location.toString());
+      }
 
-    public void onProviderDisabled(String provider) {
-        Log.e("mdx", "onProviderDisabled");
-    }
+      public void onStatusChanged(String provider, int status, Bundle extras) {
+          Log.e("mdx", "onStatusChanged" + status);
+      }
 
-}
-   ```
+      public void onProviderEnabled(String provider) {
+          Log.e("mdx", "onProviderEnabled");
+      }
+
+      public void onProviderDisabled(String provider) {
+          Log.e("mdx", "onProviderDisabled");
+      }
+
+      }
+     ```
