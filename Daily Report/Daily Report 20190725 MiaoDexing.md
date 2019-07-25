@@ -105,6 +105,7 @@
 - 上层APP通过获得LocationManager从而获得最合适的Provider，应用的位置信息都是来自provider；应用是通过设置listener的方式来获得到Location，是被动的获取，而不是主动的获取。
 ### 问题：
 1、 上层应用只是知道从合适的Provider中获得数据，具体数据是从哪个设备中获得的应用是不清楚的；而想要获得GpsProvider，必须有对应的设备，目前的PC没有GPS，因此，需要我们虚拟一个GPS设备，但此设备只能产生虚拟数据，没有真实数据，也就谈不上虚拟设备和物理设备切换了！
+
 2、 PASSIVE_PROVIDER 返回的位置是通过其他 providers 产生的，也就是说provider并不是和底层硬件是一一对应的，如何清楚地知道当前使用的provider是对应的哪一个设备？
 
 - 流程图：
