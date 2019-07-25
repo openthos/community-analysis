@@ -101,3 +101,7 @@
      locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5,10, locationListener);
     }
   ```
+### 小结：
+- 上层APP通过获得LocationManager从而获得最合适的Provider，应用的位置信息都是来自provider；应用是通过设置listener的方式来获得到Location，是被动的获取，而不是主动的获取。
+- 流程图：
+![blockchain](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/GpsLocation.png）
