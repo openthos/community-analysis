@@ -10,7 +10,7 @@
       LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
      ```
    2、 了解LocationProvider：它是位置信息提供者，系统一般提供三种方式获取地理位置信息：
-   - GPS_PROVIDER：通过 GPS 来获取地理位置的经纬度信息；
+   - GPS_PROVIDER：通过 GPS 来获取地理位置的经纬度信息；<br>
     优点：获取地理位置信息精确度高；<br>
     缺点：只能在户外使用，获取经纬度信息耗时，耗电；<br>
    - NETWORK_PROVIDER：通过移动网络的基站或者 Wi-Fi 来获取地理位置；<br>
@@ -86,7 +86,7 @@
 
       }
      ```
- - 这个回调里面有4个方法；
+- 这个回调里面有4个方法；
   -  onLocationChanged：当位置发生改变后就会回调该方法，经纬度相关信息存在Location里面；
   -  onStatusChanged：我们所采用的provider状态改变时会回调，该状态有3种；
   -  LocationProvider.OUT_OF_SERVICE = 0：无服务
