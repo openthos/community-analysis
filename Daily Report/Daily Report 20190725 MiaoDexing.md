@@ -94,3 +94,10 @@
   -  LocationProvider.TEMPORARILY_UNAVAILABLE = 1：provider不可用
   -  onProviderEnabled：当provider可用时被触发，比如定位模式切换到了使用精确位置时GPSProvider就会回调该方法；
   -  onProviderDisabled：当provider不可用时被触发，比如定位模式切换到了使用使用网络定位时GPSProvider就会回调该方法；
+
+ 5、 获取位置信息，调用监听方法，不过在获取位置前先判断一下要调用的provider是否可用；
+  ```
+    if (mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+     locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5,10, locationListener);
+    }
+  ```
