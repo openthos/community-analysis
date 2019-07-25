@@ -108,6 +108,22 @@
 
 2、 PASSIVE_PROVIDER 返回的位置是通过其他 providers 产生的，也就是说provider并不是和底层硬件是一一对应的，如何清楚地知道当前使用的provider是对应的哪一个设备？
 
-- 流程图：
-
+## 定位服务源码分析
+- 下图是定位服务架构图，先从宏观上有个了解。如图一共分为四层，每层都依赖下面一层完成其所需提供的服务
 ![blockchain](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/GpsLocation.png)
+
+  -   应用层：是android.location包中包含的内容，主要通过LocationManager来进行方法调用
+  -   框架层：这一层包含了系统服务的实现，LocationManager通过Binder机制来和LocationManagerService进行通讯，LocationManagerService会选择合适的provider来提供位置，其中LocationProviderProxy的一个实现就是NLP，可以理解为LocationProviderProxy和GeocoderProxy都是一个空壳，如果没有第三方实现他们，那么将不提供服务，如果使用了GpsLocationProvider则会去调用硬件来获取位置；
+  -   共享库层：GpsLocationProvider通过JNI来调用本层libgps.so中的C++代码；
+  -   Linux内核层：C++代码最终去调用GPS硬件来获取位置；
+### 具体分析代码
+#### tionManager分析
+- App调用定位接口是通过LocationManager的API，其中很多方法都是代理了service的一些方法，这个service的声明类型是ILocationManager，这个对象就是代理对象，很显然是AIDL的调用，具体实现类则是LocationManagerService，LocationManager和LocationManagerService就是通过Binder 机制来进行通讯的。
+- LocationManager提供的主要方法有：
+1、 etLastKnownLocation：获取上一次缓存的位置，这个方法不会发起定位请求，返回的是上一次的位置信息，但此前如果没有位置更新的话，返回的位置信息可能是错误的；
+2、 equestSingleUpdate：只请求一次定位，会发起位置监听，该方法要在主线程上执行，可以传入Listener或广播来接收位置；
+3、 equestLocationUpdates：持续请求定位，根据传入的时间间隔和位置差进行回调，该方法要在主线程上执行，可以传入Listener或广播来接收位置；
+4、 emoveUpdates：移除定位请求，传入Listener；
+5、 ddProximityAlert：添加一个地理围栏，这是一个圆形的围栏；
+6、 etProvider：获取Provider，可以指定条件，也可以根据名字来获取；
+7、 endExtraCommand：给系统发送辅助指令；
