@@ -117,7 +117,7 @@
   -   共享库层：GpsLocationProvider通过JNI来调用本层libgps.so中的C++代码；
   -   Linux内核层：C++代码最终去调用GPS硬件来获取位置；
 ### 具体分析代码
-#### tionManager分析
+#### LocationManager分析
 - App调用定位接口是通过LocationManager的API，其中很多方法都是代理了service的一些方法，这个service的声明类型是ILocationManager，这个对象就是代理对象，很显然是AIDL的调用，具体实现类则是LocationManagerService，LocationManager和LocationManagerService就是通过Binder 机制来进行通讯的。
 - LocationManager提供的主要方法有：
 1、 etLastKnownLocation：获取上一次缓存的位置，这个方法不会发起定位请求，返回的是上一次的位置信息，但此前如果没有位置更新的话，返回的位置信息可能是错误的；<br>
@@ -127,5 +127,62 @@
 5、 ddProximityAlert：添加一个地理围栏，这是一个圆形的围栏；<br>
 6、 etProvider：获取Provider，可以指定条件，也可以根据名字来获取；<br>
 7、 endExtraCommand：给系统发送辅助指令；<br>
+- 这些方法的最终都是由service来实现的，发起定位时传入的Listener经过包装成AIDL接口传给了服务端，因为它们是需要跨进程来进行通讯的。
+- 这里分析一下requestSingleUpdate方法，这个方法主要是传一个Listener，然后内部创建了一个LocationRequest，最小时间和最小距离都是0，还给singleShot设置为了true，并最终调用requestLocationUpdates方法，所以requestLocationUpdates才是核心，而所有定制的参数都封装成了LocationRequest。
+```
+687     @RequiresPermission(anyOf = {ACCESS_COARSE_LOCATION, ACCESS_FINE_LOCATION})
+ 688     public void requestSingleUpdate(String provider, LocationListener listener, Looper looper) {                                                                                                       
+ 689         checkProvider(provider);
+ 690         checkListener(listener);
+ 691 
+ 692         LocationRequest request = LocationRequest.createFromDeprecatedProvider(
+ 693                 provider, 0, 0, true);
+ 694         requestLocationUpdates(request, listener, looper, null);
+ 695     }
 
-这些方法的最终都是由service来实现的，发起定位时传入的Listener经过包装成AIDL接口传给了服务端，因为它们是需要跨进程来进行通讯的。
+ 879     private void requestLocationUpdates(LocationRequest request, LocationListener listener,                                                                                                            
+ 880             Looper looper, PendingIntent intent) {
+ 881         
+ 882         String packageName = mContext.getPackageName();
+ 883         
+ 884         // wrap the listener class
+ 885         ListenerTransport transport = wrapListener(listener, looper);
+ 886     
+ 887         try {
+ 888             mService.requestLocationUpdates(request, transport, intent, packageName);
+ 889        } catch (RemoteException e) {
+ 890            throw e.rethrowFromSystemServer();
+ 891        }
+ 892     }
+
+```
+- createFromDeprecatedProvider
+```
+170     /** @hide */
+171     @SystemApi   
+172     public static LocationRequest createFromDeprecatedProvider(String provider, long minTime,
+173             float minDistance, boolean singleShot) {
+174         if (minTime < 0) minTime = 0;
+175         if (minDistance < 0) minDistance = 0;
+176 
+177         int quality;
+178         if (LocationManager.PASSIVE_PROVIDER.equals(provider)) {
+179             quality = POWER_NONE;
+180         } else if (LocationManager.GPS_PROVIDER.equals(provider)) {
+181             quality = ACCURACY_FINE;
+182         } else {
+183             quality = POWER_LOW;
+184         }                                                                                                                                                                                               
+185 
+186         LocationRequest request = new LocationRequest()
+187             .setProvider(provider)
+188             .setQuality(quality)
+189             .setInterval(minTime)
+190             .setFastestInterval(minTime)
+191             .setSmallestDisplacement(minDistance);
+192         if (singleShot) request.setNumUpdates(1);
+193         return request;
+194     }
+
+```
+这里把传来的最小时间频率，最小距离差值存下，设置了定位的精度类型，如果singleShot为true，会设置locationRequest.setNumUpdates(1)，numUpdate这个变量的默认值是一个很大的数，Integer.MAX_VALUE = 0x7fffffff，而单次定位g该值就设为了1，这个点在分析service的代码时会用到。
