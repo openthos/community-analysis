@@ -610,6 +610,75 @@ if (notifyLocation != null) {
 ### 问题
 1、 通过分析源码我们知道Location数据在Framework是通过回调客户端Listener或者广播的形式将数据回传到应用层，而且数据是按照一定时间间隔无差别的回传，同一时刻多个应用可以同时接收数据，如何做到真假数据切换
 
+
+## LocationManagerService服务的启动以及初始化过程
+- SystemServer.java的startOtherServices方法中添加LocationManagerService方法的代码如下：
+```
+1178                     location = new LocationManagerService(context);
+1179                     ServiceManager.addService(Context.LOCATION_SERVICE, location);
+
+```
+- 添加gps服务到系统之后, SystemServer.java的startOtherServices方法中调用LocationManagerService的systemRunning方法,完成LocationManagerService服务的初始化。
+```
+1778             try {
+1779                 if (locationF != null) locationF.systemRunning();                                                                                                                                      
+1780             } catch (Throwable e) {
+1781                 reportWtf("Notifying Location Service running", e);
+1782             }
+
+```
+- systemRunning方法中会调用loadProvidersLocked方法
+```
+ 345             // prepare providers
+ 346             loadProvidersLocked();
+ 347             updateProvidersLocked();
+
+```
+- loadProvidersLocked方法主要是添加设备上支持的GPS定位Provider,
+```
+ 587     private void loadProvidersLocked() {                                                                                                                                                               
+ 588         // create a passive location provider, which is always enabled
+ 589         PassiveProvider passiveProvider = new PassiveProvider(this);
+ 590         addProviderLocked(passiveProvider);
+ 591         mEnabledProviders.add(passiveProvider.getName());
+ 592         mPassiveProvider = passiveProvider;
+ 593 
+ 594         if (GnssLocationProvider.isSupported()) {
+ 595             // Create a gps location provider
+ 596             GnssLocationProvider gnssProvider = new GnssLocationProvider(mContext, this,
+ 597                     mLocationHandler.getLooper());
+ 598             mGnssSystemInfoProvider = gnssProvider.getGnssSystemInfoProvider();
+ 599             mGnssBatchingProvider = gnssProvider.getGnssBatchingProvider();
+ 600             mGnssMetricsProvider = gnssProvider.getGnssMetricsProvider();
+ 601             mGnssStatusProvider = gnssProvider.getGnssStatusProvider();
+ 602             mNetInitiatedListener = gnssProvider.getNetInitiatedListener();
+ 603             addProviderLocked(gnssProvider);
+ 604             mRealProviders.put(LocationManager.GPS_PROVIDER, gnssProvider);
+ 605             mGnssMeasurementsProvider = gnssProvider.getGnssMeasurementsProvider();
+ 606             mGnssNavigationMessageProvider = gnssProvider.getGnssNavigationMessageProvider();
+ 607             mGpsGeofenceProxy = gnssProvider.getGpsGeofenceProxy();
+ 608         }
+
+
+```
+设备如果支持GpsLocationProvider,就会新建GpsLocationProvider对象,然后添加到mProviders和mProvidersByName等list中。
+
+- isSupported方法做出判断
+```
+ 579     public static boolean isSupported() {
+ 580         return native_is_supported();                                                                                                                                                                  
+ 581     }
+ 582 
+
+```
+- native_is_supported是一个native方法
+```
+private static native boolean native_is_supported();
+```
+这里肯定是要去加载gps的.so文件，获得当前设备是否支持gps
+### 问题：
+1、当前PC基本没有gps设备，如果自己构建HAL让系统认为存在gps，这里根本谈不上真假设备了，因为只有一个假设备；但是假如当前设备存在gps，那么系统在启动时已经加载了对应的gps.so，如何区分真假设备？除非在一个HAL中同时支持真假gps。
+
 ## HAL Implementation
 
 GPS HAL在AOSP中的示例实现可参考qemu的gps HAL，此实现并没有从Linux设备节点获取NMEA数据，而是通过QEMU Pipe从模拟器中获取用户指定的虚拟位置数据的NMEA数据，通过epoll监听pipe，产生控制数据时，进行对应处理；产生位置数据时，解析后交由Location Provider处理。
@@ -845,6 +914,8 @@ struct GnssLocation {
 ```
 ### 问题
 GPS产生数据面向的是provider，app并不知道数据从哪里来，只知道数据是来自Provider
+
+
 # 总结HAL鉴权不可行原因
 
 - 1、 APP获得的数据来自Provider，Provider将来自HAL的数据进行封装，APP和HAL并没有直接关系，所以APP什么时候获得真假数据，只有PMS知道其是否有权限从而去区分，HAL根本不清楚
