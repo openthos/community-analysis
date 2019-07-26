@@ -609,3 +609,240 @@ if (notifyLocation != null) {
 ```
 ### 问题
 1、 通过分析源码我们知道Location数据在Framework是通过回调客户端Listener或者广播的形式将数据回传到应用层，而且数据是按照一定时间间隔无差别的回传，同一时刻多个应用可以同时接收数据，如何做到真假数据切换
+
+## HAL Implementation
+
+GPS HAL在AOSP中的示例实现可参考qemu的gps HAL，此实现并没有从Linux设备节点获取NMEA数据，而是通过QEMU Pipe从模拟器中获取用户指定的虚拟位置数据的NMEA数据，通过epoll监听pipe，产生控制数据时，进行对应处理；产生位置数据时，解析后交由Location Provider处理。
+
+文件位于：
+
+```
+device/generic/goldfish/gps/gps_qemu.c
+```
+
+由hw_module_t的定义HAL的名称、版本、作者，及方法集合等。入口点为gps_module_methods，类型为gps_module_methods。
+
+```
+struct hw_module_t HAL_MODULE_INFO_SYM = {
+    .tag = HARDWARE_MODULE_TAG,
+    .version_major = 1,
+    .version_minor = 0,
+    .id = GPS_HARDWARE_MODULE_ID,
+    .name = "Goldfish GPS Module",
+    .author = "The Android Open Source Project",
+    .methods = &gps_module_methods,
+};
+```
+
+在HAL中仅指定了open方法的实现。
+```
+static struct hw_module_methods_t gps_module_methods = {
+    .open = open_gps
+};
+```
+
+在open_gps方法中设置gps的方法集合。
+
+```
+static int open_gps(const struct hw_module_t* module,
+                    char const* __unused name,
+                    struct hw_device_t** device)
+{
+    ...
+    dev->get_gps_interface = gps__get_gps_interface;
+    ...
+}
+```
+方法位于qemuGpsInterface结构体。
+
+```
+const GpsInterface* gps__get_gps_interface(struct gps_device_t* __unused dev)
+{
+    return &qemuGpsInterface;
+}
+```
+
+qemuGpsInterface结构体中包含初始化、启动、关闭等操作。
+
+```
+static const GpsInterface  qemuGpsInterface = {
+    sizeof(GpsInterface),
+    qemu_gps_init,
+    qemu_gps_start,
+    qemu_gps_stop,
+    qemu_gps_cleanup,
+    qemu_gps_inject_time,
+    qemu_gps_inject_location,
+    qemu_gps_delete_aiding_data,
+    qemu_gps_set_position_mode,
+    qemu_gps_get_extension,
+};
+```
+
+#### Init Process
+
+初始化过程中qemu_gps_init方法调用了gps_state_init方法，并指定了callbacks成员的徽调函数。
+
+```
+typedef struct {
+    int                     init;
+    int                     fd;
+    GpsCallbacks            callbacks;
+    pthread_t               thread;
+    int                     control[2];
+} GpsState;
+```
+
+#### Thread 处理
+
+回调函数中的线程处理，主要是通过epoll监听pipe文件节点，针对控制信息做对应的控制动作，对gps位置信息，进行解析后，经过libhardware，交给Location Provider处理。
+
+```
+static void
+gps_state_thread( void*  arg )
+{
+    ...
+    epoll_register( epoll_fd, control_fd );
+    epoll_register( epoll_fd, gps_fd );
+    ...
+    for (;;) {
+        ...
+        nevents = epoll_wait( epoll_fd, events, 2, timeout );
+        ...
+        for (ne = 0; ne < nevents; ne++) {
+            ...
+            if ((events[ne].events & EPOLLIN) != 0) {
+                ...
+                if (fd == control_fd)
+                {
+                    ...
+                    do {
+                        ret = read( fd, &cmd, 1 );
+                    } while (ret < 0 && errno == EINTR);
+
+                    if (cmd == CMD_QUIT) {
+                        ...
+                    }
+                    else if (cmd == CMD_START) {
+                        ...
+                    }
+                    else if (cmd == CMD_STOP) {
+                        ...
+                    }
+                }
+                else if (fd == gps_fd)
+                {
+                    ...
+                    for (;;) {
+                        ...
+                        ret = read( fd, buff, sizeof(buff) );
+                        ...
+                        for (nn = 0; nn < ret; nn++)
+                            nmea_reader_addc( reader, buff[nn] );
+                            ...
+                    }
+                }
+
+}
+```
+
+### HAL Interface
+
+GPS HAL接口的源码位于：
+
+```
+hardware/libhardware/include/hardware/gps.h
+hardware/libhardware/include/hardware/gnss-base.h
+```
+
+定义了GpsLocation结构体。
+
+```
+/** Represents a location. */
+typedef struct {
+    /** set to sizeof(GpsLocation) */
+    size_t          size;
+    /** Contains GpsLocationFlags bits. */
+    uint16_t        flags;
+    /** Represents latitude in degrees. */
+    double          latitude;
+    /** Represents longitude in degrees. */
+    double          longitude;
+    /**
+     * Represents altitude in meters above the WGS 84 reference ellipsoid.
+     */
+    double          altitude;
+    /** Represents speed in meters per second. */
+    float           speed;
+    /** Represents heading in degrees. */
+    float           bearing;
+    /** Represents expected accuracy in meters. */
+    float           accuracy;
+    /** Timestamp for the location fix. */
+    GpsUtcTime      timestamp;
+} GpsLocation;
+```
+
+HAL接口位于：
+
+```
+interfaces/gnss/1.0/types.hal
+```
+
+定义了GnssLocation结构体。经由
+NMEA -> GpsLocation(c++) -> GnssLocation(c++) -> Location(java)转换，最终由App获取。
+
+```
+/** Represents a location. */
+struct GnssLocation {
+    /** Contains GnssLocationFlags bits. */
+    bitfield<GnssLocationFlags> gnssLocationFlags;
+
+    /** Represents latitude in degrees. */
+    double latitudeDegrees;
+
+    /** Represents longitude in degrees. */
+    double longitudeDegrees;
+
+    /**
+     * Represents altitude in meters above the WGS 84 reference ellipsoid.
+     */
+    double altitudeMeters;
+
+    /** Represents speed in meters per second. */
+    float speedMetersPerSec;
+
+    /** Represents heading in degrees. */
+    float bearingDegrees;
+
+    /**
+    * Represents expected horizontal position accuracy, radial, in meters
+    * (68% confidence).
+    */
+    float horizontalAccuracyMeters;
+
+    /**
+    * Represents expected vertical position accuracy in meters
+    * (68% confidence).
+    */
+    float verticalAccuracyMeters;
+
+    /**
+    * Represents expected speed accuracy in meter per seconds
+    * (68% confidence).
+    */
+    float speedAccuracyMetersPerSecond;
+
+    /**
+    * Represents expected bearing accuracy in degrees
+    * (68% confidence).
+    */
+    float bearingAccuracyDegrees;
+
+    /** Timestamp for the location fix. */
+    GnssUtcTime timestamp;
+};
+```
+
+# 总结HAL鉴权不可行原因
+1、
