@@ -533,6 +533,44 @@ if (notifyLocation != null) {
 ```
 - 在callLocationChangedLocaked方法里就会回调客户端Listener的onLocationChanged方法，并把Location回传回去，如果客户端不是用的Listener而是用广播的形式来接受数据，那么就会发送广播。
 ```
+ 991         public boolean callLocationChangedLocked(Location location) {
+ 992             if (mListener != null) {
+ 993                 try {
+ 994                     synchronized (this) {
+ 995                         // synchronize to ensure incrementPendingBroadcastsLocked()
+ 996                         // is called before decrementPendingBroadcasts()
+ 997                         mListener.onLocationChanged(new Location(location));
+ 998                         // call this after broadcasting so we do not increment
+ 999                         // if we throw an exeption.
+1000                         incrementPendingBroadcastsLocked();
+1001                     }
+1002                 } catch (RemoteException e) {
+1003                     return false;
+1004                 }
+1005             } else {
+1006                 Intent locationChanged = new Intent();
+1007                 locationChanged.putExtra(LocationManager.KEY_LOCATION_CHANGED, new Location(location));
+1008                 try {
+1009                     synchronized (this) {
+1010                         // synchronize to ensure incrementPendingBroadcastsLocked()
+1011                         // is called before decrementPendingBroadcasts()
+1012                         mPendingIntent.send(mContext, 0, locationChanged, this, mLocationHandler,
+1013                                 getResolutionPermission(mAllowedResolutionLevel));
+1014                         // call this after broadcasting so we do not increment
+1015                         // if we throw an exeption.
+1016                         incrementPendingBroadcastsLocked();
+1017                     }
+1018                 } catch (PendingIntent.CanceledException e) {
+1019                     return false;
+1020                 }
+1021             }
+1022             return true;
+1023         }
+
+
+```
+- 然后看是否需要回调callStatusChangedLocked方法，它内部也是回调Listener或者发送广播。
+```
 956         public boolean callStatusChangedLocked(String provider, int status, Bundle extras) {
  957             if (mListener != null) {
  958                 try {
@@ -555,7 +593,7 @@ if (notifyLocation != null) {
  975                     synchronized (this) {
  976                         // synchronize to ensure incrementPendingBroadcastsLocked()
  977                         // is called before decrementPendingBroadcasts()
- 978                         mPendingIntent.send(mContext, 0, statusChanged, this, mLocationHandler,                                                                                                        
+ 978                         mPendingIntent.send(mContext, 0, statusChanged, this, mLocationHandler,
  979                                 getResolutionPermission(mAllowedResolutionLevel));
  980                         // call this after broadcasting so we do not increment
  981                         // if we throw an exeption.
