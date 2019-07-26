@@ -186,7 +186,7 @@
 ```
 这里把传来的最小时间频率，最小距离差值存下，设置了定位的精度类型，如果singleShot为true，会设置locationRequest.setNumUpdates(1)，numUpdate这个变量的默认值是一个很大的数，Integer.MAX_VALUE = 0x7fffffff，而单次定位g该值就设为了1，这里最终获得了一个LocationRequest，这在LocationManagerService时会用到。
 
--当客户端调用LocationManager的requestLocationUpdates方法时，会把参数拼成LocationRequest这个类，传给LocationManagerService。服务端会调用requestLocationUpdatesLocked方法，这些加Locked的方法是系统封装的带锁的方法。
+- 当客户端调用LocationManager的requestLocationUpdates方法时，会把参数拼成LocationRequest这个类，传给LocationManagerService。服务端会调用requestLocationUpdatesLocked方法，这些加Locked的方法是系统封装的带锁的方法。
 ```
 2011     @Override
 2012     public void requestLocationUpdates(LocationRequest request, ILocationListener listener,
@@ -247,5 +247,325 @@
 2085     }
 
 
-```在这里每个发起定位请求的客户端都会插入一条记录UpdateRecord，请求定位和取消定位就是插入删除一条记录，如果之前有这条记录，那么就把它移除，相当于App调用了2次定位，那么后面的请求会把前面的覆盖，这种情况一般是发生在持续定位的过程。
-- 
+```
+```
+在这里每个发起定位请求的客户端都会插入一条记录UpdateRecord，请求定位和取消定位就是插入删除一条记录，如果之前有这条记录，那么就把它移除，相当于App调用了2次定位，那么后面的请求会把前面的覆盖，这种情况一般是发生在持续定位的过程。
+```
+- 下面分析applyRequirementsLocked方法
+```
+1719     private void applyRequirementsLocked(String provider) {
+1720         LocationProviderInterface p = mProvidersByName.get(provider);
+1721         if (p == null) return;
+1722                                                                                                                                                                                                        
+1723         ArrayList<UpdateRecord> records = mRecordsByProvider.get(provider);
+1724         WorkSource worksource = new WorkSource();
+1725         ProviderRequest providerRequest = new ProviderRequest();
+1726 
+1727         ContentResolver resolver = mContext.getContentResolver();
+1728         long backgroundThrottleInterval = Settings.Global.getLong(
+1729                 resolver,
+1730                 Settings.Global.LOCATION_BACKGROUND_THROTTLE_INTERVAL_MS,
+1731                 DEFAULT_BACKGROUND_THROTTLE_INTERVAL_MS);
+1732 
+1733         if (records != null) {
+1734             for (UpdateRecord record : records) {
+1735                 if (isCurrentProfile(UserHandle.getUserId(record.mReceiver.mIdentity.mUid))) {
+1736                     if (checkLocationAccess(
+1737                             record.mReceiver.mIdentity.mPid,
+1738                             record.mReceiver.mIdentity.mUid,
+1739                             record.mReceiver.mIdentity.mPackageName,
+1740                             record.mReceiver.mAllowedResolutionLevel)) {
+1741                         LocationRequest locationRequest = record.mRealRequest;
+1742                         long interval = locationRequest.getInterval();
+1743 
+1744                         if (!isThrottlingExemptLocked(record.mReceiver.mIdentity)) {
+1745                             if (!record.mIsForegroundUid) {
+1746                                 interval = Math.max(interval, backgroundThrottleInterval);
+1747                             }
+1748                             if (interval != locationRequest.getInterval()) {
+1749                                 locationRequest = new LocationRequest(locationRequest);
+1750                                 locationRequest.setInterval(interval);
+1751                             }
+1752                         }
+1753 
+1754                         record.mRequest = locationRequest;
+1755                         providerRequest.locationRequests.add(locationRequest);
+1756                         if (interval < providerRequest.interval) {
+1757                             providerRequest.reportLocation = true;
+1758                             providerRequest.interval = interval;
+1759                         }
+1760                     }
+1761                 }
+1762             }
+
+```
+这里注意下ProviderRequest是一个局部变量，每次都会new出来的，它的时间频率默认值是一个大数，所以每次遍历只要有定位请求，频率就会改变，直到找出最小的频率，并且标记为需要上报位置。
+- 遍历完之后判断如果需要上报位置，就把worksource记录下，以便于追查耗电的元凶，worksource包含2个参数，一个是uid，一个是包名。最后会回调setRequest方法，把ProviderRequest和WorkSource参数传递过去。
+```
+1764             if (providerRequest.reportLocation) {
+1765                 // calculate who to blame for power
+1766                 // This is somewhat arbitrary. We pick a threshold interval
+1767                 // that is slightly higher that the minimum interval, and
+1768                 // spread the blame across all applications with a request
+1769                 // under that threshold.
+1770                 long thresholdInterval = (providerRequest.interval + 1000) * 3 / 2;
+1771                 for (UpdateRecord record : records) {
+1772                     if (isCurrentProfile(UserHandle.getUserId(record.mReceiver.mIdentity.mUid))) {
+1773                         LocationRequest locationRequest = record.mRequest;
+1774 
+1775                         // Don't assign battery blame for update records whose
+1776                         // client has no permission to receive location data.
+1777                         if (!providerRequest.locationRequests.contains(locationRequest)) {
+1778                             continue;
+1779                         }
+1780 
+1781                         if (locationRequest.getInterval() <= thresholdInterval) {
+1782                             if (record.mReceiver.mWorkSource != null
+1783                                     && record.mReceiver.mWorkSource.size() > 0
+1784                                     && record.mReceiver.mWorkSource.getName(0) != null) {
+1785                                 // Assign blame to another work source.
+1786                                 // Can only assign blame if the WorkSource contains names.
+1787                                 worksource.add(record.mReceiver.mWorkSource);
+1788                             } else {
+1789                                 // Assign blame to caller.
+1790                                 worksource.add(
+1791                                         record.mReceiver.mIdentity.mUid,
+1792                                         record.mReceiver.mIdentity.mPackageName);
+1793                             }
+1794                         }
+1795                     }
+1796                 }
+1797             }
+1798         }
+1799 
+1800         if (D) Log.d(TAG, "provider request: " + provider + " " + providerRequest);
+1801         p.setRequest(providerRequest, worksource);
+1802     }
+
+
+services/core/java/com/android/server/location/LocationProviderInterface.java
+29 /**   
+30  * Location Manager's interface for location providers.
+31  * @hide  
+32  */           
+33 public interface LocationProviderInterface {
+34     。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+39     public void setRequest(ProviderRequest request, WorkSource source);                                                          。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+48 }
+
+location/lib/java/com/android/location/provider/LocationProviderBase.java
+78     private final class Service extends ILocationProvider.Stub {
+ 79         @Override
+ 80         public void enable() {
+ 81             onEnable();
+ 82         }
+ 83         @Override
+ 84         public void disable() {
+ 85             onDisable();
+ 86         }
+ 87         @Override
+ 88         public void setRequest(ProviderRequest request, WorkSource ws) {                                                                                                                                
+ 89             onSetRequest(new ProviderRequestUnbundled(request), ws);
+ 90         }
+
+```
+- 接着我们向服务器请求定位，得到结果后调用LocationProviderBase的reportLocation方法来把位置上报。这里又需要注意了，reportLocation并不是ILocationProvider里的接口方法，而是LocationProviderBase里的一个自定义的final方法，它调用的是ILocationManager里定义的reportLocation方法，而前面已经说过LocationManagerService才是ILocationManager真正实现类，所以要去LocationManagerService去找reportLocation究竟做了什么，定位结果是怎么返给APP的。
+```
+134     public final void reportLocation(Location location) {
+135         try {
+136             mLocationManager.reportLocation(location, false);
+137         } catch (RemoteException e) {
+138             Log.e(TAG, "RemoteException", e);
+139         } catch (Exception e) {
+140             // never crash provider, might be running in a system process                                                                                                                               
+141             Log.e(TAG, "Exception", e);
+142         }
+143     }
+144 
+
+
+```
+- LocationManagerService的reportLocation就是用handler发送了一个MSG_LOCATION_CHANGED的消息
+```
+2526     @Override
+2527     public void reportLocation(Location location, boolean passive) {                                                                                                                                   
+2528         checkCallerIsProvider();
+2529 
+2530         if (!location.isComplete()) {
+2531             Log.w(TAG, "Dropping incomplete location: " + location);
+2532             return;
+2533         }
+2534            
+2535         mLocationHandler.removeMessages(MSG_LOCATION_CHANGED, location);
+2536         Message m = Message.obtain(mLocationHandler, MSG_LOCATION_CHANGED, location);
+2537         m.arg1 = (passive ? 1 : 0);
+2538         mLocationHandler.sendMessageAtFrontOfQueue(m);
+2539     }
+
+
+2736     private class LocationWorkerHandler extends Handler {                                                                                                                                              
+2737         public LocationWorkerHandler(Looper looper) {
+2738             super(looper, null, true);
+2739         }
+2740     
+2741         @Override
+2742         public void handleMessage(Message msg) {
+2743             switch (msg.what) {
+2744                 case MSG_LOCATION_CHANGED:
+2745                     handleLocationChanged((Location) msg.obj, msg.arg1 == 1);
+2746                     break;
+2747             }
+2748         }
+2749     }
+
+
+```
+
+- 在handleLocationChangedLocked方法里先对mLastLocation做了更新，然后遍历所有UpdateRecord，根据LocationRequest请求的精度来确定返回粗略位置还是精确位置。
+```
+2757     private void handleLocationChanged(Location location, boolean passive) {
+2758         // create a working copy of the incoming Location so that the service can modify it without
+2759         // disturbing the caller's copy
+2760         Location myLocation = new Location(location);
+2761         String provider = myLocation.getProvider();
+2762 
+2763         // set "isFromMockProvider" bit if location came from a mock provider. we do not clear this
+2764         // bit if location did not come from a mock provider because passive/fused providers can
+2765         // forward locations from mock providers, and should not grant them legitimacy in doing so.
+2766         if (!myLocation.isFromMockProvider() && isMockProvider(provider)) {
+2767             myLocation.setIsFromMockProvider(true);
+2768         }
+2769 
+2770         synchronized (mLock) {
+2771             if (isAllowedByCurrentUserSettingsLocked(provider)) {
+2772                 if (!passive) {
+2773                     // notify passive provider of the new location
+2774                     mPassiveProvider.updateLocation(myLocation);
+2775                 }
+2776                 handleLocationChangedLocked(myLocation, passive);
+2777             }
+2778         }
+2779     }
+
+
+2574     private void handleLocationChangedLocked(Location location, boolean passive) {
+2575         if (D) Log.d(TAG, "incoming location: " + location);
+2576 
+2577         long now = SystemClock.elapsedRealtime();
+2578         String provider = (passive ? LocationManager.PASSIVE_PROVIDER : location.getProvider());
+2579 
+2580         // Skip if the provider is unknown.
+2581         LocationProviderInterface p = mProvidersByName.get(provider);
+2582         if (p == null) return;
+2583 
+2584         // Update last known locations
+2585         Location noGPSLocation = location.getExtraLocation(Location.EXTRA_NO_GPS_LOCATION);
+2586         Location lastNoGPSLocation;
+2587         Location lastLocation = mLastLocation.get(provider);
+2588         if (lastLocation == null) {
+2589             lastLocation = new Location(provider);
+2590             mLastLocation.put(provider, lastLocation);
+2591         } else {
+2592             lastNoGPSLocation = lastLocation.getExtraLocation(Location.EXTRA_NO_GPS_LOCATION);
+2593             if (noGPSLocation == null && lastNoGPSLocation != null) {
+2594                 // New location has no no-GPS location: adopt last no-GPS location. This is set
+2595                 // directly into location because we do not want to notify COARSE clients.
+2596                 location.setExtraLocation(Location.EXTRA_NO_GPS_LOCATION, lastNoGPSLocation);
+2597             }
+2598         }                                                                                                                                                                                              
+2599         lastLocation.set(location);
+
+2638         // Broadcast location or status to all listeners
+2639         for (UpdateRecord r : records) {
+2640             Receiver receiver = r.mReceiver;
+2641             boolean receiverDead = false;
+2642 
+2643             int receiverUserId = UserHandle.getUserId(receiver.mIdentity.mUid);
+2644             if (!isCurrentProfile(receiverUserId)
+2645                     && !isUidALocationProvider(receiver.mIdentity.mUid)) {                                                                                                                             
+2646                 if (D) {
+2647                     Log.d(TAG, "skipping loc update for background user " + receiverUserId +
+2648                             " (current user: " + mCurrentUserId + ", app: " +
+2649                             receiver.mIdentity.mPackageName + ")");
+2650                 }
+2651                 continue;
+2652             }
+2653 
+2654             if (mBlacklist.isBlacklisted(receiver.mIdentity.mPackageName)) {
+2655                 if (D) Log.d(TAG, "skipping loc update for blacklisted app: " +
+2656                         receiver.mIdentity.mPackageName);
+2657                 continue;
+2658             }
+2659 
+2660             if (!reportLocationAccessNoThrow(
+2661                     receiver.mIdentity.mPid,
+2662                     receiver.mIdentity.mUid,
+2663                     receiver.mIdentity.mPackageName,
+2664                     receiver.mAllowedResolutionLevel)) {
+2665                 if (D) Log.d(TAG, "skipping loc update for no op app: " +
+2666                         receiver.mIdentity.mPackageName);
+2667                 continue;
+2668             }
+2669 
+2670             Location notifyLocation;
+2671             if (receiver.mAllowedResolutionLevel < RESOLUTION_LEVEL_FINE) {
+2672                 notifyLocation = coarseLocation;  // use coarse location
+2673             } else {
+2674                 notifyLocation = lastLocation;  // use fine location
+2675             }
+if (notifyLocation != null) {
+2677                 Location lastLoc = r.mLastFixBroadcast;
+2678                 if ((lastLoc == null) || shouldBroadcastSafe(notifyLocation, lastLoc, r, now)) {
+2679                     if (lastLoc == null) {
+2680                         lastLoc = new Location(notifyLocation);
+2681                         r.mLastFixBroadcast = lastLoc;
+2682                     } else {
+2683                         lastLoc.set(notifyLocation);
+2684                     }
+2685                     if (!receiver.callLocationChangedLocked(notifyLocation)) {
+2686                         Slog.w(TAG, "RemoteException calling onLocationChanged on " + receiver);
+2687                         receiverDead = true;
+2688                     }
+2689                     r.mRealRequest.decrementNumUpdates();
+2690                 }
+2691             }
+
+```
+- 在callLocationChangedLocaked方法里就会回调客户端Listener的onLocationChanged方法，并把Location回传回去，如果客户端不是用的Listener而是用广播的形式来接受数据，那么就会发送广播。
+```
+956         public boolean callStatusChangedLocked(String provider, int status, Bundle extras) {
+ 957             if (mListener != null) {
+ 958                 try {
+ 959                     synchronized (this) {
+ 960                         // synchronize to ensure incrementPendingBroadcastsLocked()
+ 961                         // is called before decrementPendingBroadcasts()
+ 962                         mListener.onStatusChanged(provider, status, extras);
+ 963                         // call this after broadcasting so we do not increment
+ 964                         // if we throw an exeption.
+ 965                         incrementPendingBroadcastsLocked();
+ 966                     }
+ 967                 } catch (RemoteException e) {
+ 968                     return false;
+ 969                 }
+ 970             } else {
+ 971                 Intent statusChanged = new Intent();
+ 972                 statusChanged.putExtras(new Bundle(extras));
+ 973                 statusChanged.putExtra(LocationManager.KEY_STATUS_CHANGED, status);
+ 974                 try {
+ 975                     synchronized (this) {
+ 976                         // synchronize to ensure incrementPendingBroadcastsLocked()
+ 977                         // is called before decrementPendingBroadcasts()
+ 978                         mPendingIntent.send(mContext, 0, statusChanged, this, mLocationHandler,                                                                                                        
+ 979                                 getResolutionPermission(mAllowedResolutionLevel));
+ 980                         // call this after broadcasting so we do not increment
+ 981                         // if we throw an exeption.
+ 982                         incrementPendingBroadcastsLocked();
+ 983                     }
+ 984                 } catch (PendingIntent.CanceledException e) {
+ 985                     return false;
+ 986                 }
+ 987             }
+ 988             return true;
+ 989         }
+
+```
