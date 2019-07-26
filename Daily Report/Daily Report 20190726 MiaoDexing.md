@@ -236,3 +236,7 @@ ServiceWatcher是用来连接和监视应用程序实现LocationProvider服务�
 ```
 获取属性信息，把这些属性统一封装在类型为ProviderProperties的对象中，并回调enable方法，如果客户端有请求，
 则回调setRequest方法，这里要注意的是这些回调方法的对象是ILocationProvider，而不是NLP提供商。把NLP添加到可用provider之后，又添加了融合定位的provider和GeocoderProvider，GeocoderProvider和NLP的代理过程类似，至此LocationManagerService的初始化流程就算是结束了
+
+
+# 总结
+要想使用NLP完成定位，只能通过和地图资源商进行商务合作或者取得授权，才能够合法地放入网络定位的相关底层应用和分发使用权，否则会被视为侵权使用。openthos应该是没有，这里也就谈不上真假设备切换了！
