@@ -843,6 +843,10 @@ struct GnssLocation {
     GnssUtcTime timestamp;
 };
 ```
-
+### 问题
+GPS产生数据面向的是provider，app并不知道数据从哪里来，只知道数据是来自Provider
 # 总结HAL鉴权不可行原因
-1、
+1、APP获得的数据来自Provider，Provider将来自HAL的数据进行封装，APP和HAL并没有直接关系，所以APP什么时候获得真假数据，只有PMS知道其是否有权限从而去区分，HAL根本不清楚
+2、 假如根据包名在HAL层鉴权，HAL只是将数据回传到Provider，根本无法将数据回传给指定的app，所以在provider（framework）中还是需要区分数据回传给谁，如此以来显得有些多此一举
+3、 系统在启动LocationManagerService时已经根据硬件信息设定了对应的provider，如果我们使用了自己构建的gps hal，那么此时获得数据一定来自虚拟设备，根本无从谈起真假设备切换
+4 、目前想到在HAL层鉴权是根据读取xml文件的方式，这本身就存在安全问题
