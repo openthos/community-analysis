@@ -65,7 +65,8 @@
    ```
 
 4、 注册一个位置监听器来接受结果
-    ```
+    
+```
      private final class MyLocationListener implements LocationListener{
 
       public void onLocationChanged(Location location) {
@@ -85,7 +86,7 @@
       }
 
       }
-     ```
+```
 - 这个回调里面有4个方法；
   -  onLocationChanged：当位置发生改变后就会回调该方法，经纬度相关信息存在Location里面；
   -  onStatusChanged：我们所采用的provider状态改变时会回调，该状态有3种；<br>
