@@ -94,7 +94,7 @@
     2、   LocationProvider.AVAILABLE = 2：provider可用 <br>
     3、   LocationProvider.TEMPORARILY_UNAVAILABLE = 1：provider不可用 <br>
   -  onProviderEnabled：当provider可用时被触发，比如定位模式切换到了使用精确位置时GPSProvider就会回调该方法；
-  -  onProviderDisabled：当provider不可用时被触发，比如定位模式切换到了使用使用网络定位时GPSProvider就会回调该方法；
+  -  onProviderDisabled：当provider不可用时被触发，比如定位模式切换到了使用网络定位时就会回调该方法；
 
  5、 获取位置信息，调用监听方法，不过在获取位置前先判断一下要调用的provider是否可用；
   ```
@@ -105,10 +105,8 @@
 ### 小结：
 - 上层APP通过获得LocationManager从而获得最合适的Provider，应用的位置信息都是来自provider；应用是通过设置listener的方式来获得到Location，是被动的获取，而不是主动的获取。
 ### 问题：
-1、 上层应用只是知道从合适的Provider中获得数据，具体数据是从哪个设备中获得的应用是不清楚的；而想要获得GpsProvider，必须有对应的设备，目前的PC没有GPS，因此，需要我们虚拟一个GPS设备，但此设备只能产生虚拟数据，没有真实数据，也就谈不上虚拟设备和物理设备切换了！
-
-2、 PASSIVE_PROVIDER 返回的位置是通过其他 providers 产生的，也就是说provider并不是和底层硬件是一一对应的，如何清楚地知道当前使用的provider是对应的哪一个设备？
-
+1、 上层应用想要获得GpsProvider，必须有对应的设备，目前的PC没有GPS，因此，需要我们虚拟一个GPS设备，但此设备只能产生虚拟数据，没有真实数据，也就谈不上虚拟设备和物理设备切换了！
+2、 假如上层应用使用getBestProvider获得provider，优先使用的GPS，这时我们已经返回的是GpsProvider（因为我们有虚拟GPS），所以根本就不可能在所谓的“虚拟设备与物理设备”切换了！
 ## 定位服务源码分析
 - 下图是定位服务架构图，先从宏观上有个了解。如图一共分为四层，每层都依赖下面一层完成其所需提供的服务
 ![blockchain](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/GpsLocation.png)
@@ -119,9 +117,9 @@
   -   Linux内核层：C++代码最终去调用GPS硬件来获取位置；
 ### 具体分析代码
 #### LocationManager分析
-- App调用定位接口是通过LocationManager的API，其中很多方法都是代理了service的一些方法，这个service的声明类型是ILocationManager，这个对象就是代理对象，很显然是AIDL的调用，具体实现类则是LocationManagerService，LocationManager和LocationManagerService就是通过Binder 机制来进行通讯的。
+- App调用定位接口是通过LocationManager的API，其中很多方法都是代理了service的一些方法，这个service的声明类型是ILocationManager，这个对象就是代理对象，很显然是AIDL的调用，具体实现类则是LocationManagerService，LocationManager和LocationManagerService就是通过Binder机制来进行通讯的。
 - LocationManager提供的主要方法有：
-1、 etLastKnownLocation：获取上一次缓存的位置，这个方法不会发起定位请求，返回的是上一次的位置信息，但此前如果没有位置更新的话，返回的位置信息可能是错误的；<br>
+1、 getLastKnownLocation：获取上一次缓存的位置，这个方法不会发起定位请求，返回的是上一次的位置信息，但此前如果没有位置更新的话，返回的位置信息可能是错误的；<br>
 2、 equestSingleUpdate：只请求一次定位，会发起位置监听，该方法要在主线程上执行，可以传入Listener或广播来接收位置；<br>
 3、 equestLocationUpdates：持续请求定位，根据传入的时间间隔和位置差进行回调，该方法要在主线程上执行，可以传入Listener或广播来接收位置；<br>
 4、 emoveUpdates：移除定位请求，传入Listener；<br>
@@ -186,4 +184,68 @@
 194     }
 
 ```
-这里把传来的最小时间频率，最小距离差值存下，设置了定位的精度类型，如果singleShot为true，会设置locationRequest.setNumUpdates(1)，numUpdate这个变量的默认值是一个很大的数，Integer.MAX_VALUE = 0x7fffffff，而单次定位g该值就设为了1，这个点在分析service的代码时会用到。
+这里把传来的最小时间频率，最小距离差值存下，设置了定位的精度类型，如果singleShot为true，会设置locationRequest.setNumUpdates(1)，numUpdate这个变量的默认值是一个很大的数，Integer.MAX_VALUE = 0x7fffffff，而单次定位g该值就设为了1，这里最终获得了一个LocationRequest，这在LocationManagerService时会用到。
+
+-当客户端调用LocationManager的requestLocationUpdates方法时，会把参数拼成LocationRequest这个类，传给LocationManagerService。服务端会调用requestLocationUpdatesLocked方法，这些加Locked的方法是系统封装的带锁的方法。
+```
+2011     @Override
+2012     public void requestLocationUpdates(LocationRequest request, ILocationListener listener,
+2013             PendingIntent intent, String packageName) {
+         。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+2033         try {
+2034             // We don't check for MODE_IGNORED here; we will do that when we go to deliver
+2035             // a location.
+2036             checkLocationAccess(pid, uid, packageName, allowedResolutionLevel);
+2037 
+2038             synchronized (mLock) {
+2039                 Receiver recevier = checkListenerOrIntentLocked(listener, intent, pid, uid,
+2040                         packageName, workSource, hideFromAppOps);
+2041                 requestLocationUpdatesLocked(sanitizedRequest, recevier, pid, uid, packageName);                                                                                                       
+2042             }
+2043        。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+2046     }
+
+
+
+2048     private void requestLocationUpdatesLocked(LocationRequest request, Receiver receiver,
+2049             int pid, int uid, String packageName) {
+2050         // Figure out the provider. Either its explicitly request (legacy use cases), or
+2051         // use the fused provider
+2052         if (request == null) request = DEFAULT_LOCATION_REQUEST;
+2053         String name = request.getProvider();
+2054         if (name == null) {
+2055             throw new IllegalArgumentException("provider name must not be null");
+2056         }
+2057 
+2058         LocationProviderInterface provider = mProvidersByName.get(name);
+2059         if (provider == null) {
+2060             throw new IllegalArgumentException("provider doesn't exist: " + name);
+2061         }
+2062 
+2063         UpdateRecord record = new UpdateRecord(name, request, receiver);
+2064         if (D) Log.d(TAG, "request " + Integer.toHexString(System.identityHashCode(receiver))
+2065                 + " " + name + " " + request + " from " + packageName + "(" + uid + " "
+2066                 + (record.mIsForegroundUid ? "foreground" : "background")
+2067                 + (isThrottlingExemptLocked(receiver.mIdentity)
+2068                     ? " [whitelisted]" : "") + ")");
+2069 
+2070         UpdateRecord oldRecord = receiver.mUpdateRecords.put(name, record);
+2071         if (oldRecord != null) {
+2072             oldRecord.disposeLocked(false);
+2073         }
+2074 
+2075         boolean isProviderEnabled = isAllowedByUserSettingsLocked(name, uid);
+2076         if (isProviderEnabled) {
+2077             applyRequirementsLocked(name);
+2078         } else {
+2079             // Notify the listener that updates are currently disabled
+2080             receiver.callProviderEnabledLocked(name, false);
+2081         }
+2082         // Update the monitoring here just in case multiple location requests were added to the
+2083         // same receiver (this request may be high power and the initial might not have been).                                                                                                         
+2084         receiver.updateMonitoring(true);
+2085     }
+
+
+```在这里每个发起定位请求的客户端都会插入一条记录UpdateRecord，请求定位和取消定位就是插入删除一条记录，如果之前有这条记录，那么就把它移除，相当于App调用了2次定位，那么后面的请求会把前面的覆盖，这种情况一般是发生在持续定位的过程。
+- 
