@@ -120,12 +120,12 @@
 - App调用定位接口是通过LocationManager的API，其中很多方法都是代理了service的一些方法，这个service的声明类型是ILocationManager，这个对象就是代理对象，很显然是AIDL的调用，具体实现类则是LocationManagerService，LocationManager和LocationManagerService就是通过Binder机制来进行通讯的。
 - LocationManager提供的主要方法有：
 1、 getLastKnownLocation：获取上一次缓存的位置，这个方法不会发起定位请求，返回的是上一次的位置信息，但此前如果没有位置更新的话，返回的位置信息可能是错误的；<br>
-2、 equestSingleUpdate：只请求一次定位，会发起位置监听，该方法要在主线程上执行，可以传入Listener或广播来接收位置；<br>
-3、 equestLocationUpdates：持续请求定位，根据传入的时间间隔和位置差进行回调，该方法要在主线程上执行，可以传入Listener或广播来接收位置；<br>
-4、 emoveUpdates：移除定位请求，传入Listener；<br>
-5、 ddProximityAlert：添加一个地理围栏，这是一个圆形的围栏；<br>
-6、 etProvider：获取Provider，可以指定条件，也可以根据名字来获取；<br>
-7、 endExtraCommand：给系统发送辅助指令；<br>
+2、 requestSingleUpdate：只请求一次定位，会发起位置监听，该方法要在主线程上执行，可以传入Listener或广播来接收位置；<br>
+3、 requestLocationUpdates：持续请求定位，根据传入的时间间隔和位置差进行回调，该方法要在主线程上执行，可以传入Listener或广播来接收位置；<br>
+4、 removeUpdates：移除定位请求，传入Listener；<br>
+5、 addProximityAlert：添加一个地理围栏，这是一个圆形的围栏；<br>
+6、 getProvider：获取Provider，可以指定条件，也可以根据名字来获取；<br>
+7、 sendExtraCommand：给系统发送辅助指令；<br>
 - 这些方法的最终都是由service来实现的，发起定位时传入的Listener经过包装成AIDL接口传给了服务端，因为它们是需要跨进程来进行通讯的。
 - 这里分析一下requestSingleUpdate方法，这个方法主要是传一个Listener，然后内部创建了一个LocationRequest，最小时间和最小距离都是0，还给singleShot设置为了true，并最终调用requestLocationUpdates方法，所以requestLocationUpdates才是核心，而所有定制的参数都封装成了LocationRequest。
 ```
