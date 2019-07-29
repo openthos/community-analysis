@@ -926,4 +926,4 @@ GPS产生数据面向的是provider，app并不知道数据从哪里来，只知
 
 # Framework鉴权的优越性
 1、 Android本身的PMS鉴权可以覆盖所有应用需要的权限
-2、 framework可以采用构造真假provider的方式为应用提供真假数据切换，比较容易
+2、 framework可以采用构造真假provider的方式为应用提供真假数据切换，比较规范
