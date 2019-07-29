@@ -916,7 +916,7 @@ struct GnssLocation {
 GPS产生数据面向的是provider，app并不知道数据从哪里来，只知道数据是来自Provider
 
 
-# 总结HAL鉴权不可行原因
+# 总结HAL鉴权较Framework困难的原因
 
 - 1、 APP获得的数据来自Provider，Provider将来自HAL的数据进行封装，APP和HAL并没有直接关系，所以APP什么时候获得真假数据，只有PMS知道其是否有权限从而去区分，HAL根本不清楚
 - 2、 假如根据包名在HAL层鉴权，HAL只是将数据回传到Provider，根本无法将数据回传给指定的app，所以在provider（framework）中还是需要区分数据回传给谁，如此以来会走很多弯路
