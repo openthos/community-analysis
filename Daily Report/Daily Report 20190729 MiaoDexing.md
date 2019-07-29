@@ -83,3 +83,66 @@ src/com/android/packageinstaller/permission/ui/handheld/GrantPermissionsViewHand
 366         }
 
 ```
+提示框的click 事件是在GrantPermissionsViewHandlerImpl 这里处理的，最后会通过callback 调回到GrantPermissionsActivity 中。
+
+- onPermissionGrantResult
+```
+304     @Override                                                                                                                                                                                           
+305     public void onPermissionGrantResult(String name, boolean granted, boolean doNotAskAgain) {
+306         KeyguardManager kgm = getSystemService(KeyguardManager.class);
+307 
+308         if (kgm.isDeviceLocked()) {
+309             kgm.requestDismissKeyguard(this, new KeyguardManager.KeyguardDismissCallback() {
+310                         @Override
+311                         public void onDismissError() {
+312                             Log.e(LOG_TAG, "Cannot dismiss keyguard perm=" + name + " granted="
+313                                    + granted + " doNotAskAgain=" + doNotAskAgain);
+314                         }
+315 
+316                         @Override
+317                         public void onDismissCancelled() {
+318                             // do nothing (i.e. stay at the current permission group)
+319                         }
+320 
+321                         @Override
+322                         public void onDismissSucceeded() {
+323                             // Now the keyguard is dismissed, hence the device is not locked
+324                             // anymore
+325                             onPermissionGrantResult(name, granted, doNotAskAgain);
+326                         }
+327                     });
+328 
+329             return;
+330         }
+331 
+332         GroupState groupState = mRequestGrantPermissionGroups.get(name);
+333         if (groupState.mGroup != null) {
+334             if (granted) {
+335                 groupState.mGroup.grantRuntimePermissions(doNotAskAgain,
+336                         groupState.affectedPermissions);
+337                 groupState.mState = GroupState.STATE_ALLOWED;
+338             } else {
+339                 groupState.mGroup.revokeRuntimePermissions(doNotAskAgain,
+340                         groupState.affectedPermissions);
+341                 groupState.mState = GroupState.STATE_DENIED;
+342 
+343                 int numRequestedPermissions = mRequestedPermissions.length;
+344                 for (int i = 0; i < numRequestedPermissions; i++) {
+345                     String permission = mRequestedPermissions[i];
+346 
+347                     if (groupState.mGroup.hasPermission(permission)) {
+348                         EventLogger.logPermissionDenied(this, permission,
+349                                 mAppPermissions.getPackageInfo().packageName);
+350                     }
+351                 }
+352             }
+353             updateGrantResults(groupState.mGroup);
+354         }
+355         if (!showNextPermissionGroupGrantRequest()) {
+356             setResultAndFinish();
+357         }
+358     }
+
+
+```
+这里的callback 是从GrantPermissionsViewHandlerImpl 回来，确定执行grant 还是revoke。
