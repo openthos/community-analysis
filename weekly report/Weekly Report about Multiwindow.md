@@ -1,3 +1,10 @@
+# 2019年07月29日 - - 2019年08月02日 周总结
+
+# 刘晓旭
+### 窗口兼容模式功能
+  - 1.bug：微信登录按钮重叠，经过之前分析、定位，由于资源文件没有更新，导致登录按钮获取padding值出错造成重叠，通过调用Resources的updateConfiguration方法更新资源文件信息，保证登录按钮获取正确的padding值，解决此重叠问题，目前通过在NewPhoneWindow&NewDecorView的onConfigurationChanged方法中调用Resources的updateConfiguration方法更新配置信息。通过此种解决方式，会导致登录界面更改语言，关闭重新打开后，语言不生效问题，可以在调用Resources的updateConfiguration方法时，设置Configuration的setLocales，解决此问题。
+
+
 # 2019年07月22日 - - 2019年07月26日 周总结
 
 # 刘晓旭
