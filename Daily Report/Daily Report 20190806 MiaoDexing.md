@@ -335,5 +335,3 @@ mModule是一个CameraModule对象，调用的是hardware\interfaces\camera\comm
 
 - hardware/libcamera/CameraHal.cpp <br>
 openthos8.1在此文件中定义了结构体camera_module_t，在CameraProvider类的initialize()方法中调用hw_get_module获取到的就是这里定义的camera_module_t，它也就是构造CameraModule时传入的参数。
-- hardware/interfaces/camera/provider/2.4/default/CameraProvider.cpp
-我们回过头去看CameraProvider.cpp中的 “err = mModule->setCallbacks(this);”
