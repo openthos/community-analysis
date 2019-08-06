@@ -107,13 +107,7 @@ res = mHardware->initialize(manager);这里是调用头文件作为和HAL通信�
  367 }
 
 ```
-可以看到，该方法的逻辑就是对成员变量mProviders进行遍历，判断每个DeviceInfo的id值、最小版本、最大版本号是否符合传入的最小和最大版本，
-符合的话，就返回该对象，那我们就要问一下了，mProviders中的值是什么时候添加的呢？我们大概追究一下，它是在CameraService进行启动时，
-初始化CameraProviderManager对象的逻辑中，通过addProviderLocked方法生成具体的DeviceInfo对象，添加到mProviders成员变量中的。
-找到deviceInfo对象之后，然后调用deviceInfo3->mInterface->open，而它的成员变量mInterface就是在前面我们说构造ProviderInfo时
-获取到的binder对象了，它实际上是hardware\interfaces\camera\device\3.2\default\CameraDevice.cpp对象了，
-来到这里，我们就进入了CameraDaemon进程当中，两个进程的通信是通过HIDL，其实还是binder进程间通信机制，只是它是用来提供给HAL层服务的，
-所以和AIDL类似，取了个HIDL的名字。
+可以看到，该方法的逻辑就是对成员变量mProviders进行遍历，判断每个DeviceInfo的id值、最小版本、最大版本号是否符合传入的最小和最大版本，符合的话，就返回该对象，那我们就要问一下了，mProviders中的值是什么时候添加的呢？我们大概追究一下，它是在CameraService进行启动时，初始化CameraProviderManager对象的逻辑中，通过addProviderLocked方法生成具体的DeviceInfo对象，添加到mProviders成员变量中的。找到deviceInfo对象之后，然后调用deviceInfo3->mInterface->open，而它的成员变量mInterface就是在前面我们说构造ProviderInfo时获取到的binder对象了，它实际上是hardware\interfaces\camera\device\3.2\default\CameraDevice.cpp对象了，来到这里，我们就进入了CameraDaemon进程当中，两个进程的通信是通过HIDL，其实还是binder进程间通信机制，只是它是用来提供给HAL层服务的，所以和AIDL类似，取了个HIDL的名字。
 - hardware\interfaces\camera\device\3.2\default\CameraDevice.cpp
 ```
 173 Return<void> CameraDevice::open(const sp<ICameraDeviceCallback>& callback, open_cb _hidl_cb)  {
@@ -219,19 +213,9 @@ res = mHardware->initialize(manager);这里是调用头文件作为和HAL通信�
 
 
 ```
-我们先来看一下该方法的参数，第一个是callback对象，它的使用方法和我们之前讲的应用层调用openCamera时
-在CameraManager中传入的binder类型的callback是一样的，Server端拿到这个callback之后，就可以针对
-需要的节点事件回调应用层，而这里是在CameraDaemon回调CameraServer，道理是一样的。这个callback
-参数最终赋值给HAL层中的CameraDeviceSession类的mResultBatcher成员变量了；第二个参数是open_cb类型，
-从它的命名中可以看出来，它也是一个回调函数，非常方便，就像一个函数指针一样，它在CameraProviderManager
-一侧中像一个结构体一样传了过来，当CameraDevice类中的open执行完成后，就会将session对象作为参数回传到
-CameraProviderManager这一侧，我们就拿到了session，后续对camera的操作都是通过这个sesson对象来进行中转完成的。
+我们先来看一下该方法的参数，第一个是callback对象，它的使用方法和我们之前讲的应用层调用openCamera时在CameraManager中传入的binder类型的callback是一样的，Server端拿到这个callback之后，就可以针对需要的节点事件回调应用层，而这里是在CameraDaemon回调CameraServer，道理是一样的。这个callback参数最终赋值给HAL层中的CameraDeviceSession类的mResultBatcher成员变量了；第二个参数是open_cb类型，从它的命名中可以看出来，它也是一个回调函数，非常方便，就像一个函数指针一样，它在CameraProviderManager一侧中像一个结构体一样传了过来，当CameraDevice类中的open执行完成后，就会将session对象作为参数回传到CameraProviderManager这一侧，我们就拿到了session，后续对camera的操作都是通过这个sesson对象来进行中转完成的。<br>
 
-open方法中先判断status，正常的话，接着调用res = mModule->open(mCameraId.c_str(), reinterpret_cast<hw_device_t**>(&device))
-来执行相机的打开操作，mModule对象是CameraDevice类的成员变量，它是在CameraDevice的构造函数中传入的，
-而CameraDevice类的对象是在hardware\interfaces\camera\provider\2.4\default\CameraProvider.cpp
-文件中的getCameraDeviceInterface_V3_x方法中构造的，该方法也是CameraDaemon进程为CameraServer进程提供的，
-当添加相机设备时，CameraServer就需要查询和获取camera设备，也就会使用到这个接口，
+open方法中先判断status，正常的话，接着调用res = mModule->open(mCameraId.c_str(), reinterpret_cast<hw_device_t**>(&device))来执行相机的打开操作，mModule对象是CameraDevice类的成员变量，它是在CameraDevice的构造函数中传入的，而CameraDevice类的对象是在hardware\interfaces\camera\provider\2.4\default\CameraProvider.cpp文件中的getCameraDeviceInterface_V3_x方法中构造的，该方法也是CameraDaemon进程为CameraServer进程提供的，当添加相机设备时，CameraServer就需要查询和获取camera设备，也就会使用到这个接口，
 
 - hardware\interfaces\camera\common\1.0\default\CameraModule.cpp
 mModule是一个CameraModule对象，调用的是hardware\interfaces\camera\common\1.0\default\CameraModule.cpp类的open方法。
@@ -347,4 +331,4 @@ mModule是一个CameraModule对象，调用的是hardware\interfaces\camera\comm
 276 }
 
 ```
-```这里构造CameraModule时传入的参数rawModule就是在该方法一开始时，通过调用int err = hw_get_module(CAMERA_HARDWARE_MODULE_ID, (const hw_module_t **)&rawModule)获取到的，看到这里大家是不是觉得有些熟悉，CAMERA_HARDWARE_MODULE_ID就是HAL层定义的module，从这里往下就和对应的设备厂商有密切关系了。```
+  这里构造CameraModule时传入的参数rawModule就是在该方法一开始时，通过调用int err = hw_get_module(CAMERA_HARDWARE_MODULE_ID, (const hw_module_t **)&rawModule)获取到的，看到这里大家是不是觉得有些熟悉，CAMERA_HARDWARE_MODULE_ID就是HAL层定义的module，从这里往下就和对应的设备厂商有密切关系了。
