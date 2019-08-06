@@ -332,3 +332,91 @@ mModule是一个CameraModule对象，调用的是hardware\interfaces\camera\comm
 
 ```
   这里构造CameraModule时传入的参数rawModule就是在该方法一开始时，通过调用int err = hw_get_module(CAMERA_HARDWARE_MODULE_ID, (const hw_module_t **)&rawModule)获取到的，看到这里大家是不是觉得有些熟悉，CAMERA_HARDWARE_MODULE_ID就是HAL层定义的module，从这里往下就和对应的设备厂商有密切关系了。
+
+- hardware/libcamera/CameraHal.cpp
+openthos8.1在此文件中定义了结构体camera_module_t，在CameraProvider类的initialize()方法中调用hw_get_module获取到的就是这里定义的camera_module_t，它也就是构造CameraModule时传入的参数。CameraModule类的open方法实际是调用它的common（这里就是camera_module_t结构体的第一个成员变量common了，它指向camera_common结构体）的methods的open方法。
+```
+26 #include "CameraFactory.h"
+27 
+28 /*
+29  * Required HAL header.
+30  */
+31 camera_module_t HAL_MODULE_INFO_SYM = {
+32     .common = {
+33         .tag           = HARDWARE_MODULE_TAG,
+34         .version_major = 1,
+35         .version_minor = 0,
+36         .id            = CAMERA_HARDWARE_MODULE_ID,
+37         .name          = "Camera Module",
+38         .author        = "The Android Open Source Project",
+39         .methods       = &android::CameraFactory::mCameraModuleMethods,
+40         .dso           = NULL,
+41         .reserved      = {0},
+42     },
+43     .get_number_of_cameras = android::CameraFactory::get_number_of_cameras,
+44     .get_camera_info       = android::CameraFactory::get_camera_info,
+45 };
+~           
+```
+- hardware/libcamera/CameraFactory.cpp
+```
+237 /* Entry point for camera HAL API. */
+238 struct hw_module_methods_t CameraFactory::mCameraModuleMethods = {
+239     .open = CameraFactory::device_open
+240 };
+
+```
+从上述代码中不难看出，这里实际调用的是CameraFactory::device_open
+```
+191 /****************************************************************************
+192  * Camera HAL API callbacks.
+193  ***************************************************************************/
+194 
+195 int CameraFactory::device_open(const hw_module_t* module,                                                                                                                                               
+196                                        const char* name,
+197                                        hw_device_t** device)
+198 {
+199     ALOGD("CameraFactory::device_open: name = %s", name);
+200 
+201     /*
+202      * Simply verify the parameters, and dispatch the call inside the
+203      * CameraFactory instance.
+204      */
+205 
+206     if (module != &HAL_MODULE_INFO_SYM.common) {
+207         ALOGE("%s: Invalid module %p expected %p",
+208                 __FUNCTION__, module, &HAL_MODULE_INFO_SYM.common);
+209         return -EINVAL;
+210     }
+211     if (name == NULL) {
+212         ALOGE("%s: NULL name is not expected here", __FUNCTION__);
+213         return -EINVAL;
+214     }
+215 
+216     int camera_id = atoi(name);
+217     return gCameraFactory.cameraDeviceOpen(module, camera_id, device);
+218 }
+219 
+
+```
+这里做了一些判断，不是很重要，最终执行到gCameraFactory.cameraDeviceOpen(module, camera_id, device);实际执行的是如下代码：
+```
+70 int CameraFactory::cameraDeviceOpen(const hw_module_t* module,int camera_id, hw_device_t** device)
+ 71 {
+ 72     ALOGD("CameraFactory::cameraDeviceOpen: id = %d", camera_id);
+ 73 
+ 74     *device = NULL;
+ 75 
+ 76     if (!mCamera || camera_id < 0 || camera_id >= getCameraNum()) {
+ 77         ALOGE("%s: Camera id %d is out of bounds (%d)",
+ 78              __FUNCTION__, camera_id, getCameraNum());
+ 79         return -EINVAL;
+ 80     }
+ 81 
+ 82     if (!mCamera[camera_id]) {                                                                                                                                                                          
+ 83         mCamera[camera_id] = new CameraHardware(module, mCameraDevices[camera_id]);
+ 84     }
+ 85     return mCamera[camera_id]->connectCamera(device);
+ 86 }
+
+```
