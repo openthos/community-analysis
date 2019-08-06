@@ -245,4 +245,106 @@ mModule是一个CameraModule对象，调用的是hardware\interfaces\camera\comm
 345 }
 
 ```
-这里就是对应的厂商的HAL代码了！
+该方法非常简洁，就是调用mModule类的common.methods的open方法处理，它的mModule也是在CameraModule类的构造函数中传入的，而CameraModule的构造方法是在CameraProvider类的initialize()方法中调用的。 
+```
+```
+- hardware/interfaces/camera/provider/2.4/default/CameraProvider.cpp
+```
+182 bool CameraProvider::initialize() {
+183     camera_module_t *rawModule;
+184     int err = hw_get_module(CAMERA_HARDWARE_MODULE_ID,
+185             (const hw_module_t **)&rawModule);
+186     if (err < 0) {
+187         ALOGE("Could not load camera HAL module: %d (%s)", err, strerror(-err));
+188         return true;
+189     }
+190 
+191     mModule = new CameraModule(rawModule);
+192     err = mModule->init();
+193     if (err != OK) {
+194         ALOGE("Could not initialize camera HAL module: %d (%s)", err, strerror(-err));
+195         mModule.clear();
+196         return true;
+197     }
+198     ALOGI("Loaded \"%s\" camera module", mModule->getModuleName());
+199 
+200     // Setup vendor tags here so HAL can setup vendor keys in camera characteristics
+201     VendorTagDescriptor::clearGlobalVendorTagDescriptor();
+202     if (!setUpVendorTags()) {
+203         ALOGE("%s: Vendor tag setup failed, will not be available.", __FUNCTION__);
+204     }
+205 
+206     // Setup callback now because we are going to try openLegacy next
+207     err = mModule->setCallbacks(this);
+208     if (err != OK) {
+209         ALOGE("Could not set camera module callback: %d (%s)", err, strerror(-err));
+210         mModule.clear();
+211         return true;
+212     }
+213                                                                                                                                                                                                         
+214     mPreferredHal3MinorVersion = property_get_int32("ro.camera.wrapper.hal3TrebleMinorVersion", 3);
+215     ALOGV("Preferred HAL 3 minor version is %d", mPreferredHal3MinorVersion);
+216     switch(mPreferredHal3MinorVersion) {
+217         case 2:
+218         case 3:
+219             // OK
+220             break;
+221         default:
+222             ALOGW("Unknown minor camera device HAL version %d in property "
+223                     "'camera.wrapper.hal3TrebleMinorVersion', defaulting to 3", mPreferredHal3MinorVersion);
+224             mPreferredHal3MinorVersion = 3;
+225     }
+226 
+227     mNumberOfLegacyCameras = mModule->getNumberOfCameras();
+228     for (int i = 0; i < mNumberOfLegacyCameras; i++) {
+229         struct camera_info info;
+230         auto rc = mModule->getCameraInfo(i, &info);
+231         if (rc != NO_ERROR) {
+232             ALOGE("%s: Camera info query failed!", __func__);
+233             mModule.clear();
+234             return true;
+235         }
+236 
+237         if (checkCameraVersion(i, info) != OK) {
+238             ALOGE("%s: Camera version check failed!", __func__);
+239             mModule.clear();
+240             return true;
+241         }
+242 
+243         char cameraId[kMaxCameraIdLen];
+244         snprintf(cameraId, sizeof(cameraId), "%d", i);
+245         std::string cameraIdStr(cameraId);
+246         mCameraStatusMap[cameraIdStr] = CAMERA_DEVICE_STATUS_PRESENT;
+247         mCameraIds.add(cameraIdStr);
+248 
+249         // initialize mCameraDeviceNames and mOpenLegacySupported
+250         mOpenLegacySupported[cameraIdStr] = false;
+251         int deviceVersion = mModule->getDeviceVersion(i);
+252         mCameraDeviceNames.add(
+253                 std::make_pair(cameraIdStr,
+254                                getHidlDeviceName(cameraIdStr, deviceVersion)));
+255         if (deviceVersion >= CAMERA_DEVICE_API_VERSION_3_2 &&
+256                 mModule->isOpenLegacyDefined()) {
+257             // try open_legacy to see if it actually works
+258             struct hw_device_t* halDev = nullptr;
+259             int ret = mModule->openLegacy(cameraId, CAMERA_DEVICE_API_VERSION_1_0, &halDev);
+260             if (ret == 0) {
+261                 mOpenLegacySupported[cameraIdStr] = true;
+262                 halDev->close(halDev);
+263                 mCameraDeviceNames.add(
+264                         std::make_pair(cameraIdStr,
+265                                 getHidlDeviceName(cameraIdStr, CAMERA_DEVICE_API_VERSION_1_0)));
+266             } else if (ret == -EBUSY || ret == -EUSERS) {
+267                 // Looks like this provider instance is not initialized during
+268                 // system startup and there are other camera users already.
+269                 // Not a good sign but not fatal.
+270                 ALOGW("%s: open_legacy try failed!", __FUNCTION__);
+271             }                                                                                                                                                                                           
+272         }
+273     }
+274 
+275     return false; // mInitFailed
+276 }
+
+```
+```这里构造CameraModule时传入的参数rawModule就是在该方法一开始时，通过调用int err = hw_get_module(CAMERA_HARDWARE_MODULE_ID, (const hw_module_t **)&rawModule)获取到的，看到这里大家是不是觉得有些熟悉，CAMERA_HARDWARE_MODULE_ID就是HAL层定义的module，从这里往下就和对应的设备厂商有密切关系了。```
