@@ -335,3 +335,72 @@ mModule是一个CameraModule对象，调用的是hardware\interfaces\camera\comm
 
 - hardware/libcamera/CameraHal.cpp <br>
 openthos8.1在此文件中定义了结构体camera_module_t，在CameraProvider类的initialize()方法中调用hw_get_module获取到的就是这里定义的camera_module_t，它也就是构造CameraModule时传入的参数。
+
+至此，完成了设备的open操作！
+
+# 设置回调函数
+- frameworks/av/services/camera/libcameraservice/api1/CameraClient.cpp
+```
+  89 mHardware->setCallbacks(notifyCallback,
+  90             dataCallback,
+  91             dataCallbackTimestamp,
+  92             handleCallbackTimestampBatch,
+  93             (void *)(uintptr_t)mCameraId);      
+```
+这里根据调用的是CameraHardwareInterface的setCallbacks方法
+
+- services/camera/libcameraservice/device1/CameraHardwareInterface.cpp
+```
+463 void CameraHardwareInterface::setCallbacks(notify_callback notify_cb,                                                                                                                                          
+464         data_callback data_cb,
+465         data_callback_timestamp data_cb_timestamp,
+466         data_callback_timestamp_batch data_cb_timestamp_batch,
+467         void* user)
+468 {        
+469     mNotifyCb = notify_cb;
+470     mDataCb = data_cb;
+471     mDataCbTimestamp = data_cb_timestamp;
+472     mDataCbTimestampBatch = data_cb_timestamp_batch;
+473     mCbUser = user;
+474 
+475     ALOGI("%s(%s)", __FUNCTION__, mName.string());
+476 }
+
+```
+- CameraHardware.cpp
+```
+1811 void CameraHardware::set_callbacks(
+1812         struct camera_device* dev,
+1813         camera_notify_callback notify_cb,
+1814         camera_data_callback data_cb,
+1815         camera_data_timestamp_callback data_cb_timestamp,
+1816         camera_request_memory get_memory,                                                                                                                                                                     
+1817         void* user)
+1818 {
+1819     CameraHardware* ec = reinterpret_cast<CameraHardware*>(dev->priv);
+1820     if (ec == NULL) {
+1821         ALOGE("%s: Unexpected NULL camera device", __FUNCTION__);
+1822         return;
+1823     }
+1824     ec->setCallbacks(notify_cb, data_cb, data_cb_timestamp, get_memory, user);
+1825 }
+
+ 366 void CameraHardware::setCallbacks(camera_notify_callback notify_cb,                                                      
+ 367                                   camera_data_callback data_cb,
+ 368                                   camera_data_timestamp_callback data_cb_timestamp,
+ 369                                   camera_request_memory get_memory,
+ 370                                   void* user)
+ 371 {
+ 372     ALOGD("CameraHardware::setCallbacks");
+ 373     {
+ 374         Mutex::Autolock lock(mLock);
+ 375         mNotifyCb = notify_cb;
+ 376         mDataCb = data_cb;
+ 377         mDataCbTimestamp = data_cb_timestamp;
+ 378         mRequestMemory = get_memory;
+ 379         mCallbackCookie = user;
+ 380     }
+ 381 }
+ 382 
+
+```
