@@ -6,6 +6,9 @@
     - 1.分析定位文本编辑功能弹窗错位bug，弹窗的显示区域是在FloatingActionMode.java的isContentRectWithinBounds方法中设置的，是通过Display的getRealSize方法获取屏幕宽高，设置整个屏幕为显示区域，而对于微信窗口，getRealSize获取的是当前窗口的大小，从而导致其位置显示不正常。
     - 2.分析内容光标位置错位bug，由于对微信适配，在微信专属的NewPhoneWindow中，针对FakeDecor的transforParent方法做适配，导致光标位置错位，目前设计的解决方案，在光标位置更新的地方，通过判断RootView是否是FakeDecor，对光标位置的y方向进行修正，解决此问题。
 
+# 罗浩
+### 多窗口
+  - 1.基本解决京东APK窗口周围白边的问题。问题的具体成因是apk调用了canvas的drawcolor方法来绘制背景，而drawcolor方法会直接将整个Layer按照给定MODE绘制为给定颜色。在多窗口模式下，frameworks/base中定义了变量surfaceinsect，其大小根据dpi浮动，在创建surface时会在窗口原有大小的基础上将surfaceinset加到宽高上，使得申请的surface比窗口在上下左右方向各大出一部分，其目的不明确但猜测是通过native的方式来绘制窗口周围的阴影。由于drawcolor会直接绘制整个surface所处的layer，导致会将由于上述原因多出的部分也进行绘制，因此导致周围存在白色区域。解决方案是对drawcolor方法进行扩展，将其中的clipbase中的用于控制绘制区域的bounds进行调整，数据源则选取和窗口逻辑大小一直的canvas大小，在canvas调用drawcolor时将其宽高传入，并根据传入数值来界定绘制区域，保证不会有过渡绘制。京东仍存在一些多窗口问题，会继续解决。
 
 
 # 2019年07月29日 - - 2019年08月02日 周总结
