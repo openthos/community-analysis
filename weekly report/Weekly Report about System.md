@@ -1,3 +1,18 @@
+# 2019-08-05 ~ 2019-08-09 工作总结
+## 萧络元
+### 任务情况
+* 保证各模块符合selinux的规则、可以编译运行通过 ，分析理解selinux的policy，统计所有报错“avc: denied”，为自动生成对应的sepolicy试验规则配置工具audit2allow	
+* 同步oto8代码到github	梳理好openthos修改过的仓库，并把multiwindow-oreo分支push到github，见https://github.com/openthos/OTO/blob/master/README.md
+* oto8上常用应用崩溃问题协助黄sir分析，出bug的都是houdini对so库翻译有关，闭源目前也没有好的解决方法
+  - 知乎
+  java.lang.UnsatisfiedLinkError: dlopen failed: "/data/user/0/com.zhihu.android/lib/libDexHelper-x86.so" has unexpected e_machine: 3
+  libDexHelper.so ELF32,ARM
+  libDexHelper-x86.so ELF32,Intel80386
+  通过删除该库的方式也无法正常。
+  - 天猫
+  SIGSEGV
+  0020084b /system/lib/libhoudini.so
+
 # 2019-07-08 ~ 2019-07-12 工作总结
 ## 萧络元
 ### 任务情况
