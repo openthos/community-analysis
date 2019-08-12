@@ -1,17 +1,22 @@
-[2019-04-22 ~ 2019-04-26个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-04-01--2019-04-05%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-04-15 ~ 2019-04-19个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-04-15--2019-04-19%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-04-08 ~ 2019-04-12个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-04-08--2019-04-12%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-04-02 ~ 2019-04-05个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-04-02--2019-04-05%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-03-25 ~ 2019-03-29个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-25--2019-03-29%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-03-18 ~ 2019-03-22个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-18--2019-03-22%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-03-11 ~ 2019-03-15个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-11--2019-03-15%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-03-04 ~ 2019-03-08个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-03-04--2019-03-08%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-02-25 ~ 2019-03-01个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-02-25--2019-03-01%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-02-18 ~ 2019-02-22个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-02-18--2019-02-22%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-01-21 ~ 2019-01-25个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-21--2019-01-25%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-01-14 ~ 2019-01-18个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-14--2019-01-18%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-01-07 ~ 2019-01-11个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-07--2019-01-11%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
-[2019-01-02 ~ 2019-01-04个人周报](https://github.com/openthos/community-analysis/blob/master/weekly%20report/Weekly%20Report%20about%20Launcher%20Group.md#2019-01-02--2019-01-04%E4%B8%AA%E4%BA%BA%E5%91%A8%E6%8A%A5)<br />
+# 2019-08-05 ~ 2019-08-09周报
+## 王之旭
+  - 深入学习多窗口组代码，文档，了解UI是如何绘制出来的。
+  - 正在解决下拉窗口到屏幕下方再松开后，窗口尺寸变小的bug，目前已经定位到原因，还未找到很好的改动办法，因为触发该问题的的地方，如果改动了，也会影响窗口缩放，目前怀疑可能没有找到正确的位置，待确定。
+  
+下周计划
+  - 继续解决窗口拖拽缩放问题
+  - 深入学习C C++ ndk，为云服务打基础
+
+## 董鹏
+  - 添加传输列表功能按钮的接口
+  - 梳理传输列表逻辑
+本周计划：
+  - 继续完善传输列表中的逻辑
+
+
+
+
+
 
 # 2019-04-22 ~ 2019-04-26周报
 ## 王之旭
