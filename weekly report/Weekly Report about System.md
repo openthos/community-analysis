@@ -11,12 +11,23 @@ checkpolicy:  error(s) encountered while parsing configuration
 ```
 
 * 在repo代码库的manifest中添加packages/apps/PackageInstaller项目，并构建对应开发分支；
- 
+                                                                                                           30%
 ### 下周计划
 * 继续对各模块符合selinux的规则、编译运行问题的解决，理解selinux的policy；
 * 跟踪调试浏览器新bug: 打开outlook.com后崩溃问题；
 * 沟通并了解权限管理组的写代码进度情况； 
- 
+
+## 苗德行
+### 本周任务
+* 与黄志伟就权限管理patch沟通，并根据其要求做出修改，提交最终patch与王之旭
+* 在PMS中增加Location权限管理，并形成patch提交给王之旭
+* 协助张善民与测试完成Location权限管理测试
+* 分析PMS弹窗
+### 下周计划
+* 完成弹窗对权限的管理
+* 增加权限管理的其他接口
+* 分析电话，短信权限管理
+
 # 2019-08-05 ~ 2019-08-09 工作总结
 ## 萧络元
 ### 任务情况
