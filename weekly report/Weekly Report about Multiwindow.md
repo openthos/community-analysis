@@ -2,7 +2,7 @@
 # 刘晓旭
 ### 窗口兼容模式功能
   - 1.review、整理oto8手机兼容模式需求功能代码，并push至服务器。
-  - 2.协助尝试实现app在兼容模式下运行，建立Configuration、CompatContextImpl、Display三者之间联系，已初步实现功能。
+  - 2.协助尝试设计、实现app在兼容模式下运行，建立Configuration、CompatContextImpl、Display三者之间联系，已初步实现功能。
   - 3.协助通过demo对比oto8、华为m6，返回给应用的相关多窗口的屏幕数据。
 
 # 2019年08月12日 - - 2019年08月16日 周总结
