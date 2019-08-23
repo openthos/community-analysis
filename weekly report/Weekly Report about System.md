@@ -1,3 +1,22 @@
+# 2019-08-19 ~ 2019-08-23 工作总结
+## 萧络元 
+### 任务情况
+* 修复selinux策略文件编译时出现的如下报错，这类错误需要预先对所描述的type对象进行申明定义，代表一个对象（例如，文件、套接字）或一组对象的标签；
+```
+RROR 'unknown type surfaceflinger_tmpfs' at token ';' on line 22603:
+ERROR 'unknown type platform_app_tmpfs' at token ';' on line 22583:
+allow platform_app platform_app_tmpfs:file map;
+allow platform_app device:dir { open read };
+checkpolicy:  error(s) encountered while parsing configuration
+```
+
+* 在repo代码库的manifest中添加packages/apps/PackageInstaller项目，并构建对应开发分支；
+ 
+### 下周计划
+* 继续对各模块符合selinux的规则、编译运行问题的解决，理解selinux的policy；
+* 跟踪调试浏览器新bug: 打开outlook.com后崩溃问题；
+* 沟通并了解权限管理组的写代码进度情况； 
+ 
 # 2019-08-05 ~ 2019-08-09 工作总结
 ## 萧络元
 ### 任务情况
