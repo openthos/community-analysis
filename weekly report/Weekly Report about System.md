@@ -1,4 +1,14 @@
 # 2019-08-19 ~ 2019-08-23 工作总结
+## 黃志偉
+* 研究基於 Project Celadon cel_kbl 的 Android 9 解決方案：
+  - 將 cel_kbl 由 car mode 修改為 tablet mode，移除 car 相關 components 以解決無法開進桌面的問題。
+  - 測試加入 GMS，基本運作正常。但 Chrome browser 無法開啟。安裝 Firefox 可正常執行。
+  - 測試加入 houdini，32-bit arm app 可正常運作。但須移除 arm64 abi 以免安裝到 arm64 app。
+* SELinux enabling 卡在 neverallow rules 的修改。目前暫停，待 Android 9/10 一併解決。
+* 討論並 review 權限管理相關 patches。
+* 下週計劃：
+  - 將 celadon 改為基於 android-x86 style installer 以方便測試。
+  
 ## 萧络元 
 ### 任务情况
 * 修复selinux策略文件编译时出现的如下报错，这类错误需要预先对所描述的type对象进行申明定义，代表一个对象（例如，文件、套接字）或一组对象的标签；
