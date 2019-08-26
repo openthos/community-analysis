@@ -7,7 +7,7 @@
 * SELinux enabling 卡在 neverallow rules 的修改。目前暫停，待 Android 9/10 一併解決。
 * 討論並 review 權限管理相關 patches。
 * 下週計劃：
-  - 將 celadon 改為基於 android-x86 style installer 以方便測試。
+  - 將 celadon 改為基於 android-x86 或 openthos style installer 以方便測試。
   
 ## 萧络元 
 ### 任务情况
