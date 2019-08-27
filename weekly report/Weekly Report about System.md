@@ -38,6 +38,18 @@ checkpolicy:  error(s) encountered while parsing configuration
 * 增加权限管理的其他接口
 * 分析电话，短信权限管理
 
+
+## 张善民
+### 本周工作进展：
+
+    根据PackageManager预留的Location接口，修改了虚拟位置权限的Patch，经测试在高德地图、百度地图、搜狗地图上基本可用。
+    分析了一部分ContentProvider的源码。
+
+### 下周工作计划：
+
+    继续分析ContentProvider的源码，尝试寻找合适的入口点，注入联系人、日历、通话记录的虚拟权限代码。
+
+
 # 2019-08-05 ~ 2019-08-09 工作总结
 ## 萧络元
 ### 任务情况
