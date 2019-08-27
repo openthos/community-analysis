@@ -8,7 +8,9 @@
 * 討論並 review 權限管理相關 patches。
 * 下週計劃：
   - 將 celadon 改為基於 android-x86 或 openthos style installer 以方便測試。
-  
+
+>>陈渝：openthos需要一个精简的linux apps based on musl-libc，请与肖一起在本周开始此项工作
+
 ## 萧络元 
 ### 任务情况
 * 修复selinux策略文件编译时出现的如下报错，这类错误需要预先对所描述的type对象进行申明定义，代表一个对象（例如，文件、套接字）或一组对象的标签；
@@ -27,6 +29,8 @@ checkpolicy:  error(s) encountered while parsing configuration
 * 跟踪调试浏览器新bug: 打开outlook.com后崩溃问题；
 * 沟通并了解权限管理组的写代码进度情况； 
 
+>>陈渝：openthos需要一个精简的linux apps based on musl-libc，请与黄一起在本周开始此项工作
+
 ## 苗德行
 ### 本周任务
 * 与黄志伟就权限管理patch沟通，并根据其要求做出修改，提交最终patch与王之旭
@@ -38,6 +42,7 @@ checkpolicy:  error(s) encountered while parsing configuration
 * 增加权限管理的其他接口
 * 分析电话，短信权限管理
 
+>>陈渝：请与张一起在本周完成分析相关权限管理代码，写出分析报告并实现联系人、日历、通话记录的虚拟权限
 
 ## 张善民
 ### 本周工作进展：
@@ -49,6 +54,7 @@ checkpolicy:  error(s) encountered while parsing configuration
 
     继续分析ContentProvider的源码，尝试寻找合适的入口点，注入联系人、日历、通话记录的虚拟权限代码。
 
+>>陈渝：请与苗一起在本周完成分析相关权限管理代码，写出分析报告并实现联系人、日历、通话记录的虚拟权限
 
 # 2019-08-05 ~ 2019-08-09 工作总结
 ## 萧络元
