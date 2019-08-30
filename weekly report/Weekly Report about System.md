@@ -1,4 +1,12 @@
 # 2019-08-26 ~ 2019-08-30 工作总结
+## 黃志偉
+### 本周情况
+* 研究 musl-libc、LFS、alpine-linux 等相關 projects。
+* 建立 external/musl/libc repo，嘗試將其 makefile 轉換成 Android.mk 以便在 OPENTHOS 環境下編譯。
+### 下週計劃：
+* 完成 musl-libc 的 Android.mk
+* 建立基於 musl-libc 的 Android 編譯系統
+
 ## 萧络元
 ### 本周情况
 * openthos需要一个精简的linux apps based on musl-libc;
