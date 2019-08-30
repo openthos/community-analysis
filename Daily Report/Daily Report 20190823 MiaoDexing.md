@@ -88,13 +88,3 @@
 341                         groupState.affectedPermissions);
 342                 groupState.mState = GroupState.STATE_DENIED;
 ```
-
-
-
-08-23 04:03:26.262  3670  3670 I mdx----- revokeRuntimePermissions: mAppSupportsRuntimePermissions true false
-08-23 04:03:26.265  3670  3670 I mdx------revokeRuntimePermissions: android.permission-group.CAMERA
-08-23 04:03:26.266  3670  3670 I mdx------ updateGrantResults: permission android.permission.CAMERA 0 true
-
-
-08-23 04:05:06.092  3670  3670 I mdx------grantRuntimePermissions: android.permission-group.MICROPHONE
-08-23 04:05:06.092  3670  3670 I mdx------ updateGrantResults: permission android.permission.RECORD_AUDIO 0 true
