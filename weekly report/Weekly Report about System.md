@@ -1,3 +1,18 @@
+# 2019-08-26 ~ 2019-08-30 工作总结
+## 萧络元
+### 本周情况
+* openthos需要一个精简的linux apps based on musl-libc;
+  - 根据LinuxFromScratch，基于musl-1.1.22、Linux-4.19.36 headers、binutils-2.32、GCC-8.3.0等，现从源码构建出Cross Compiler Toolchain;
+* 跟踪调试浏览器新bug: 打开outlook.com后崩溃问题;
+  - CrGpuMain进程在checkCompiled时出问题:`GLSL compilation error`,`error: 'gl_LastFragData' undeclared`
+  - 触发SIGABRT, 定位问题在skia/src/gpu/gl/builders/GrGLShaderStringBuilder.cpp +143
+* 协助WZX解决oto-8.1代码仓库提交出现的一些error；
+
+### 下周计划
+* OPENTHOS系统上的精简的linux apps based on musl-libc，与黄一起开展此项工作；
+* 跟踪调试浏览器新bug: 打开outlook.com后崩溃问题；
+* 继续对各模块符合selinux的规则、编译运行问题的解决，理解selinux的policy；
+
 # 2019-08-19 ~ 2019-08-23 工作总结
 ## 黃志偉
 * 研究基於 Project Celadon cel_kbl 的 Android 9 解決方案：
@@ -23,7 +38,7 @@ checkpolicy:  error(s) encountered while parsing configuration
 ```
 
 * 在repo代码库的manifest中添加packages/apps/PackageInstaller项目，并构建对应开发分支；
-                                                                                                           30%
+
 ### 下周计划
 * 继续对各模块符合selinux的规则、编译运行问题的解决，理解selinux的policy；
 * 跟踪调试浏览器新bug: 打开outlook.com后崩溃问题；
