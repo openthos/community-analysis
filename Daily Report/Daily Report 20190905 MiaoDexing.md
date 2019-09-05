@@ -28,4 +28,7 @@
 ```
 
 -  src/com/android/packageinstaller/permission/ui/handheld/AppPermissionsFragment.java
+
 这里会出现AlertDialog 
+
+https://github.com/openthos/community-analysis/blob/master/Daily%20Report/Screenshot_20190904-202216.png
