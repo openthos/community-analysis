@@ -35,7 +35,9 @@
 
 
 -  packages/providers/ContactsProvider/src/com/android/providers/contacts/ContactsProvider2.java
+
 经测试，联系人添加，更改，删除皆是通过ContactsProvider2类中的相应方法实现
 
 -  frameworks/base/core/java/android/content/ContentResolver.java
+
 联系人的查询最终调用的是ContentResolver的query方法
