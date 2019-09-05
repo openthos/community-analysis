@@ -31,4 +31,4 @@
 
 这里会出现AlertDialog 
 
-https://github.com/openthos/community-analysis/blob/master/Daily%20Report/Screenshot_20190904-202216.png
+![blockchain](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/Screenshot_20190904-202216.png)
