@@ -37,7 +37,7 @@
 -  packages/providers/ContactsProvider/src/com/android/providers/contacts/ContactsProvider2.java
 
 联系人添加，更改，删除皆是通过ContactsProvider2类中的相应方法实现 <br>
-此处有一个问题，对联系人的添加，更改，删除皆需要通过ContactsProvider2类，而ContactsProvider2类只能获得包名com.android.providers.contacts
+此处有一个问题，对联系人的添加，更改，删除皆需要通过ContactsProvider2类
 
 
 -  frameworks/base/core/java/android/content/ContentResolver.java
