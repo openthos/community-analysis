@@ -1,4 +1,13 @@
-# 2019-09-02~ 2019-09-06结
+# 2019-09-02~ 2019-09-06 工作总结
+## 黃志偉
+### 本周情况
+* 建立 external/musl/libc/Android.mk，可搭配 OPENTHOS 環境編譯 libc-musl.so 和 musl-gcc。
+* 準備 Android 10 的移植。
+
+### 下週計劃：
+* 建立 BUILD_MUSL_EXECUTABLE 和 BUILD_MUSCL_LIBRARY 兩個 makefiles，以編譯 musl-libc 相關文件。
+* 開始 q-x86 porting。
+
 ## 苗德行
 ### 本周情况
 - 1、日历的权限管理 ，目前暂停，下周继续       40%
