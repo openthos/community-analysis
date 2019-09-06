@@ -4,6 +4,7 @@
     - 基本已完成功能，整理代码中。
     - [Notification在SystemUi上的显示流程](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/oto8%20Notification%E5%9C%A8SystemUi%E4%B8%8A%E6%98%BE%E7%A4%BA%E6%B5%81%E7%A8%8B.md)
   - 2.分析oto8系统语言显示流程，并协助修改。
+    - [设置-系统-语言项显示加载流程](https://github.com/openthos/multiwin-analysis/edit/master/multiwindow/liuxx/oto8%20%E8%AE%BE%E7%BD%AE-%E7%B3%BB%E7%BB%9F-%E8%AF%AD%E8%A8%80%E9%A1%B9%E6%98%BE%E7%A4%BA%E5%8A%A0%E8%BD%BD%E6%B5%81%E7%A8%8B.md)
   
 
 # 2019年08月26日 - - 2019年08月30日 周总结
