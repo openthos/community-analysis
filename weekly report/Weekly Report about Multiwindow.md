@@ -5,7 +5,10 @@
     - [Notification在SystemUi上的显示流程](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/oto8%20Notification%E5%9C%A8SystemUi%E4%B8%8A%E6%98%BE%E7%A4%BA%E6%B5%81%E7%A8%8B.md)
   - 2.分析oto8系统语言显示流程，并协助修改。
     - [设置-系统-语言项显示加载流程](https://github.com/openthos/multiwin-analysis/edit/master/multiwindow/liuxx/oto8%20%E8%AE%BE%E7%BD%AE-%E7%B3%BB%E7%BB%9F-%E8%AF%AD%E8%A8%80%E9%A1%B9%E6%98%BE%E7%A4%BA%E5%8A%A0%E8%BD%BD%E6%B5%81%E7%A8%8B.md)
-  
+
+# 罗浩
+  - 1.分析oto8通知栏实现流程，初步设计动态statusbarwindowview大小的设计，当大通知栏未打开时，需要弹出消息的时候则弹出和消息本体差不多大小的小通知栏，若在此期间用户通过satatusbar的按钮开启大通知栏则先让小通知栏的动画停止并使之随大通知栏一起重新显示，从而能保证当用户在次点击按钮隐藏大通知栏时，小通知栏也会一起消失。同时，在小通知栏显示的时候为了使之更自然，同时调整通知栏整体的layout结构，权重以及背景色，并将上述改动在大通知栏显示时回调，保证大小通知栏都能够正常显示。已经初步提供镜像给测试组进行测试，反馈没有问题，整理代码后下周一提交patch。
+
 
 # 2019年08月26日 - - 2019年08月30日 周总结
 # 刘晓旭
