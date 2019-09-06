@@ -2,7 +2,7 @@
 # 刘晓旭
   - 1.协助分析oto8通知栏实现流程，解决通知栏收到消息后，整体弹出问题。通过代码分析，此问题是早期通知栏设计实现，引出的问题，原生Android x86不存在此问题。目前初步设计解决方案：通知栏关闭状态下，收到消息后，在屏幕右上或右下弹出消息提示弹窗；在通知栏打开状态下，收到消息时，不弹出消息提示弹窗。
     - 基本已完成功能，整理代码中。
-    - ![Notification在SystemUi上的显示流程](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/oto8%20Notification%E5%9C%A8SystemUi%E4%B8%8A%E6%98%BE%E7%A4%BA%E6%B5%81%E7%A8%8B.md)
+    - [Notification在SystemUi上的显示流程](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/oto8%20Notification%E5%9C%A8SystemUi%E4%B8%8A%E6%98%BE%E7%A4%BA%E6%B5%81%E7%A8%8B.md)
   - 2.分析oto8系统语言显示流程，并协助修改。
   
 
