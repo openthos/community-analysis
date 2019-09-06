@@ -9,3 +9,6 @@
  2、发出访问数据请求的过程：
    -   B应用程序如果希望跨进程访问A应用程序共享出来的数据，需要调用Context#getContentResolver()#query()|update()|insert()|delete()，无非就是对数据内容进行增删改查操作，涉及到一个类ContentResolver，具体调用的是ContentResolver的增删改查方法；与SQLite数据库的增删改查不同，ContentResolver的增删改查方法需要接受一个URI参数，这个URI参数就是希望访问的数据内容的URI；
    -   此过程在B应用程序内部实现，通过在B进程访问A进程的私有数据，完成跨进程共享数据的过程！
+```
+在packages/providers/ContactsProvider/中的AndroidManifest.xml文件中我们可以知道，此处为联系人所对应的provider，其他应用访问联系人皆是向其发送请求
+```
