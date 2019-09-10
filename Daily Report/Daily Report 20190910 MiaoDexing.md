@@ -1,0 +1,13 @@
+# 权限检查流程梳理
+## 权限申请
+- （1）App调用requestPermissions发起动态权限申请；
+- （2）requestPermissions方法通过广播的形式启动PackageInstaller的GrantPermissionsActivity界面让用户选择是否授权；
+- （3）经由PackageManagerService把相关信息传递给PermissionManagerService处理；
+- （4）PermissionManagerService处理结束后回调PackageManagerService中onPermissionGranted方法把处理结果返回；
+- （5）PackageManagerService通知观察者权限变化并调用writeRuntimePermissionsForUserLPr方法让PackageManager的settings记录下相关的权限授予状态。
+
+## 权限检查
+- （1）App调用checkSelfPermission方法检测是否具有权限；
+- （2）通过实现类ContextImpl的checkPermission方法经由ActivityManager和ActivityManagerService处理；
+- （3）经过ActivityManager处理后会调用PackageManagerService的checkUidPermission方法把数据传递给PermissionManagerService处理；
+- （4）最终经过一系列查询返回权限授权的状态。
