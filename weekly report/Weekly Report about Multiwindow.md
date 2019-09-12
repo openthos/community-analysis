@@ -1,4 +1,14 @@
-# 2019年09月06日 - - 2019年09月02日 周总结
+# 2019年09月09日 - - 2019年09月12日 周总结
+# 刘晓旭
+  - 1.bug：安装应用时最小化安装窗口会使系统软重启，安装抖音时最容易复现，通过定位分析在ActivityMetricsLogger.java中，当最小化时，String数组TRON_WINDOW_STATE_VARZ_STRINGS出现ArrayIndexOutOfBoundsException数组下标索引越界异常，导致系统软重启。
+    - 解决方案：增加String数组TRON_WINDOW_STATE_VARZ_STRINGS对应的应用最小化状态时数值，避免数组下标索引越界异常。
+    - 应用安装界面PackageInstaller打开时，在StatusBar上不显示状态图标，因此最小化时，应用安装完成后，界面仍处于最小化状态，无法关闭。
+      - 解决方案：当PackageInstaller最小化时，应用安装完成或安装失败后，界面直接finish。
+  - 2.bug：时钟计时器功能完成计时后崩溃。通过定位分析，Android8.0也就是API26开始要求Notification设置Channel,否则会报错，而aosp8.1时钟app没有做相应适配，导致弹出Notification时crash。
+    - 解决方案：在Notification创建时设置相应的NotificationChannel，解决此问题。
+
+
+# 2019年09月02日 - - 2019年09月06日 周总结
 # 刘晓旭
   - 1.协助分析oto8通知栏实现流程，解决通知栏收到消息后，整体弹出问题。通过代码分析，此问题是早期通知栏设计实现，引出的问题，原生Android x86不存在此问题。目前初步设计解决方案：通知栏关闭状态下，收到消息后，在屏幕右上或右下弹出消息提示弹窗；在通知栏打开状态下，收到消息时，不弹出消息提示弹窗。
     - 基本已完成功能，整理代码中。
