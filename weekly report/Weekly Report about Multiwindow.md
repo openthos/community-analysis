@@ -3,9 +3,9 @@
   - 1.bug：安装应用时最小化安装窗口会使系统软重启，安装抖音时最容易复现，通过定位分析在ActivityMetricsLogger.java中，当最小化时，String数组TRON_WINDOW_STATE_VARZ_STRINGS出现ArrayIndexOutOfBoundsException数组下标索引越界异常，导致系统软重启。
     - 解决方案：增加String数组TRON_WINDOW_STATE_VARZ_STRINGS对应的应用最小化状态时数值，避免数组下标索引越界异常。
     - 应用安装界面PackageInstaller打开时，在StatusBar上不显示状态图标，因此最小化时，应用安装完成后，界面仍处于最小化状态，无法关闭。
-      - 解决方案：当PackageInstaller最小化时，应用安装完成或安装失败后，界面直接finish。
+      - 解决方案：当PackageInstaller最小化时，应用安装完成或安装失败后，界面直接finish，目前正在调试代码。
   - 2.bug：时钟计时器功能完成计时后崩溃。通过定位分析，Android8.0也就是API26开始要求Notification设置Channel,否则会报错，而aosp8.1时钟app没有做相应适配，导致弹出Notification时crash。
-    - 解决方案：在Notification创建时设置相应的NotificationChannel，解决此问题。
+    - 解决方案：在Notification创建时设置相应的NotificationChannel，目前正调试代码。
 
 
 # 2019年09月02日 - - 2019年09月06日 周总结
