@@ -35,6 +35,10 @@ Following the above process will result in a repo directory, which you simply ne
 sudo mkdir /var/www/fdroid
 sudo chown -R $USER /var/www/fdroid
 ```
+- 服务器需要安装openssh-server
+```
+sudo apt-get install openssh-server
+```
 
 # Real World Setup
 
