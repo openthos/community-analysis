@@ -1,3 +1,16 @@
+# 2019-09-23 ~ 2019-09-30 工作总结
+## 萧络元
+### 本周工作
+* 文件管理器硬盘分区自动挂载功能；
+  -在Android自带移动盘管理中增加磁盘挂载功能的入口。代码分析中;
+* musl-libc移植到openthos; linux-apps由LinuxFromScratch融合至android平台中，编译路径，以及运行链接相关路径的尝试；
+* Android10-x86系统移植工作；
+  - 同步最新Android10_r2，并初步编译通过，尝试了模拟器中运行未果；
+  - 从源码编译运行Android10到Intel NUC硬件，一切正常，不过默认没有houdini支持；
+* 服务器的无法访问题与刘总沟通，并计划搬到来广营托管；github同步失败问题的修复，已交测试；实验室服务器暴露端口的统计管理；
+* 接手ZSM离职的115服务器的工作;
+* 协助WZX，在OTO8的manifest中添加DeskClock,CalendarProvider,ContactsProvider子仓库的开发分支；
+
 # 2019-09-16 ~ 2019-09-20 工作总结
 ## 苗德行
 ### 本周情况
