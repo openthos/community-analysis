@@ -3,6 +3,10 @@
 # 刘晓旭
   - 1.bug：全屏时，鼠标移到顶部的右半部分的不会触发标题栏，已完成
   - 2.bug：Microsoft office全屏时所有需要弹出子菜单的功能均不可用，比如修改字体颜色等，待提交。
+  
+# 罗浩
+  - 1.解决startupmenu在不打开应用的情况下无法接收键盘输入的问题
+  - 2.分析bilibili滑动播放下一个视频时回变为纵向布局的问题。目前的结果是需要通过一次onConfigurationChanged来使得窗口重新调整布局内容之后则会正常，否则无法正常播放，不正常的原因仍然不明，目前确定的原因和DisplayMetrics，isInMultiwindowMode，onMultiWIndowModeChange和Activity的生命周期无关。
 
 # 2019年9月16日 - - 2019年09月20日 周总结
 
