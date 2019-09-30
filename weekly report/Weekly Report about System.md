@@ -2,7 +2,7 @@
 ## 萧络元
 ### 本周工作
 * 文件管理器硬盘分区自动挂载功能；
-  - ndroid自带移动盘管理中增加磁盘挂载功能的入口。代码分析中;
+  - 在Android自带移动盘管理中增加磁盘挂载功能的入口。代码分析中;
 * musl-libc移植到openthos;
   - linux-apps由LinuxFromScratch融合至android平台中，编译路径，以及运行链接相关路径的尝试；
 * Android10-x86系统移植工作；
