@@ -9,6 +9,7 @@
   - 同步最新Android10_r2，并初步编译通过，尝试了模拟器中运行未果；
   - 从源码编译运行Android10到Intel NUC硬件，一切正常，不过默认没有houdini支持；
 * 服务器的无法访问题与刘总沟通，并计划搬到来广营托管；github同步失败问题的修复，已交测试；实验室服务器暴露端口的统计管理；
+* Sifive开发版借取，调试烧写OS，并邮寄出去；
 * 接手ZSM离职的115服务器的工作;
 * 协助WZX，在OTO8的manifest中添加DeskClock,CalendarProvider,ContactsProvider子仓库的开发分支；
 
