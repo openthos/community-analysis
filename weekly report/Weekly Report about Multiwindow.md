@@ -1,3 +1,9 @@
+# 2019年10月08日 - - 2019年10月12日 周总结
+# 刘晓旭
+  - bug：oto8 office应用，当窗口左右半屏、最大化、全屏、窗口bottom大于StatusBar的top时，编辑菜单无法显示。
+    - 1.之前通过设置office窗口bottom最大值为Display的高度，解决上述问题，通过测试发现，部分应用窗口高度与屏幕高度一致时，内容会被StatusBar遮挡；目前通过设置窗口resize时，控制窗口的bottom最大值等于StatusBar的top，可解决office窗口在左右半屏、最大化、窗口bottom大于StatusBar的top状态时，编辑菜单无法显示问题。而office窗口全屏时，无法显示编辑菜单的问题，正在分析解决方案。
+    - 2.测试发现当Word在内容编辑界面，当窗口bottom >= StatusBar的top时，窗口无法向上下拖动，只能左右拖动，excel、ppt窗口不存在此问题，正在分析解决方案。
+
 # 2019年9月23日 - - 2019年09月30日 周总结
 
 # 刘晓旭
