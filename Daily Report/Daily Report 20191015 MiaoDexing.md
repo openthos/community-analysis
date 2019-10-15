@@ -11,9 +11,11 @@
 ```
 public List<String> getAllProviders();     返回当前设备所有地理位置提供者。
 
-public List<String> getProviders(boolean enabledOnly);  当参数为true时，返回的时当前设备可使用的位置提供者；当参数为false时和上面那个方法一样，返回所有的位置提供者。
+public List<String> getProviders(boolean enabledOnly);  当参数为true时，返回的时当前设备可使用的位置提供者；
+当参数为false时和上面那个方法一样，返回所有的位置提供者。
 
-public String getBestProvider(Criteria criteria, boolean enabledOnly);  返回当前设备最符合指定条件的位置提供者，第一个参数criteria用于指定条件，第二个参数表示是否返回当前设备可用的位置提供者。现在来分析这两个参数。
+public String getBestProvider(Criteria criteria, boolean enabledOnly);  返回当前设备最符合指定条件的位置提供者，
+第一个参数criteria用于指定条件，第二个参数表示是否返回当前设备可用的位置提供者。
 
 public List<String> getProviders(Criteria criteria, boolean enabledOnly);  返回当前符合条件的所有可用的provider。
 
@@ -34,5 +36,6 @@ getLastKnownLocation()方法只能一次性的获得当前最新的地理位置�
 ```
 public void requestLocationUpdates(String provider, long minTime, float minDistance,
             LocationListener listener)
-  以上注册监听方法，参数一：位置提供者；参数二：位置更新最短时间（单位ms）；参数三：位置更新最短距离（单位m）；参数四：LocationListener监听器对象。         
+  以上注册监听方法，参数一：位置提供者；参数二：位置更新最短时间（单位ms）；参数三：位置更新最短距离（单位m）；
+  参数四：LocationListener监听器对象。         
 ```
