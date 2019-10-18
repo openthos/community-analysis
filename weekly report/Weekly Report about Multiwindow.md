@@ -3,6 +3,12 @@
   - 1.编译aosp8.1-r65分支源码，编译成功后，commit openthos8.1上frameworks/base下修改的所有patches，编译x86镜像运行在x86模拟器上，此部分工作已完成，用于多窗口测试平台。
   - 2.共同分析oto8微信兼容模式运行时，欢乐斗地主、人人斗地主打开闪退问题，已定位到与微信configuration update有关联，正在设计解决方案。
 
+# 罗浩
+  - 1.获取修改后的aosp_dragon代码，编译能够烧到pixel-c上的aosp8.1（具体文档之后完成）
+  - 2.将frameworks/base下的修改打到上述aosp8.1上，在pixel-c上运行一个只包含frameworks/base内容的openthos，目前已知问题是兼容模式窗口和内容都过小。以及由于虚拟权限问题无法使用摄像头。
+  - 3.定位微信闪退问题到LoadedApk中生成的context，提供初步修改方案。
+  - 4.定位微信横评小程序无法启动问题，保证横竖屏的长宽数值对应则可顺利启动，已提供解决方案。
+
 # 2019年10月08日 - - 2019年10月12日 周总结
 # 刘晓旭
   - bug：oto8 office应用，当窗口左右半屏、最大化、全屏、窗口bottom大于StatusBar的top时，编辑菜单无法显示。
