@@ -3,12 +3,13 @@
 ### 本周工作
 * Linux Kernel Performance的代码分析和运行试验；
   - 撰写好文档：https://github.com/openthos/kis-analysis/blob/master/doc/lkp-test-analysis/Linux%20Kernel%20Performance%20tests%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90.md
-
 * 基于AOSP与Kernel源码模式，编译跑在Pixel C机器中，wifi和蓝牙等正常；
   - 校内代码同步地址：https://aosp.tuna.tsinghua.edu.cn/kernel/tegra
-
 * musl-libc移植到openthos; linux-apps由LinuxFromScratch融合至android平台中，编译路径，以及运行链接相关路径的尝试；
   - 通过交流后，以交叉编译成prebuild的方式来移植到OTO8中；（80%）
+  
+### 下周计划
+* 跟踪调试OTO8的USER版本镜像启动失败的问题；
 
 # 2019-10-08 ~ 2019-10-12 工作总结
 ## 萧络元
