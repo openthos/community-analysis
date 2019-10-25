@@ -1,3 +1,10 @@
+# 2019年10月21日 - - 2019年10月25日 周总结
+# 刘晓旭
+  - 1.整理提交解决oto8微信欢乐斗地主、人人斗地主打开闪退问题。
+  - 2.整理oto8 frameworks、base已提交的patches
+    - [oto8多窗口内容总结](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/oto8%20%E5%A4%9A%E7%AA%97%E5%8F%A3%E5%86%85%E5%AE%B9%E6%80%BB%E7%BB%93.md)
+
+
 # 2019年10月14日 - - 2019年10月18日 周总结
 # 刘晓旭
   - 1.编译aosp8.1-r65分支源码，编译成功后，commit openthos8.1上frameworks/base下修改的所有patches，编译x86镜像运行在x86模拟器上，此部分工作已完成，用于多窗口测试平台。
