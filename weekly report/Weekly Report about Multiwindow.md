@@ -4,6 +4,10 @@
   - 2.整理oto8 frameworks、base已提交的patches
     - [oto8多窗口内容总结](https://github.com/openthos/multiwin-analysis/blob/master/multiwindow/liuxx/oto8%20%E5%A4%9A%E7%AA%97%E5%8F%A3%E5%86%85%E5%AE%B9%E6%80%BB%E7%BB%93.md)
 
+# 罗浩
+  - 1.初步解决微信切换兼容模式闪退问题，仅偶发在安装后不进行登录情况下重启后登录按钮位置较为接近，自测不影响使用
+  - 2.协助考虑整理openthos8.1 framworks/base部分patch的方法和思路以及对后续工作的意义
+  - 3.分析android10多窗口部分代码，目前主要分析新增的mLauchParams的用法和对openthos的使用方案
 
 # 2019年10月14日 - - 2019年10月18日 周总结
 # 刘晓旭
