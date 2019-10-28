@@ -1,3 +1,14 @@
+# Ubuntu 安装和配置 GitLab
+- Gitlab 安装地址
+官方地址：https://packages.gitlab.com/gitlab/gitlab-ce
+
+- 打开vim /etc/gitlab/gitlab.rb文件，将external_url = 'http://git.example.com'
+修改成自己的 IP 或者 HostName
+
+- 配置完毕，就可以使用以下命令启动Gitlab
+```
+sudo gitlab-ctl reconfigure
+```
 # Gitlab 配置不与本机已安装的Nginx冲突
 Gitlab安装包自带了http服务，会与系统已经安装的nginx冲突，导致http服务不可用。
 
