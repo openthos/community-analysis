@@ -1,5 +1,5 @@
 # Gitlab 配置不与本机已安装的Nginx冲突
-Gitlab安装包自带了http服务，会与系统已经安装的nginx冲突，导致之前的http服务不可用。
+Gitlab安装包自带了http服务，会与系统已经安装的nginx冲突，导致http服务不可用。
 
 所以，修改Gitlab默认配置
 - 修改 gitlab.rb 
