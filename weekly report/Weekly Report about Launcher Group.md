@@ -1,3 +1,19 @@
+# 2019-10-28 ~ 2019-11-01周报
+## 董鹏
+功能:
+- 完成文件列表多选功能
+- 添加多个文件下载功能
+- 添加多个删除功能（当点击ctrl时）
+- 优化下载 删除按钮状态的展示
+- 修复bug:点击空文件崩溃问题
+- 修复bug:改变窗口大小崩溃问题 
+- 下周计划：
+   - 解决下载取消时线程阻塞的问题
+## 王之旭
+- 多窗口学习80%
+- https://github.com/potatomagic/DevelopmentMaterials/tree/master/Android/Android%E5%A4%9A%E7%AA%97%E5%8F%A3
+- AOSP 9.0的多窗口修改，已实现5%,可以通过修改代码来直接Freeform模式运行程序，但位置不正确，处理不得当，bug较多
+
 # 2019-10-21 ~ 2019-10-25周报
 ## 董鹏
 - 完成右菜单数据自适应屏幕宽度功能--已提交
@@ -7,7 +23,7 @@
    - 完成框选，多选剩余工作
 ## 王之旭
 - 多窗口学习60%
-- https://github.com/potatomagic/GoodGoodStudy_DayDayUp/tree/master/Android/Android%E5%A4%9A%E7%AA%97%E5%8F%A3
+- https://github.com/potatomagic/DevelopmentMaterials/tree/master/Android/Android%E5%A4%9A%E7%AA%97%E5%8F%A3
 
 # 2019-10-14 ~ 2019-10-18周报
 ## 董鹏
