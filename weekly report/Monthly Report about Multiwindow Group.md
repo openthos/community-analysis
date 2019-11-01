@@ -1,3 +1,22 @@
+# 2019年10月 -- Multiwindow组 总结
+## 月小结
+  - 本月主要工作：前期解决oto8微信、office高优先级bug，后期同步、分析aosp9.0、aosp10.0多窗口源码。
+
+## 下月计划
+### 刘晓旭
+  - 1.解决oto8多窗口高优先级bug。
+  - 2.开发aosp9.0、aosp10.0窗口DecorCaption模块。
+  
+## 个人月总结
+### 刘晓旭
+  - 1.同步aosp9.0、aosp10.0源码。
+  - 2.编译aosp9.0源码，且成功运行在x86模拟器上。
+  - 3.aosp9.0上移植StartupMenu、StatusBar模块。
+  - 4.分析、解决oto8微信欢乐斗地主、人人斗地主打开闪退问题。
+  - 5.分析、解决oto8 office编辑菜单在窗口高度与设备高度一致时，无法显示问题。
+  - 6.整理oto8 frameworks、base已提交的patches
+  - 7.编译aosp8.1-r65分支源码，编译成功后，commit openthos8.1上frameworks/base下修改的所有patches，编译x86镜像运行在x86模拟器上，此部分工作已完成，用于多窗口测试平台。
+
 # 2019年09月 -- Multiwindow组 总结
 ## 月小结
   - 本月主要工作：解决oto8多窗口高优先级的bug，基本上完成bug的修复。
