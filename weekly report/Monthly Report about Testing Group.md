@@ -10,6 +10,10 @@
 - 分析user版镜像重启的问题
 
 ## 齐
+- patch测试
+- 测试app：微信，Edge for Android
+- 简历筛选和面试
+- openthos cloud测试
 
 # 2019-9月～月报
 
