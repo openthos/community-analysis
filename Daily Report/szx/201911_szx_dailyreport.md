@@ -12,9 +12,17 @@
    - [under-the-hood-2](https://cki-project.org/posts/under-the-hood-part-2/)
 7. 搭建自动化测试环境，要求自动生成img，且测试到启动界面，使用qemu即可。
 
+#### 101105
+
+- [ ] 发布user版镜像：
+
+#### 101104
+
+- [x] musl libc集成到oto8的测试
+- [x] 发布user版镜像：发布前测试
+
 #### 101101
 
 - [x] 统计周报，月报，进度报告
 - [x] patch测试：解决user版重启的问题
-- [ ] musl libc集成到oto8的测试
 - [x] 搭建自动化测试环境：阅读代码

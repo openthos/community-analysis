@@ -27,6 +27,16 @@
 - 解决了一台电脑上多个Openthos系统不能共存的问题
 - 解决蓝牙不能使用的问题
 
+##### Change log
+
+1. Add virtual permission management
+2. Add compatible mode
+3. Add function : virtual wifi
+4. Repair usb boot
+5. Getting startup time quicker
+6. Multiple Openthos installation on one computer
+7. Repair that the Bluetooth is not available
+
 #### 20180811版本(包含0810patch）
 
 ##### 修复问题
