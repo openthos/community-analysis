@@ -12,9 +12,14 @@
    - [under-the-hood-2](https://cki-project.org/posts/under-the-hood-part-2/)
 7. 搭建自动化测试环境，要求自动生成img，且测试到启动界面，使用qemu即可。
 
+#### 101106
+
+- [x] 发布user版镜像：联系ZJ添加长期运营者
+- [x] 测试openthos cloud桌面端
+
 #### 101105
 
-- [ ] 发布user版镜像：
+- [x] 发布user版镜像:完成镜像上传
 
 #### 101104
 
