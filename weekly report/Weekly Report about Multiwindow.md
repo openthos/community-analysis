@@ -1,3 +1,15 @@
+# 2019年11月04日 - - 2019年11月08日 周总结
+# 刘晓旭
+  - 1.移植taskbaricon主体内容到9.0
+  - 2.移植taskbarIcon对应的接口和功能到9.0
+  - 3.修改窗口DecorCaption界面，增加back、appname、appicon、setting、minimize组件，同时添加对应功能接口
+  - 4.移植最小化功能到9.0.
+# 罗浩
+  - 1.添加taskbaricon主体内容到10.0
+  - 2.添加taskbarIcon对应的接口和功能到10.0
+  - 3.修改startupMenu中应用的启动方式和ActivityStarter中对应用是否支持多窗口的判断策略保证从startupmenu启动的应用均以窗口化运行，目前发现chrome特例，待解决
+  - 4.添加最小化功能到10.0
+
 # 2019年10月28日 - - 2019年11月01日 周总结
 # 刘晓旭
   - 1.同步aosp9.0、aosp10.0源码。
