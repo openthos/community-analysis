@@ -7,6 +7,8 @@
 3. 简历筛选
 
 ## 齐
+1. 调研云服务需求：坚果云,Icloud,OneDrive，dropbox，seafile windows版
+2. 简历筛选
 
 # 2019-11-04 ~ 2019-11-08工作总结
 
