@@ -4,6 +4,10 @@
   - 2.修改aosp9.0多窗口模式下，launcher始终显示在窗口最底层。
   - 3.bug：aosp9.0默认窗口全屏功能，窗口内容无法实现全屏。通过对比分析aosp9.0、aosp10.0窗口全屏功能实现流程，定位到与ConfigurationContainer的mOverrideConfiguration的update、Changed有关，解决方案可以参考aosp8、aosp10实现思路。
 
+# 罗浩
+  - 1.实现10.0的最大化按钮以及decorcaption在全屏状态下可以通过点击顶部10个像素的位置来唤醒
+  - 2.对比10.0分析9.0中全屏时内容不放大的问题，目前看来9.0相比8.1来说，把内容显示的相关变量从task的bounds改为activityrecord的configuration中的windowconfiguration，相对9.0而言，10.0又进一步细化了在窗口的显示模式，也就是windowingmode发生变化时，configurationChange的方式，因此9.0作为方法改变而尚未细化的版本，出现了在8.1上不曾出现的bug，解决方案仍需进一步探讨。可能的方向是根据10.0将overrideconfiguration一分为二的策略并简化，在发生变化时考虑windowingmode来改编configuration，或是恢复8.1的模式通过bounds来决定显示模式，具体方式仍需要进一步研究。
+
 # 2019年11月04日 - - 2019年11月08日 周总结
 # 刘晓旭
   - 1.移植taskbaricon主体内容到9.0
