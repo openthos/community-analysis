@@ -1,3 +1,9 @@
+# 2019年11月11日 - - 2019年11月15日 周总结
+# 刘晓旭
+  - 1.添加最大化功能到9.0
+  - 2.修改aosp9.0多窗口模式下，launcher始终显示在窗口最底层。
+  - 3.bug：aosp9.0默认窗口全屏功能，窗口内容无法实现全屏。通过对比分析aosp9.0、aosp10.0窗口全屏功能实现流程，定位到与ConfigurationContainer的mOverrideConfiguration的update、Changed有关，解决方案可以参考aosp8、aosp10实现思路。
+
 # 2019年11月04日 - - 2019年11月08日 周总结
 # 刘晓旭
   - 1.移植taskbaricon主体内容到9.0
