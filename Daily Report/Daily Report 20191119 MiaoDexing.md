@@ -4,3 +4,6 @@
 # 2
 - lkp compile  ./mytest-defaults.yaml -o my.sh
 - lkp qemu my.sh
+
+# 3
+- vi ./rootfs/kexec/etc/inittab
