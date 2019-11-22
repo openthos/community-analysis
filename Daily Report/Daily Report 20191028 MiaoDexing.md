@@ -4,6 +4,9 @@
 
 - 打开vim /etc/gitlab/gitlab.rb文件，将external_url = 'http://git.example.com'
 修改成自己的 IP 或者 HostName
+```
+external_url 'http://192.168.0.146:82'
+```
 
 - 配置完毕，就可以使用以下命令启动Gitlab
 ```
