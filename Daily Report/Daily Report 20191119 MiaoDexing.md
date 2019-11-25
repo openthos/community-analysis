@@ -7,3 +7,13 @@
 
 # 3
 - vi ./rootfs/kexec/etc/inittab
+
+# 4
+- 使用buildroot编译生成的rootfs，不需要输入用户名密码直接登录
+```
+qemu-system-x86_64  -m 2G -append "root=/dev/sda rdinit=/sbin/init" -serial stdio -kernel bzImage  -hda rootfs.ext2
+```
+- 使用debian作为文件系统在内存中运行
+```
+qemu-system-x86_64  -m 2G -append "root=/dev/ram0 rdinit=/bin/bash" -serial stdio -kernel bzImage  -initrd debian-x86_64-2018-04-03.cgz
+```
