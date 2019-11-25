@@ -17,3 +17,7 @@ qemu-system-x86_64  -m 2G -append "root=/dev/sda rdinit=/sbin/init" -serial stdi
 ```
 qemu-system-x86_64  -m 2G -append "root=/dev/ram0 rdinit=/bin/bash" -serial stdio -kernel bzImage  -initrd debian-x86_64-2018-04-03.cgz
 ```
+- gitlab  将qemu的输出指定到ttyS0，因为gitlab从console=ttyS0获取数据
+``
+qemu-system-x86_64 -nographic  -m 2G -append "root=/dev/sda init=/bin/bash console=ttyS0"  -kernel $1 -hda $2
+```
