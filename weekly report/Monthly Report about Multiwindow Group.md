@@ -1,3 +1,28 @@
+# 2019年11月 -- Multiwindow组 总结
+## 月小结
+  - 本月主要工作：完成aosp9.0、aosp10.0多窗口相关功能需求，以及在物理机部署、测试aosp9.0、aosp10.0多窗口功能。
+  
+## 下月计划
+### 刘晓旭
+  - 1.完成aosp9.0多窗口相关缺失功能。
+  - 2.解决aosp9.0多窗口相关bug。
+  
+## 个人月总结
+### 刘晓旭
+  - 1.完成aosp9.0窗口在屏幕上侧、左侧、右侧docked及undocked功能。
+  - 2.解决aosp9.0命令行启动应用及桌面应用默认打开非窗口化问题。
+  - 3.完成aosp9.0窗口bounds记忆功能，其中窗口docked状态、窗口全屏状态未记忆、系统关机重启后窗口各状态未记忆。
+  - 4.完成Pixel C设备aosp8.1系统刷机。
+  - 5.解决Pixel C设备aosp8.1系统wifi无法使用，窗口最小化无法还原问题。
+  - 6.完成Pixel C设备aosp8.1系统应用兼容模式窗口尺寸适配。
+  - 7.添加最大化功能到aosp9.0
+  - 8.修改aosp9.0多窗口模式下，launcher始终显示在窗口最底层。
+  - 9.bug：aosp9.0默认窗口全屏功能，窗口内容无法实现全屏。通过对比分析aosp9.0、aosp10.0窗口全屏功能实现流程，定位到与ConfigurationContainer的mOverrideConfiguration的update、Changed有关，解决方案可以参考aosp8、aosp10实现思路。
+  - 10.移植taskbaricon主体内容到aosp9.0
+  - 11.移植taskbarIcon对应的接口和功能到aosp9.0
+  - 12.修改窗口DecorCaption界面，增加back、appname、appicon、setting、minimize组件，同时添加对应功能接口
+  - 13.移植最小化功能到aosp9.0.
+
 # 2019年10月 -- Multiwindow组 总结
 ## 月小结
   - 本月主要工作：前期解决oto8微信、office高优先级bug，后期同步、分析aosp9.0、aosp10.0多窗口源码。
