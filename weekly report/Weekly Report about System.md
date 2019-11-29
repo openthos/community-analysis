@@ -17,10 +17,10 @@
 * 完成LKP在QEMU虚拟机中正确运行benchmark并取得结果数据，并连接gitlabCI回显数据；
 * 完成权限管理专利材料
 * 完成lkp运行步骤文档：https://github.com/openthos/kis-analysis/blob/master/doc/lkp-test-analysis/lkp-test%E8%BF%90%E8%A1%8C%E6%AD%A5%E9%AA%A4.md
-* 在lkp中添加测试用例，目前数据分析仍未完成
+* 在lkp中添加测试用例，目前数据解析仍未完成
 
 ### 下周计划
-* 学习ruby，在lkp中添加测试用例，完成数据分析
+* 学习ruby，在lkp中添加测试用例，完成数据解析
 
 # 2019-10-21 ~ 2019-10-25 工作总结
 ## 萧络元
