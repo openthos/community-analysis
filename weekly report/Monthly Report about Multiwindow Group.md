@@ -7,6 +7,11 @@
   - 1.完成aosp9.0多窗口相关缺失功能。
   - 2.解决aosp9.0多窗口相关bug。
   
+### 罗浩
+  - 1.完成aosp10.0多窗口相关缺失功能。
+  - 2.解决aosp10.0多窗口相关bug。
+  - 3.准备os2atc的演示和讲解
+  
 ## 个人月总结
 ### 刘晓旭
   - 1.完成aosp9.0窗口在屏幕上侧、左侧、右侧docked及undocked功能。
@@ -22,6 +27,13 @@
   - 11.移植taskbarIcon对应的接口和功能到aosp9.0
   - 12.修改窗口DecorCaption界面，增加back、appname、appicon、setting、minimize组件，同时添加对应功能接口
   - 13.移植最小化功能到aosp9.0.
+  
+### 罗浩
+  - 1.完成aosp10.0的在emulator和celadon上的编译，运行
+  - 2.初步完成aosp10.0中多窗口相关功能的实现和完善以及bug修复
+  - 3.协助调整Pixel C上的openthos8.1内容
+  - 4.协助实现aosp9.0中全屏化功能缺失问题
+  - 5.统一9.0和10.0中所实现的功能和UI的一致性。
 
 # 2019年10月 -- Multiwindow组 总结
 ## 月小结
