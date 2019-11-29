@@ -10,12 +10,29 @@
    - [kernelci](https://github.com/kernelci)
    - [under-the-hood-1](https://cki-project.org/posts/under-the-hood-part-1/)
    - [under-the-hood-2](https://cki-project.org/posts/under-the-hood-part-2/)
-7. 搭建自动化测试环境，要求自动生成img，且测试到启动界面，使用qemu即可。
+
+#### 101129
+
+- [x] 优化自动化脚本的执行逻辑，修复运行过程的一些问题，编写说明文档
+- [ ] 更新周报和本周进度
+
+#### 101128
+
+- [x] 开始定期执行自动化测试脚本，并添加自动发送邮件的功能
+- [x] 简历筛选
+
+#### 101126~101127
+
+- [x] 搭建自动化测试环境：编写install和launcher部分的脚本
+
+#### 101124
+
+- [x] 搭建自动化测试环境：编写build部分的脚本
 
 #### 101122
 
 - [x] 简历筛选
-- [ ] 更新周报、本周进度
+- [x] 更新周报、本周进度
 
 #### 101121
 
