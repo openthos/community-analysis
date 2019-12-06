@@ -8,6 +8,11 @@
   - 初步选用Android10对Windows10和ubuntu；
 * LKP benchmark运行qemu测试kernel，对结果数据进行diff分析，lkp ncompare可以对物理机不同commit内核的测试结果，可以compare到结果数据表格展示，不过对qemu的结果数据统计还待进一步匹配处理；
 
+## 苗德行
+### 本周工作
+* 调研理解本机运行LKP后数据结果的解析，并与XLY讨论。
+* 与XLY讨论基于qemu的LKP数据解析实现方式，目前实现方式是希望基于lkp ncompare来实现对qemu的数据解析，目前在做在qemu中搭建ruby环境
+
 # 2019-11-25 ~ 2019-11-29 工作总结
 ## 萧络元
 ### 本周工作
