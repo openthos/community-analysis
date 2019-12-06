@@ -1,3 +1,13 @@
+# 2019-12-02 ~ 2019-12-06 工作总结
+## 萧络元
+### 本周工作
+* 清华同方一台服务器，托管到来广营机房；并部署好网络和网站服务。
+* musl-libc移植到openthos；配合黄Sir，配合黄Sir，以源码方式集成binutils和coreutils，util-unix。
+  - 现初步在编写集成AOSP编译系统的Android.mk
+* Android10的MiraCast的屏幕无线投射功能的调研与测试；
+  - 初步选用Android10对Windows10和ubuntu；
+* LKP benchmark运行qemu测试kernel，对结果数据进行diff分析，lkp ncompare可以对物理机不同commit内核的测试结果，可以compare到结果数据表格展示，不过对qemu的结果数据统计还待进一步匹配处理；
+
 # 2019-11-25 ~ 2019-11-29 工作总结
 ## 萧络元
 ### 本周工作
