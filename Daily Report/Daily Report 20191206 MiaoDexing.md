@@ -107,3 +107,7 @@ ping www.baidu.com
 ping addrip # 宿主机ip
 
 原文链接：https://blog.csdn.net/qiusi0225/article/details/80447710
+
+#  could not configure /dev/net/tun (tap0): Device or resource busy
+- 杀死进程
+```lsof | grep /dev/net/tun```
