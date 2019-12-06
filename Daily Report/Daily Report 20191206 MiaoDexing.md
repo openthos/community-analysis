@@ -1,6 +1,6 @@
 
 本文链接：https://blog.csdn.net/qiusi0225/article/details/80447710
-qemu安装
+- qemu安装
 
 sudo apt-get install qemu qemu-user
 
@@ -19,7 +19,7 @@ ifconfig查看自己的网卡名称,在主机下编写两个脚本:
 mkdir etc
 cd etc
 vim qemu-ifup
-
+```
 #!/bin/bash
 
 IFNAME=enp4s0 #网卡名称
@@ -55,10 +55,10 @@ else
         exit 1
 fi
 
-
+```
 vim qemu-ifdown
 
-
+```
 #!/bin/bash
 if [ -n "$1" ];then
     IP1=192.168.10.100/24
@@ -86,7 +86,7 @@ if [ -n "$1" ];then
 else
     echo "ERROR:no interface specified"
 fi
-
+```
 
 
 给两个脚本添加权限
@@ -94,14 +94,12 @@ fi
 chmod 777 qemu-ifup qemu-ifdown
 sudo modprobe tun 
 
-    1
-    2
+
 
 启动虚拟机,其中ifname可能会冲突,那就改为tap1, tap2 ,….
-
+```
 qemu-system-mips64 -M malta -kernel vmlinux-2.6.32-5-5kc-malta -hda debian_squeeze_mips_standard.qcow2 -append "root=/dev/sda1 console=tty0" -netdev tap,id=mytap,ifname=tap0,script=etc/qemu-ifup,downscript=etc/qemu-ifdown -device e1000,netdev=mytap
-
-    1
+```
 
 进入虚拟机后,已经可以与外网和宿主机互相通信了:
 
