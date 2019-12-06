@@ -6,6 +6,12 @@
   - 4.bug：aosp9 StartupMenu点击uninstall应用时无反应。已可以显示uninstall应用界面，但无法点击。
   - 5.反馈基于onedrive云服务需求设计文档。
 
+# 罗浩
+  - 1.完成10.0中dock状态记忆整合到LaunchParams中的功能
+  - 2.调整blurnative部分代码，准备提交
+  - 3.调整blurbase部分代码，添加对兼容模式的支持，但目前会引发systeui重启bug，正在尝试解决
+  - 4.尝试在pixel C上不输blur代码，由于pixel C的layer合成通过HWC2完成，因此无法将基于openGL实现的高斯模糊内容直接加入其中，若想要加入需要修改其合成方式并对HWC作出修改，个人感觉比较繁琐，应该无法在12月14日会议之前使用。
+
 # 2019年11月25日 - - 2019年11月29日 周总结
 # 刘晓旭
   - 1.完成aosp9.0窗口在屏幕上侧、左侧、右侧docked及undocked功能。
