@@ -3,7 +3,7 @@
 - 完成onedrive、坚果云、iCloud需求分析报告
 - 完成openthos云手机版需求文档
 - 下周计划
- - systemui ui替换
+  - systemui ui替换
 
 ## 王之旭
 - 编写多窗口文档
