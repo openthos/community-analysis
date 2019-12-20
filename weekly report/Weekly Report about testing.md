@@ -6,7 +6,7 @@
 2. 
 
 ## 齐
-1. 浏览器用户使用分析（[https://github.com/openthos/community-analysis/blob/master/%E6%B5%8F%E8%A7%88%E5%99%A8/%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90.md]）
+1. 浏览器用户使用分析(https://github.com/openthos/community-analysis/blob/master/%E6%B5%8F%E8%A7%88%E5%99%A8/%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90.md)
 2. 测试oto媒体播放器
 
 # 2019-12-09 ~ 2019-12-13工作总结
