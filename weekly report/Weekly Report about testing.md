@@ -2,8 +2,9 @@
 
 ## 石
 
-1. 
-2. 
+1. 简历筛选
+2. 讨论与记录mixer的需求
+3. 测试HZW对mixer的探索：在app层的修改，在framework层的修改
 
 ## 齐
 1. [浏览器用户使用分析](https://github.com/openthos/community-analysis/blob/master/%E6%B5%8F%E8%A7%88%E5%99%A8/%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90.md)
