@@ -1,4 +1,18 @@
 # 2019-12-16 ~ 2019-12-20 工作总结
+## 黃志偉
+### 本周工作
+* OTO8
+  - Analyze Android audio focus policies
+  - Modify Music app to request audio focus by AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK
+  - Modify AudioManager to set AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK by default
+  - Explain the study of audio focus in email
+* Android-x86 10
+  - Apply patches of Settings to q-x86, resolve conflicts
+ 
+### 下周计划
+* Study how to add volume to PackageManager
+
+
 ## 苗德行
 ### 本周工作
 * 完成不同kernel下LKP运行的QEMU环境
