@@ -1,3 +1,14 @@
+# 2019年12月09日 - - 2019年12月20日 周总结
+# 刘晓旭
+  - 1.解决aosp9 install 或者uninstall应用时，系统软重启问题。
+  - 2.解决aosp9 窗口Fullscreen时，隐藏maximize button。
+  - 3.解决aosp9 真机运行时，最小化应用无法还原问题。
+  - 4.提供Android8\9\10等版本系统运行截图，协助准备os2atc会议技术文档。
+  - 5.解决aosp9 StartupMenu uninstall应用时，卸载界面无法点击问题。
+  - 6.测试OneDrive的需求功能，并协助完成seafile概要设计。
+  - 7.测试Deepin Cloud sync需求功能，并协助完成与openthos 云功能对比文档。
+ 
+
 # 2019年12月02日 - - 2019年12月06日 周总结
 # 刘晓旭
   - 1.完成aosp9窗口docked状态、窗口全屏状态记忆、系统关机重启后窗口各状态记忆。
