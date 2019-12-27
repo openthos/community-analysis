@@ -1,3 +1,15 @@
+# 2019-12-23 ~ 2019-12-27 工作总结
+## 黃志偉
+### 本周工作
+* OTO8
+  - Analyze how to add audio volume to an app
+  - Modify ConfigurationInfo in PackageInfo to add audioVolume attr.
+  - Study how to change volume when an activity is activated.
+  - Help analyze musl-libc linking issue.
+
+* Android-x86 10
+  - Finish porting all patches of Settings to q-x86
+
 # 2019-12-16 ~ 2019-12-20 工作总结
 ## 黃志偉
 ### 本周工作
