@@ -1,3 +1,17 @@
+# 2019-12-23 ~ 2019-12-27周报
+## 董鹏
+- systemui 底部任务栏ui替换，完成度60% （12月9日开始）
+- wifi、电池、音量、输入法、日历的弹窗和逻辑，完成度0% （12月23日开始）
+- 下周计划
+  - 完成systemui ui 底部任务栏替换
+  - 完成wifi、电池、音量、输入法、日历的弹窗和逻辑
+  
+## 王之旭
+- 修复多次创建桌面的BUG
+- 修复图片管理器打开文件显示错误的BUG，后期会更加完美的解决该问题（目前是在frameworks层解决，后期会更换到应用层来解决，工作量较大）
+- 优化文件管理器代码
+- 编写本周总结-FileProvider的使用（https://github.com/potatomagic/DevelopmentMaterials/blob/master/Android/FileProvider%E7%9A%84%E4%BD%BF%E7%94%A8.md）
+
 # 2019-12-16 ~ 2019-12-20周报
 ## 董鹏
 - systemui 底部任务栏ui替换，完成度80%
