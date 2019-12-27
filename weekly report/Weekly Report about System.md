@@ -10,6 +10,16 @@
 * Android-x86 10
   - Finish porting all patches of Settings to q-x86
 
+## 萧络元
+### 本周工作
+* 奇异果投屏终端支持这几种投屏模式：AirPlay、DLNA、Miracast；Android的投屏默认支持的模式是Miracast；尝试了T45 openthos5.1、Intel NUC Celadon、Pixel C 以及hikey970开发板。
+* 默认情况均无法正常使用投屏显示，情况有：无投射选项、无法搜索终端设备、连接后自动重启等；
+* hikey970对Miracast所需的工作：
+  - 无线HAL层适配，包括wpa_supplicant运行参数的部署，配置文件p2p_supplicant.conf的添加，使能wifip2p功能；
+  - WifiDisaply服务层的启动，xml文件的添加：core_hardware、wifi.direct；
+  - Frameworks中的项config_enableWifiDisplay置身为true，使得设置选项中出现无投射选项；
+* 现在bug：无法搜索终端设备；
+ 
 ## 苗德行
 ### 本周工作
 * musl 和 coreutils
@@ -38,6 +48,13 @@
 ### 下周计划
 * Study how to add volume to PackageManager
 
+## 萧络元
+### 本周工作
+* hikey970板子，AOSP 9.0搭配hikey970 bsp代码，并加入OPENTHOS多窗口等的patch，生成的系统镜像可运行到桌面，不过存在蓝牙和WIFI无法使用的bug；
+* 跟踪修复了蓝牙和WIFI无法使用的bug：
+  - 蓝牙在启动时，检测到kernel无CLOCK_BOOTTIME_ALARM特性时，timer_create失败，进程异常退出；发现该bug在aosp新版本代码库中已有修复patch，遂打入；
+  - 之后出现bluetooth hci的初始化延时与btservice延时不匹配的问题，导致hci初始化还未来得及完成时btservice便TIMEOUT了；遂重新匹配两者延时修复之；
+  - WIFI问题，先从kernel层排除了驱动为正常加载的问题，后跟踪到HAL的wpa_supplicant，发现是其启动阶段对conf文件的读取出错导致，遂重新给定正确的参数启动成功；
 
 ## 苗德行
 ### 本周工作
