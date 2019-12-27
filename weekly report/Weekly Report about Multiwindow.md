@@ -1,3 +1,12 @@
+# 2019年12月23日 - - 2019年12月27日 周总结
+# 刘晓旭
+  - 1.整理云服务各种同步异常处理。
+    - [Seafile 异常同步状态处理](https://github.com/openthos/multiwin-analysis/blob/master/seafile/Seafile%20%E5%BC%82%E5%B8%B8%E5%90%8C%E6%AD%A5%E7%8A%B6%E6%80%81%E5%A4%84%E7%90%86.md)
+  - 2.整理云服务概要设计文档修订版
+    - [云服务概要设计](https://github.com/openthos/multiwin-analysis/blob/master/seafile/%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1.md)
+  - 3.初步实现aosp9.0 应用兼容模式UI，以及标准模式、全屏模式运行模式切换。
+
+
 # 2019年12月09日 - - 2019年12月20日 周总结
 # 刘晓旭
   - 1.解决aosp9 install 或者uninstall应用时，系统软重启问题。
