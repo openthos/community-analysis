@@ -24,6 +24,13 @@
 ### 下周计划
 * Study how to add volume to PackageManager
 
+## 萧络元
+### 本周工作
+hikey970板子，AOSP 9.0搭配hikey970 bsp代码，并加入OPENTHOS多窗口等的patch，生成的系统镜像可运行到桌面，不过存在蓝牙和WIFI无法使用的bug；
+跟踪修复了蓝牙和WIFI无法使用的bug：
+* 蓝牙在启动时，检测到kernel无CLOCK_BOOTTIME_ALARM特性时，timer_create失败，进程异常退出；发现该bug在aosp新版本代码库中已有修复patch，遂打入；
+之后出现bluetooth hci的初始化延时与btservice延时不匹配的问题，导致hci初始化还未来得及完成时btservice便TIMEOUT了；遂重新匹配两者延时修复之；
+* WIFI问题，先从kernel层排除了驱动为正常加载的问题，后跟踪到HAL的wpa_supplicant，发现是其启动阶段对conf文件的读取出错导致，遂重新给定正确的参数启动成功；
 
 ## 苗德行
 ### 本周工作
