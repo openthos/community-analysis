@@ -36,3 +36,17 @@ clean:
         rm *.o
         rm main
 ```
+- 一般我们可以使用“$(wildcard *.c)”来获取工作目录下的所有的.c文件列表。
+```
+#sample Makefile
+
+objects := $(patsubst %.c,%.o,$(wildcard *.c))
+
+ 
+
+foo : $(objects)
+
+cc -o foo $(objects)
+
+
+```
