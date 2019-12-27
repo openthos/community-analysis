@@ -10,7 +10,7 @@
 - 修复多次创建桌面的BUG
 - 修复图片管理器打开文件显示错误的BUG，后期会更加完美的解决该问题（目前是在frameworks层解决，后期会更换到应用层来解决，工作量较大）
 - 优化文件管理器代码
-- 编写本周总结-FileProvider的使用（https://github.com/potatomagic/DevelopmentMaterials/blob/master/Android/FileProvider%E7%9A%84%E4%BD%BF%E7%94%A8.md）
+- 编写本周总结-FileProvider的使用（https://github.com/potatomagic/DevelopmentMaterials/blob/master/Android/FileProvider%E7%9A%84%E4%BD%BF%E7%94%A8.md ）
 
 # 2019-12-16 ~ 2019-12-20周报
 ## 董鹏
