@@ -47,7 +47,7 @@ function get_kernel_commit()
 {
 	if [ -d $kernel_dir ]
 	then
-		cd $kernel_dir && commit=`git log | grep "^commit" | head -2 | tail -1 | cut -d " " -f 2` && cd -
+		cd $kernel_dir && commit=`git log | grep "^commit" | head -3 | tail -1 | cut -d " " -f 2` && cd -
 	fi
 }
 
@@ -87,8 +87,6 @@ function print_menu()
         echo "     $i. $choice"
         i=$(($i+1))
     done
-
-    echo
 }
 unset selection
 unset bootloader_append
@@ -193,25 +191,32 @@ function set_analyze_benchmark(){
 }
 unset result
 unset  RESULT
-unset SUM
 function get_result(){
 	local n=0
 	local sum=0
 
+	if [ -f result/compare ]; then
+		rm result/compare 
+	fi
+
 	for f in `ls result`
 	do
-		file_date=`echo -n $f | awk -F '_' '{print $3}'`
-		FILE_LIST=(${FILE_LIST[@]} $file_date)
+		job=`echo -n $f | awk -F '_' '{print $2}'`
+		if [ "$selection" == "$job" ]; then
+			file_date=`echo -n $f | awk -F '_' '{print $3}'`
+			FILE_LIST=(${FILE_LIST[@]} $file_date)
+		fi
 	done
 
 	for f in `ls result`
 	do
 		job=`echo -n $f | awk -F '_' '{print $2}'`
-		nn=`cat  result/$f | grep -n "^commit" | awk -F ':' '{print $1}'`
-		nn=`expr $nn + 2`
+		str=`echo -n $selection | awk -F '-' '{print $1}'`
+		nn=`cat  result/$f | grep -n $str | awk -F ':' '{print $1}'`
+		nn=`expr $nn + 4`
 		commit_id=`head -$nn  result/$f | tail -1 | awk '{print $1}'`
-		echo $nn $commit_id
 		if [ "$selection" == "$job" -a "$commit_id" == "$commit" ]; then
+			echo $commit_id
 			local filedate=${FILE_LIST[0]}
 			local i=0
 			for ff  in ${FILE_LIST[@]}
@@ -221,38 +226,44 @@ function get_result(){
 				fi
 				i=$(($i+1))
 			done
-			m=`cat  result/${benchmark}_${selection}_${filedate}_compare  | grep -n "%stddev" | awk -F ':' '{print $1}'`
-			t=`wc -l result/${benchmark}_${selection}_${filedate}_compare | awk  '{print $1}'`
-			t=`expr $t - 1`
-			r=`expr $t - $m - 1`     #有效数据项行数
-			cat result/${benchmark}_${selection}_${filedate}_compare | head -$t | tail -$r | while read line
-			do
-				echo $line > result/compare
-			done
-			while read line
-			do
-				l=`echo $line | awk '{print NF}'`
-				if [ $l -ge 6 ]; then
-					rs=`echo $line | awk '{print $4}' | awk -F '%' '{print $1}'`
-				else
-					rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
-				fi
-				if [[ $rs == *+* ]]; then
-					rs=`echo $rs | awk -F '+' '{print $2}'`
-				fi
-				RESULT=(${RESULT[@]} $rs)
-
-				if [ "${line##* }" == "time.involuntary_context_switches" ]; then
-					num=`echo $line | awk '{print NF}'`
-					if [ $num -ge 6 ]; then
-						result=`echo $line | awk '{print $4}'`
+			if [ -f result/${benchmark}_${selection}_${filedate}_compare ]; then
+				m=`cat  result/${benchmark}_${selection}_${filedate}_compare  | grep -n "%stddev" | awk -F ':' '{print $1}'`
+				t=`wc -l result/${benchmark}_${selection}_${filedate}_compare | awk  '{print $1}'`
+				t=`expr $t - 1`
+				r=`expr $t - $m - 1`     #有效数据项行数
+				cat result/${benchmark}_${selection}_${filedate}_compare | head -$t | tail -$r | while read line
+				do
+					echo $line >> result/compare
+				done
+				while read line
+				do
+					l=`echo $line | awk '{print NF}'`
+					if [ $l -ge 6 ]; then
+						rs=`echo $line | awk '{print $4}' | awk -F '%' '{print $1}'`
 					else
-						result=`echo $line | awk '{print $2}'`
+						rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
 					fi
-					echo "time.involuntary_context_switches  result is "$result 
-				fi
-			done < result/compare
-		fi
+					if [[ $rs == *+* ]]; then
+						rs=`echo $rs | awk -F '+' '{print $2}'`
+					fi
+					RESULT=(${RESULT[@]} $rs)
+
+					if [ "${line##* }" == "time.involuntary_context_switches" ]; then
+						num=`echo $line | awk '{print NF}'`
+						if [ $num -ge 6 ]; then
+							result=`echo $line | awk '{print $4}'`
+						else
+							result=`echo $line | awk '{print $2}'`
+						fi
+						echo "time.involuntary_context_switches  result is "$result 
+					fi
+				done < result/compare
+			else
+				echo "file not found!"
+				return 
+			fi
+	fi
+
 	done
 
 	local sum=0
@@ -272,7 +283,7 @@ if [ 1 == 1 ]; then
 	echo commit  $commit
 	#run_kvm bzImage_5.3 rootfs_ok.ext4 commit=fd8f64df95204951c3edd4c4a7817c909d55a100
 	#run_kvm $kernel $rootfs
-	run_kvm $kernel $rootfs "commit=${commit}"
+	#run_kvm $kernel $rootfs "commit=${commit}"
 
 	if [ -f $host_shared/boot ]; then
 		grep "boot successfully" $host_shared/boot
@@ -289,7 +300,5 @@ fi
 #backtrack $commit
 set_analyze_benchmark $selection
 lunch_analyze_benchmark
-#res=`echo $(get_result) | awk '{print NF}'`
 get_result
-#echo $res
 echo "end------------------"
