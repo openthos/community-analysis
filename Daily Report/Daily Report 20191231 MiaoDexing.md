@@ -29,7 +29,7 @@ linux:~# echo $var3
 linux:~# echo $var3
  ```
  # Shell变量while循环内改变无法传递到循环外
-- shell中使用管道会生成一个子shell，在子shell中使用while、for循环的代码也是在子shell中执行的，所以在循环中的修改的变量只在子shell中有效，当循环结束时，会回到主shell，子shell中修改的变量不会影响主shell中的变量
+- shell中使用管道会生成一个子shell，在子shell中使用while、for循环的代码也是在子shell中执行的，所以在循环中的修改的变量只在子shell中有效，当循环结束时，会回到主shell，子shell中修改的变量不会影响主shell中的变量<br>
 代码如下：
 ```
 A="1"
