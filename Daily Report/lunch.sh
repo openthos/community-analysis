@@ -193,13 +193,37 @@ function set_analyze_benchmark(){
 }
 unset result
 function get_result(){
+	local n=0
+
+	for f in `ls result`
+	do
+		file_date=`echo -n $f | awk -F '_' '{print $3}'`
+		FILE_LIST=(${FILE_LIST[@]} $file_date)
+	done
+
 	for f in `ls result`
 	do
 		job=`echo -n $f | awk -F '_' '{print $2}'`
-		if [ "$selection" == "$job" ]; then
-			cat result/$f | while read line
+		nn=`cat  result/$f | grep -n "^commit" | awk -F ':' '{print $1}'`
+		nn=`expr $nn + 2`
+		commit_id=`head -$nn  result/$f | tail -1 | awk '{print $1}'`
+		echo $nn $commit_id
+		if [ "$selection" == "$job" -a "$commit_id" == "$commit" ]; then
+			local filedate=${FILE_LIST[0]}
+			local i=0
+			for ff  in ${FILE_LIST[@]}
+			do
+				if [ $filedate -lt ${FILE_LIST[i]} ]; then
+					filedate=${FILE_LIST[i]}#保留最新日期
+				fi
+				i=$(($i+1))
+			done
+			m=`cat  result/${benchmark}_${selection}_${filedate}_compare  | grep -n "%stddev" | awk -F ':' '{print $1}'`
+			t=`wc -l result/${benchmark}_${selection}_${filedate}_compare | awk  '{print $1}'`
+			r=`expr $t - $m - 2` #有效数据项行数
+			cat result/${benchmark}_${selection}_${filedate}_compare | while read line
 		do
-			if [ "${line##* }" == "time.involuntary_context_switches" ];then
+			if [ "${line##* }" == "time.involuntary_context_switches" ]; then
 				num=`echo $line | awk '{print NF}'`
 				if [ $num -ge 6 ]; then
 					result=`echo $line | awk '{print $4}'`
@@ -210,7 +234,6 @@ function get_result(){
 				#echo $line 
 			fi
 		done
-
 	fi
 done
 }
@@ -222,8 +245,8 @@ if [ 1 == 1 ]; then
 	lunch_benchmark
 	echo commit  $commit
 	#run_kvm bzImage_5.3 rootfs_ok.ext4 commit=fd8f64df95204951c3edd4c4a7817c909d55a100
-	run_kvm $kernel $rootfs
-	run_kvm $kernel $rootfs "commit=${commit}"
+	#run_kvm $kernel $rootfs
+	#run_kvm $kernel $rootfs "commit=${commit}"
 
 	if [ -f $host_shared/boot ]; then
 		grep "boot successfully" $host_shared/boot
@@ -240,6 +263,7 @@ fi
 #backtrack $commit
 set_analyze_benchmark $selection
 lunch_analyze_benchmark
-res=`echo $(get_result) | awk '{print $1}'`
-echo $res
+#res=`echo $(get_result) | awk '{print NF}'`
+get_result
+#echo $res
 echo "end------------------"
