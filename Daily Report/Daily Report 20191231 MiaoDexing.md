@@ -49,7 +49,7 @@ echo $B
 第一个echo打印的是1
 第二个echo打印的是2
 ```
-这里是因为在子shell中的while循环中的B只是主shell中B的一个副本，你在子shell中对B重新赋值是不能影响到父shell的，所以你最后echo $B时值没有改变。
+这里是因为在子shell中的while循环中的B只是主shell中B的一个副本，在子shell中对B重新赋值是不能影响到父shell的，所以最后echo $B时值没有改变。
 
 以下是可以的：
 ```
