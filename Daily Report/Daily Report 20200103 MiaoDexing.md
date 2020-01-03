@@ -5,3 +5,4 @@ git bisect 其实很简单，主要是基于几个基本命令：
 - git bisect good：标记一个提交为 "good"
 - git bisect bad：标记一个提交为 “bad”
 - git bisect reset：退出 bisect debug 的状态
+- git bisect replay：重置到某个状态。
