@@ -1,4 +1,4 @@
-# 2019-12-03 ~ 2020-01-03 工作总结
+# 2019-12-30 ~ 2020-01-03 工作总结
 ## 黃志偉
 ### 本周工作
 * OTO8
@@ -8,7 +8,12 @@
 * Android-x86 10
   - Update kernel to 4.19.91, resolve conflicts
   - Port fuse support to sdcard service
-
+## 苗德行
+### 本周工作
+* LKP benchmark 运行结果分析
+  - 单独分析某一项测试结果，取得对应值                            已完成
+  - 对测试结果所有数据项进行分析，获得所有数据的平均值               已完成
+  - 编写脚本，根据kernel commit id，使用二分搜索法，得到good commit及bad commit，完成错误定位    已完成
 # 2019-12-23 ~ 2019-12-27 工作总结
 ## 黃志偉
 ### 本周工作
