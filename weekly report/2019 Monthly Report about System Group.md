@@ -48,7 +48,7 @@
   - 编译musl和测试用例hello，就测试用例无法运行向HZW请教，并成功运行
   - 学习了解coreutils的编译过程，使用gcc整体编译通过
   - 针对coreutils中的cat命令，使用gcc分步编译，解决出现的头文件及库链接问题，测试通过
-  - 基于musl-libc单独编译cat，并将所出现问题与HZW进行讨论，定位问题所在，目前正在解决问题
+  - 基于musl-libc单独编译cat，并将所出现问题与HZW进行讨论，定位问题所在
 ### 下月计划
 - 完善lkp
 - 实现基于musl的coreutils移植
