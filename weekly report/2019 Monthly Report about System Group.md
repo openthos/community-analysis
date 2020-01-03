@@ -1,6 +1,18 @@
 # 2019-12 月报
 ## 黃志偉
 ### 个人月总结
+* OTO8
+  - Study Android audio focus policies.
+  - Modify AudioManager to set AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK by default.
+  - Modify ConfigurationInfo in PackageInfo to add audioVolume attr.
+  - Modify ActivityThread.java to change audio volume on demand (unfinished).
+  - Help analyze coreutils building issue with musl-libc.
+
+* Android-x86 10.0 q-x86
+  - Finish settings patches porting
+  - Fix superuser app crashing
+  - Update mesa to 19.3.1
+  - Fix llvm90 'no work to do' failure issue
 
 ## 萧络元
 ### 个人月总结
