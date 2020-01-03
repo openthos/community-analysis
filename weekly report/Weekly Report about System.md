@@ -1,3 +1,14 @@
+# 2019-12-03 ~ 2020-01-03 工作总结
+## 黃志偉
+### 本周工作
+* OTO8
+  - Try to hack ActivityThread.java to change audio volume (unfinished).
+  - Fix include paths issue in Android.mk of musl-libc.
+  
+* Android-x86 10
+  - Update kernel to 4.19.91, resolve conflicts
+  - Port fuse support to sdcard service
+
 # 2019-12-23 ~ 2019-12-27 工作总结
 ## 黃志偉
 ### 本周工作
