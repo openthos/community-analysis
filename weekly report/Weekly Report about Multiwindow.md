@@ -1,3 +1,10 @@
+# 2019年12月30日 - - 2020年01月03日 周总结
+# 刘晓旭
+  - 1.分析，解决了aosp9.0 窗口从全屏模式切换到标准模式后，窗口尺寸未还原问题。
+  - 2.协助解决oto8.1壁纸显示不全问题。
+  - 3.与UI工程师交流关于oto8.1SystemUI各模块设计，以及各模块工作安排。
+    - [SystemUI任务列表](https://github.com/openthos/systemui-analysis/blob/master/LXX/oto8.1%20systemui%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8.md)
+
 # 2019年12月23日 - - 2019年12月27日 周总结
 # 刘晓旭
   - 1.整理云服务各种同步异常处理。
