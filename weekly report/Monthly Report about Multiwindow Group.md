@@ -1,3 +1,28 @@
+# 2019年12月 -- Multiwindow组 总结
+## 月小结
+  - 本月前半部分主要工作：准备os2act会议材料，及相关设备系统演示；
+  - 本月后半部分主要工作：优化、完善oto8.1高斯模糊设计及实现，完成云服务前期概要设计，以及相关bug修复。
+
+## 下月计划
+### 刘晓旭
+  - 1.完成oto8.1 SystemUI之StartupMenu开始菜单UI设计、实现。
+  
+## 个人月总结
+### 刘晓旭
+  - 1.完成aosp9窗口docked状态、窗口全屏状态记忆、系统关机重启后窗口各状态记忆。
+  - 2.解决aosp9 应用最小化，桌面获得焦点时，任务栏显示filemanager图标bug。
+  - 3.解决aosp9 应用最小化，桌面获取焦点后，点击已最小化的应用，应用无法显示问题
+  - 4.bug：aosp9 StartupMenu点击uninstall应用时无反应。已可以显示uninstall应用界面，但无法点击。
+  - 5.解决aosp9 install 或者uninstall应用时，系统软重启问题。
+  - 6.解决aosp9 窗口Fullscreen时，隐藏maximize button。
+  - 7.解决aosp9 真机运行时，最小化应用无法还原问题。
+  - 8.提供Android8\9\10等版本系统运行截图，协助准备os2atc会议技术文档。
+  - 9.解决aosp9 StartupMenu uninstall应用时，卸载界面无法点击问题。
+  - 10.测试Deepin Cloud sync、OneDrive需求功能，并协助完成与openthos 云功能对比文档。
+  - 11.整理云服务各种同步异常处理
+  - 12.整理云服务概要设计文档修订版
+  - 13.初步实现aosp9.0 应用兼容模式UI，以及标准模式、全屏模式运行模式切换。
+
 # 2019年11月 -- Multiwindow组 总结
 ## 月小结
   - 本月主要工作：完成aosp9.0、aosp10.0多窗口相关功能需求，以及在物理机部署、测试aosp9.0、aosp10.0多窗口功能。
