@@ -5,4 +5,6 @@ git bisect 其实很简单，主要是基于几个基本命令：
 - git bisect good：标记一个提交为 "good"
 - git bisect bad：标记一个提交为 “bad”
 - git bisect reset：退出 bisect debug 的状态
+
 - git bisect replay：重置到某个状态。
+  -  replay 需要制定一个回退的点，这个点是需要使用 git bisect log > log.txt 输出的 Log 文件， 我们需要通过修改这个 Log 文件，来确定回退的点。
