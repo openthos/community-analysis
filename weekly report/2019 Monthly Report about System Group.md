@@ -34,8 +34,24 @@
 
 ## 苗德行
 ### 个人月总结
-
-
+* 基于qemu的LKP数据解析
+  - 完成不同kernel下LKP运行的QEMU环境
+  - 制作QEMU运行时需要的文件系统并在其中搭建ruby环境；
+  - 实现QEMU中lkp本地运行，并完成其开机启动；
+  - 完成外部传参来运行指定benchmark；
+  - 实现QEMU与主机的文件共享
+  - 获取内核最新一次commit，并与对应版本进行比较，获取数据
+  - 调研LKP的数据结果分析，确定结果分析是internal Intel analysis
+  - 根据benchmark运行结果分析某一项数据及所有项数据
+  - 实现根据分析结果完成根据commit id的bisect
+* musl和coreutils
+  - 编译musl和测试用例hello，就测试用例无法运行向HZW请教，并成功运行
+  - 学习了解coreutils的编译过程，使用gcc整体编译通过
+  - 针对coreutils中的cat命令，使用gcc分步编译，解决出现的头文件及库链接问题，测试通过
+  - 基于musl-libc单独编译cat，并将所出现问题与HZW进行讨论，定位问题所在，目前正在解决问题
+### 下月计划
+- 完善lkp
+- 实现基于musl的coreutils移植
 # 2019-06 月报
 ## 黃志偉
 ### 个人月总结
