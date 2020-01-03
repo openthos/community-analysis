@@ -5,6 +5,12 @@
   - 3.与UI工程师交流关于oto8.1SystemUI各模块设计，以及各模块工作安排。
     - [SystemUI任务列表](https://github.com/openthos/systemui-analysis/blob/master/LXX/oto8.1%20systemui%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8.md)
 
+# 罗浩
+  - 1.解决大面积模糊应用最小化后透明区域失效问题
+  - 2.解决statusbar透明后屏幕下方应用显示不全问题，有两种方案
+  - 3.探究使spotshadow不存在于应用正下方，一面模糊带来的透明会使之显示，目前仍在寻求方案，初步发现重要代码段
+  - 4.着手处理systemUI素材更换工作
+
 # 2019年12月23日 - - 2019年12月27日 周总结
 # 刘晓旭
   - 1.整理云服务各种同步异常处理。
