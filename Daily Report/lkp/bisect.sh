@@ -60,7 +60,7 @@ function git_bisect()
 	git bisect reset
 	popd
 	
-	if [ -z "$commit"]; then
+	if [ -z "$commit" ]; then
 		echo "That is OK!"
 		return
 	fi
@@ -106,7 +106,9 @@ function kill_qemu()
 {
 	sleep 20s
 	pid=`ps -aux | grep "qemu" | head -1 | awk '{print $2}'`
-	kill -9 $pid
+	if [ -n $pid ]; then
+		kill -9 $pid
+	fi
 }
 function test_commit_is_ok()
 {
