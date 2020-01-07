@@ -11,7 +11,9 @@ function get_kernel_commit()
 {
 	if [ -d $kernel_dir ]
 	then
-		cd $kernel_dir && commit=`git log | grep "^commit" | head -1 | tail -1 | cut -d " " -f 2` && cd -
+		pushd $kernel_dir > /dev/null
+		commit=`git log | grep "^commit" | head -1 | tail -1 | cut -d " " -f 2` 
+		popd > /dev/null
 	fi
 }
 
@@ -95,8 +97,6 @@ function run_kvm()
 }
 
 unset BENCHMAR_MENU
-pushd $BASE_DIR > /dev/null
-
 function add_analyze_benchmark()
 {
     local new_benchmark=$1
