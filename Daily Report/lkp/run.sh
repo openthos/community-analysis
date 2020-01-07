@@ -51,13 +51,6 @@ function get_kernel_commit()
 	fi
 }
 
-function backtrack()
-{
-	cd $kernel_dir && git reset --hard $1 && git reset --hard HEAD^
-}
-
-
-
 unset MENU_CHOICES
 function add_benchmark()
 {
@@ -246,7 +239,13 @@ function get_result(){
 
 	while read line
 	do
-		rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
+		l=`echo $line | awk '{print NF}'`
+		if [ $l -ge 6 ]; then
+			rs=`echo $line | awk '{print $4}' | awk -F '%' '{print $1}'`
+		else
+			rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
+		fi
+		#rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
 		if [[ $rs == *+* ]]; then
 			rs=`echo $rs | awk -F '+' '{print $2}'`
 		fi
@@ -270,7 +269,7 @@ function get_result(){
 	done
 	ave=$(echo "scale=1; $sum  / ${#RESULT[@]}" | bc)
 	var=`echo $ave | awk -F "." '{print $1}'`	
-	if [[ $var  == " " ]]; then
+	if [[ $var  == " " ]] || [[ $var == "" ]]; then
 		echo "The calculated average is "0${ave}%
 	elif  [[ $var  == "-" ]]; then
 		echo "The calculated average is -0."`echo ${ave} | awk -F "." '{print $2}'`%
@@ -285,8 +284,8 @@ if [ 1 == 1 ]; then
 	get_kernel_commit
 	lunch_benchmark
 	echo commit  $commit
-	run_kvm $kernel $rootfs
-	run_kvm $kernel $rootfs "commit=${commit}"
+	#run_kvm $kernel $rootfs
+	#run_kvm $kernel $rootfs "commit=${commit}"
 
 	if [ -f $host_shared/boot ]; then
 		grep "boot successfully" $host_shared/boot
