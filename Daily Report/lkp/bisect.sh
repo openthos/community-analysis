@@ -156,7 +156,7 @@ function test_is_go_on()
 
 
 if [ $# -eq  1 ]; then
-	echo $1 > commit_ok_log.txt
+	echo ${1##*=} > commit_ok_log.txt
 	test_is_go_on
 	echo good_commit_id $good_commit_id
 	echo bad_commit_id $bad_commit_id
