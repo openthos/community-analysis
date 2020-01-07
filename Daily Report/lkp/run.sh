@@ -5,43 +5,7 @@ rootfs=$2
 commit=
 
 DATE=`date +%Y%m%d%H`
-IS_NEW=N
-kernel_dir=/home/linux/lkp/kernel/linux
-BASE_DIR=$(cd $(dirname $0); pwd)
-
-function test_kernel_update()
-{
-	pushd $kernel_dir > /dev/null
-	repo sync > /dev/null
-	wait
-	repo manifest -r -o proc/$DATE.xml
-	CMP_XML=`ls -t proc | awk 'NR==2'`
-	diff proc/$DATE.xml proc/$CMP_XML
-	RESULT_IS_DIFF=$?
-	if [ $RESULT_IS_DIFF -eq 1 ]; then
-		IS_NEW=Y
-	elif [ -z $CMP_XML ]; then
-		IS_NEW=Y
-	elif [ $RESULT_IS_DIFF -eq 0 ]; then
-		rm proc/$DATE.xml
-	fi
-
-	if [ $IS_NEW == N ]; then
-		echo "There is no update"
-		exit 1
-	else 
-		exit -1
-	fi
-}
-
-function build_kernel()
-{
-	if [ -d $kernel_dir ]
-	then
-		cd $kernel_dir && make
-	fi
-
-}
+kernel_dir=`echo ${3##*=}`
 
 function get_kernel_commit()
 {
@@ -284,8 +248,8 @@ if [ 1 == 1 ]; then
 	get_kernel_commit
 	lunch_benchmark
 	echo commit  $commit
-	#run_kvm $kernel $rootfs
-	#run_kvm $kernel $rootfs "commit=${commit}"
+	run_kvm $kernel $rootfs
+	run_kvm $kernel $rootfs "commit=${commit}"
 
 	if [ -f $host_shared/boot ]; then
 		grep "boot successfully" $host_shared/boot
@@ -299,7 +263,7 @@ if [ 1 == 1 ]; then
 else
 	echo "There is no update,nohing to do !!!!"
 fi
-#backtrack $commit
+
 set_analyze_benchmark $selection
 lunch_analyze_benchmark
 get_result
