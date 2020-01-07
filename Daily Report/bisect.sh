@@ -278,43 +278,47 @@ function git_bisect()
 	echo commit $commit
 	git bisect reset
 	popd
+	
+	if [ -z "$commit"]; then
+		echo "That is OK!"
+		return
+	fi
 
 	test_commit_is_ok $commit
 	ret=$?
 	if [ $ret == 0 ]; then
 		echo "ok"
 		echo $commit > commit_ok_log.txt
+		git_bisect $commit  $bad_commit_id
 	else if [ $ret == 1 ]; then
 		echo "no"
 		good_commit_id=`cat commit_ok_log.txt`
-		git_bisect $good_commit_id  $bad_commit_id
-		#test_commit_is_ok $commit
+		git_bisect $good_commit_id  $commit
 		fi
 	fi
 	
-	echo $commit
 	set +x
 }
 
 head=1
+unset COMMITS
 function get_kernel_commit()
 {
-	set -x
 	local n
 	if [ -d $kernel_dir ]
 	then
 		pushd $kernel_dir
-		if [ $# == 2 ]; then
-			n=`git log | grep "^commit" | grep -n "$1"`
-			n=`expr $n + $2`
-			commit=`git log | grep "^commit" | head -$n | tail -$2 | tail -1`
-		else
-			commit=`git log | grep "^commit" | head -$head | tail -1 | cut -d " " -f 2`
-			head=$(($head+1))
+		commit_ok=`cat $lkp_dir/commit_ok_log.txt`
+		n=`git log | grep "^commit" | grep -n "$commit_ok" | awk -F ":" '{print $1}'`
+		commits=`git log | grep -n "^commit" | head -$n | awk '{print $2}'`
+		for c in $commits
+		do
+			COMMITS=(${COMMITS[@]} $c)
+		done 
+		commit=`git log | grep "^commit" | head -1 |  awk '{print $2}'`
+		head=$(($head+1))
 		fi
-	fi
 	popd
-	set +x
 }
 
 function kill_qemu()
@@ -326,7 +330,11 @@ function kill_qemu()
 function test_commit_is_ok()
 {
 	set -x
+	if [ -f kernel_ok_log.txt ]; then
+		rm kernel_ok_log.txt
+	fi
 	if [ $# == 1 ]; then	
+		echo ${COMMITS[2]}
 		build_kernel $1
 		wait
 		kill_qemu &
@@ -389,7 +397,11 @@ function test_is_go_on()
 }
 
 
-
-test_is_go_on
-echo good_commit_id $good_commit_id
-echo bad_commit_id $bad_commit_id
+if [ $# -eq  1 ]; then
+	echo $1 > commit_ok_log.txt
+	test_is_go_on
+	echo good_commit_id $good_commit_id
+	echo bad_commit_id $bad_commit_id
+else
+	echo "Plead input the commit that can be used!"
+fi
