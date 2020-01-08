@@ -17,9 +17,18 @@ sudo apt install heirloom-mailx
 ## 配置外部SMTP
 Ubuntu18.04的配置文件为/etc/s-nail.rc，把下面几行放置在最后
 ```
-set from=xxx@163.com
-set smtp=smtp.163.com
-set smtp-auth-user=xxx@163.com
-set smtp-auth-password=123456
-set smtp-auth=login
+set from="759381818@qq.com"
+set smtp="smtps://smtp.qq.com:465"
+set smtp-auth-user="759381818@qq.com"
+set smtp-auth-password="ahkphzlybshabbga"
+set smtp-auth=login  
+```
+注意：第四行password是指的QQ邮箱授权码，不是密码
+## 测试
+```
+echo "邮件内容" | s-nail  -s "邮件主题" miaodexing@openthos.org
+```
+或者
+```
+s-nail  -s "邮件主题" miaodexing@openthos.org  < result.txt
 ```
