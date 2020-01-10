@@ -5,7 +5,10 @@
 ## 萧络元
 ### 本周工作
 * OPENTHOS运行于Hikey970 ARM开发板的代码整理push到服务器，并撰写文档发送邮件；
-* 通过trace跟踪与Hikey970相同Android9版本的NUC，MiraCast连接到已扫描的投屏客户端，出现“listenForRemoteDisplay is no longer supported!”　ERROR；进而发现是由于某一个commit“stagefright: remove Miracast sender code”　把投屏发送代码移除了。通过手动revert相关“remove Miracast ”的commit，修复编译问题，恢复了libstagefright/wifi-display的miracast发送端代码，出现的ERROR修复；
+* 通过trace跟踪与Hikey970相同Android9版本的NUC，MiraCast连接到已扫描的投屏客户端;
+  - 出现“listenForRemoteDisplay is no longer supported!”　ERROR；
+  - 进而发现是由于某一个commit“stagefright: remove Miracast sender code”　把投屏发送代码移除了。
+  - 通过手动revert相关“remove Miracast ”的commit，修复编译问题，恢复了libstagefright/wifi-display的miracast发送端代码，出现的ERROR修复；
 * 继而出现“[OMX.google.h264.encoder] configureCodec returning error”，视频编码格式的错误，正着手修复；
 
 ## 苗德行
