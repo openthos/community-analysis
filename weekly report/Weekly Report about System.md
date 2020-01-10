@@ -1,15 +1,15 @@
 # 2020-01-06 ~ 2020-01-09 工作总结
 ## 黃志偉
 ### 本周工作
-
-## 萧络元
-### 本周工作
-* OPENTHOS运行于Hikey970 ARM开发板的代码整理push到服务器，并撰写文档发送邮件；
-* 通过trace跟踪与Hikey970相同Android9版本的NUC，MiraCast连接到已扫描的投屏客户端;
-  - 出现“listenForRemoteDisplay is no longer supported!”　ERROR；
-  - 进而发现是由于某一个commit“stagefright: remove Miracast sender code”　把投屏发送代码移除了。
-  - 通过手动revert相关“remove Miracast ”的commit，修复编译问题，恢复了libstagefright/wifi-display的miracast发送端代码，出现的ERROR修复；
-* 继而出现“[OMX.google.h264.encoder] configureCodec returning error”，视频编码格式的错误，正着手修复；
+* OTO8
+  - Use SharedPreferences to save audio volume of an app.
+  - Add audioVolume to Configuration.java which can be got by ResourcesManager.getConfiguration().audioVolume.
+  - Add patch to ActivityThread.java to change audio volume on Activity launch, and save it on paused.
+    The patch works as expected. However, the result may not what we want. Need more work...
+  
+* Android-x86 10
+  - Finish adding back sdcard fuse support.
+  - Add patch from Mauro to enable iris, i915drmfb and nouveaudrmfb support.
 
 ## 苗德行
 ### 本周工作
@@ -29,6 +29,7 @@
 * Android-x86 10
   - Update kernel to 4.19.91, resolve conflicts
   - Port fuse support to sdcard service
+
 ## 苗德行
 ### 本周工作
 * LKP benchmark 运行结果分析
