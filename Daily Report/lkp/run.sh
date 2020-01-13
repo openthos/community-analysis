@@ -204,11 +204,14 @@ function get_result(){
 	while read line
 	do
 		l=`echo $line | awk '{print NF}'`
-		if [ $l -ge 6 ]; then
+		if [ $l -eq 6 ]; then
 			rs=`echo $line | awk '{print $4}' | awk -F '%' '{print $1}'`
-		else
-			rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
-		fi
+		elif [ $l -eq 5 ]; then
+                	rs=`echo $line | awk '{print $3}' | awk -F '%' '{print $1}'`
+                elif [ $l -eq 4 ]; then                                                                                                                                                                         
+             		rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
+         	fi
+
 		#rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
 		if [[ $rs == *+* ]]; then
 			rs=`echo $rs | awk -F '+' '{print $2}'`
