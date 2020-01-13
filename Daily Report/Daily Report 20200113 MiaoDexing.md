@@ -1,18 +1,22 @@
-sudo curl -L --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
+# 结果分析特殊情况
+## 第一种：
+```
+ 3002 ±169%     -98.6%      41.00        proc-vmstat.pgactivate
+```
+## 第二种：
+```
+404.00           -75.2%     100.25 ±173%  slabinfo.Acpi-Namespace.active_objs
+```
+上述两种情况的列数都是五列，针对上述两种情况，代码如下：
+```
+#num 表示列数
+#line 表示读取的一行数据
 
-ou can download a binary for every available version as described in Bleeding Edge - download any other tagged release.
+[ $num -eq 5 ]; then
+             s=`echo $line | awk '{print $4}'
+             if [ $s == *±* ]; then 
+                 rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
+             else
+                 rs=`echo $line | awk '{print $3}' | awk -F '%' '{print $1}'`
 
-Give it permissions to execute:
 ```
-sudo chmod +x /usr/local/bin/gitlab-runner
-```
-Create a GitLab CI user:
-```
-sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
-```
-Install and run as service:
-```
-sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
-sudo gitlab-runner start
-```
-Register the Runner
