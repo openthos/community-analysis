@@ -12,9 +12,9 @@
 #num 表示列数
 #line 表示读取的一行数据
 
-[ $num -eq 5 ]; then
+if [ $num -eq 5 ]; then
              s=`echo $line | awk '{print $4}'
-             if [ $s == *±* ]; then 
+             if [[ $s == *±* ]]; then 
                  rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
              else
                  rs=`echo $line | awk '{print $3}' | awk -F '%' '{print $1}'`
