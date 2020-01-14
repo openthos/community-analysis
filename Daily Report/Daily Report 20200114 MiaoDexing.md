@@ -16,7 +16,7 @@
 ## 第一种
 总共是八列，如13行
 ```
-l=`echo $line | awk '{print NF}'`                                                                                                                                                               
+l=`echo $line | awk '{print NF}'`
 if [ $l -eq 8 ]; then
    rs=`echo $line | awk '{print $4}' | awk -F '%' '{print $1}'`
 fi
