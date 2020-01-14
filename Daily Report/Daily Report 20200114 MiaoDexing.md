@@ -33,9 +33,36 @@ if [ $l -eq 7 ]; then
    fi
 fi
 ```
+如果第六列包含“±”，就取第四列；否则，就取第三列，最终要得出的是“%change”的数据，后面的情况亦是如此
 ## 第三种
 总共是六列，如第16、17行
+```
+if [ $l -eq 6 ]; then
+   s=`echo $line | awk '{print $5}'`
+   if [[ $s == *±* ]]; then 
+      rs=`echo $line | awk '{print $3}' | awk -F '%' '{print $1}'`
+   else
+      rs=`echo $line | awk '{print $4}' | awk -F '%' '{print $1}'`
+   fi
+fi
+```
 ## 第四种
 总共是五列，如第18、19行
+```
+if [ $l -eq 5 ]; then
+   s=`echo $line | awk '{print $2}'`
+   if [[ $s == *±* ]]; then 
+      rs=`echo $line | awk '{print $3}' | awk -F '%' '{print $1}'`
+   else
+      rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
+   fi
+fi
+```
 ## 第五种
 总共是四列，如第20行
+```
+if [ $l -le 4 ]; then
+   rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
+fi
+
+```
