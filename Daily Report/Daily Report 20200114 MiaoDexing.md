@@ -8,9 +8,10 @@
  15      78.00 ±174%     +78.2%     139.00 ± 17%  proc-vmstat.nr_written
  16      78.00 ±174%     +78.2%     139.00 ±117%  proc-vmstat.nr_written
  17      78.00 ± 74%     +78.2%     139.00        proc-vmstat.nr_written
- 18      78.00 ±174%     +78.2%     139.00        proc-vmstat.nr_written
- 19      78.00           +78.2%     139.00 ±117%  proc-vmstat.nr_written
- 20      78.00           +78.2%     139.00        proc-vmstat.nr_written
+ 18      1886            +12.5%     2121 ± 5%     slabinfo.vmap_area.active_objs
+ 19      78.00 ±174%     +78.2%     139.00        proc-vmstat.nr_written
+ 20      78.00           +78.2%     139.00 ±117%  proc-vmstat.nr_written
+ 21      78.00           +78.2%     139.00        proc-vmstat.nr_written
 ```
 参照上述示例，分为以下集中情况（以空格作为分隔符）：
 ## 第一种
@@ -35,19 +36,24 @@ fi
 ```
 如果第六列包含“±”，就取第四列；否则，就取第三列，最终要得出的是“%change”的数据，后面的情况亦是如此
 ## 第三种
-总共是六列，如第16、17行
+总共是六列，如第16、17、18行
 ```
 if [ $l -eq 6 ]; then
    s=`echo $line | awk '{print $5}'`
    if [[ $s == *±* ]]; then 
       rs=`echo $line | awk '{print $3}' | awk -F '%' '{print $1}'`
    else
-      rs=`echo $line | awk '{print $4}' | awk -F '%' '{print $1}'`
+      s=`echo $line | awk '{print $4}'`
+      if [[ $s == *±* ]]; then
+          rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
+      else
+          rs=`echo $line | awk '{print $4}' | awk -F '%' '{print $1}'`
+      fi
    fi
 fi
 ```
 ## 第四种
-总共是五列，如第18、19行
+总共是五列，如第19、20行
 ```
 if [ $l -eq 5 ]; then
    s=`echo $line | awk '{print $2}'`
@@ -59,7 +65,7 @@ if [ $l -eq 5 ]; then
 fi
 ```
 ## 第五种
-总共是四列，如第20行
+总共是四列，如第21行
 ```
 if [ $l -le 4 ]; then
    rs=`echo $line | awk '{print $2}' | awk -F '%' '{print $1}'`
