@@ -8,7 +8,7 @@ job_name:
     CI_DEBUG_TRACE: "true"
 
 ```
-以下是 CI_DEBUG_TRACE 设置为 true 的输出:
+以下是 CI_DEBUG_TRACE 设置为 true 的输出,其中可以看到环境变量的输出:
 ```
 + eval 'export FF_CMD_DISABLE_DELAYED_ERROR_LEVEL_EXPANSION=$'\''false'\''
 554 export FF_USE_LEGACY_BUILDS_DIR_FOR_DOCKER=$'\''false'\''
