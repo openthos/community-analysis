@@ -1,4 +1,12 @@
 # 2020-01-13 ~ 2020-01-17 工作总结
+## 黃志偉
+### 本周工作
+* OTO8
+  - Implement per app audio volume based on media session.
+
+* Android-x86 10
+  - Fix internal problem on booting (mismatched fingerprints).
+
 ## 萧络元
 ### 本周工作
 * 在与Hikey970相同版本pie的Intel NUC上，MiraCast连接到已扫描的投屏客户端，修复出现的encoder编码错误，原因为使用了不支持的“intra-refresh-mode” AVC Encoder Parameters，成功跑起了miracast无线投射屏demo；
