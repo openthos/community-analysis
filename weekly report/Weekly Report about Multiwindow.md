@@ -1,4 +1,10 @@
-# 2020年01月06日 - - 2020年01月09日 周总结
+# 2020年01月13日 - - 2020年01月17日 周总结
+# 刘晓旭
+  - 1.完成oto8.1 StartupMenu右键菜单UI重组
+  - 2.完成oto8.1 StartupMenu最近应用列表显示以及清除功能。
+  - 3.整理StartupMenu代码并入oto8.1frameworks模块中，并清除多余代码。完成70%.
+
+# 2020年01月06日 - - 2020年01月10日 周总结
 # 刘晓旭
   - 1.实现oto8.1 StartupMenu新UI替换，已完成StartupMenu整体界面显示，应用列表显示及其点击、hover事件等。
   - 2.实现oto8.1 StartupMenu搜索功能.
