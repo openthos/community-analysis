@@ -1,4 +1,10 @@
 # 2020-01-13 ~ 2020-01-17 工作总结
+## 萧络元
+### 本周工作
+* 在与Hikey970相同版本pie的Intel NUC上，MiraCast连接到已扫描的投屏客户端，修复出现的encoder编码错误，原因为使用了不支持的“intra-refresh-mode” AVC Encoder Parameters，成功跑起了miracast无线投射屏demo；
+* 但是hikey970板子原生代码无法正常运行wifi p2p服务，跟踪发现是因为未实现硬件抽象层android.hardware.wifi.IWifi接口，尝试手动实现IWifi HAL接口；
+* 在刘总来实验室试用hikey970板子OPENTHOS系统后，感觉运行速度不够流畅，可能为正常enable硬件GPU加速，指示进行底层调查；
+
 ## 苗德行
 ### 本周工作
 - 完成gitlab 与 lkp的集成（已完成）
