@@ -1,3 +1,12 @@
+# 2020-01-13 ~ 2020-01-17 工作总结
+## 苗德行
+### 本周工作
+- 完成gitlab 与 lkp的集成
+  -  在服务器搭建gitlab及runner环境
+  -  gitlab构建linux kernel，除了yml、md、config文件，当有新的提交发生，则会编译kernel
+  -  gitlab 将编译后的内核进行交给lkp测试，如果内核测试没有问题，得出测试结果并发送邮件，并不会触发bisect；如果测试有问题，则会触发bisect，得出good commit 和 bad commit。
+
+
 # 2020-01-06 ~ 2020-01-09 工作总结
 ## 黃志偉
 ### 本周工作
