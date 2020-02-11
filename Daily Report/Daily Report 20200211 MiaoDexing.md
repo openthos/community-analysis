@@ -29,3 +29,31 @@ sudo docker run --detach \
   这个时候会要求你修改root账户的密码，输入2次密码确定就可以了。注意这个root账户是gitlab的账户不是你mac系统的root账户，不要搞错了。
   到这里，在macos中搭建gitlab系统就算完成了。
 
+# 问题记录
+
+安装gitlab 的时候报错: <br>
+'''
+
+docker: Error response from daemon: Mounts denied:
+The paths /srv/gitlab/logs and /srv/gitlab/config and /srv/gitlab/data
+are not shared from OS X and are not known to Docker.
+You can configure shared paths from Docker -> Preferences... -> File Sharing.
+See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
+
+'''
+
+没看懂官方的解决办法，用以下方式替代了/srv目录 <br>
+
+'''
+
+sudo docker run --detach \
+    --hostname mygitlab.com \
+    --publish 443:443 --publish 80:80 --publish 22:22 \
+    --name gitlab \
+    --restart always \
+    --volume ~/gitlab/config:/etc/gitlab \
+    --volume ~/gitlab/logs:/var/log/gitlab \
+    --volume ~/gitlab/data:/var/opt/gitlab \
+    gitlab/gitlab-ce:latest
+    
+'''
