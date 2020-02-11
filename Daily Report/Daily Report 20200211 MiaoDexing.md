@@ -6,6 +6,7 @@ https://docs.docker.com/docker-for-mac/install/
 
 - 安装gitlab-ce
 使用下面的命令安装gitlab-ce
+
 '''
 sudo docker run --detach \
     --hostname mygitlab.com \
