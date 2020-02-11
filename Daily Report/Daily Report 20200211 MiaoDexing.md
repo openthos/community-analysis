@@ -7,7 +7,7 @@ https://docs.docker.com/docker-for-mac/install/
 - 安装gitlab-ce
 使用下面的命令安装gitlab-ce
 
-'''
+```
 sudo docker run --detach \
     --hostname mygitlab.com \
     --publish 443:443 --publish 80:80 --publish 22:22 \
@@ -17,7 +17,7 @@ sudo docker run --detach \
     --volume /srv/gitlab/logs:/var/log/gitlab \
     --volume /srv/gitlab/data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest
-'''
+```
   - 上面的参数说明：
     - hostname按照自己的需要改
     -  volume的冒号前面为物理机器上的实际目录，需提前建好，然后改为正确路径。冒号后面为挂载点，不要改
@@ -33,7 +33,7 @@ sudo docker run --detach \
 # 问题记录
 
 安装gitlab 的时候报错: <br>
-'''
+```
 
 docker: Error response from daemon: Mounts denied:
 The paths /srv/gitlab/logs and /srv/gitlab/config and /srv/gitlab/data
@@ -41,11 +41,11 @@ are not shared from OS X and are not known to Docker.
 You can configure shared paths from Docker -> Preferences... -> File Sharing.
 See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
 
-'''
+```
 
 没看懂官方的解决办法，用以下方式替代了/srv目录 <br>
 
-'''
+```
 
 sudo docker run --detach \
     --hostname mygitlab.com \
@@ -57,4 +57,4 @@ sudo docker run --detach \
     --volume ~/gitlab/data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest
     
-'''
+```
