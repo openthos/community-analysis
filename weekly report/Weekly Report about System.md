@@ -10,6 +10,7 @@
 - 构建lkp开发环境
   * 构建gitlab-ci开发环境，完成Linux 内核自动编译
   * 构建qemu运行所需要rootfs
+  * 构建Ubuntu邮件自动发送环境，为bisect做准备
   * 了解kubernetes
 # 2020-01-13 ~ 2020-01-17 工作总结
 ## 黃志偉
