@@ -5,6 +5,13 @@
   - Settings: use DownloadManager to get native bridge libraries
   - Camera2: fix camera facing by querying characteristics
   - inputflinger: fix relative mouse movement
+
+## 萧络元
+### 本周工作
+* 在测试盒子Intel NUC上，使能MiraCast功能，连接到投屏客户端跑起无线投射屏模式；
+* 对Android-9无线投屏出现的“[OMX.google.h264.encoder] configureCodec returning error”，视频编码格式的问题，运行速度不够流畅比特率过低的问题，跟踪分析该模块相关代码：frameworks/av/media/libstagefright
+* 与黄SIR讨论在Android-x86中移植使用MiraCast的工作；
+
 ## 苗德行
 ### 本周工作
 - 构建lkp开发环境
