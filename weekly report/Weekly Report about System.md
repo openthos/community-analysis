@@ -5,7 +5,12 @@
   - Settings: use DownloadManager to get native bridge libraries
   - Camera2: fix camera facing by querying characteristics
   - inputflinger: fix relative mouse movement
-
+## 苗德行
+### 本周工作
+- 构建lkp开发环境
+  * 构建gitlab-ci开发环境，完成Linux 内核自动编译
+  * 构建qemu运行所需要rootfs
+  * 了解kubernetes
 # 2020-01-13 ~ 2020-01-17 工作总结
 ## 黃志偉
 ### 本周工作
