@@ -1,3 +1,11 @@
+# 2020-02-17 ~ 2020-02-21 工作总结
+## 黃志偉
+### 本周工作
+* Android-x86
+  - Settings: use DownloadManager to get native bridge libraries
+  - Camera2: fix camera facing by querying characteristics
+  - inputflinger: fix relative mouse movement
+
 # 2020-01-13 ~ 2020-01-17 工作总结
 ## 黃志偉
 ### 本周工作
