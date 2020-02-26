@@ -35,4 +35,4 @@ minikube start --image-mirror-country cn \
 ```
 minikube dashboard
 ```
-
+![avatar](https://github.com/openthos/community-analysis/blob/master/Daily%20Report/2020-02-26%2018-08-33%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
