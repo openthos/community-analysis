@@ -7,6 +7,16 @@
 * Release android-x86 9.0-r1
 * Merge latest oreo-x86 into multiwindow-oreo
 
+
+## 萧络元
+### 本周工作
+* openthos网站证书过期，更新证书；
+* oto8代码库更新同步至github;
+* 关于在Android-x86中移植使用MiraCast，整理好使能功能PATCH于pie-hikey970/frameworks/av提供给黄sir；
+* 对于hikey970运行速度不够流畅的问题，对比了原厂的系统镜像与自编译的图形EGL情况相同：
+Renderer  : Mali-G72，OpenGL ES 3.2，载入库/vendor/lib64/egl/libGLES_mali.so
+滑动鼠标拖影的显示情况一致，猜测是原厂图形HAL没有完备支持； 
+
 ## 苗德行
 ### 本周工作
 - 构建lkp开发环境
