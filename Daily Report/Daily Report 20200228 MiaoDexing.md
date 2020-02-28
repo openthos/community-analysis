@@ -36,3 +36,4 @@ Helm由两部分组成，客户端helm和服务端tiller，其中tiller运行在
 ```
 https://github.com/helm/helm/releases
 ```
+下载完可执行文件helm后，拷贝到文件夹/usr/local/bin下，执行helm version, 如果看到版本信息，说明helm的客户端安装成功。
