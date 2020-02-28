@@ -1,4 +1,4 @@
-# 2020-02-24 ~ 2020-02-27 工作总结
+# 2020-02-24 ~ 2020-02-28 工作总结
 ## 黃志偉
 ### 本周工作
 * Update kernel to 4.19.105
@@ -6,6 +6,16 @@
 * Update mesa to 19.3.4
 * Release android-x86 9.0-r1
 * Merge latest oreo-x86 into multiwindow-oreo
+
+## 苗德行
+### 本周工作
+- 构建lkp开发环境
+  * 完成lkp开发环境基于gitlab 与qemu 的运行
+- 搭建kubernetes环境
+  * 了解Kubernetes的背景，Kubernetes的安装环境、Kubernetes 基本概念
+  * 完成Minikube-Kubernetes本地实验环境的构建
+  * 完成Helm的环境构建
+  * 完成Kuberctl的环境构建
 
 # 2020-02-17 ~ 2020-02-21 工作总结
 ## 黃志偉
