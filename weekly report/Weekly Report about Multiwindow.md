@@ -1,3 +1,11 @@
+# 2020年02月24日 - - 2020年02月28日 周总结
+# 刘晓旭
+  - 1.完善openthos8.1 右键菜单UI及相关功能。
+  - 2.解决StartupMenu新安装应用首次打开crash问题。
+  - 3.解决StartupMenu新安装应用出现在最近应用列表中bug
+  - 4.完成StartupMenu 最近文档UI界面，实现功能40%.
+
+
 # 2020年02月17日 - - 2020年02月21日 周总结
 # 刘晓旭
   - 1.安装、配置virtualbox，方便openthos8.1系统startupmenu测试。
