@@ -11,5 +11,6 @@
 可以帮我们快速安装软件到 k8s 上。我们需要在其中一个主节点上安装好 Helm 的 client 和 server。具体可参考：
 
     [Helm User Guide - Helm 用户指南](https://whmzsu.github.io/helm-doc-zh-cn/quickstart/install-zh_cn.html)
+    
     [Kubernetes Helm 初体验](https://zhuanlan.zhihu.com/p/33813367)
  
