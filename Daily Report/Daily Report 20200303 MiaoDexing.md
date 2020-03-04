@@ -1,4 +1,5 @@
 # 为gitlab添加kubernetes集群
+[链接](https://www.jianshu.com/p/1208c132b84c)
 - 点击project的【Add Kubernetes cluster】按钮。
 - 选择【Add existing kubernetes】，填入相应的信息。
   -  name随意
