@@ -55,6 +55,43 @@ helm init --service-account tiller --upgrade -i registry.cn-hangzhou.aliyuncs.co
 Error: error when upgrading: current Tiller version registry.cn-hangzhou.aliyuncs.com/google_containers/tiller:v2.16.3 is newer than client version registry.cn-hangzhou.aliyuncs.com/google_containers/tiller:v2.9.1, use --force-upgrade to downgrade
 
 ```
-这里解决办法直接将创建服务端中的v2.9.1替换为提示的v2.16.3即可。
+这里解决办法直接将创建服务端中的v2.9.1替换为提示的v2.16.3即可。<br>
 在 Kubernetes 中安装 Tiller 服务，因为官方的镜像因为某些原因无法拉取，使用-i指定自己的镜像，可选镜像：registry.cn-hangzhou.aliyuncs.com/google_containers/tiller:v2.9.1（阿里云），该镜像的版本与helm客户端的版本相同，使用helm version可查看helm客户端版本。
 如果在用helm init安装tiller server时一直部署不成功,检查deployment，根据描述解决问题。
+
+### 给 Tiller 授权
+- 因为 Helm 的服务端 Tiller 是一个部署在 Kubernetes 中 Kube-System Namespace 下 的 Deployment，它会去连接 Kube-Api 在 Kubernetes 里创建和删除应用。
+
+而从 Kubernetes 1.6 版本开始，API Server 启用了 RBAC 授权。目前的 Tiller 部署时默认没有定义授权的 ServiceAccount，这会导致访问 API Server 时被拒绝。所以我们需要明确为 Tiller 部署添加授权。
+
+创建 Kubernetes 的服务帐号和绑定角色
+```
+kubectl create serviceaccount --namespace kube-system tiller
+
+kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+
+```
+为 Tiller 设置帐号
+
+```
+ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
+```
+查看是否授权成功
+```
+$ kubectl get deploy --namespace kube-system   tiller-deploy  --output yaml|grep  serviceAccount
+serviceAccount: tiller
+serviceAccountName: till
+```
+
+### 验证 Tiller 是否安装成功
+```
+$ helm version
+Client: &version.Version{SemVer:"v2.16.3", GitCommit:"20adb27c7c5868466912eebdf6664e7390ebe710", GitTreeState:"clean"}
+Server: &version.Version{SemVer:"v2.16.3", GitCommit:"20adb27c7c5868466912eebdf6664e7390ebe710", GitTreeState:"clean"}
+```
+### 卸载 Helm 服务器端 Tiller
+如果你需要在 Kubernetes 中卸载已部署的 Tiller，可使用以下命令完成卸载。
+```
+    $ helm reset 或
+    $helm reset --force
+```
