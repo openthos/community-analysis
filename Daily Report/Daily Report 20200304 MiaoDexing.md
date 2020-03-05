@@ -2,14 +2,10 @@
 ## helm简介
 - 很多人都使用过Ubuntu下的ap-get或者CentOS下的yum, 这两者都是Linux系统下的包管理工具。
 采用apt-get/yum,应用开发者可以管理应用包之间的依赖关系，发布应用；用户则可以以简单的方式查找、安装、升级、卸载应用程序。
-
 我们可以将Helm看作Kubernetes下的apt-get/yum。Helm是Deis (https://deis.com/) 开发的一个用于kubernetes的包管理器。
 每个包称为一个Chart，一个Chart是一个目录（一般情况下会将目录进行打包压缩，形成name-version.tgz格式的单一文件，方便传输和存储）。
-
 对于应用发布者而言，可以通过Helm打包应用，管理应用依赖关系，管理应用版本并发布应用到软件仓库。
-
 对于使用者而言，使用Helm后不用需要了解Kubernetes的Yaml语法并编写应用部署文件，可以通过Helm下载并在kubernetes上安装需要的应用。
-
 除此以外，Helm还提供了kubernetes上的软件部署，删除，升级，回滚应用的强大功能。
 
 ### Helm组件及相关术语
@@ -29,3 +25,39 @@ Helm 的软件仓库，Repository 本质上是一个 Web 服务器，该服务�
 Release
 
 使用 helm install 命令在 Kubernetes 集群中部署的 Chart 称为 Release。
+
+## helm部署
+### helm客户端安装
+- 使用官方提供的脚本一键安装
+```
+    curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh
+    $ chmod 700 get_helm.sh
+    $ ./get_helm.sh
+```
+### helm 服务端安装Tiller
+Tiller 是以 Deployment 方式部署在 Kubernetes 集群中的，只需使用以下指令便可简单的完成安装。
+```
+helm init
+```
+
+由于 Helm 默认会去 storage.googleapis.com 拉取镜像，如果你当前执行的机器不能访问该域名的话可以使用以下命令来安装：
+```
+helm init --client-only --stable-repo-url https://aliacs-app-catalog.oss-cn-hangzhou.aliyuncs.com/charts/
+helm repo add incubator https://aliacs-app-catalog.oss-cn-hangzhou.aliyuncs.com/charts-incubator/
+helm repo update
+```
+
+- 创建服务端
+```
+helm init --service-account tiller --upgrade -i registry.cn-hangzhou.aliyuncs.com/google_containers/tiller:v2.9.1  --stable-repo-url https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
+```
+- 创建TLS认证服务端，参考地址：https://github.com/gjmzj/kubeasz/blob/master/docs/guide/helm.md
+```
+helm init --service-account tiller --upgrade -i registry.cn-hangzhou.aliyuncs.com/google_containers/tiller:v2.9.1 --tiller-tls-cert /etc/kubernetes/ssl/tiller001.pem --tiller-tls-key /etc/kubernetes/ssl/tiller001-key.pem --tls-ca-cert /etc/kubernetes/ssl/ca.pem --tiller-namespace kube-system --stable-repo-url https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
+```
+此处注意，有可能会出现以下error：
+```
+Error: error when upgrading: current Tiller version registry.cn-hangzhou.aliyuncs.com/google_containers/tiller:v2.16.3 is newer than client version registry.cn-hangzhou.aliyuncs.com/google_containers/tiller:v2.9.1, use --force-upgrade to downgrade
+
+```
+这里解决办法直接将客户端安装中的v2.9.1替换为提示的v2.16.3即可
