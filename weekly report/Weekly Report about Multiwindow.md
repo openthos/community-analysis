@@ -1,3 +1,11 @@
+# 2020年03月02日 - - 2020年03月06日 周总结
+# 刘晓旭
+  - 1.bug：系统重启，StartupMenu最近应用界面会重复显示应用图标。
+  - 2.完成openthos8.1 StartupMenu最近文档时间显示功能。
+  - 3.bug：首次安装系统开机，StartupMenu最近文档界面通过Fileobserver监听文件状态，无法触发onEvent回调事件，系统重启后，可以触发onEvent回调事件，监听文件状态。分析定位到首次安装的系统Fileobserver开启监听的时间点，Sd卡未mount，目录为空，下一步接着分析解决此问题。
+  - 4.完成StartupMenu最近文档功能80%
+
+
 # 2020年02月24日 - - 2020年02月28日 周总结
 # 刘晓旭
   - 1.完善openthos8.1 右键菜单UI及相关功能。
