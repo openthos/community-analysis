@@ -6,7 +6,7 @@
 * Update packages/apps/Taskbar to support both portrait mode apps.
 * Work on kernel-5.4 branch based on kernel/common android-5.4. (unfinished)
 
-
+## 苗德行
 ### 本周工作
 - 与专利负责人沟通专利细节，根据沟通结果更改原有文档并反馈给专利书写负责人
 - 搭建kubernetes环境
