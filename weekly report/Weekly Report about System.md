@@ -6,6 +6,16 @@
 * Update packages/apps/Taskbar to support both portrait mode apps.
 * Work on kernel-5.4 branch based on kernel/common android-5.4. (unfinished)
 
+
+### 本周工作
+- 与专利负责人沟通专利细节，根据沟通结果更改原有文档并反馈给专利书写负责人
+- 搭建kubernetes环境
+  * 解决Helm之Tiller version问题
+  * 完成k8s单个节点环境部署
+  * 完成gitlab-runner在k8s单个节点部署
+  * 完成gitlab某个project在k8s测试
+
+
 # 2020-02-24 ~ 2020-02-28 工作总结
 ## 黃志偉
 ### 本周工作
