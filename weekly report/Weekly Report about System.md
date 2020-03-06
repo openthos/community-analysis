@@ -1,3 +1,11 @@
+# 2020-03-02 ~ 2020-03-06 工作总结
+## 黃志偉
+### 本周工作
+* Fix swiftshader r-b swapped issue in q-x86.
+* Replace rtl8723bs_bt firmwares (reported in android-x86 list)
+* Update packages/apps/Taskbar to support both portrait mode apps.
+* Work on kernel-5.4 branch based on kernel/common android-5.4. (unfinished)
+
 # 2020-02-24 ~ 2020-02-28 工作总结
 ## 黃志偉
 ### 本周工作
