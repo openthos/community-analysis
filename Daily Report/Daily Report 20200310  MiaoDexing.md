@@ -28,5 +28,12 @@ midysen/kernel_env   v1                  924b0f6c44b4        3 hours ago        
 ubuntu               18.04               72300a873c2c        2 weeks ago         64.2MB
 linux@linux-THTF:~$ sudo docker push midysen/kernel_env:v1
 The push refers to repository [docker.io/midysen/kernel_env]
+abb8fdeebe00: Pushed 
+1852b2300972: Pushed 
+03c9b9f537a4: Pushed 
+8c98131d2d1d: Pushed 
+cc4590d6a718: Pushed 
+v1: digest: sha256:e5f64b694a0b54ff4660628bd417aa494d00aef33b20e9378b46c0418702a41f size: 1365
+
 
 ```
