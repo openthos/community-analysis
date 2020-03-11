@@ -1,4 +1,4 @@
-# Kubernetes 集群使用 Helm 搭建 GitLab 并配置 Ingress
+# Kubernetes 集群使用 Helm 搭建 GitLab
 ## 一、Helm 介绍
 - Helm 是一个管理 Kubernetes Charts 的工具，Charts 可以理解为预先配置的 Kubernetes 资源包，
 通过 Helm 可以轻松的安装和管理 Kubernetes 应用，类似我们平时使用的 apt、yum、homebrew 工具。
