@@ -90,8 +90,10 @@ f13d2bb6d8f0        midysen/kernel_env:v1   "/bin/bash"         16 minutes ago  
 ```
 linux@linux-THTF:~$ sudo docker commit  -m "Add qemu and rootfs" 0e96c3f59af3 midysen/kernel_env:v1
 sha256:690da9807a73a64b2b0450946f2293ca8b3e9e75314598d9a47a4622157f6718
-linux@linux-THTF:~$ sudo docker images 
-REPOSITORY           TAG                 IMAGE ID            CREATED              SIZE
-midysen/kernel_env   v1                  690da9807a73        About a minute ago   6.65GB
+linux@linux-THTF:~$ sudo docker images -a
+REPOSITORY           TAG                 IMAGE ID            CREATED                  SIZE
+midysen/kernel_env   v1                  690da9807a73        About a minute ago       6.65GB
+midysen/kernel_env   v0                  924b0f6c44b4        46 hours ago             1.85GB
+ubuntu               18.04               72300a873c2c        2 weeks ago              64.2MB
 
 ```
