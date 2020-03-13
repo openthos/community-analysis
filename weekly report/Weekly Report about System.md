@@ -1,7 +1,8 @@
 # 2020-03-09 ~ 2020-03-013 工作总结
 ## 苗德行
 ### 本周工作
-* 搭建build Linux kernel 的 docker image，并上传至docker hub
+* 搭建build Linux kernel 的 docker image，并上传至docker hub，并解决“ docker push失败:denied: requested access to the resource is denied
+”问题
 * 替换minikube的docker image为最新制作build kernel image
 * 在gitlab中使用最新docker image完成kernel building
 * 在最新制作的docker image中启动qemu
