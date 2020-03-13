@@ -1,4 +1,15 @@
-# 2020-03-09 ~ 2020-03-013 工作总结
+# 2020-03-09 ~ 2020-03-13 工作总结
+## 黃志偉
+### 本周工作
+* Use AOSP's isohybrid instead of isohybrid.pl to fix UEFI booting failure issue. (oreo-x86/pie-x86/q-x86)
+* Add some quirks for Teclast devices.
+* Merge aosp/android-9.0.0_r54 into pie-x86
+* Merge aosp/android-10.0.0_r32 into q-x86
+* Fix a bug in installer/init: avoid finding system dir too aggressive
+* Add firmware of Broadcom AP6255
+* Update kernel-4.19 branch to 4.19.109
+* Merge mesa 19.3.5 into pie-x86
+
 ## 苗德行
 ### 本周工作
 * 搭建build Linux kernel 的 docker image，并上传至docker hub，并解决“ docker push失败:denied: requested access to the resource is denied
