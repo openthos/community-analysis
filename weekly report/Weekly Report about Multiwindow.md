@@ -4,7 +4,11 @@
   - 2.bug：修改最近文档图标UI，以及解决最近文档时间显示不全。
   - 3.完成最近文档数据存储功能。
   - 4.完成StartupMenu最近文档功能100%
-  
+
+# 罗浩
+  - 1.解决通知中心无法前置问题，由于新增的STATUS_BAR_DIALOG类型窗口没有对应的非APPLICATION的Layer类型并且在PhoneWIndowManager中不会被当作特殊类型窗口处理导致其显示时会被一些一般应用窗口覆盖。根据Layer类型和PhoneWindowManager对STATUS_BAR和STATUS_BAR_PANEL类型窗口的处理方式新增了对STATUS_BAR_DIALOG类型窗口的处理方式，使其能够被识别成特殊窗口，从而不会被应用窗口遮挡，能够保证显示在最前。
+  - 2.STATUS_BAR窗口可以自行决定blur的区域大小，目前认为可以用在startupMenu中，若未设定则surfaceflinger中会按照全layer都算作blur区域来计算
+  - 3.解决通知中心背景透明和模糊在发生动画时的时机冲突问题
 # 2020年03月02日 - - 2020年03月06日 周总结
 # 刘晓旭
   - 1.bug：系统重启，StartupMenu最近应用界面会重复显示应用图标。
