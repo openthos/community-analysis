@@ -1,3 +1,12 @@
+# 2020-03-09 ~ 2020-03-013 工作总结
+## 苗德行
+### 本周工作
+* 搭建build Linux kernel 的 docker image，并上传至docker hub
+* 替换minikube的docker image为最新制作build kernel image
+* 在gitlab中使用最新docker image完成kernel building
+* 在最新制作的docker image中启动qemu
+* 与专利编写人做具体技术细节沟通
+
 # 2020-03-02 ~ 2020-03-06 工作总结
 ## 黃志偉
 ### 本周工作
