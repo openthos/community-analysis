@@ -6,7 +6,7 @@
 * Update kernel-4.19 branch to 4.19.110
 * Merge aosp/android-8.1.0_r74 into oreo-x86 and release 8.1-r4
 * Prepare 9.1-r2 release
-* 搬家打包
+* 辦公室搬家打包
 
 ## 苗德行
 ### 本周工作
