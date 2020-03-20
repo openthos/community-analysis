@@ -1,3 +1,9 @@
+# 2020年03月16日 - - 2020年03月20日 周总结
+# 刘晓旭
+  - 1.优化openthos8.1兼容模式代码，根据当前设备分辨率，动态设置兼容模式运行density、densityDpi、widthPixel、heightPixel，确保在不同分辨率设备上，兼容模式正常运行。
+  - 2.优化openthos8.1窗口DecorCaption各个功能按钮MotionEvent，当后退、兼容模式设置、最下化、最大化、关闭功能按钮触摸事件为MotionEvent.ACTION_MOVE时，窗口可以随触摸事件拖动。
+  - 3.解决bug：在1366x768设备上，兼容模式更改提示窗口显示不全。
+
 # 2020年03月09日 - - 2020年03月13日 周总结
 # 刘晓旭
   - 1.bug：解决SystemUI中FileObserver首次开启监听startWatching后，无法触发onEvent回调事件；
