@@ -1,3 +1,13 @@
+# 2020-03-16 ~ 2020-03-20 工作总结
+## 黃志偉
+### 本周工作
+* Change default resolution of virgl to fix hwcomposer crashing
+* Workaround GMS crashing on 32-bit image
+* Update kernel-4.19 branch to 4.19.110
+* Merge aosp/android-8.1.0_r74 into oreo-x86 and release 8.1-r4
+* Prepare 9.1-r2 release
+* 搬家打包
+
 # 2020-03-09 ~ 2020-03-13 工作总结
 ## 黃志偉
 ### 本周工作
