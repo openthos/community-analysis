@@ -4,6 +4,11 @@
   - 2.优化openthos8.1窗口DecorCaption各个功能按钮MotionEvent，当后退、兼容模式设置、最下化、最大化、关闭功能按钮触摸事件为MotionEvent.ACTION_MOVE时，窗口可以随触摸事件拖动。
   - 3.解决bug：在1366x768设备上，兼容模式更改提示窗口显示不全。
 
+# 罗浩
+  - 1.提供STATUS_BAR窗口控制模糊区域大小的功能
+  - 2.优化STATUS_BAR中对通知中心弹窗位置，大小和窗口类型控制的代码。调整窗口类型在WindowManager中的调用，使其不会被当作一般的STATUS_BAR_PANEL从而不会影响应用窗口的显示
+  - 3.尝试一种新的对比度调整算法，效果不如之前的版本固不采用
+
 # 2020年03月09日 - - 2020年03月13日 周总结
 # 刘晓旭
   - 1.bug：解决SystemUI中FileObserver首次开启监听startWatching后，无法触发onEvent回调事件；
@@ -12,7 +17,7 @@
   - 4.完成StartupMenu最近文档功能100%
 
 # 罗浩
-  - 1.解决通知中心无法前置问题，由于新增的STATUS_BAR_DIALOG类型窗口没有对应的非APPLICATION的Layer类型并且在PhoneWIndowManager中不会被当作特殊类型窗口处理导致其显示时会被一些一般应用窗口覆盖。根据Layer类型和PhoneWindowManager对STATUS_BAR和STATUS_BAR_PANEL类型窗口的处理方式新增了对STATUS_BAR_DIALOG类型窗口的处理方式，使其能够被识别成特殊窗口，从而不会被应用窗口遮挡，能够保证显示在最前。
+  - 1.解决通知中心无法前置问题，由于新增的STATUS_BAR_DIALOG类型窗口没有对应的非APPLICATION的Layer类型并且在PhoneWindowManager中不会被当作特殊类型窗口处理导致其显示时会被一些一般应用窗口覆盖。根据Layer类型和PhoneWindowManager对STATUS_BAR和STATUS_BAR_PANEL类型窗口的处理方式新增了对STATUS_BAR_DIALOG类型窗口的处理方式，使其能够被识别成特殊窗口，从而不会被应用窗口遮挡，能够保证显示在最前。
   - 2.STATUS_BAR窗口可以自行决定blur的区域大小，目前认为可以用在startupMenu中，若未设定则surfaceflinger中会按照全layer都算作blur区域来计算
   - 3.解决通知中心背景透明和模糊在发生动画时的时机冲突问题
 # 2020年03月02日 - - 2020年03月06日 周总结
