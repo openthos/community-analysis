@@ -24,3 +24,4 @@ qemu-system-x86_64 -nographic  -m 2G -append "root=/dev/sda init=/bin/bash conso
 - -curses方式和-nographic
   - 使用 --nographic 以非图形界面的方式启动，所以需要重定向guest的console，所以需要“-append console=ttyS0”参数，而使用该参数是必须要使用-kernel参数的，因为无法直接将append中的内核命令行参数传递到硬盘、CDROM等里面的kernel中去。有时，需要“ -append 'console=tty0 console=ttyS0,115200n8' ”这样的参数。
   -  curses 图形化方式
+  
