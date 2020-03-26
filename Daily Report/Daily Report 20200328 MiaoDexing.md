@@ -78,7 +78,7 @@ docker pull alpine
 docker tag alpine 192.168.1.108:5000/alpine
 
  ```
-上传测试镜像
+- 上传测试镜像
 ```
 docker push 192.168.1.108:5000/alpine
 ```
@@ -89,7 +89,7 @@ The push refers to repository [192.168.1.108:5000/alpine]
 Get https://192.168.1.108:5000/v2/: dial tcp 192.168.1.108:5000: connect: connection refused
 
 ```
-- 因为Docker从1.3.X之后，与docker registry交互默认使用的是https，然而此处搭建的私有仓库只提供http服务，所以当与私有仓库交互时就会报上面的错误。
+因为Docker从1.3.X之后，与docker registry交互默认使用的是https，然而此处搭建的私有仓库只提供http服务，所以当与私有仓库交互时就会报上面的错误。
 - 解决办法
 修改daemon.json
 
