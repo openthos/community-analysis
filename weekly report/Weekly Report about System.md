@@ -1,4 +1,13 @@
 # 2020-03-23 ~ 2020-03-27 工作总结
+## 黃志偉
+### 本周工作
+* Fix Surface 3 audio issue
+* Apply a patch to add minimize & pip buttons to freeform windows
+* Enable pip feature (from BlissOS)
+* Release 9.0-r2 to include recent fixes
+* Study if possible to add softdep to ueventd
+* kernel: r8169: fix realtek module not loaded issue
+
 ## 苗德行
 ### 本周工作
 - 尝试在minikube中直接构建lkp环境，经多次验证不可行
