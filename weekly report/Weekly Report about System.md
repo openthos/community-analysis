@@ -1,3 +1,10 @@
+# 2020-03-30 ~ 2020-04-03 工作总结
+## 苗德行
+### 本周工作
+* 完成在gitlab中“install Runner on Kubernetes”
+* 基于gitlab，构建lkp在minikube中所需要的docker image（受限于image较大和网速问题，频繁测试较慢）
+* 尝试实现lkp ncompare
+
 # 2020-03-23 ~ 2020-03-27 工作总结
 ## 黃志偉
 ### 本周工作
