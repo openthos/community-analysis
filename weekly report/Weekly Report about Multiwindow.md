@@ -1,3 +1,10 @@
+# 2020年43月06日 - - 2020年04月10日 周总结
+# 刘晓旭
+  - 1.完成aosp10.0 开始菜单UI替换。
+  - 2.尝试设置隐藏DecorCaption的接口，方便应用自定义Caption，目前通过Window.addFlags()方式设置系统DecorCaption显示与隐藏，自测生效。
+  - 3.openthos8.1 图片管理器UI更换完成30%.
+ 
+
 # 2020年03月30日 - - 2020年04月03日 周总结
 # 刘晓旭
   - 1.commit、运行aosp10多窗口patches。
