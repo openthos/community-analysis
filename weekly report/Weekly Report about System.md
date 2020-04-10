@@ -1,3 +1,10 @@
+# 2020-04-06 ~ 2020-04-10 工作总结
+## 苗德行
+### 本周工作
+* 解决kernel commit 正常情况下无法拿到commit信息问题
+* 解决kernel ok情况下无法获得lkp信息问题
+* 完成docker 启动之后rc.local相关bug
+* 正才解决docker image 与 minikube 数据共享
 # 2020-03-30 ~ 2020-04-03 工作总结
 ## 苗德行
 ### 本周工作
