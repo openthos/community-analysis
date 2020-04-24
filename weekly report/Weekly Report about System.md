@@ -1,3 +1,11 @@
+# 2020-04-20 ~ 2020-04-24 工作总结
+## 苗德行
+### 本周工作
+* 完成minikube中docker中qemu的数据与docker共享
+* 完成host 与 minikube的数据共享
+* 解决了minikube中docker中运行的qemu的lkp数据compare
+* 与专利相关责任人做沟通
+
 # 2020-04-13 ~ 2020-04-17 工作总结
 ## 苗德行
 ### 本周工作
