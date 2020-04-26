@@ -62,4 +62,18 @@ spec:
 ```
 kubectl create -f emptydir.yaml
 ```
-此时Emptydir已经创建成功，在宿主机(我这里是在minikube中)上的访问路径为/home/docker/data,如果在此目录中创建删除文件，都将对容器中的/data目录有影响，如果删除Pod，文件将全部删除，即使是在宿主机上创建的文件也是如此，在宿主机上删除容器则k8s会再自动创建一个容器，此时文件仍然存在。
+此时Emptydir已经创建成功，在宿主机(我这里是在minikube中)上的访问路径为/home/docker/data,如果在此目录中创建删除文件，都将对容器中的/data目录有影响。
+可以使用如下命令测试：
+```
+linux@linux:~$ kubectl  get pods
+NAME           READY   STATUS    RESTARTS   AGE
+redis-master   1/1     Running   0          46s
+linux@linux:~$ kubectl  exec -it redis-master  /bin/bash
+root@redis-master:/data# ls
+root@redis-master:/data# touch abc
+root@redis-master:/data# ls
+abc
+root@redis-master:/data# 
+```
+此时pod中的/data目录是与/home/docker/data 同步的。
+如果删除Pod，文件将全部删除，即使是在宿主机上创建的文件也是如此，在宿主机上删除容器则k8s会再自动创建一个容器，此时文件仍然存在。
