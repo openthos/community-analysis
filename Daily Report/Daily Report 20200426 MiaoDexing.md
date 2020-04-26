@@ -31,9 +31,8 @@ docker run -v $(pwd)/tmp:/root/tmp -it ubuntu:18.04
 
 ## k8s之Volume存储数据卷
 - 在Docker中就有数据卷的概念，当容器删除时，数据也一起会被删除，想要持久化使用数据，需要把主机上的目录挂载到Docker中去，在K8S中，数据卷是通过Pod实现持久化的，如果Pod删除，数据卷也会一起删除，k8s的数据卷是docker数据卷的扩展，K8S适配各种存储系统，包括本地存储EmptyDir,HostPath,网络存储NFS,GlusterFS,PV/PVC等，下面就详细介绍下K8S的存储如何实现。
-
-  -  HostDir
-   -  编辑EmptyDir配置文件
+- HostDir
+  -  编辑EmptyDir配置文件
 ```
    apiVersion: v1
 kind: Pod        #类型是Pod
