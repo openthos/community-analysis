@@ -3,7 +3,7 @@
 
 新版本的Kubernetes在安装部署中，需要从k8s.grc.io仓库中拉取所需镜像文件，但由于国内网络防火墙问题导致无法正常拉取，本文将介绍如何绕过此问题，来完成业务的部署。
 ## 问题描述
-使用Kubernetes V1.11.3版本部署集群业务，在进行kubeadm init时，需要从k8s.grc.io仓库拉取镜像：
+使用Kubernetes V1.11.1版本部署集群业务，在进行kubeadm init时，需要从k8s.grc.io仓库拉取镜像：
 ```
 [preflight/images] You can also perform this action in beforehand using 'kubeadm config images pull'
 [preflight] Some fatal errors occurred:
