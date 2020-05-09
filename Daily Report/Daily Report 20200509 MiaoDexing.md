@@ -29,13 +29,13 @@ docker pull coredns/coredns:1.1.3
 ```
 版本信息需要根据实际情况进行相应的修改。通过docker tag命令来修改镜像的标签：
 ```
-docker tag docker.io/mirrorgooglecontainers/kube-proxy-amd64:v1.11.1 k8s.gcr.io/kube-proxy-amd64:v1.11.1
-docker tag docker.io/mirrorgooglecontainers/kube-scheduler-amd64:v1.11.1 k8s.gcr.io/kube-scheduler-amd64:v1.11.1
-docker tag docker.io/mirrorgooglecontainers/kube-apiserver-amd64:v1.11.1 k8s.gcr.io/kube-apiserver-amd64:v1.11.1
-docker tag docker.io/mirrorgooglecontainers/kube-controller-manager-amd64:v1.11.1 k8s.gcr.io/kube-controller-manager-amd64:v1.11.1
-docker tag docker.io/mirrorgooglecontainers/etcd-amd64:3.2.18  k8s.gcr.io/etcd-amd64:3.2.18
-docker tag docker.io/mirrorgooglecontainers/pause:3.1  k8s.gcr.io/pause:3.1
-docker tag docker.io/coredns/coredns:1.1.3  k8s.gcr.io/coredns:1.1.3
+docker tag mirrorgooglecontainers/kube-proxy-amd64:v1.11.1 k8s.gcr.io/kube-proxy-amd64:v1.11.1
+docker tag mirrorgooglecontainers/kube-scheduler-amd64:v1.11.1 k8s.gcr.io/kube-scheduler-amd64:v1.11.1
+docker tag mirrorgooglecontainers/kube-apiserver-amd64:v1.11.1 k8s.gcr.io/kube-apiserver-amd64:v1.11.1
+docker tag mirrorgooglecontainers/kube-controller-manager-amd64:v1.11.1 k8s.gcr.io/kube-controller-manager-amd64:v1.11.1
+docker tag mirrorgooglecontainers/etcd-amd64:3.2.18  k8s.gcr.io/etcd-amd64:3.2.18
+docker tag mirrorgooglecontainers/pause:3.1  k8s.gcr.io/pause:3.1
+docker tag coredns/coredns:1.1.3  k8s.gcr.io/coredns:1.1.3
 
 ```
 使用docker rmi删除不用镜像，通过docker images命令显示，已经有我们需要的镜像文件，可以继续部署工作了
