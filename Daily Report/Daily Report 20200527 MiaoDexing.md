@@ -11,4 +11,4 @@ qemu-system-x86_64  -nographic   -m 2G $fs9p -append "$bootloader_arg job=xxx" -
  - fs9p 用来实现qemu内部的目录与host共享，从而拿到测试任务的测试结果方面在host分析
  - kernel要支持9p文件系统
  - rootfs文件系统内部的开机启动脚本要去分析“/proc/cmdline”获得到内核的启动参数，主要是获得要执行的测试任务
- - rootfs文件系统内部的开机启动脚本中要使用mount挂载9p文件系统，否则无法实现qemu与host共享
+ - rootfs文件系统内部的开机启动脚本中要使用mount挂载9p指定的${host_shared}，否则无法实现qemu与host共享
