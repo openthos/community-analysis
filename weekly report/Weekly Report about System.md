@@ -3,7 +3,7 @@
 ### 本周工作
 - 配置编译raspberry-pi-4对应的内核，支持USB Camera
 - 基于raspberry-pi-4与WZX沟通，完成Launcher 和 FileManager
-- 测试raspberry-pi-4与LXX就开始菜单做沟通，目前完成10%
+- 基于raspberry-pi-4与LXX做沟通，StartMenu目前完成10%
 - 指导学生完成基于qemu的测试
 
 
