@@ -1,4 +1,11 @@
 # 2020-06-01~ 2020-06-05工作总结
+## 萧络元
+### 本周工作
+* 树莓派4试验其对UEFI的支持;rpi4的无线网络wifi功能的增加，调整kernel的80211和broadcom驱动部分，以使wpa可启动；
+* 联系机房查看“超强TR246”服务器的标签的同方产品序列号，并拍照发给刘总；
+* 应用商店服务器资源仓库迁移至 https://www.openthos.com/openthos/appstores/；并创建对应权限的账户提供LXX升级；
+* 修复git.openthos.org的证书错误；
+
 ## 苗德行
 ### 本周工作
 - 配置编译raspberry-pi-4对应的内核，支持USB Camera
