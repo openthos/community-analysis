@@ -2,8 +2,8 @@
 ## 苗德行
 ### 本周工作
 - 配置编译raspberry-pi-4对应的内核，支持USB Camera
-- 根据raspberry-pi-4并与XLY沟通，完成raspberry-pi-4的镜像烧写
-- 测试raspberry-pi-4的部分应用及多窗口支持
+- 基于raspberry-pi-4与WZX沟通，完成Launcher 和 FileManager
+- 测试raspberry-pi-4与LXX就开始菜单做沟通，目前完成10%
 - 指导学生完成基于qemu的测试
 
 
