@@ -1,3 +1,10 @@
+# 2020年06月15日 - - 2020年06月19日 周总结
+# 刘晓旭
+  - 1.完成oto8 任务栏，以及任务上的功能弹窗高斯模糊效果。
+  - 2.罗浩工程师oto8.1 settings UI替换实现方案以沿用原生settings框架为主，通过外层PhoneWindow（SettingsActivity显示窗口）+内层PhoneWindow（settings各个功能Activity显示窗口）方式展示settings的各功能界面，由于原生系统一个窗口只有一个PhoneWindow，所以需要修改系统PhoneWindow的显示方式，保证settings窗口中内外两个PhoneWindow能正常显示，这部分涉及到系统窗口框架的修改，与系统版本耦合度比较高，可能不利于后期的版本迭代。
+  - 3.对比罗浩工程师settings ui实现方案，通过分析Settings源代码，发现各个模块Activity在AndroidManifest.xml中注册时都指定了相对应的fragment，也就是各模块功能都是最终都是通过fragment实现的，因此尝试通过Activity+fragment的方式实现settings左右分栏显示效果，目前已初步实现左右分栏效果。下一步考量两种实现方案的优缺点以及工作量。
+
+
 # 2020年06月08日 - - 2020年06月12日 周总结
 # 刘晓旭
   - 1.优化应用商店codes，添加国际化及控件背景阴影效果
