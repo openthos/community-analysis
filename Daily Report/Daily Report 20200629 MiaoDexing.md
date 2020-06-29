@@ -1,4 +1,4 @@
-# android 10.0 Launcher3 去掉抽屉式,显示所有 app
+# android 9.0 Launcher3 去掉抽屉式,显示所有 app
 ## 修改思路
 1、增加全局控制变量 sys.launcher3.is_full_app，用来动态切换
 
