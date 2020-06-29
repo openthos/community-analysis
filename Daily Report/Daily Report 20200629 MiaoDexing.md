@@ -154,7 +154,7 @@ public static boolean isDisableAllApps() {
 对应的 string 文件就不贴了，自己增加下就行
 ```
 ### 增加两套布局，对应有抽屉和无抽屉
-加载布局文件对应的 xml 为packages\apps\Launcher3\res\xml\device_profiles.xml
+1） 加载布局文件对应的 xml 为packages\apps\Launcher3\res\xml\device_profiles.xml
 
 Launcher3 通过获取 minWidthDps 和 minHeightDps 来确定加载哪一个 profile，我的平板分辨率是 1280*800 的，增加两个 profile 节点
 ```
@@ -193,3 +193,385 @@ Launcher3 通过获取 minWidthDps 和 minHeightDps 来确定加载哪一个 pro
 
 这样的好处是你可以自定义不同的布局文件加载内容，上面的配置含义简单说一下，分别是最小宽度、最小高度、布局的行和列、文件夹中布局行和列、图标大小、图标文字大小、HotSeat 个数，加载的布局文件
 
+2） 在 InvariantDeviceProfile() 判断是否需要加载 Tablet_no_all_app profile
+
+- packages\apps\Launcher3\src\com\android\launcher3\InvariantDeviceProfile.java
+```
+public InvariantDeviceProfile(Context context) {
+ 
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        DisplayMetrics dm = new DisplayMetrics();
+        display.getMetrics(dm);
+ 
+        Point smallestSize = new Point();
+        Point largestSize = new Point();
+        display.getCurrentSizeRange(smallestSize, largestSize);
+ 
+        // This guarantees that width < height
+        minWidthDps = Utilities.dpiFromPx(Math.min(smallestSize.x, smallestSize.y), dm);
+        minHeightDps = Utilities.dpiFromPx(Math.min(largestSize.x, largestSize.y), dm);
+        Log.i("Launcher3.profiles", "orignalminWidthDps="+minWidthDps + "  orignalminHeightDps="+minHeightDps);
+        
+        //add for load no_all_app xml
+        if (LauncherAppState.isDisableAllApps()) {
+            Log.e("Launcher3.profiles", "load no all app profiles");
+            //对应 device_profiles.xml 中 Tablet_no_all_app 的值
+            minWidthDps = 380.0f;
+            minHeightDps = 590.0f;
+        }
+        .....
+}
+```
+### 去除 allAppsButton
+1） 将 resetLayout() 中 FeatureFlags.NO_ALL_APPS_ICON 替换为 LauncherAppState.isDisableAllApps()
+- packages\apps\Launcher3\src\com\android\launcher3\Hotseat.java
+
+```
+void resetLayout(boolean hasVerticalHotseat) {
+        mContent.removeAllViewsInLayout();
+        mHasVerticalHotseat = hasVerticalHotseat;
+        InvariantDeviceProfile idp = mLauncher.getDeviceProfile().inv;
+        if (hasVerticalHotseat) {
+            mContent.setGridSize(1, idp.numHotseatIcons);
+        } else {
+            mContent.setGridSize(idp.numHotseatIcons, 1);
+        }
+ 
+        //if (!FeatureFlags.NO_ALL_APPS_ICON) {
+        /// add for check is need allappbutton
+        if (!LauncherAppState.isDisableAllApps()) {
+            // Add the Apps button
+            Context context = getContext();
+            DeviceProfile grid = mLauncher.getDeviceProfile();
+ 
+        ...
+}
+
+```
+### 将 AllAppsContainerView 中的图标加载到 Workspace
+run() 中增加判断，添加 verifyApplications(), 修改 InstallShortcutReceiver 中 PendingInstallShortcutInfo 为 public
+- packages\apps\Launcher3\src\com\android\launcher3\model\LoaderTask.java
+```
+
+public void run() {
+        synchronized (this) {
+            // Skip fast if we are already stopped.
+            if (mStopped) {
+                return;
+            }
+        }
+        ....
+ 
+        // second step
+        TraceHelper.partitionSection(TAG, "step 2.1: loading all apps");
+        loadAllApps();
+ 
+        //add for load all app on workspace
+        if (LauncherAppState.isDisableAllApps()) {
+            android.util.Log.e("Launcher3", "verifyApplications()");
+            verifyApplications();
+        }
+ 
+        ....
+}
+ 
+ //add for load all app on workspace
+private void verifyApplications() {
+        final Context context = mApp.getContext();
+        ArrayList<Pair<ItemInfo, Object>> installQueue = new ArrayList<>();
+        final List<UserHandle> profiles = mUserManager.getUserProfiles();
+        for (UserHandle user : profiles) {
+            final List<LauncherActivityInfo> apps = mLauncherApps.getActivityList(null, user);
+            ArrayList<InstallShortcutReceiver.PendingInstallShortcutInfo> added = new ArrayList<InstallShortcutReceiver.PendingInstallShortcutInfo>();
+            synchronized (this) {
+                for (LauncherActivityInfo app : apps) {
+                    InstallShortcutReceiver.PendingInstallShortcutInfo pendingInstallShortcutInfo = new InstallShortcutReceiver.PendingInstallShortcutInfo(app, context);
+                    added.add(pendingInstallShortcutInfo);
+                    installQueue.add(pendingInstallShortcutInfo.getItemInfo());
+                }
+            }
+            if (!added.isEmpty()) {
+                mApp.getModel().addAndBindAddedWorkspaceItems(installQueue);
+            }
+        }
+    }
+
+
+```
+注释 run() 中的 return
+- packages\apps\Launcher3\src\com\android\launcher3\model\BaseModelUpdateTask.java
+```
+@Override
+    public final void run() {
+        if (!mModel.isModelLoaded()) {
+            if (DEBUG_TASKS) {
+                Log.d(TAG, "Ignoring model task since loader is pending=" + this);
+            }
+            // Loader has not yet run.
+            //annotaion for load all app on workspace
+            // return;
+        }
+        execute(mApp, mDataModel, mAllAppsList);
+    }
+
+```
+
+### 新安装的 app 自动添加图标到 Workspace
+execute() 中增加判断，添加 updateToWorkSpace()
+- packages\apps\Launcher3\src\com\android\launcher3\model\PackageUpdatedTask.java
+```
+
+public void execute(LauncherAppState app, BgDataModel dataModel, AllAppsList appsList) {
+ 
+    ....
+ 
+     final ArrayList<AppInfo> addedOrModified = new ArrayList<>();
+    addedOrModified.addAll(appsList.added);
+        
+    //add for load new install app on workspace 
+    if (LauncherAppState.isDisableAllApps()) {
+        android.util.Log.e("cczLauncher3", "updateToWorkSpace()");
+        updateToWorkSpace(context, app, appsList);
+    }
+    
+    ...
+}
+ 
+//add for load new install app on workspace
+public void updateToWorkSpace(Context context, LauncherAppState app , AllAppsList appsList){
+         ArrayList<Pair<ItemInfo, Object>> installQueue = new ArrayList<>();
+        final List<UserHandle> profiles = UserManagerCompat.getInstance(context).getUserProfiles();
+        ArrayList<InstallShortcutReceiver.PendingInstallShortcutInfo> added 
+        = new ArrayList<InstallShortcutReceiver.PendingInstallShortcutInfo>();
+        
+        for (UserHandle user : profiles) {
+            final List<LauncherActivityInfo> apps = LauncherAppsCompat.getInstance(context).getActivityList(null, user);
+            synchronized (this) {
+                for (LauncherActivityInfo info : apps) {
+                    for (AppInfo appInfo : appsList.added) {
+                        if(info.getComponentName().equals(appInfo.componentName)){
+                            InstallShortcutReceiver.PendingInstallShortcutInfo mPendingInstallShortcutInfo 
+                            =  new InstallShortcutReceiver.PendingInstallShortcutInfo(info,context);
+                            added.add(mPendingInstallShortcutInfo);
+                            installQueue.add(mPendingInstallShortcutInfo.getItemInfo());
+                        }
+                    }
+                }
+}
+        }
+        if (!added.isEmpty()) {
+            app.getModel().addAndBindAddedWorkspaceItems(installQueue);
+        }
+    }
+```
+
+### 替换 Workspace 图标长按删除选项为取消
+
+在 setTextBasedOnDragSource() 、setControlTypeBasedOnDragSource()、onAccessibilityDrop() 中分别增加判断是否需要删除图标
+- packages\apps\Launcher3\src\com\android\launcher3\DeleteDropTarget.java
+```
+private void setTextBasedOnDragSource(ItemInfo item) {
+        if (!TextUtils.isEmpty(mText)) {
+            mText = getResources().getString(item.id != ItemInfo.NO_ID
+                    ? R.string.remove_drop_target_label
+                    : android.R.string.cancel);
+            //add for hide deletedroptarget
+            if (LauncherAppState.isDisableAllApps()) {
+                android.util.Log.e("Launcher3", "hide delete drop target");
+                mText = getResources().getString(isCanDrop(item)
+                            ? R.string.remove_drop_target_label
+                            : android.R.string.cancel);
+            }
+ 
+            requestLayout();
+        }
+    }
+ 
+    private void setControlTypeBasedOnDragSource(ItemInfo item) {
+        mControlType = item.id != ItemInfo.NO_ID ? ControlType.REMOVE_TARGET
+                : ControlType.CANCEL_TARGET;
+ 
+        //add for hide deletedroptarget [S]
+        if (LauncherAppState.isDisableAllApps()) {
+            mControlType = isCanDrop(item) ? ControlType.REMOVE_TARGET
+                : ControlType.CANCEL_TARGET;
+        }        
+    }
+ 
+public void onAccessibilityDrop(View view, ItemInfo item) {
+        // Remove the item from launcher and the db, we can ignore the containerInfo in this call
+        // because we already remove the drag view from the folder (if the drag originated from
+        // a folder) in Folder.beginDrag()
+        //add if juge is need remove item from workspace
+        if (!LauncherAppState.isDisableAllApps() || isCanDrop(item)) {
+            mLauncher.removeItem(view, item, true /* deleteFromDb */);
+            mLauncher.getWorkspace().stripEmptyScreens();
+            mLauncher.getDragLayer()
+                    .announceForAccessibility(getContext().getString(R.string.item_removed));
+        }
+}
+ 
+private boolean isCanDrop(ItemInfo item){
+        return !(item.itemType == LauncherSettings.Favorites.ITEM_TYPE_APPLICATION ||
+                item.itemType == LauncherSettings.Favorites.ITEM_TYPE_FOLDER);
+}
+```
+
+drop() 中增加判断，取消当前拖拽操作
+- packages\apps\Launcher3\src\com\android\launcher3\dragndrop\DragController.java
+```
+private void drop(DropTarget dropTarget, Runnable flingAnimation) {
+    ....
+ 
+    boolean accepted = false;
+        if (dropTarget != null) {
+            dropTarget.onDragExit(mDragObject);
+            if (dropTarget.acceptDrop(mDragObject)) {
+                if (flingAnimation != null) {
+                    flingAnimation.run();
+                } else {
+                    dropTarget.onDrop(mDragObject, mOptions);
+                }
+                accepted = true;
+ 
+                //add for cancel canceldroptarget handle
+                if (LauncherAppState.isDisableAllApps() && dropTarget instanceof DeleteDropTarget &&
+                        isNeedCancelDrag(mDragObject.dragInfo)) {
+                    cancelDrag();
+                }
+            }
+        }
+        ...
+}
+ 
+private boolean isNeedCancelDrag(ItemInfo item){
+        return (item.itemType == LauncherSettings.Favorites.ITEM_TYPE_APPLICATION ||
+                item.itemType == LauncherSettings.Favorites.ITEM_TYPE_FOLDER);
+ }
+
+```
+
+### 屏蔽上拉显示抽屉页面手势
+
+canInterceptTouch() 中增加判断是否直接拦截
+- packages\apps\Launcher3\quickstep\src\com\android\launcher3\uioverrides\OverviewToAllAppsTouchController.java
+```
+@Override
+    protected boolean canInterceptTouch(MotionEvent ev) {
+        //add for forbidden workspace drag change GradientView alph
+        if (LauncherAppState.isDisableAllApps()){
+            android.util.Log.e("Launcher3", "canInterceptTouch()");
+            return false;
+        }  
+ 
+        if (mCurrentAnimation != null) {
+            // If we are already animating from a previous state, we can intercept.
+            return true;
+        }
+        if (AbstractFloatingView.getTopOpenView(mLauncher) != null) {
+            return false;
+        }
+        if (mLauncher.isInState(ALL_APPS)) {
+            // In all-apps only listen if the container cannot scroll itself
+            return mLauncher.getAppsView().shouldContainerScroll(ev);
+        } else if (mLauncher.isInState(NORMAL)) {
+            return true;
+        } else if (mLauncher.isInState(OVERVIEW)) {
+            RecentsView rv = mLauncher.getOverviewPanel();
+            return ev.getY() > (rv.getBottom() - rv.getPaddingBottom());
+        } else {
+            return false;
+        }
+    }
+```
+
+### 修改页面指示线为圆点
+WorkspacePageIndicator 改为 PageIndicatorDots
+- packages\apps\Launcher3\res\layout\launcher.xml
+
+```
+<com.android.launcher3.pageindicators.PageIndicatorDots
+            android:id="@+id/page_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:theme="@style/HomeScreenElementTheme" />
+
+
+```
+
+增加 PageIndicatorDots 继承 Insettable，复写setInsets(), 调整圆点的位置
+- packages\apps\Launcher3\src\com\android\launcher3\pageindicators\PageIndicatorDots.java
+```
+public class PageIndicatorDots extends View implements PageIndicator, Insettable {
+ 
+// add for change WorkspacePageIndicator line to dot
+    @Override
+    public void setInsets(Rect insets) {
+        DeviceProfile grid = mLauncher.getDeviceProfile();
+        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) getLayoutParams();
+ 
+        if (grid.isVerticalBarLayout()) {
+            Rect padding = grid.workspacePadding;
+            lp.leftMargin = padding.left + grid.workspaceCellPaddingXPx;
+            lp.rightMargin = padding.right + grid.workspaceCellPaddingXPx;
+            lp.bottomMargin = padding.bottom;
+        } else {
+            lp.leftMargin = lp.rightMargin = 0;
+            lp.gravity = Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM;
+            lp.bottomMargin = grid.hotseatBarSizePx + insets.bottom;
+        }
+        setLayoutParams(lp);
+    }
+ 
+    @Override
+    public void setScroll(int currentScroll, int totalScroll) {
+        if (mNumPages > 1) {
+            if (mIsRtl) {
+                currentScroll = totalScroll - currentScroll;
+            }
+            int scrollPerPage = totalScroll / (mNumPages - 1);
+ 
+            // add for change WorkspacePageIndicator line to dot
+            if (scrollPerPage == 0) {
+                return;
+            }
+            int pageToLeft = currentScroll / scrollPerPage;
+            int pageToLeftScroll = pageToLeft * scrollPerPage;
+            int pageToRightScroll = pageToLeftScroll + scrollPerPage;
+ 
+        ...
+ 
+}
+
+```
+
+注释 setShouldAutoHide()，避免长按 workSpace 时发生崩溃
+- packages\apps\Launcher3\src\com\android\launcher3\states\SpringLoadedState.java
+```
+@Override
+    public void onStateEnabled(Launcher launcher) {
+        Workspace ws = launcher.getWorkspace();
+        ws.showPageIndicatorAtCurrentScroll();
+        //annotaion for WorkspacePageIndicator line to dot
+        // ws.getPageIndicator().setShouldAutoHide(false);
+ 
+        // Prevent any Un/InstallShortcutReceivers from updating the db while we are
+        // in spring loaded mode
+        InstallShortcutReceiver.enableInstallQueue(InstallShortcutReceiver.FLAG_DRAG_AND_DROP);
+        launcher.getRotationHelper().setCurrentStateRequest(REQUEST_LOCK);
+    }
+ 
+    @Override
+    public void onStateDisabled(final Launcher launcher) {
+        //annotaion for WorkspacePageIndicator line to dot
+        // launcher.getWorkspace().getPageIndicator().setShouldAutoHide(true);
+ 
+        // Re-enable any Un/InstallShortcutReceiver and now process any queued items
+        InstallShortcutReceiver.disableAndFlushInstallQueue(
+                InstallShortcutReceiver.FLAG_DRAG_AND_DROP, launcher);
+    }
+
+
+```
