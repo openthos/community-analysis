@@ -1,3 +1,11 @@
+# 2020-06-29 ~ 2020-07-03工作总结
+## 苗德行
+### 本周工作
+* 基于raspberry-pi-4，完成Launcher的搜索框的去除
+* 基于raspberry-pi-4，完成Launcher的左右滑动页面切换的修改
+* 基于raspberry-pi-4，完成Launcher的抽屉效果及所有APP界面展示的去除
+* 基于raspberry-pi-4，完成Launcher的去除长按应用图标显示详细信息
+
 # 2020-06-15 ~ 2020-06-19工作总结
 ## 苗德行
 ### 本周工作
