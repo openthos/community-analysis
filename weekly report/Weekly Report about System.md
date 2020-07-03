@@ -1,3 +1,11 @@
+# 2020-06-15 ~ 2020-06-19工作总结
+## 苗德行
+### 本周工作
+* 分析SystemUi的启动流程以及raspberry-pi-4的Overlay原理，包括StatusBar和NavigationBar，完成StatusBar和NavigationBar的移植 
+* 基于raspberry-pi-4，完成StartMenu移植 	
+* 基于raspberry-pi-4，完成Launcher3的搜索框的去除
+
+
 # 2020-06-01~ 2020-06-05工作总结
 ## 萧络元
 ### 本周工作
