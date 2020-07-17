@@ -1,6 +1,13 @@
 # 2020-07-06 ~ 2020-07-10工作总结
 ## 苗德行
 ### 本周工作
+* 研究Android开机启动动画原理，并成功替换原有开机画面“ANDROID”或开机动画bootanimation
+* 解决Rapi4因同步代码后无限重启问题
+* 研究Rapi4从USB Driver 启动，10%
+
+# 2020-07-06 ~ 2020-07-10工作总结
+## 苗德行
+### 本周工作
 * 解决Rapi4无音量问题
 * 升级Rapi4内核至5.4
 * 同步Rapi4的Android10 代码，并基于最新源码整理StartMenu和SystemUi的patch
