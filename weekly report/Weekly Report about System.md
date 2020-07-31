@@ -1,3 +1,17 @@
+# 2020-07-20~2020-07-24工作总结
+## 苗德行
+### 本周工作
+* 基于raspberry-pi-4，分析Settings实现，并修改Settings中“About Tablet”显示openthos信息
+* 基于raspberry-pi-4，去除SystemUi中“quick settings”
+* 基于raspberry-pi-4，完成StartMenu的All Apps菜单与之适配
+
+# 2020-07-20~2020-07-24工作总结
+## 苗德行
+### 本周工作
+* 实现raspberry-pi-4从USB Driver启动
+* 基于raspberry-pi-4，分析验证USB Camera
+* 基于raspberry-pi-4，添加openthos平台
+
 # 2020-07-13 ~ 2020-07-17工作总结
 ## 苗德行
 ### 本周工作
