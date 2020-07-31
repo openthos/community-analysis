@@ -1,4 +1,4 @@
-# 2020-07-20~2020-07-24工作总结
+# 2020-07-27~2020-07-31工作总结
 ## 苗德行
 ### 本周工作
 * 基于raspberry-pi-4，分析Settings实现，并修改Settings中“About Tablet”显示openthos信息
