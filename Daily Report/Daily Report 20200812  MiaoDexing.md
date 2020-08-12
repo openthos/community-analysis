@@ -1,0 +1,18 @@
+# Launcher3分析篇
+- 下面正式开始Launcher3的分析，首先介绍一下主要的几个类：
+  - Launcer 是显示Launcher的主Activity。我们看到的桌面就是它，是最核心且唯一的Activity。
+  - LauncherAppState：单例对象，构造方法中初始化对象、注册应用安装、卸载、更新，配置变化等广播。这些广播用来实时更新桌面图标等，其receiver的实现在LauncherModel类中，LauncherModel也在这里初始化。
+  - LauncherModel：数据处理类，保存桌面状态，提供读写数据库的API，内部类LoaderTask用来初始化桌面。
+  - InvariantDeviceProfile：一些不变的设备相关参数管理类，其内部包涵了横竖屏模式的DeviceProfile。
+  - IconCache：图标缓存类，应用程序icon和title的缓存，内部类创建了数据库app_icons.db。
+  - LauncherProvider：核心数据库类，负责launcher.db的创建与维护。
+  - DragLayer：一个用来负责分发事件的ViewGroup。
+  - DragController：DragLayer只是一个ViewGroup，具体的拖拽的处理都放到了DragController中。
+  - BubblTextView：图标都基于他，继承自TextView。
+  - Folder：打开文件夹展示的View。
+  - FolderIcon：文件夹图标。
+  - ItemInfo：桌面上每个Item的信息数据结构，包括在第几屏、第几行、第几列、宽高等信息；该对象与数据库中记录一一对应；该类有多个子类，譬如FolderIcon的FolderInfo、BubbleTextView的ShortcutInfo等。
+  - Workspace：显示Launcher界面的视图。
+  - CellLayout：Workspace中显示多页，每一页就是一个CellLayout。
+  - ShortcutAndWidgetContainer：CellLayout中存放子View（即应用图标或小控件）的ViewGroup，即真正包含子View的容器。
+  - Hotseat：Workspace下的快捷栏
