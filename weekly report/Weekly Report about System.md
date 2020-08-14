@@ -1,7 +1,14 @@
+# 2020-08-10 ~ 2020-08-14工作总结
+## 苗德行
+### 本周工作
+* 修改startmenu，完成startmenu中“FileManager”、"Settings"、"Power"显示及实现“power”功能
+* 修复应用程序窗口全屏时被底部OpentosStatusBar覆盖问题
+
 # 2020-08-03 ~ 2020-08-07工作总结
 ## 苗德行
 ### 本周工作
-
+* 基于raspberry-pi-4，去除下拉菜单noticification
+* 基于raspberry-pi-4，分析平台添加，并去除非必要平台menu info
 
 # 2020-07-27 ~ 2020-07-31工作总结
 ## 苗德行
