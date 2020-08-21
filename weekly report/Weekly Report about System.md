@@ -1,3 +1,10 @@
+# 2020-08-17 ~ 2020-08-21工作总结
+## 苗德行
+### 本周工作
+* 基于raspberry-pi-4，修复"Power"出现的“FLAG_ACTIVITY_NEW_TASK”问题，并整理相应patch
+* 基于raspberry-pi-4，整理所有关于startmenu的patch
+* 基于raspberry-pi-4，实现SystemUI中关于输入法、电池电量、wifi、音量、通知、日历时间的图标显示
+
 # 2020-08-10 ~ 2020-08-14工作总结
 ## 苗德行
 ### 本周工作
