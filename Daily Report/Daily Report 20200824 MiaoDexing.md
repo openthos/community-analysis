@@ -3,11 +3,11 @@
 ```
 Intent i = new Intent();
 
-if (Build.VERSION.SDK_INT >= 11) { //Honeycomb
+if (Build.VERSION.SDK_INT >= 11) {
 
     i.setClassName("com.android.settings", "com.android.settings.Settings$WifiSettingsActivity");
 
-} else {//other versions
+} else {
      i.setClassName("com.android.settings", "com.android.settings.wifi.WifiSettings");
 
 }
