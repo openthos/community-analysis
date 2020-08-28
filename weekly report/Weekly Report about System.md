@@ -1,3 +1,12 @@
+# 2020-08-24 ~ 2020-08-28工作总结
+## 苗德行
+### 本周工作
+* 基于raspberry-pi-4，实现SystemUI中关于输入法的功能
+* 基于raspberry-pi-4，实现SystemUI中关于电池电量的功能
+* 基于raspberry-pi-4，实现SystemUI中关于WIFI设置的功能
+* 基于raspberry-pi-4，实现SystemUI中关于音量设置功能
+
+
 # 2020-08-17 ~ 2020-08-21工作总结
 ## 苗德行
 ### 本周工作
