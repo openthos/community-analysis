@@ -11,7 +11,7 @@
   
 ---
 - service
-  -  ThinkingService.h
+1. ThinkingService.h
 
 ```
     #ifndef THINKING_SERVICE_H
@@ -42,8 +42,7 @@
      
     #endif
 ```
-
-   -   ThinkingService.cpp
+2. ThinkingService.cpp
 ```
     #include <binder/IServiceManager.h>
     #include <binder/IPCThreadState.h>
