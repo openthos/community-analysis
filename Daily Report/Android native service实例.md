@@ -101,7 +101,7 @@
 #include <binder/ProcessState.h>
 #include <binder/IServiceManager.h>
 #include <utils/Log.h>
-#include "../service/ThinkingService.h"
+#include "ThinkingService.h"
  
 using namespace android;
  
@@ -176,7 +176,7 @@ namespace android
 1. test.cpp
 ```
 #include <stdio.h>
-#include "../client/ThinkingClient.h"
+#include "ThinkingClient.h"
  
 using namespace android;
  
@@ -214,7 +214,6 @@ cc_library_shared {
         ],
 
 }
-
 
 cc_binary {
     name: "ThinkingServer",
