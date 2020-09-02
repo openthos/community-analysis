@@ -110,7 +110,7 @@ int main(int arg, char** argv)
 	printf("ThinkingService start register \n");
 	sp<ProcessState> proc(ProcessState::self());
         sp<IServiceManager> sm = defaultServiceManager();
-	int ret=ThinkingService::Instance();
+	ThinkingService::Instance();
 	ProcessState::self()->startThreadPool();
 	IPCThreadState::self()->joinThreadPool();
 	return 0;
