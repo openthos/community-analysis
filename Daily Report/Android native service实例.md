@@ -40,8 +40,8 @@
      
     #endif
 ```
-  -  ThinkingService.cpp
-  ```
+   -   ThinkingService.cpp
+```
       #include <binder/IServiceManager.h>
     #include <binder/IPCThreadState.h>
     #include "ThinkingService.h"
