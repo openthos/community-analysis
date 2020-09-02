@@ -259,7 +259,8 @@ PRODUCT_PACKAGES += \
 ```
 ---
 - 测试
-将最新的system.img烧写至设备。
+
+将最新的system.img烧写至设备。<br>
 1、 打开第一个终端
 ```
 openthos:/ # ThinkingServer &                                                  
