@@ -8,6 +8,8 @@
   -  client：客户端程序，服务调用封装。
 
   -  test：测试client
+  
+---
 - service
   -  ThinkingService.h
 
@@ -40,9 +42,10 @@
      
     #endif
 ```
+
    -   ThinkingService.cpp
 ```
-      #include <binder/IServiceManager.h>
+    #include <binder/IServiceManager.h>
     #include <binder/IPCThreadState.h>
     #include "ThinkingService.h"
      
@@ -86,3 +89,4 @@
     	}
     }
   ```
+---
