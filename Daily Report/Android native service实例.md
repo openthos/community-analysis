@@ -89,3 +89,160 @@
     }
   ```
 ---
+
+- server
+1. ThinkingServer.cpp
+```
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <grp.h>
+#include <binder/IPCThreadState.h>
+#include <binder/ProcessState.h>
+#include <binder/IServiceManager.h>
+#include <utils/Log.h>
+#include "../service/ThinkingService.h"
+ 
+using namespace android;
+ 
+int main(int arg, char** argv)
+{
+	printf("ThinkingService start register \n");
+	sp<ProcessState> proc(ProcessState::self());
+    sp<IServiceManager> sm = defaultServiceManager();
+	int ret=ThinkingService::Instance();
+	ProcessState::self()->startThreadPool();
+	IPCThreadState::self()->joinThreadPool();
+	return 0;
+}
+```
+
+---
+
+- client
+1. ThinkingClient.h
+```
+    #ifndef THINKING_CLIENT_H
+    #define THINKING_CLIENT_H
+     
+    namespace android
+    {
+    	class ThinkingClient
+    	{
+    		public:
+    		int setData(int a,int b);
+    		private:
+    		static void getThinkingService();
+    	};
+    }
+     
+    #endif
+```
+
+2. ThinkingClient.cpp
+```
+#include <binder/IServiceManager.h>
+#include <binder/IPCThreadState.h>
+#include "ThinkingClient.h"
+ 
+namespace android
+{
+	sp<IBinder> binder;
+	
+	int ThinkingClient::setData(int a,int b)
+	{
+		getThinkingService();
+		Parcel data,reply;
+		data.writeInt32(a);
+		data.writeInt32(b);
+		binder->transact(0, data, &reply);
+		int result=reply.readInt32();
+		return result;
+	}
+	
+	void ThinkingClient::getThinkingService()
+	{
+		sp<IServiceManager> sm = defaultServiceManager();
+        binder = sm->getService(String16("thinking.svc"));
+		if(binder == 0)
+			return;
+	}
+}
+```
+
+---
+
+- test
+1. test.cpp
+```
+#include <stdio.h>
+#include "../client/ThinkingClient.h"
+ 
+using namespace android;
+ 
+int main(int argc, char** argv)
+{
+	ThinkingClient client;
+	int result=client.setData(1,2);
+	printf("result is %d \n",result);
+	return 0;
+}
+```
+---
+
+- Android.bp
+
+```
+cc_library_shared {                                                                                                                                                                                         
+        name: "libThinkingService",
+
+        srcs: [
+            "ThinkingService.cpp",
+        ],
+
+        shared_libs: [
+            "libcutils",
+            "libutils",
+            "libbinder",
+        ],
+
+        cflags: [
+            "-Wall",
+            "-Werror",
+            "-Wunused",
+            "-Wunreachable-code",
+        ],
+
+}
+
+
+cc_binary {
+    name: "ThinkingServer",
+    srcs: ["ThinkingServer.cpp"],
+   
+    shared_libs: [
+        "libutils",
+        "libbinder",
+        "libThinkingService",
+    ], 
+}
+
+cc_library_shared {   
+    name: "libThinkingClient",
+   
+    srcs: ["ThinkingClient.cpp"],
+   
+    shared_libs: [
+        "libutils",
+        "libbinder",
+    ], 
+}
+
+cc_binary {   
+     name: "ThinkingTest",
+     srcs: ["test.cpp"],
+     shared_libs: ["libThinkingClient"],
+   
+}
+
+```
