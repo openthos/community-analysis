@@ -109,7 +109,7 @@ int main(int arg, char** argv)
 {
 	printf("ThinkingService start register \n");
 	sp<ProcessState> proc(ProcessState::self());
-    sp<IServiceManager> sm = defaultServiceManager();
+        sp<IServiceManager> sm = defaultServiceManager();
 	int ret=ThinkingService::Instance();
 	ProcessState::self()->startThreadPool();
 	IPCThreadState::self()->joinThreadPool();
@@ -163,7 +163,7 @@ namespace android
 	void ThinkingClient::getThinkingService()
 	{
 		sp<IServiceManager> sm = defaultServiceManager();
-        binder = sm->getService(String16("thinking.svc"));
+                binder = sm->getService(String16("thinking.svc"));
 		if(binder == 0)
 			return;
 	}
@@ -244,5 +244,35 @@ cc_binary {
      shared_libs: ["libThinkingClient"],
    
 }
+
+```
+---
+- 添加至平台相关mk文件
+1、 device/tinghua/openthos/openthos.mk
+```
+PRODUCT_PACKAGES += \
+......
+	libThinkingService \
+	libThinkingClient \
+	ThinkingServer \
+	ThinkingTest \
+......
+```
+---
+- 测试
+将最新的system.img烧写至设备。
+1、 打开第一个终端
+```
+openthos:/ # ThinkingServer &                                                  
+[1] 3430
+openthos:/ # ThinkingService start register 
+-----------ThinkingService-->Instance 
+-----------ThinkingService-----------ThinkingService-->Instance 0 
+
+```
+2、另一个终端：
+```
+openthos:/ # ThinkingTest                                            
+result is 2 
 
 ```
