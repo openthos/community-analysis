@@ -1,6 +1,12 @@
 # 2020-08-31 ~ 2020-09-04工作总结
 ## 苗德行
 ### 本周工作
+* 基于raspberry-pi-4，实现SystemUI中关于通知的功能     
+* 分析Android 10中的init、zygote启动过程，分析init.rc文件
+
+# 2020-08-31 ~ 2020-09-04工作总结
+## 苗德行
+### 本周工作
 * 基于raspberry-pi-4，实现SystemUI中关于日历的功能
 * 基于raspberry-pi-4，实现SystemUI中关于通知的功能      80%
 
