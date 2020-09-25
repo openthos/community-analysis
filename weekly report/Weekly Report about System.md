@@ -1,3 +1,11 @@
+# 2020-09-21 ~ 2020-09-25工作总结
+## 苗德行
+### 本周工作
+* 基于raspberry-pi-4，完成Settings的全部二级选项显示
+* 基于raspberry-pi-4，修复Settings二级选项"Network"的bugs
+* 基于raspberry-pi-4，修复Settings二级选项"Location"的bugs
+* 基于raspberry-pi-4，修复Settings二级选项"Storage"下三级选项bugs
+
 # 2020-09-14 ~ 2020-09-18工作总结
 ## 苗德行
 ### 本周工作
