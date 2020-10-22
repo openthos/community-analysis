@@ -1,4 +1,4 @@
-# Ubuntu搭建RISCV之QUMU测试环境
+# Ubuntu搭建RISCV之QEMU测试环境
 ## 前言
 搭建此测试环境需要qemu、交叉工具链、内核、文件系统
 ## 安装QEMU
