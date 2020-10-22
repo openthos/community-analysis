@@ -24,6 +24,7 @@ $ make
 ```
 $ make install
 ```
+在安装路径的bin目录下能够看到“qemu-riscv64    qemu-system-riscv64”即代表成功！
 ## 安装交叉工具链
 - 下载交叉工具链
 ```
@@ -42,6 +43,7 @@ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev
 ```
 make linux
 ```
+在安装路径的bin目录下即可以找到工具集
 - 为了方便使用，建议将安装的工具链设置到环境变量中
 ```
 vi .bashrc
@@ -64,7 +66,7 @@ make ARCH=riscv menuconfig
 ```
 make CROSS_COMPILE=riscv64-unknown-linux-gnu-  ARCH=riscv
 ```
-##制作文件系统
+## 制作文件系统
 - debootstrap
 制作一个 "standard"文件系统，可以使用debootstrap
 ```
